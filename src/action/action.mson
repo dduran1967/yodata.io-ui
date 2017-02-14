@@ -1,0 +1,22 @@
+# Action (object)
+
+An action performed by a direct agent and indirect participants upon a direct object. 
+Optionally happens at a location with the help of an inanimate instrument. 
+The execution of the action may produce a result. Specific action sub-type documentation 
+specifies the exact expectation of each argument/role.
+
+## properties
+
++ actionStatus (ActionStatusType) - Indicates the current disposition of the Action.
++ agent (Person, Organization) - The direct performer of an action
++ endTime (DateTime)
+    - `The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation) 
+    the time that it is expected to end. For actions that span a period of time, when the action was performed. 
+    e.g. John wrote a book from January to December. Note that Event uses startDate/endDate instead 
+    of startTime/endTime, even when describing dates with times. This situation may be clarified in 
+    future revisions.`
++ error (object)
++ instrument (Thing)
++ location (Place)
++ object (Thing)
++ 

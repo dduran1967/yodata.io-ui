@@ -1,0 +1,9 @@
+export {default as MessagesView} from './messages.view'
+export {default as MessageView} from './message.view'
+export {default as HomeView} from './home.view';
+export {default as ConnectView} from './connect.view';
+export {default as ConnectClientView} from './connect.client.view';
+export {default as TypeListView} from '../type/type.list.view';
+export {default as ActionListView} from '../action/action.list.view';
+export {default as ActionView} from '../action/action.view';
+export {default as CodeView} from '../type/code.view';
