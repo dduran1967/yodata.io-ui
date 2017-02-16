@@ -2,15 +2,15 @@ import React from 'react';
 import {lit} from '../lib/rdf-utilities';
 import Link from 'react-router-dom/Link';
 
-const ListView = ({listItems = [], onLink, linkTo, ...props}) =>
+const ListView = ({listItems = []}) =>
   <div className="ListView">
     <div className="list-group">
-      {listItems.map(({id, label, description}) =>
+      {listItems.map(({key, id, label, description, linkTo, onClick}) =>
         <Link
-          key={id}
-          to={linkTo + '#' + id}
+          key={key || id}
+          to={linkTo}
           className="list-group-item list-group-item-action media"
-          onClick={(e) => onLink(id)}>
+          onClick={(e) => onClick(id)}>
           <div className="media-body">
             <h5 className="media-heading">{lit(label)}</h5>
             {lit(description)}

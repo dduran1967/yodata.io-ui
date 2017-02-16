@@ -22,10 +22,11 @@ const StyledPageHeader = styled.header`
 
 class PageHeader extends React.Component {
   render() {
-    let {title, onNavToggle, onBack, onNext, onClose} = this.props
+    let {title, onNavToggle, onBack, onNext, onClose, potentialAction} = this.props
     let height = '24';
     return (
       <StyledPageHeader>
+
         <div className="text-left d-flex">
           {onNavToggle &&
           <Button onClick={()=>onNavToggle()}><Icon name="menu" height={height} width={height}/></Button>
@@ -33,9 +34,13 @@ class PageHeader extends React.Component {
           {onBack &&
           <Link style={{display:'flex',alignItems:'center'}} to={'..'} onClick={()=>onBack()}><Icon name="back" height={height} width={height}/></Link>
           }
-          <h2 className="d-inline-block">{title}</h2>
+          <h2 className="d-inline-block pl-3">{title}</h2>
         </div>
         <div className="text-right d-flex">
+          {potentialAction && potentialAction.map(action => (
+            <Button key={Math.random()} onClick={action.onClick} rounded big>{action.name}</Button>
+          ))
+          }
           {onNext &&
           <Button onClick={()=>onNext()}><Icon name="next" height={height} width={height}/></Button>
           }

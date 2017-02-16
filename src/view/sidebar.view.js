@@ -5,27 +5,34 @@ function Sidebar({open, toggleSidebar, onNav}) {
   return (
     <div>
       <Drawer open={open} style={{color:'white'}}>
-        <PageHeader
-          title="Yodata"
-          onClose={toggleSidebar}
-        />
+        <div className="px-3">
+          <PageHeader
+            title="Yodata"
+            onClose={toggleSidebar}
+          />
+        </div>
+
         <Nav stacked>
           <NavLink to="/">
             <Icon name="home" style={{marginRight: '1em'}}/>
             Home
           </NavLink>
-          <NavLink to="/type">
-            <Icon name="code" style={{marginRight: '1em'}}/>
-            Types
+          <NavLink to="/stream/" >
+            <Icon name="stream" style={{marginRight: '1em'}}/>
+            Streams
           </NavLink>
           <NavLink to="/action">
             <Icon name="applications" style={{marginRight: '1em'}}/>
             Actions
           </NavLink>
-          <NavLink to="/documents" >
-          <Icon name="documents" style={{marginRight: '1em'}}/>
-          Documents
-          </NavLink>
+          {/*<NavLink to="/type">*/}
+            {/*<Icon name="code" style={{marginRight: '1em'}}/>*/}
+            {/*Types*/}
+          {/*</NavLink>*/}
+          {/*<NavLink to="/documents" >*/}
+            {/*<Icon name="documents" style={{marginRight: '1em'}}/>*/}
+            {/*Documents*/}
+          {/*</NavLink>*/}
           {/*<NavLink to="/connect" >*/}
           {/*<Icon name="connect" style={{marginRight: '1em'}}/>*/}
           {/*Connect*/}

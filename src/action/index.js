@@ -1,12 +1,11 @@
 // @flow
 import React from 'react';
-import ActionListView from './action.list.view';
 import ActionView from './action.view';
 import CodeView from '../type/code.view';
 import {Route, Switch} from 'react-router-dom';
 import {observer} from 'mobx-react';
-import {sym, lit} from '../lib/rdf-utilities';
-import {PageHeader, Link} from '../component';
+import {lit} from '../lib/rdf-utilities';
+import {PageHeader, Link, List} from '../component';
 
 
 class ActionViewController extends React.Component {
@@ -55,10 +54,16 @@ class ActionViewController extends React.Component {
                  component={ActionView}
                  subject={subject}
           />
-          <Route component={ActionListView}
-                 listItems={typeStore.ready ? typeStore.actions : []}
-                 linkTo={'/action/view/'}
-                 onLink={(v) => typeStore.setCurrentSubject(sym(v))}
+          <Route
+            component={List}
+            listItems={typeStore.actions.map(type=>({
+              key: type.id,
+              id:     type.id,
+              label:  type.label,
+              description: type.description,
+              linkTo: '/action/view/#' + type.id,
+              onClick: console.log
+            }))}
           />
         </Switch>
       </div>

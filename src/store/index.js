@@ -4,6 +4,7 @@ import message from './message';
 import user from './user';
 import typeStore from '../type/typeStore';
 import docs from '../documents/document.store';
+import streams from '../stream/streams';
 
 export default {
   client,
@@ -11,5 +12,6 @@ export default {
   ui,
   user,
   typeStore,
-  docs
+  docs,
+  streams
 }

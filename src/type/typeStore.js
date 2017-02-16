@@ -95,7 +95,7 @@ class TypeStore {
         this.filter = val;
       })
     });
-    this.fetch('http://localhost:3000/schema.nt');
+    this.fetch('https://devtest.yodata.me/test/schema.nt');
   }
 
   fill = node => {
@@ -228,7 +228,7 @@ class TypeStore {
 }
 
 window.Type = Type;
-const typeStore = window.store$ = new TypeStore();
+const typeStore = window.types = new TypeStore();
 export default observable(typeStore);
 
 autorun(function typeStoreAutorun() {

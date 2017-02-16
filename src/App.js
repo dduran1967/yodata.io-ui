@@ -10,10 +10,9 @@ import styleConfig from './style/config';
 import './style/index.css';
 import 'codemirror/lib/codemirror.css';
 import ActionViewController from './action';
-import DocumentViewController from './documents';
+import StreamViewController from './stream/stream.view.controller';
 import HomeView from './view/home.view';
 require('./action');
-
 
 class App extends React.Component {
   static childContextTypes = {
@@ -34,9 +33,9 @@ class App extends React.Component {
           <div id="contentWrapper" className="w-100">
             <main id="mainContent">
               <Switch>
+                <Route path={"/stream"} component={StreamViewController} store={store}/>
+                <Route path={"/action"} component={ActionViewController} store={store}/>
                 <Route path={"/type"} component={TypeViewController} store={typeStore} ui={store.ui}/>
-                <Route path={"/action"} component={ActionViewController} store={store} />
-                <Route path={"/documents"} component={DocumentViewController} store={store}/>
                 {/*<Route path={"/connect/:clientId"} component={ConnectClientView}/>*/}
                 {/*<Route path={"/connect"} component={ConnectView}/>*/}
                 {/*<Route path={"/events"} component={MessagesView}/>*/}

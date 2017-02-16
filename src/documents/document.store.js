@@ -1,5 +1,5 @@
 // @flow
-import {observable, extendObservable, action, computed, autorun} from 'mobx';
+import {observable, extendObservable, action, autorun} from 'mobx';
 import solid from 'solid-client';
 import user from '../store/user';
 
@@ -34,7 +34,7 @@ class DocumentStore {
 }
 
 const documentStore = window.doc$ = new DocumentStore();
-export default observable(documentStore);
+export default documentStore
 
 autorun(function loadDocs() {
   if (user && user.storage) {

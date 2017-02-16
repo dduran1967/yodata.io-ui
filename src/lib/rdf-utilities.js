@@ -1,4 +1,5 @@
 import $rdf from 'rdflib';
+import uuid from 'uuid/v1';
 
 export function sym(v) {
   if (typeof v === 'string') {
@@ -40,6 +41,13 @@ export function lit(value, defaultValue) {
     return value.value;
   }
   return defaultValue;
+}
+
+/**
+ * create a new id
+ */
+export function createId() {
+  return uuid();
 }
 
 export default {

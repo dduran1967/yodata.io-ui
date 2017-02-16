@@ -5,18 +5,10 @@ class UserStore {
     extendObservable(this, {
       name:      'Yodata developer',
       webid:     'https://devtest.yodata.me/profile/card#me',
-      storage:  'https://devtest.yodata.me/',
+      storage:   'https://devtest.yodata.me/',
       inbox:     'https://devtest.yodata.me/inbox/',
+      stream:    'https://devtest.yodata.me/stream/',
       client:    [],
-      stream:    {
-        website: {
-          name:    'website',
-          action:  {
-            registerAction: {}
-          },
-          history: {}
-        }
-      },
       addClient: action(function (id) {
         return this.client.push[id];
       })
