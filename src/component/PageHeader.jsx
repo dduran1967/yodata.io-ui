@@ -2,6 +2,7 @@
 import React from 'react';
 import {Icon, Button, Link} from '../component';
 import styled from 'styled-components';
+import ui from '../store/ui';
 
 const StyledPageHeader = styled.header`
     display:         flex;
@@ -28,8 +29,8 @@ class PageHeader extends React.Component {
       <StyledPageHeader>
 
         <div className="text-left d-flex">
-          {onNavToggle &&
-          <Button onClick={()=>onNavToggle()}><Icon name="menu" height={height} width={height}/></Button>
+          {!ui.sidebar.open && 
+          <Button onClick={()=>ui.toggleSidebar()}><Icon name="menu" height={height} width={height}/></Button>
           }
           {onBack &&
           <Link style={{display:'flex',alignItems:'center'}} to={'..'} onClick={()=>onBack()}><Icon name="back" height={height} width={height}/></Link>
