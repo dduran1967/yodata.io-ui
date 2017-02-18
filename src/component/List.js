@@ -1,6 +1,7 @@
 import React from 'react';
 import {lit} from '../lib/rdf-utilities';
 import Link from 'react-router-dom/Link';
+import {noop} from 'lodash';
 
 const ListView = ({listItems = []}) =>
   <div className="ListView">
@@ -10,7 +11,7 @@ const ListView = ({listItems = []}) =>
           key={key || id}
           to={linkTo || '#'}
           className="list-group-item list-group-item-action media"
-          onClick={(e) => onClick(id)}>
+          onClick={(e) => onClick ? onClick(id) : noop}>
           <div className="media-body">
             <h5 className="media-heading">{lit(label)}</h5>
             {lit(description)}

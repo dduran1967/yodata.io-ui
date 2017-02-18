@@ -1,7 +1,7 @@
 import React from 'react';
 import PropertiesListView from '../type/properties.list.view';
-import {PageHeader, Link, List} from '../component'
-import {lit, sym} from '../lib/rdf-utilities';
+import {PageHeader, Link} from '../component'
+import {lit} from '../lib/rdf-utilities';
 import {observer} from 'mobx-react';
 
 const ActionView = ({store, location}) => {
@@ -22,7 +22,7 @@ const ActionView = ({store, location}) => {
       {subject.superTypes.map(({id, label}) =>
         <Link
           key={id}
-          to={"/type/view/#" + id}
+          to={"/action/view/#" + id}
           className="breadcrumb-item">
           {lit(label)}
         </Link>

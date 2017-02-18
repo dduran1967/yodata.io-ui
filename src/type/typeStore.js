@@ -213,11 +213,3 @@ class TypeStore {
 window.Type = Type;
 const typeStore = window.types = new TypeStore();
 export default observable(typeStore);
-
-autorun(function typeStoreAutorun() {
-  if (typeStore.ready) {
-    if (location.hash && !typeStore.currentsubjectId) {
-      typeStore.setCurrentSubject(location.hash.substring(1));
-    }
-  }
-});
