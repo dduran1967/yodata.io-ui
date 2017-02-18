@@ -50,6 +50,60 @@ export function createId() {
   return uuid();
 }
 
+export function forceArray(value) {
+  if (Array.isArray(value)) {
+    return value;
+  }
+  if (typeof value === 'undefined' || value === null) {
+    return [];
+  }
+  return new Array(value);
+}
+
+
+export function mergeValues(currentValue, value) {
+
+  if (typeof value === 'undefined') {
+    return currentValue;
+  }
+
+  if (typeof currentValue === 'undefined') {
+    return value;
+  }
+
+  if (currentValue === value) {
+    return currentValue;
+  }
+
+  if (Array.isArray(currentValue)) {
+    return currentValue.includes(value) ? currentValue : currentValue.push(value);
+  }
+
+  return [currentValue, value];
+}
+
+
+export function toJson(statements = [], options) {
+  const doc = {};
+  const opts = options || {};
+  const context = opts.context;
+  statements.forEach(function ({subject, predicate, object}) {
+    let id = subject.value;
+    let eid = context[subject] || subject.value;
+    let attribute = context[predicate] || predicate;
+    let value = context[object] || object;
+
+    if (doc[eid]) {
+      let currentValue = doc[eid][attribute];
+      doc[eid][attribute] = mergeValues(currentValue, value);
+      return;
+    }
+    doc[eid] = {id: id, [attribute]: value}
+  });
+
+  return doc;
+}
+
 export default {
   docname,
   lit,
@@ -57,5 +111,4 @@ export default {
 }
 
 window.$rdf = $rdf;
-
 window.lit = lit;

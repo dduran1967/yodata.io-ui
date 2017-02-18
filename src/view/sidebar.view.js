@@ -13,15 +13,15 @@ function Sidebar({open, toggleSidebar, onNav}) {
         </div>
 
         <Nav stacked>
-          <NavLink to="/">
+          <NavLink to="/" onClick={toggleSidebar} >
             <Icon name="home" style={{marginRight: '1em'}}/>
             Home
           </NavLink>
-          <NavLink to="/stream/" >
+          <NavLink to="/stream/" onClick={toggleSidebar}>
             <Icon name="stream" style={{marginRight: '1em'}}/>
             Streams
           </NavLink>
-          <NavLink to="/action">
+          <NavLink to="/action" onClick={toggleSidebar}>
             <Icon name="applications" style={{marginRight: '1em'}}/>
             Actions
           </NavLink>

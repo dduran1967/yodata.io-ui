@@ -84,7 +84,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "aws s3 sync build/ s3://yodata.io-ui"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -117,6 +117,5 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "homepage": "https://dduran1967.github.io/yodata.io-ui"
+  }
 }

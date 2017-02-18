@@ -1,41 +1,81 @@
-import {extendObservable, action} from 'mobx';
-import {createId} from '../lib/rdf-utilities';
+import {extendObservable, action, autorun} from 'mobx';
 import solid from 'solid-client';
 import {values} from 'lodash';
 
 class Stream {
-  constructor(props){
+  constructor(props) {
+    Object.assign(this,props);
     extendObservable(this, {
-      id:   undefined,
-      type: undefined,
-      name: undefined,
-      hasBeenLoaded: false,
-    values: [],
-      ...props,
-      createOnNext: action('stream:createOnNext', (e)=>{
-        let slug = Date.now() + '.json';
-        let doc = JSON.stringify(e);
-        solid.web.post(this.id, doc, slug)
-             .then(response => console.log(response))
-             .catch(err => console.error(err));
-      }),
-      load: action('stream:load',()=>{
-        solid.web.get(this.id)
-        .then(container => {
-          let events = values(container.resource.resources).map(event => {
-            return {
-              name: event.name,
-              type: event.types,
-              id: event.uri,
-            }
+      values: [],
+      currentValue: {},
+      showValue: false,
+      createOnNext: action('stream:createOnNext', (e) => {
+        const self = this;
+        solid
+          .web
+          .post(this.id,JSON.stringify(e,null,1))
+          .then(response=>{
+            let {url} = response;
+            self.values.push({
+              id:url,
+              name: url.slice(self.id.length),
+              data: {...e}
+            });
           });
-          this.values = this.values.concat(events);
-          this.hasBeenLoaded = true;
+      }),
+      fetchOne: action('stream:fetchOne', (url) => {
+        fetch(url)
+        .then((response)=>{
+          console.log('this=',this);
         })
+      }),
+      load: action('stream:load', () => {
+        const self = this;
+        solid
+          .web
+          .get(this.id)
+          .then(solidResponse => {
+            let {resources} = solidResponse.resource;
+            values(resources).forEach(doc => {
+              self.values.push({
+                id: doc.uri,
+                name: doc.name
+              })
+            })
+            this.hasBeenLoaded = true;
+          })
+      }),
+      setCurrentValue: action('stream:setCurrentValue',(url)=>{
+        const self = this;
+        fetch(url)
+        .then(response=>{
+          let contentType = response.headers.get('content-type');
+          switch(contentType){
+            case 'application/json':
+              response.json()
+              .then(data => {
+                self.currentValue = data
+                self.showValue = true;
+              });
+              break;
+            case 'text/turtle':
+              response.text()
+              .then(JSON.parse)
+              .then(data => {
+                self.currentValue = {id:url, ...data};
+                self.showValue = true;
+              })
+              break;
+            default:
+              console.error('unhandled contentType', contentType);
+          }
+        })
+      }),
+      postNewEventsToSolid: autorun('postNewEventsToSolid',function(){
+        console.debug('NEW EVENT',arguments);
       })
     });
   }
-
 }
 
 window.Stream = Stream;

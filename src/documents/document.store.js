@@ -1,5 +1,5 @@
 // @flow
-import {observable, extendObservable, action, autorun} from 'mobx';
+import {extendObservable, action, autorun} from 'mobx';
 import solid from 'solid-client';
 import user from '../store/user';
 

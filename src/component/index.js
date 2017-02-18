@@ -42,3 +42,4 @@ export {default as Button} from './Button';
 export {default as Link} from './Link';
 export {default as Nav, NavLink} from './Nav';
 export {default as List} from './List';
+export {default as HttpCodeExample} from './httpCodeExample';

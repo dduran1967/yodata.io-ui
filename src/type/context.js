@@ -1,4 +1,5 @@
 import {Namespace} from 'rdflib';
+import {invert} from 'lodash';
 
 // Namespaces
 const acl = Namespace('http://www.w3.org/ns/auth/acl#')
@@ -10,11 +11,14 @@ const rdf = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 const rdfs = Namespace('http://www.w3.org/2000/01/rdf-schema#')
 const schema = Namespace('http://schema.org/')
 const owl = Namespace('http://www.w3.org/2002/07/owl#')
+const posix = Namespace('http://www.w3.org/ns/posix/stat#')
 const skos = Namespace('http://www.w3.org/2004/02/skos/core#')
 const vann = Namespace('http://purl.org/vocab/vann/')
 const vs = Namespace('http://www.w3.org/2003/06/sw-vocab-status/ns#')
 const xsd = Namespace('http://www.w3.org/2001/XMLSchema#')
 const link = Namespace('http://www.w3.org/2007/ont/link#')
+
+
 
 export const NAMESPACE = {
   acl,
@@ -30,7 +34,8 @@ export const NAMESPACE = {
   vann,
   vs,
   xsd,
-  link
+  link,
+  posix
 }
 
 const baseTypes = {
@@ -49,12 +54,14 @@ const baseTypes = {
 
 export const context = {
   allValuesFrom:            owl('allValuesFrom'),
+  bytes:                    posix('size'),
   contributor:              dc('contributor'),
   creator:                  dc('creator'),
   contains:                 ldp('contains'),
   deprecated:               owl('deprecated'),
   description:              rdfs('comment'),
   disjointWith:             owl('disjointWith'),
+  dateModified:             schema('dateModified'),
   domain:                   schema('domainIncludes'),
   equivalentClass:          owl('equivalentClass'),
   equivalentProperty:       owl('equivalentProperty'),
@@ -68,6 +75,7 @@ export const context = {
   mainEntityOfPage:         schema('mainEntityOfPage'),
   minCardinality:           owl('minCardinality'),
   minQualifiedCardinality:  owl('minQualifiedCardinality'),
+  modificationTimestamp:    posix('mtime'),
   note:                     skos('note'),
   onClass:                  owl('onClass'),
   onDataRange:              owl('onDataRange'),
@@ -95,6 +103,7 @@ export const context = {
 export const sameAs = [
   [rdfs('domain'), schema('domainIncludes')],
   [rdfs('range'), schema('rangeIncludes')],
+  [dc('modified'), schema('dateModified')]
 ]
 
 export const PROPERTY_TYPES = [
@@ -113,5 +122,7 @@ export const CLASS_TYPES = [
   'http://www.w3.org/2000/01/rdf-schema#Datatype',
   'http://www.w3.org/2002/07/owl#DeprecatedClass',
   'http://purl.org/dc/terms/AgentClass'];
+
+export const CONTEXT_IN = invert(context);
 
 export default context;

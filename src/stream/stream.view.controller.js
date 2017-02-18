@@ -8,14 +8,14 @@ import StreamView from '../stream/stream.view';
 class StreamViewController extends React.Component {
 
   render() {
-    console.log('StreamViewController',this);
     let {store} = this.props;
     let {sidebar, toggleSidebar} = store.ui;
     let streams = store.streams;
-    let currentStream = streams.currentStream;
     let headerConfig = {
-      title:           currentStream ? currentStream.name : 'Streams',
-      onNavToggle:     !sidebar.open ? toggleSidebar : undefined
+      title: 'Streams',
+      onNavToggle: !sidebar.open
+        ? toggleSidebar
+        : undefined
     };
     return (
       <div>
@@ -26,19 +26,16 @@ class StreamViewController extends React.Component {
         <main className="p-3">
           <Switch>
             <Route
-              path={"/stream/:name"}
+              path={"/stream/:streamName"}
               component={StreamView}
-              stream={streams.currentStream}
+              store={store}
             />
-            <Route
-              component={List}
-              listItems={streams.values().map(v=>({
-                id:     v.name,
-                label:  v.name,
-                linkTo: '/stream/' + v.name,
-                onClick: (id)=>streams.currentStream = streams.get(id)
-              }))}
-            />
+            <Route component={List} listItems={streams.values().map(v => ({
+              id: v.name,
+              label: v.name,
+              linkTo: '/stream/' + v.name,
+              onClick: (id) => streams.currentStream = streams.get(id)
+            }))}/>
           </Switch>
         </main>
       </div>

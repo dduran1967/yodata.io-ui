@@ -8,7 +8,7 @@ const ListView = ({listItems = []}) =>
       {listItems.map(({key, id, label, description, linkTo, onClick}) =>
         <Link
           key={key || id}
-          to={linkTo}
+          to={linkTo || '#'}
           className="list-group-item list-group-item-action media"
           onClick={(e) => onClick(id)}>
           <div className="media-body">

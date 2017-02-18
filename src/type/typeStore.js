@@ -1,41 +1,10 @@
 // @flow
 import {observable, extendObservable, action, computed, autorun} from 'mobx';
-import {union, invert, get as getValue, set as setValue} from 'lodash';
+import {invert, get as getValue, set as setValue} from 'lodash';
 import $rdf from 'rdflib';
 import CONTEXT, {sameAs as SAMEAS, NAMESPACE} from './context';
-import {sym} from '../lib/rdf-utilities';
+import {sym, mergeValues, lit} from '../lib/rdf-utilities';
 import Type from './Type';
-
-function forceArray(value) {
-  if (Array.isArray(value)) {
-    return value;
-  }
-  if (typeof value === 'undefined' || value === null) {
-    return [];
-  }
-  return new Array(value);
-}
-
-function mergeValues(currentValue, value) {
-
-  if (typeof value === 'undefined') {
-    return currentValue;
-  }
-
-  if (typeof currentValue === 'undefined') {
-    return forceArray(value);
-  }
-
-  if (currentValue === value) {
-    return currentValue;
-  }
-
-  if (Array.isArray(currentValue)) {
-    return union(currentValue, forceArray(value));
-  }
-
-  return [currentValue, value];
-}
 
 class TypeStore {
   constructor() {
@@ -89,11 +58,11 @@ class TypeStore {
         })
       }),
       setCurrentSubject: action('setCurrentSubject', function (id) {
-        this.currentSubjectId = id ? sym(id) : undefined;
+        this.currentSubjectId = sym(id)
       }),
       setFilter:         action('setFilter', function (val) {
         this.filter = val;
-      })
+      }),
     });
     this.fetch('https://devtest.yodata.me/test/schema.nt');
   }
@@ -122,7 +91,6 @@ class TypeStore {
 
     return result;
   }
-
 
   findOne = node => {
     return this.graph
@@ -213,6 +181,7 @@ class TypeStore {
                  .sort()
     }
     console.debug('propertiesOfDeep called with undefined subject');
+    return [];
   }
 
   propertiesOf = subject => {
@@ -225,6 +194,20 @@ class TypeStore {
     console.debug('propertiesOf called with undefined subject')
   }
 
+  getSubject = uri => {
+    if(!uri) return;
+    let subjectNode = sym(uri);
+    let props = this.findOne(subjectNode);
+    return {
+      id: uri,
+      type: props.type,
+      label: lit(props.label),
+      description: lit(props.description),
+      superTypes: this.superTypesOf(subjectNode).map(this.findOne),
+      properties: this.propertiesOfDeep(subjectNode).map(this.findOne),
+    }
+  }
+
 }
 
 window.Type = Type;
@@ -232,9 +215,7 @@ const typeStore = window.types = new TypeStore();
 export default observable(typeStore);
 
 autorun(function typeStoreAutorun() {
-  console.debug('typeStoreAutorun', this);
   if (typeStore.ready) {
-    console.debug('typeStoreReady', this);
     if (location.hash && !typeStore.currentsubjectId) {
       typeStore.setCurrentSubject(location.hash.substring(1));
     }
