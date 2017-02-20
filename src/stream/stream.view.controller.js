@@ -30,11 +30,10 @@ class StreamViewController extends React.Component {
               component={StreamView}
               store={store}
             />
-            <Route component={List} listItems={streams.values().map(v => ({
+            <Route component={List} listItems={streams.items.map(v => ({
               id: v.name,
               label: v.name,
               linkTo: '/stream/' + v.name,
-              onClick: (id) => streams.currentStream = streams.get(id)
             }))}/>
           </Switch>
         </main>

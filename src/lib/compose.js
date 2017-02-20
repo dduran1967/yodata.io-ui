@@ -10,7 +10,7 @@
  * (...args) => f(g(h(...args))).
  */
 
-export function compose(...funcs) {
+export default function compose(...funcs) {
   if (funcs.length === 0) {
     return (arg) => arg
   } else {

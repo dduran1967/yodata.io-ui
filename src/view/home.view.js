@@ -17,7 +17,7 @@ class Home extends React.Component {
         <PageHeader
           {...headerConfig}
         />
-        <div className="p-3">
+        <div className="p-3 foo">
           <h4>How it works</h4>
           [ insert image here ]
         </div>

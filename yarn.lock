@@ -6012,6 +6012,10 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
+stampit@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/stampit/-/stampit-3.1.2.tgz#8bd956b2f1ccbdb1ed2bec4af4fce4a0120a0388"
+
 "standard-error@>= 1.1.0 < 2":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/standard-error/-/standard-error-1.1.0.tgz#23e5168fa1c0820189e5812701a79058510d0d34"

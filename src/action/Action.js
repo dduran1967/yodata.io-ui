@@ -1,35 +1,24 @@
 // @flow
 import uuid from 'uuid/v1';
 
-class Action {
-  constructor(props) {
-    Object.assign(this, {
-      id:          uuid(),
-      type:        'Action',
-      label:       '',
-      name:        '',
-      description: '',
-      properties:  {},
-      ...props
-    });
-  }
-
-  get termType() {
-    return 'NamedNode'
-  }
-
-  get uri() {
-    return this.id;
-  }
-
-  addProperty = ({id, type, label, description}) => {
-    this.properties[id] = {id, type, label, description};
-  }
-
-  toNT = () => `<${this.id}>`;
+type Property = {
+  id: string,
+  type: string,
+  label: string,
+  description: string
 }
 
-export default Action
+class ActionDescriptor {
+  id: string
+  type: string
+  label: string
+  description: string
+  implements: ActionDescriptor[]
+  property: {[key:string]: Property}
 
-window.$Action = Action;
+  constructor = () => {
+    this.id = uuid();
+  }
+}
 
+export default ActionDescriptor;

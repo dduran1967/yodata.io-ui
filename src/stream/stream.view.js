@@ -35,18 +35,18 @@ class StreamView extends React.Component {
   updateMessageData = (v) => this.setState({messageData: v})
 
   render() {
-    let {store, match,} = this.props;
+    let {store, match} = this.props;
     let streamName = match.params.streamName;
-    if (!streamName)
-      return null;
-
     let streams = store.streams;
     let stream = streams.get(streamName);
+    console.debug('stream=',stream);
     if (!stream)
       return null;
 
     return (
       <div className="px-3">
+
+        <h1>StreamView</h1>
 
         <section className="mb-4">
           <h6 className="section-title">ACCEPTS ACTIONS:</h6>
@@ -60,11 +60,13 @@ class StreamView extends React.Component {
 
         <section className="mb-4">
           <h6 className="section-title">SEND EVENT</h6>
+
           <HttpCodeExample
-            url={stream.id}
+            url={stream.url}
             method="post"
             body={this.state.messageData}
           />
+
         </section>
 
         <section className="mb-4">
@@ -79,7 +81,7 @@ class StreamView extends React.Component {
           </div>
         </section>
 
-        {stream.values.length > 0 &&
+        {stream.items.length > 0 &&
           <section className="mb-4">
             <StreamEventsView stream={stream} values={stream.values}/>
           </section>
@@ -88,7 +90,7 @@ class StreamView extends React.Component {
         <section className="mb-4">
           <h6 className="section-title">GET AN EVENT</h6>
           <HttpCodeExample
-            url={stream.id+'[eventid]'}
+            url={stream.url+'[eventid]'}
             method="get"
             body={JSON.stringify(stream.currentValue,null,3)}
           />

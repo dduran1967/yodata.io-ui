@@ -2,6 +2,7 @@ import React from 'react'
 
 const HttpCodeExample = props => {
   if(!props.url) return null;
+  console.debug(props);
   let body = props.body;
   let url = new URL(props.url);
   let method = String.prototype.toUpperCase.call(props.method);

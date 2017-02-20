@@ -23,13 +23,13 @@ const StyledPageHeader = styled.header`
 
 class PageHeader extends React.Component {
   render() {
-    let {title, onNavToggle, onBack, onNext, onClose, potentialAction} = this.props
+    let {title, onBack, onNext, onClose, potentialAction} = this.props
     let height = '24';
     return (
       <StyledPageHeader>
 
         <div className="text-left d-flex">
-          {!ui.sidebar.open && 
+          {!ui.sidebar.open &&
           <Button onClick={()=>ui.toggleSidebar()}><Icon name="menu" height={height} width={height}/></Button>
           }
           {onBack &&

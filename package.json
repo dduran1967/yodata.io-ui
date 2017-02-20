@@ -76,6 +76,7 @@
     "rebass": "^0.3.4",
     "reflexbox": "^2.2.3",
     "solid-client": "^0.23.7",
+    "stampit": "^3.1.2",
     "styled-components": "^1.4.3",
     "uuid": "^3.0.1"
   },

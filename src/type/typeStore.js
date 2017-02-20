@@ -1,66 +1,110 @@
 // @flow
-import {observable, extendObservable, action, computed, autorun} from 'mobx';
+import {observable, extendObservable, action, computed,} from 'mobx';
 import {invert, get as getValue, set as setValue} from 'lodash';
 import $rdf from 'rdflib';
 import CONTEXT, {sameAs as SAMEAS, NAMESPACE} from './context';
-import {sym, mergeValues, lit} from '../lib/rdf-utilities';
+import {sym, mergeValues, lit, toJson} from '../lib/rdf-utilities';
 import Type from './Type';
 
+type NamedNode = {
+  termType: "NamedNode",
+  value: string
+}
+type NamedNodeMap = {
+  [key : string]: NamedNode
+};
+type Literal = {
+  termType: "Literal",
+  value: string,
+  lang?: string,
+  datatype?: NamedNode
+}
+
+const computedValues = {
+  ready: computed(function(){
+    return !this.loading;
+  })
+}
+
 class TypeStore {
+  graph : $rdf.IndexedFormula
+  fetcher : $rdf.Fetcher
+  loading : boolean
+  context : NamedNodeMap
+  inverseContext: {[key:string]:string}
+  namespace : {[key:string]: Function}
+  statements : Array<Object>
+
   constructor() {
     this.graph = $rdf.graph();
     this.fetcher = $rdf.fetcher(this.graph);
+    this.context = {
+      ...CONTEXT
+    };
+    this.namespace = {
+      ...NAMESPACE
+    };
     this.equateAll(SAMEAS);
     extendObservable(this, {
-      loading:           true,
-      ready:             computed(() => !this.loading),
-      context:           {...CONTEXT},
-      namespace:         {...NAMESPACE},
-      statements:        [],
-      filter:            '',
-      matches:           [],
-      currentSubjectId:  undefined,
-      currentSubject:    computed(function () {
+      loading: true,
+      statements: [],
+      filter: '',
+      matches: [],
+      currentSubjectId: undefined,
+      ready: computed(() => !this.loading),
+      currentSubject: computed(function() {
         if (this.currentSubjectId && this.ready) {
           let id = this.currentSubjectId;
           let props = this.findOne(id);
           return {
             ...props,
-            id:         id,
-            superTypes: this.superTypesOf(id).map(this.findOne),
-            properties: this.propertiesOfDeep(id).map(this.findOne),
+            id: id,
+            superTypes: this
+              .superTypesOf(id)
+              .map(this.findOne),
+            properties: this
+              .propertiesOfDeep(id)
+              .map(this.findOne),
           }
         }
         return undefined;
       }),
-      inverseContext:    computed(function () {
+      inverseContext: computed(function(): {[key:string]:string} {
         return invert(this.context);
       }),
-      list:              computed(function () {
+      list: computed(function() {
         let ns = this.namespace;
         let type = ns.rdf('type');
         let Type = ns.rdfs('Class');
-        return this.statements
-                   .filter(st => (st.predicate.equals(type) && st.object.equals(Type)))
-                   .map(({subject}) => subject)
+        return this
+          .statements
+          .filter(st => (st.predicate.equals(type) && st.object.equals(Type)))
+          .map(({subject}) => subject)
       }),
-      json:              computed(function () {
-        return this.toJson(this.matches.length > 0 ? this.matches : this.statements);
+      json: computed(function() {
+        return this.toJson(this.matches.length > 0
+          ? this.matches
+          : this.statements);
       }),
-      add:               action('addType', function addType(type) {
-        this.items.push(type);
+
+      add: action('addType', function addType(type) {
+        this
+          .items
+          .push(type);
       }),
-      fetch:             action('fetchType', function (url) {
+      fetch: action('fetchType', function(url) {
         this.loading = true;
-        this.fetcher.get(url, () => {
-          this.statements = this.graph.statements;
-          this.loading = false;
-        })
+        this
+          .fetcher
+          .get(url, () => {
+            this.statements = this.graph.statements;
+            this.loading = false;
+          })
       }),
-      setCurrentSubject: action('setCurrentSubject', function (id) {
+      setCurrentSubject: action('setCurrentSubject', function(id) {
         this.currentSubjectId = sym(id)
       }),
-      setFilter:         action('setFilter', function (val) {
+      setFilter: action('setFilter', function(val) {
         this.filter = val;
       }),
     });
@@ -93,63 +137,80 @@ class TypeStore {
   }
 
   findOne = node => {
-    return this.graph
-               .match(node)
-               .map(this.toContext)
-               .reduce((a, b) => {
-                 let {predicate, object} = b;
-                 if (!a[predicate]) {
-                   a[predicate] = [];
-                 }
-                 a[predicate].push(object);
-                 return a;
-               }, {id: node.value || null})
+    return this
+      .graph
+      .match(node)
+      .map(this.toContext)
+      .reduce((a, b) => {
+        let {predicate, object} = b;
+        if (!a[predicate]) {
+          a[predicate] = [];
+        }
+        a[predicate].push(object);
+        return a;
+      }, {
+        id: (node && node.value) || null
+      })
   }
 
   equateAll(pairs = []) {
     let g = this.graph;
-    pairs.forEach(([a, b]) => g.equate(a, b))
+    pairs.forEach(([a, b,]) => g.equate(a, b))
   }
 
   get types() {
     let {type, Type} = this.context;
-    return this.graph
-               .each(null, type, Type)
-               .sort()
-               .map(this.findOne);
+    return this
+      .graph
+      .each(null, type, Type)
+      .sort()
+      .map(this.findOne);
   }
 
   get actions() {
     let action = this.context.Action;
-    return this.subTypesOf(action).sort().map(this.findOne)
+    return this
+      .subTypesOf(action)
+      .sort()
+      .map(this.findOne)
   }
 
-  superTypesOf(subject: NamedNode): [] {
-    if (subject) {
-      let superTypes = this.graph.findSuperClassesNT(subject);
-      return Object.keys(superTypes)
-                   .map(id => this.graph.fromNT(id))
-                   .reverse();
+  superTypesOf = (subject: NamedNode): Array<NamedNode> => {
+    if(subject) {
+      let superTypes = this
+        .graph
+        .findSuperClassesNT(subject);
+      return Object
+        .keys(superTypes)
+        .map(id => this.graph.fromNT(id))
+        .reverse();
     }
     console.debug('superTypesOf called with undefined subject');
+    return [];
   }
 
   subTypesOf = type => {
-    let subTypes = this.graph.findSubClassesNT(type);
-    return Object.keys(subTypes).map(id => this.graph.fromNT(id));
+    let subTypes = this
+      .graph
+      .findSubClassesNT(type);
+    return Object
+      .keys(subTypes)
+      .map(id => this.graph.fromNT(id));
   }
 
   jsonReduce = (doc, {subject, predicate, object}) => {
-    let currentValue = getValue(doc, [subject, predicate]);
-    return setValue(doc, [subject, predicate], mergeValues(currentValue, object));
+    let currentValue = getValue(doc, [subject, predicate,]);
+    return setValue(doc, [
+      subject, predicate,
+    ], mergeValues(currentValue, object));
   }
 
   toContext = (statement) => {
     let ctx = this.inverseContext;
     return {
-      subject:   ctx[statement.subject] || statement.subject,
+      subject: ctx[statement.subject] || statement.subject,
       predicate: ctx[statement.predicate] || statement.predicate,
-      object:    ctx[statement.object] || statement.object,
+      object: ctx[statement.object] || statement.object,
     }
   }
 
@@ -157,7 +218,7 @@ class TypeStore {
     const doc = {};
     const opts = options || {};
     const context = opts.context || invert(CONTEXT);
-    statements.forEach(function ({subject, predicate, object}) {
+    statements.forEach(function({subject, predicate, object}) {
       let id = subject.value;
       let eid = context[subject] || subject.value;
       let attribute = context[predicate] || predicate;
@@ -168,7 +229,10 @@ class TypeStore {
         doc[eid][attribute] = mergeValues(currentValue, value);
         return;
       }
-      doc[eid] = {id: id, [attribute]: value}
+      doc[eid] = {
+        id: id,
+        [attribute]: value
+      }
     });
 
     return doc;
@@ -176,9 +240,10 @@ class TypeStore {
 
   propertiesOfDeep = subject => {
     if (subject) {
-      return this.superTypesOf(subject)
-                 .reduce((a, b) => a.concat(this.propertiesOf(b)), [])
-                 .sort()
+      return this
+        .superTypesOf(subject)
+        .reduce((a, b) => a.concat(this.propertiesOf(b)), [])
+        .sort()
     }
     console.debug('propertiesOfDeep called with undefined subject');
     return [];
@@ -186,16 +251,20 @@ class TypeStore {
 
   propertiesOf = subject => {
     if (subject) {
-      let propertyOf = this.namespace.rdfs('domain');
-      return this.graph
-                 .each(null, propertyOf, subject)
-                 .sort()
+      let propertyOf = this
+        .namespace
+        .rdfs('domain');
+      return this
+        .graph
+        .each(null, propertyOf, subject)
+        .sort()
     }
     console.debug('propertiesOf called with undefined subject')
   }
 
   getSubject = uri => {
-    if(!uri) return;
+    if (!uri)
+      return;
     let subjectNode = sym(uri);
     let props = this.findOne(subjectNode);
     return {
@@ -203,8 +272,12 @@ class TypeStore {
       type: props.type,
       label: lit(props.label),
       description: lit(props.description),
-      superTypes: this.superTypesOf(subjectNode).map(this.findOne),
-      properties: this.propertiesOfDeep(subjectNode).map(this.findOne),
+      superTypes: this
+        .superTypesOf(subjectNode)
+        .map(this.findOne),
+      properties: this
+        .propertiesOfDeep(subjectNode)
+        .map(this.findOne),
     }
   }
 
@@ -213,3 +286,8 @@ class TypeStore {
 window.Type = Type;
 const typeStore = window.types = new TypeStore();
 export default observable(typeStore);
+
+const typeStoreAutorun = () => {
+
+
+}

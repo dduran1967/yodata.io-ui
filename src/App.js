@@ -7,12 +7,15 @@ import {Route, Switch} from 'react-router-dom';
 import TypeViewController from './type';
 import Sidebar from './view/sidebar.view';
 import styleConfig from './style/config';
-import './style/index.css';
+import './style/index.scss';
 import 'codemirror/lib/codemirror.css';
 import ActionViewController from './action';
 import StreamViewController from './stream/stream.view.controller';
 import HomeView from './view/home.view';
-require('./action');
+
+// autorun componnts
+require('./lib/solid-streams');
+require('./component/Collection');
 
 class App extends React.Component {
   static childContextTypes = {
