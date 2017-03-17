@@ -55,17 +55,15 @@ const StyledPageHeader = styled(PageHeader)`
     height:          96px;
     border-bottom:   solid 1px rgba(0, 0, 0, .25);
     color:           currentColor;
-    font-size:       48px;
+    font-size:       32px;
     line-height:     1;
     button {
       line-height:    inherit;
       vertical-align: middle;
     };
     svg {
-      font-size: 48px;
-      line-height: 48px;
-      height: 48px;
-      width: 48px;
+      height: 24px;
+      width: 24px;
     }
 `
 
@@ -76,9 +74,5 @@ PageHeader.propTypes = {
   onNext:      React.PropTypes.func,
   onClose:     React.PropTypes.func,
 }
-
-//const enhanced = compose(
-//  withDrawer()
-//)
 
 export default withDrawer(StyledPageHeader)

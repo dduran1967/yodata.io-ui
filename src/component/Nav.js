@@ -15,19 +15,17 @@ export const NavLink = styled(Link)`
   align-items:  flex-start;
   color: inherit;
   border-bottom: solid 1px #555;
+  padding: 16px;
+  font-size: 16px;
   text-decoration: none;
-  font-size: 1.5em;
-  line-height: 3;
-  padding: 0 .5rem;
   &:hover, &:focus {
     background-color: rgba(255,255,255,.2);
     color: white;
     text-decoration: none;
   }
   svg {
-    height: 28px;
-    width: 28px;
-    margin: 16px 0;
+    height: 24px;
+    width: 24px;
   }
 `
 
