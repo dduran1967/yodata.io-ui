@@ -1,95 +1,63 @@
-// @flow
+import React, {PropTypes} from 'react';
 
-import {observable} from 'mobx';
-import stampit from 'stampit';
-import Collection from '../component/Collection';
-import Resource from '../component/Resource';
+const Stream = ({name}) => (
+  <div className="px-3">
 
-const Stream =
-  stampit()
-  .compose(Resource, Collection)
-  .props({
-    acceptsType: [],
-    typeName: 'Stream',
-  })
+    <section className="mb-4">
+      <h6 className="section-title">ACCEPTS ACTIONS:</h6>
+      <div className="list-group">
+        <div className="list-group-item d-flex justify-content-between">
+          <div>RegisterAction</div>
+          <div><Link to="/action/view/#http://schema.org/RegisterAction">SCHEMA</Link></div>
+        </div>
+      </div>
+    </section>
 
-// class Stream {
-//   id: string
-//
-//   constructor(props) {
-//     Object.assign(this,props);
-//     extendObservable(this, {
-//       values: [],
-//       currentValue: {},
-//       showValue: false,
-//       createOnNext: action('stream:createOnNext', (e) => {
-//         const self = this;
-//         solid
-//           .web
-//           .post(this.id,JSON.stringify(e,null,1))
-//           .then(response=>{
-//             let {url} = response;
-//             self.values.push({
-//               id:url,
-//               name: url.slice(self.id.length),
-//               data: {...e}
-//             });
-//           });
-//       }),
-//       fetchOne: action('stream:fetchOne', (url) => {
-//         fetch(url)
-//         .then((response)=>{
-//           console.log('this=',this);
-//         })
-//       }),
-//       load: action('stream:load', () => {
-//         const self = this;
-//         solid
-//           .web
-//           .get(this.id)
-//           .then(solidResponse => {
-//             let {resources} = solidResponse.resource;
-//             values(resources).forEach(doc => {
-//               self.values.push({
-//                 id: doc.uri,
-//                 name: doc.name
-//               })
-//             })
-//             this.hasBeenLoaded = true;
-//           })
-//       }),
-//       setCurrentValue: action('stream:setCurrentValue',(url)=>{
-//         const self = this;
-//         fetch(url)
-//         .then(response=>{
-//           let contentType = response.headers.get('content-type');
-//           switch(contentType){
-//             case 'application/json':
-//               response.json()
-//               .then(data => {
-//                 self.currentValue = data
-//                 self.showValue = true;
-//               });
-//               break;
-//             case 'text/turtle':
-//               response.text()
-//               .then(JSON.parse)
-//               .then(data => {
-//                 self.currentValue = {id:url, ...data};
-//                 self.showValue = true;
-//               })
-//               break;
-//             default:
-//               console.error('unhandled contentType', contentType);
-//           }
-//         })
-//       }),
-//       postNewEventsToSolid: autorun('postNewEventsToSolid',function(){
-//         console.debug('NEW EVENT',arguments);
-//       })
-//     });
-//   }
-// }
+    <section className="mb-4">
+      <h6 className="section-title">SEND EVENT</h6>
+      <HttpCodeExample
+        url={stream.url}
+        method="post"
+        body={this.state.messageData}
+        contentType="text/plain"
+        comment={` note: use content-type of text/plain (not application/json) pending bugfix in next release\n`}
+      />
+      <div>RESPONSE</div>
+      <HttpCodeExample
+        status="201 Created"
+        headers={{
+              Location: stream.url + 'e95d2430...'
+            }}
+        body="Created"
+      />
+    </section>
 
-window.Stream = Stream;
-export default Stream
+    {/* <section className="mb-4">
+     <h6 className="section-title">SEND TEST EVENT</h6>
+     <div className="d-flex justify-content-between mb-3">
+     <div className="btn btn-outline-success">POST</div>
+     <input className="form-control mx-1" type="text" defaultValue={stream.url}/>
+     <button
+     className="btn btn-primary"
+     onClick={() => stream.sendMessage(JSON.parse(this.state.messageData))}>SEND
+     </button>
+     </div>
+     </section>
+
+     {stream.items.length > 0 &&
+     <section className="mb-4">
+     <StreamEventsView stream={stream} items={stream.items}/>
+     </section>
+     } */}
+
+    <section className="mb-4">
+      <h6 className="section-title">GET AN EVENT</h6>
+      <HttpCodeExample
+        url={stream.url+'[eventid]'}
+        method="get"
+        body={JSON.stringify(stream.currentValue,null,3)}
+      />
+    </section>
+
+  </div>
+)

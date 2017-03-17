@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {PropTypes} from 'react'
 
 const icons = {
   applications: {d: "M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"},
   blank:        {},
   back:         {d: "M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"},
   close:        {d: 'M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'},
-  code:         {d: "M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"},
+  reaction:     {d: "M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"},
   connect:      {d: "M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"},
   dashboard:    {d: "M12.984 3h8.016v6h-8.016v-6zM12.984 21v-9.984h8.016v9.984h-8.016zM3 21v-6h8.016v6h-8.016zM3 12.984v-9.984h8.016v9.984h-8.016z"},
   documents:    {d: "M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"},
@@ -16,52 +16,47 @@ const icons = {
   search:       {d: 'M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'},
   user:         {d: "M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"},
   stream:       {d: "M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm7-7H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-1.75 9c0 .23-.02.46-.05.68l1.48 1.16c.13.11.17.3.08.45l-1.4 2.42c-.09.15-.27.21-.43.15l-1.74-.7c-.36.28-.76.51-1.18.69l-.26 1.85c-.03.17-.18.3-.35.3h-2.8c-.17 0-.32-.13-.35-.29l-.26-1.85c-.43-.18-.82-.41-1.18-.69l-1.74.7c-.16.06-.34 0-.43-.15l-1.4-2.42c-.09-.15-.05-.34.08-.45l1.48-1.16c-.03-.23-.05-.46-.05-.69 0-.23.02-.46.05-.68l-1.48-1.16c-.13-.11-.17-.3-.08-.45l1.4-2.42c.09-.15.27-.21.43-.15l1.74.7c.36-.28.76-.51 1.18-.69l.26-1.85c.03-.17.18-.3.35-.3h2.8c.17 0 .32.13.35.29l.26 1.85c.43.18.82.41 1.18.69l1.74-.7c.16-.06.34 0 .43.15l1.4 2.42c.09.15.05.34-.08.45l-1.48 1.16c.03.23.05.46.05.69z"},
-
+  action:       {d: "M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"},
 }
 
+
 function SvgIcon({
-  backgroundColor,
-  color,
+  fill,
   height,
   name,
   width,
   viewBox,
-  ...props
+  xmlns,
+  className,
+  style,
+  ...rest
 }) {
   return (
-    <span className="d-inline-block" {...props}>
-      <svg
-        fill={color}
-        height={height}
-        width={width}
-        viewBox={viewBox}
-        xmlns="http://www.w3.org/2000/svg">
-        {true &&
-        <path {...icons[name]} />
-        }
-        <path d="M0 0h24v24H0z" fill={backgroundColor}/>
-      </svg>
-    </span>
+    <svg {...{xmlns, fill, height, width, viewBox, className} } >
+      <path {...icons[name]} />
+    </svg>
+
   )
 }
 
 SvgIcon.propTypes = {
-  backgroundColor: React.PropTypes.string,
-  color:           React.PropTypes.string,
-  height:          React.PropTypes.string,
-  name:            React.PropTypes.oneOf(Object.keys(icons)),
-  path:            React.PropTypes.string,
-  width:           React.PropTypes.string,
-  viewBox:         React.PropTypes.string,
+  name:      PropTypes.oneOf(Object.keys(icons)).isRequired,
+  color:     PropTypes.string,
+  height:    PropTypes.string,
+  path:      PropTypes.string,
+  width:     PropTypes.string,
+  viewBox:   PropTypes.string,
+  xmlns:     PropTypes.string,
+  className: React.PropTypes.string,
 }
 
 SvgIcon.defaultProps = {
-  backgroundColor: 'none',
-  color:           'currentColor',
-  height:          '24',
-  width:           '24',
-  viewBox:         '0 0 24 24',
-  name:            'blank',
+  xmlns:  'http://www.w3.org/2000/svg',
+  fill:   'currentColor',
+  name:   'blank',
+  width:  '24px',
+  height: '24px',
+  viewBox: '0 0 30 30'
 }
 
 export default SvgIcon;

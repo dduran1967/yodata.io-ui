@@ -2,7 +2,7 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import {sym, lit} from '../lib/rdf-utilities';
-import TypeView from '../action/action.view';
+import TypeView from '../action/ActionView';
 import TypeListView from './type.list.view';
 import {PageHeader} from '../component';
 import {observer} from 'mobx-react';

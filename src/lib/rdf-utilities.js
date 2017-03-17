@@ -1,5 +1,10 @@
-import $rdf from 'rdflib';
-import uuid from 'uuid/v1';
+// @flow
+import $rdf from 'rdflib'
+import uuid from 'uuid/v1'
+import {NAMESPACE} from '../schema/context.js'
+
+const TYPE = NAMESPACE.rdf('type');
+const CLASS = NAMESPACE.rdfs('Class')
 
 export function sym(v) {
   if (typeof v === 'string') {
@@ -60,7 +65,6 @@ export function forceArray(value) {
   return new Array(value);
 }
 
-
 export function mergeValues(currentValue, value) {
 
   if (typeof value === 'undefined') {
@@ -82,11 +86,8 @@ export function mergeValues(currentValue, value) {
   return [currentValue, value];
 }
 
-
-export function toJson(statements = [], options) {
+export function toJson(statements = [], context = {}) {
   const doc = {};
-  const opts = options || {};
-  const context = opts.context;
   statements.forEach(function ({subject, predicate, object}) {
     let id = subject.value;
     let eid = context[subject] || subject.value;
@@ -104,11 +105,24 @@ export function toJson(statements = [], options) {
   return doc;
 }
 
+export const mapStatementToContext = (statement, context) => {
+  let {subject, predicate, object, graph} = statement;
+  if (!context) return statement;
+  return {
+    subject:   context[subject] || subject,
+    predicate: context[predicate] || predicate,
+    object:    context[object] || object,
+    graph:     graph
+  }
+}
+
 export default {
   docname,
   lit,
-  sym
+  sym,
+  toJson
 }
 
 window.$rdf = $rdf;
 window.lit = lit;
+window.toJson = toJson;

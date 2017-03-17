@@ -1,8 +1,8 @@
 // @flow
-import React from 'react';
-import {Icon, Button, Link} from '../component';
-import styled from 'styled-components';
-import ui from '../store/ui';
+import React from 'react'
+import {Icon, Button, Link} from '../component'
+import styled from 'styled-components'
+import ui from '../store/ui'
 
 const StyledPageHeader = styled.header`
     display:         flex;
@@ -21,6 +21,10 @@ const StyledPageHeader = styled.header`
     }
 `
 
+function handleAction(action) {
+  console.log(action);
+}
+
 class PageHeader extends React.Component {
   render() {
     let {title, onBack, onNext, onClose, potentialAction} = this.props
@@ -33,13 +37,15 @@ class PageHeader extends React.Component {
           <Button onClick={()=>ui.toggleSidebar()}><Icon name="menu" height={height} width={height}/></Button>
           }
           {onBack &&
-          <Link style={{display:'flex',alignItems:'center'}} to={'..'} onClick={()=>onBack()}><Icon name="back" height={height} width={height}/></Link>
+          <Link style={{display:'flex',alignItems:'center'}} to={'..'} onClick={()=>onBack()}>
+            <Icon name="back" height={height} width={height}/>
+          </Link>
           }
           <h2 className="d-inline-block pl-3">{title}</h2>
         </div>
         <div className="text-right d-flex">
           {potentialAction && potentialAction.map(action => (
-            <Button key={Math.random()} onClick={action.onClick} rounded big>{action.name}</Button>
+            <Button key={action.name} onClick={()=>handleAction(action)} rounded big>{action.name}</Button>
           ))
           }
           {onNext &&
@@ -62,4 +68,4 @@ PageHeader.propTypes = {
   onClose:     React.PropTypes.func,
 }
 
-export default PageHeader;
+export default PageHeader

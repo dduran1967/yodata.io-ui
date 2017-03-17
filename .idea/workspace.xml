@@ -1,0 +1,1846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="add gh-pages">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.env" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/icon-add.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/icon-close.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/signup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/ActionList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/ActionRoot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/ActionView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/Actions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/actionViewController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/action_interface.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/actions_reducers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/consolidateActions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Collection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/RDFGraph.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Section.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/SectionTitle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Sidebar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/potentialAction.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/require_auth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/signin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/signout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/withActions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/helpers/addToSet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/helpers/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/helpers/updateObject.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/Graph.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/solid-client-lite.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/solid-client-lite.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/solid-client.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/solid-client.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/solid-streams.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logic/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/user_model.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reaction/ReactionRoot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reaction/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/router/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/router/routes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schema_actions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schema_graph.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schema_initial_state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schema_interface.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schema_logic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schema_reducer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schema_service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/auth_service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/const_service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/actions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/stream.store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/tabbar_store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/user.store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stores/auth_store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stores/crud_store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stores/register_store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stores/user_store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/ActionExample.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/StreamList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/StreamView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/_stream.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/sendEvent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/streamActions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/streamClient.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/streamInitalState.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/streamViewAction.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/stream_logic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/stream_reducer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/stream/withStreams.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/types/auth_types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/types/message_types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/types/tabbar_types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/types/user_types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/withUser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/Actions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/NotFound.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/ViewSelector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/signup.view.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/action/action.list.view.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/action/action.view.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/action/actionStore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/logo.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/store/user.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stream/stream.list.view.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stream/stream.view.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stream/streams.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/sidebar.view.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/component/Logo.js" afterPath="$PROJECT_DIR$/src/component/Logo.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/type/context.js" afterPath="$PROJECT_DIR$/src/schema/context.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/type/typeStore.js" afterPath="$PROJECT_DIR$/src/store/type.store.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/yodata.io-ui.iml" afterPath="$PROJECT_DIR$/.idea/yodata.io-ui.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/index.js" afterPath="$PROJECT_DIR$/src/action/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Button.js" afterPath="$PROJECT_DIR$/src/component/Button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/CodeEditor.js" afterPath="$PROJECT_DIR$/src/component/CodeEditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Drawer.js" afterPath="$PROJECT_DIR$/src/component/Drawer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Link.js" afterPath="$PROJECT_DIR$/src/component/Link.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/List.js" afterPath="$PROJECT_DIR$/src/component/List.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Nav.js" afterPath="$PROJECT_DIR$/src/component/Nav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/PageHeader.jsx" afterPath="$PROJECT_DIR$/src/component/PageHeader.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Signup.js" afterPath="$PROJECT_DIR$/src/component/Signup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/SvgIcon.js" afterPath="$PROJECT_DIR$/src/component/SvgIcon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/client/ClientDiscover.js" afterPath="$PROJECT_DIR$/src/component/client/ClientDiscover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/httpCodeExample.js" afterPath="$PROJECT_DIR$/src/component/httpCodeExample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/index.js" afterPath="$PROJECT_DIR$/src/component/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/documents/document.store.js" afterPath="$PROJECT_DIR$/src/documents/document.store.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/rdf-utilities.js" afterPath="$PROJECT_DIR$/src/lib/rdf-utilities.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/index.js" afterPath="$PROJECT_DIR$/src/store/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/ui.js" afterPath="$PROJECT_DIR$/src/store/ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/stream-events-view.js" afterPath="$PROJECT_DIR$/src/stream/stream-events-view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/stream.js" afterPath="$PROJECT_DIR$/src/stream/stream.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/stream.view.controller.js" afterPath="$PROJECT_DIR$/src/stream/stream.view.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/type/index.js" afterPath="$PROJECT_DIR$/src/type/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/connect.client.view.js" afterPath="$PROJECT_DIR$/src/view/connect.client.view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/home.view.js" afterPath="$PROJECT_DIR$/src/view/home.view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/index.js" afterPath="$PROJECT_DIR$/src/view/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="yodata.io-ui" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>opts</find>
+      <find>ready</find>
+      <find>ui</find>
+      <find>Section</find>
+      <find>List</find>
+      <find>action</find>
+      <find>styleed</find>
+      <find>dispathc</find>
+      <find>ADD_STREAM</find>
+      <find>selectedStream</find>
+      <find>stream</find>
+      <find>selected</find>
+      <find>list</find>
+      <find>fetcher</find>
+      <find>Home</find>
+      <find>this</find>
+      <find>findSuper</find>
+      <find>match</find>
+      <find>.fill</find>
+      <find>findOne</find>
+      <find>fill</find>
+      <find>findTypes</find>
+      <find>equateAll</find>
+      <find>match(</find>
+      <find>properties</find>
+      <find>toContext</find>
+      <find>findone</find>
+      <find>typeStore</find>
+      <find>actions</find>
+      <find>initial</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>currentSubject</replace>
+      <replace>setCurrentSubject</replace>
+      <replace>className</replace>
+      <replace>className=</replace>
+      <replace>icons</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/build</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="David Duran &lt;dduran1967@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/component/Section.js" />
+        <option value="$PROJECT_DIR$/src/component/SectionTitle.js" />
+        <option value="$PROJECT_DIR$/src/stream/streamReducer.js" />
+        <option value="$PROJECT_DIR$/src/type/context.js" />
+        <option value="$PROJECT_DIR$/src/component/CodeEditor.js" />
+        <option value="$PROJECT_DIR$/src/stream/stream.view.controller.js" />
+        <option value="$PROJECT_DIR$/src/stream/streamViewAction.js" />
+        <option value="$PROJECT_DIR$/src/stream/stream.view.js" />
+        <option value="$PROJECT_DIR$/src/stream/ActionExample.js" />
+        <option value="$PROJECT_DIR$/src/stream/streamLogic.js" />
+        <option value="$PROJECT_DIR$/src/stream/streamInitalState.js" />
+        <option value="$PROJECT_DIR$/src/view/viewNodes.js" />
+        <option value="$PROJECT_DIR$/src/user/user_container.js" />
+        <option value="$PROJECT_DIR$/src/user/UserProfile.js" />
+        <option value="$PROJECT_DIR$/src/user/index.js" />
+        <option value="$PROJECT_DIR$/src/user/user_interface.js" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/stream/stream.list.view.js" />
+        <option value="$PROJECT_DIR$/src/stream/streamConnector.js" />
+        <option value="$PROJECT_DIR$/src/schema/index.js" />
+        <option value="$PROJECT_DIR$/src/stream/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/action/index.js" />
+        <option value="$PROJECT_DIR$/src/component/index.js" />
+        <option value="$PROJECT_DIR$/src/view/ViewSelector.js" />
+        <option value="$PROJECT_DIR$/src/schema/schema_actions.js" />
+        <option value="$PROJECT_DIR$/src/schema/schema_interface.js" />
+        <option value="$PROJECT_DIR$/src/store/type.store.js" />
+        <option value="$PROJECT_DIR$/src/schema/schema_graph.js" />
+        <option value="$PROJECT_DIR$/src/schema/schema_logic.js" />
+        <option value="$PROJECT_DIR$/src/lib/rdf-utilities.js" />
+        <option value="$PROJECT_DIR$/src/lib/Graph.js" />
+        <option value="$PROJECT_DIR$/src/schema/schema_reducer.js" />
+        <option value="$PROJECT_DIR$/src/action/ActionView.js" />
+        <option value="$PROJECT_DIR$/src/stream/streamActions.js" />
+        <option value="$PROJECT_DIR$/src/action/ActionRoot.js" />
+        <option value="$PROJECT_DIR$/src/component/List.js" />
+        <option value="$PROJECT_DIR$/src/stream/StreamList.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/view/home.view.js" />
+        <option value="$PROJECT_DIR$/src/reaction/ReactionRoot.js" />
+        <option value="$PROJECT_DIR$/src/reaction/index.js" />
+        <option value="$PROJECT_DIR$/src/component/Debug.js" />
+        <option value="$PROJECT_DIR$/src/component/Link.js" />
+        <option value="$PROJECT_DIR$/src/component/Nav.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/component/SvgIcon.js" />
+        <option value="$PROJECT_DIR$/src/router/routes.js" />
+        <option value="$PROJECT_DIR$/src/component/Sidebar.js" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/component/Drawer.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <exe-path>/usr/local/bin/bower</exe-path>
+    <config-path />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path>/usr/local/bin/flow</exe-path>
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/functions/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="640" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="1413" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Ignore</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JSUnusedLocalSymbols</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource Scope="true" ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="view">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="stream">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="store">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="schema">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="router">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="component">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="action">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="js-jscs-package" value="$USER_HOME$/node_modules/jscs" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="invalidate&#9;ACTION&#9;InvalidateCaches&#10;invalid&#9;ACTION&#9;InvalidateCaches&#10;invali&#9;ACTION&#9;InvalidateCaches&#10;keys&#9;null&#9;null&#10;prett&#9;ACTION&#9;Tool_External Tools_Prettier&#10;type&#9;FILE&#9;file:///Users/dave/Dev/yodata/yodata.io-ui/src/type/typeStore.js&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;prettie&#9;ACTION&#9;Tool_External Tools_Prettier&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;term&#9;ACTION&#9;ActivateTerminalToolWindow&#10;index&#9;ACTION&#9;ES6.Generate.Index&#10;rest&#9;ACTION&#9;WebServicesPlugin.CreateRESTClient&#10;history&#9;ACTION&#9;Vcs.ShowTabbedFileHistory" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="jsgraphql-schema-editor-notification" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="js.eslint.eslintPackage" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="241" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="241" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="242" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="241" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="63" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="78" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="125" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="699" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="javascript.nodejs.core.library.configured.version" value="6.10.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib" />
+      <recent name="$PROJECT_DIR$/src/view" />
+      <recent name="$PROJECT_DIR$/src/action" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/type" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/schema" />
+      <recent name="$PROJECT_DIR$/src/lib" />
+      <recent name="$PROJECT_DIR$/src/action" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/router" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1490992997216" />
+                <option name="domain" value=".yodata.dave" />
+                <option name="name" value="connect.sid" />
+                <option name="path" value="/" />
+                <option name="value" value="s%3AdZNAf3ipRb6Bg-zA48hZ2AH7xnc6b0Jl.5JC1STvWMJiarnudzg3DCrEXqthbAR%2BHe8raSpSnQAM" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://dd5.yodata.dave:8443" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="dd5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="1badc0ffee" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://dd5.yodata.dave:8443" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="dd5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="1badc0ffee" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://yodata.dave:8443" />
+          <option name="urlPath" value="/api/accounts/new" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="dd5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="1badc0ffee" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://yodata.dave:8443" />
+          <option name="urlPath" value="/register" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="dd5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="1badc0ffee" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://yodata.dave:8443" />
+          <option name="urlPath" value="/login" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://yodata.dave:8443" />
+          <option name="urlPath" value="login" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://yodata.dave:8443" />
+          <option name="urlPath" value=".well-known/open-id" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://yodata.dave:8443" />
+          <option name="urlPath" value=".well-known/open-id-configuration" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://yodata.dave:8443" />
+          <option name="urlPath" value=".well-known/solid" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://devtest.yodata.me" />
+          <option name="urlPath" value="/stream/website" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://devtest.yodata.me" />
+          <option name="urlPath" value="/stream" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="false" name="eject" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="npm.eject" />
+      <item index="1" class="java.lang.String" itemvalue="npm.build" />
+      <item index="2" class="java.lang.String" itemvalue="npm.start" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="npm.build" />
+        <item index="1" class="java.lang.String" itemvalue="npm.start" />
+        <item index="2" class="java.lang.String" itemvalue="npm.eject" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_CLASSES" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="" />
+      <created>1486144436600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1486144436600</updated>
+      <workItem from="1486144437792" duration="34961000" />
+      <workItem from="1486235565416" duration="16738000" />
+      <workItem from="1486283942675" duration="68102000" />
+      <workItem from="1486482564606" duration="147774000" />
+      <workItem from="1486790507649" duration="33271000" />
+      <workItem from="1486849662850" duration="44000" />
+      <workItem from="1486849715989" duration="117000" />
+      <workItem from="1486849934108" duration="62659000" />
+      <workItem from="1486958477972" duration="69072000" />
+      <workItem from="1487127971828" duration="4000" />
+      <workItem from="1487129634133" duration="13000" />
+      <workItem from="1487129728362" duration="5000" />
+      <workItem from="1487135688214" duration="3000" />
+      <workItem from="1487136553675" duration="12000" />
+      <workItem from="1487142387906" duration="4000" />
+      <workItem from="1487176444333" duration="4000" />
+      <workItem from="1487178590957" duration="5000" />
+      <workItem from="1487182073834" duration="424000" />
+      <workItem from="1487189660298" duration="3000" />
+      <workItem from="1487192268960" duration="4000" />
+      <workItem from="1487222552871" duration="3000" />
+      <workItem from="1487224679739" duration="837000" />
+      <workItem from="1487236305325" duration="3188000" />
+      <workItem from="1487251535244" duration="7000" />
+      <workItem from="1487253751973" duration="17000" />
+      <workItem from="1487253926951" duration="3000" />
+      <workItem from="1487255947518" duration="3000" />
+      <workItem from="1487282470749" duration="2000" />
+      <workItem from="1487374640484" duration="1083000" />
+      <workItem from="1487426383409" duration="22000" />
+      <workItem from="1487427221877" duration="35000" />
+      <workItem from="1487434149178" duration="3000" />
+      <workItem from="1487441046831" duration="11351000" />
+      <workItem from="1487473356081" duration="96000" />
+      <workItem from="1487864644867" duration="503000" />
+      <workItem from="1487865290915" duration="473000" />
+      <workItem from="1487866879695" duration="551000" />
+      <workItem from="1488308576119" duration="2410000" />
+      <workItem from="1488488650767" duration="5474000" />
+      <workItem from="1488563985659" duration="6000" />
+      <workItem from="1488564002834" duration="8256000" />
+      <workItem from="1488578325582" duration="1479000" />
+      <workItem from="1488579844815" duration="8604000" />
+      <workItem from="1488602248764" duration="6110000" />
+      <workItem from="1488678035965" duration="5000" />
+      <workItem from="1488746018622" duration="83000" />
+      <workItem from="1488954549850" duration="1066000" />
+      <workItem from="1488978205925" duration="65000" />
+      <workItem from="1489031604117" duration="3769000" />
+      <workItem from="1489039249649" duration="3000" />
+      <workItem from="1489039261888" duration="21000" />
+      <workItem from="1489039295317" duration="5953000" />
+      <workItem from="1489064822618" duration="21607000" />
+      <workItem from="1489089775659" duration="3280000" />
+      <workItem from="1489101685197" duration="4325000" />
+      <workItem from="1489115381766" duration="3563000" />
+      <workItem from="1489120160182" duration="57607000" />
+      <workItem from="1489265390469" duration="514000" />
+      <workItem from="1489265913572" duration="1453000" />
+      <workItem from="1489267471779" duration="163507000" />
+      <workItem from="1489616400895" duration="1076000" />
+      <workItem from="1489617503666" duration="32000" />
+      <workItem from="1489617660942" duration="165000" />
+      <workItem from="1489617835106" duration="27780000" />
+      <workItem from="1489676526451" duration="1036000" />
+      <workItem from="1489677606646" duration="66789000" />
+    </task>
+    <task id="LOCAL-00001" summary="add gh-pages">
+      <created>1487102793367</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1487102793367</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add gh-pages">
+      <created>1487224842174</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1487224842174</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="847434000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="640" y="23" width="1280" height="1413" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20969023" sideWeight="0.52763057" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35980937" sideWeight="0.4723694" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.47766843" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="640" y="23" width="1280" height="1413" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Flow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="GraphQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="add gh-pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gh-pages" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/node_modules/rdflib/lib/data-factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!block;n#graph#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/rdf-store-inmemory/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="73" column="54" lean-forward="true" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!block;n#iriToKey#0" expanded="false" />
+            <element signature="n#!!block;n#InMemoryStore#0" expanded="false" />
+            <element signature="e#509#768#0" expanded="false" />
+            <element signature="e#633#765#0" expanded="false" />
+            <element signature="e#1414#1462#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/schema_interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <element signature="e#1159#1527#0" expanded="false" />
+            <element signature="e#1270#1456#0" expanded="false" />
+            <element signature="e#1574#1775#0" expanded="false" />
+            <element signature="e#1807#1899#0" expanded="false" />
+            <element signature="e#1944#2054#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mobx-react-devtools/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="1" column="9158" lean-forward="false" selection-start-line="1" selection-start-column="9158" selection-end-line="1" selection-end-column="9158" />
+          <folding>
+            <element signature="e#30754#33867#0" expanded="false" />
+            <element signature="e#31889#32199#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="84" column="17" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/less/dist/less.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="7372" column="5" lean-forward="false" selection-start-line="7372" selection-start-column="5" selection-end-line="7372" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/rdflib/lib/indexed-formula.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="895" column="18" lean-forward="false" selection-start-line="895" selection-start-column="18" selection-end-line="895" selection-end-column="18" />
+          <folding>
+            <element signature="e#1540#1584#0" expanded="false" />
+            <element signature="e#2001#2026#0" expanded="false" />
+            <element signature="e#2545#2598#0" expanded="false" />
+            <element signature="e#2883#2936#0" expanded="false" />
+            <element signature="n#!!block;n#handleRDFType#0" expanded="false" />
+            <element signature="e#3166#3216#0" expanded="false" />
+            <element signature="e#3297#3407#0" expanded="false" />
+            <element signature="e#3338#3403#0" expanded="false" />
+            <element signature="e#3699#3768#0" expanded="false" />
+            <element signature="e#3929#3994#0" expanded="false" />
+            <element signature="e#4988#5386#0" expanded="false" />
+            <element signature="e#5388#8453#0" expanded="false" />
+            <element signature="e#5657#5898#0" expanded="false" />
+            <element signature="e#5980#7151#0" expanded="false" />
+            <element signature="e#6024#6061#0" expanded="false" />
+            <element signature="e#6505#6630#0" expanded="false" />
+            <element signature="e#6636#6731#0" expanded="false" />
+            <element signature="e#6772#7060#0" expanded="false" />
+            <element signature="e#6786#6857#0" expanded="false" />
+            <element signature="e#7181#7510#0" expanded="false" />
+            <element signature="e#7566#8396#0" expanded="false" />
+            <element signature="e#8087#8181#0" expanded="false" />
+            <element signature="e#8222#8304#0" expanded="false" />
+            <element signature="e#8402#8443#0" expanded="false" />
+            <element signature="e#8455#8671#0" expanded="false" />
+            <element signature="e#8673#10227#0" expanded="false" />
+            <element signature="e#9061#9424#0" expanded="false" />
+            <element signature="e#9136#9374#0" expanded="false" />
+            <element signature="e#9493#9765#0" expanded="false" />
+            <element signature="e#9568#9718#0" expanded="false" />
+            <element signature="e#9827#10056#0" expanded="false" />
+            <element signature="e#9895#10012#0" expanded="false" />
+            <element signature="e#10068#10222#0" expanded="false" />
+            <element signature="e#10229#12557#0" expanded="false" />
+            <element signature="e#10342#10719#0" expanded="false" />
+            <element signature="e#10379#10479#0" expanded="false" />
+            <element signature="e#10425#10469#0" expanded="false" />
+            <element signature="e#10516#10600#0" expanded="false" />
+            <element signature="e#10642#10690#0" expanded="false" />
+            <element signature="e#10769#10889#0" expanded="false" />
+            <element signature="e#11060#11118#0" expanded="false" />
+            <element signature="e#11351#11548#0" expanded="false" />
+            <element signature="e#11464#11540#0" expanded="false" />
+            <element signature="e#11593#11807#0" expanded="false" />
+            <element signature="e#11603#11637#0" expanded="false" />
+            <element signature="e#11814#11891#0" expanded="false" />
+            <element signature="e#12245#12432#0" expanded="false" />
+            <element signature="e#12324#12357#0" expanded="false" />
+            <element signature="e#12559#12784#0" expanded="false" />
+            <element signature="e#12786#13153#0" expanded="false" />
+            <element signature="e#12918#12950#0" expanded="false" />
+            <element signature="e#12971#13007#0" expanded="false" />
+            <element signature="e#13028#13066#0" expanded="false" />
+            <element signature="e#13087#13122#0" expanded="false" />
+            <element signature="e#13155#13301#0" expanded="false" />
+            <element signature="e#13303#13640#0" expanded="false" />
+            <element signature="e#13502#13537#0" expanded="false" />
+            <element signature="e#13568#13635#0" expanded="false" />
+            <element signature="e#13642#13866#0" expanded="false" />
+            <element signature="e#13713#13743#0" expanded="false" />
+            <element signature="e#13810#13840#0" expanded="false" />
+            <element signature="e#13868#14306#0" expanded="false" />
+            <element signature="e#14000#14182#0" expanded="false" />
+            <element signature="e#14062#14174#0" expanded="false" />
+            <element signature="e#14102#14164#0" expanded="false" />
+            <element signature="e#14194#14301#0" expanded="false" />
+            <element signature="e#14308#15631#0" expanded="false" />
+            <element signature="e#14570#15621#0" expanded="false" />
+            <element signature="e#14763#14971#0" expanded="false" />
+            <element signature="e#14917#14959#0" expanded="false" />
+            <element signature="e#15019#15458#0" expanded="false" />
+            <element signature="e#15127#15243#0" expanded="false" />
+            <element signature="e#15249#15448#0" expanded="false" />
+            <element signature="e#15305#15436#0" expanded="false" />
+            <element signature="e#15508#15613#0" expanded="false" />
+            <element signature="e#15880#16816#0" expanded="false" />
+            <element signature="e#16096#16187#0" expanded="false" />
+            <element signature="e#16236#16663#0" expanded="false" />
+            <element signature="e#16276#16566#0" expanded="false" />
+            <element signature="e#16617#16655#0" expanded="false" />
+            <element signature="e#16675#16811#0" expanded="false" />
+            <element signature="e#16818#17379#0" expanded="false" />
+            <element signature="e#16882#16927#0" expanded="false" />
+            <element signature="e#17123#17182#0" expanded="false" />
+            <element signature="e#17189#17199#0" expanded="false" />
+            <element signature="e#17236#17313#0" expanded="false" />
+            <element signature="e#17319#17369#0" expanded="false" />
+            <element signature="e#17381#17755#0" expanded="false" />
+            <element signature="e#17497#17750#0" expanded="false" />
+            <element signature="e#17783#18155#0" expanded="false" />
+            <element signature="e#18367#18447#0" expanded="false" />
+            <element signature="e#18454#18728#0" expanded="false" />
+            <element signature="e#18730#18917#0" expanded="false" />
+            <element signature="e#18919#19648#0" expanded="false" />
+            <element signature="e#19128#19178#0" expanded="false" />
+            <element signature="e#19444#19585#0" expanded="false" />
+            <element signature="e#19650#19927#0" expanded="false" />
+            <element signature="e#19929#20176#0" expanded="false" />
+            <element signature="e#20033#20171#0" expanded="false" />
+            <element signature="e#20178#20384#0" expanded="false" />
+            <element signature="e#20269#20374#0" expanded="false" />
+            <element signature="e#20386#20697#0" expanded="false" />
+            <element signature="e#20634#20692#0" expanded="false" />
+            <element signature="e#20699#21308#0" expanded="false" />
+            <element signature="e#20784#20900#0" expanded="false" />
+            <element signature="e#20830#20871#0" expanded="false" />
+            <element signature="e#20941#20993#0" expanded="false" />
+            <element signature="e#21103#21187#0" expanded="false" />
+            <element signature="e#21254#21303#0" expanded="false" />
+            <element signature="e#21310#21708#0" expanded="false" />
+            <element signature="e#21554#21601#0" expanded="false" />
+            <element signature="e#21632#21703#0" expanded="false" />
+            <element signature="e#21710#22520#0" expanded="false" />
+            <element signature="e#21999#22060#0" expanded="false" />
+            <element signature="e#22325#22367#0" expanded="false" />
+            <element signature="e#22465#22510#0" expanded="false" />
+            <element signature="e#22522#22989#0" expanded="false" />
+            <element signature="e#22736#22984#0" expanded="false" />
+            <element signature="e#22991#23534#0" expanded="false" />
+            <element signature="e#23211#23462#0" expanded="false" />
+            <element signature="e#23313#23389#0" expanded="false" />
+            <element signature="e#23395#23454#0" expanded="false" />
+            <element signature="e#23536#23797#0" expanded="false" />
+            <element signature="e#23654#23692#0" expanded="false" />
+            <element signature="e#23723#23792#0" expanded="false" />
+            <element signature="e#23799#25595#0" expanded="false" />
+            <element signature="e#24111#24156#0" expanded="false" />
+            <element signature="e#24214#24258#0" expanded="false" />
+            <element signature="e#24264#24324#0" expanded="false" />
+            <element signature="e#24447#24490#0" expanded="false" />
+            <element signature="e#24552#25296#0" expanded="false" />
+            <element signature="e#24664#24713#0" expanded="false" />
+            <element signature="e#24803#25033#0" expanded="false" />
+            <element signature="e#24866#25023#0" expanded="false" />
+            <element signature="e#25230#25288#0" expanded="false" />
+            <element signature="e#25522#25590#0" expanded="false" />
+            <element signature="e#25597#25835#0" expanded="false" />
+            <element signature="e#25776#25830#0" expanded="false" />
+            <element signature="e#25837#26178#0" expanded="false" />
+            <element signature="e#25926#25956#0" expanded="false" />
+            <element signature="e#26180#26847#0" expanded="false" />
+            <element signature="e#26269#26336#0" expanded="false" />
+            <element signature="e#26485#26510#0" expanded="false" />
+            <element signature="e#26657#26682#0" expanded="false" />
+            <element signature="e#26733#26842#0" expanded="false" />
+            <element signature="e#26849#29265#0" expanded="false" />
+            <element signature="e#27225#27439#0" expanded="false" />
+            <element signature="e#27309#27344#0" expanded="false" />
+            <element signature="e#27350#27431#0" expanded="false" />
+            <element signature="e#27470#27511#0" expanded="false" />
+            <element signature="e#27542#27830#0" expanded="false" />
+            <element signature="e#27681#27774#0" expanded="false" />
+            <element signature="e#27714#27764#0" expanded="false" />
+            <element signature="e#27837#27870#0" expanded="false" />
+            <element signature="e#28104#28386#0" expanded="false" />
+            <element signature="e#28220#28270#0" expanded="false" />
+            <element signature="e#28303#28378#0" expanded="false" />
+            <element signature="e#28778#29155#0" expanded="false" />
+            <element signature="e#28855#29053#0" expanded="false" />
+            <element signature="e#28988#29043#0" expanded="false" />
+            <element signature="e#29078#29147#0" expanded="false" />
+            <element signature="e#29189#29260#0" expanded="false" />
+            <element signature="e#29267#29616#0" expanded="false" />
+            <element signature="e#29486#29588#0" expanded="false" />
+            <element signature="e#29535#29580#0" expanded="false" />
+            <element signature="e#29663#29707#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/rdflib/lib/statement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="e#853#1090#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/rdflib/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/schema_logic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/recompose/renameProps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="e#886#1053#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/rdf-utilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="115" column="3" lean-forward="false" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="3" />
+          <folding>
+            <element signature="e#239#310#0" expanded="false" />
+            <element signature="e#340#570#0" expanded="false" />
+            <element signature="e#379#402#0" expanded="false" />
+            <element signature="e#439#478#0" expanded="false" />
+            <element signature="e#511#565#0" expanded="false" />
+            <element signature="e#667#889#0" expanded="false" />
+            <element signature="e#989#1012#0" expanded="false" />
+            <element signature="e#1043#1077#0" expanded="false" />
+            <element signature="e#1106#1135#0" expanded="false" />
+            <element signature="n#!!doc;n#createId#0" expanded="false" />
+            <element signature="e#1302#1325#0" expanded="false" />
+            <element signature="e#1380#1400#0" expanded="false" />
+            <element signature="e#1519#1549#0" expanded="false" />
+            <element signature="e#1594#1617#0" expanded="false" />
+            <element signature="e#1649#1679#0" expanded="false" />
+            <element signature="e#1716#1804#0" expanded="false" />
+            <element signature="e#2170#2299#0" expanded="false" />
+            <element signature="e#2708#2745#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/schema_graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/rdflib/src/indexed-formula.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="492" column="2" lean-forward="false" selection-start-line="492" selection-start-column="2" selection-end-line="492" selection-end-column="2" />
+          <folding>
+            <element signature="e#13806#14259#0" expanded="false" />
+            <element signature="e#14282#14327#0" expanded="false" />
+            <element signature="e#15295#15437#0" expanded="false" />
+            <element signature="e#15525#15628#0" expanded="false" />
+            <element signature="e#15665#16229#0" expanded="false" />
+            <element signature="e#21796#22237#0" expanded="false" />
+            <element signature="e#22398#24438#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/context.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="e#1109#1864#0" expanded="false" />
+            <element signature="e#1889#4050#0" expanded="false" />
+            <element signature="e#4075#4211#0" expanded="false" />
+            <element signature="e#4243#4617#0" expanded="false" />
+            <element signature="e#4647#4880#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/actionStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/viewNodes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/type.store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="272" column="18" lean-forward="false" selection-start-line="272" selection-start-column="18" selection-end-line="272" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#TypeStore#0" expanded="false" />
+            <element signature="e#795#819#0" expanded="false" />
+            <element signature="e#842#868#0" expanded="false" />
+            <element signature="e#1176#1669#0" expanded="false" />
+            <element signature="e#3106#3190#0" expanded="false" />
+            <element signature="e#3211#3299#0" expanded="false" />
+            <element signature="e#3317#3399#0" expanded="false" />
+            <element signature="e#3416#3496#0" expanded="false" />
+            <element signature="e#3542#3841#0" expanded="false" />
+            <element signature="e#3635#3788#0" expanded="false" />
+            <element signature="n#!!block;n#types#0;n#TypeStore#0" expanded="false" />
+            <element signature="n#!!block;n#actions#0;n#TypeStore#0" expanded="false" />
+            <element signature="e#4289#4578#0" expanded="false" />
+            <element signature="e#4603#4739#0" expanded="false" />
+            <element signature="e#4795#4957#0" expanded="false" />
+            <element signature="e#4988#5235#0" expanded="false" />
+            <element signature="e#5278#5897#0" expanded="false" />
+            <element signature="e#5448#5874#0" expanded="false" />
+            <element signature="e#5652#5789#0" expanded="false" />
+            <element signature="e#5931#6166#0" expanded="false" />
+            <element signature="e#5950#6078#0" expanded="false" />
+            <element signature="e#6196#6442#0" expanded="false" />
+            <element signature="e#6582#6946#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="46" column="51" lean-forward="false" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#Graph#0" expanded="false" />
+            <element signature="n#!!block;n#init#0;n#Graph#0" expanded="false" />
+            <element signature="n#!!block;n#fetch#0;n#Graph#0" expanded="false" />
+            <element signature="n#!!block;n#find#0;n#Graph#0" expanded="false" />
+            <element signature="n#!!block;n#findSubject#0;n#Graph#0" expanded="false" />
+            <element signature="e#803#927#0" expanded="false" />
+            <element signature="e#1159#1229#0" expanded="false" />
+            <element signature="e#1253#1371#0" expanded="false" />
+            <element signature="e#1403#1443#0" expanded="false" />
+            <element signature="e#1477#1562#0" expanded="false" />
+            <element signature="e#1587#2043#0" expanded="false" />
+            <element signature="e#1732#1962#0" expanded="false" />
+            <element signature="e#2079#2198#0" expanded="false" />
+            <element signature="n#!!block;n#graph#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/StreamList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#555#634#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/List.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="110" lean-forward="false" selection-start-line="4" selection-start-column="110" selection-end-line="4" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/streamActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="15" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="15" />
+          <folding>
+            <element signature="e#285#331#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/ActionView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="228" column="16" lean-forward="false" selection-start-line="228" selection-start-column="16" selection-end-line="228" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/actionViewController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-router-dom/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/redux-router5/lib/reduxPlugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/redux-router5/lib/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!block;n#navigateTo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/redux-router5/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#442#502#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/ActionRoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reaction/ReactionRoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reaction/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ViewSelector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#237#437#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/actions_reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Drawer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#397#565#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/stream_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/schema_actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/home.view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/schema_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding>
+            <element signature="e#217#537#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Link.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+          <folding>
+            <element signature="e#734#835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/SvgIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!block;n#SvgIcon#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

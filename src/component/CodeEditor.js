@@ -1,9 +1,9 @@
-import React from 'react';
-import CodeMirror from 'react-codemirror';
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/mdn-like.css';
-import 'codemirror/mode/javascript/javascript';
-import 'codemirror/mode/shell/shell';
+import React from 'react'
+import CodeMirror from 'react-codemirror'
+import 'codemirror/lib/codemirror.css'
+import 'codemirror/theme/mdn-like.css'
+import 'codemirror/mode/javascript/javascript'
+import 'codemirror/mode/shell/shell'
 
 const defaultOptions = {
   lineNumbers: true,
@@ -19,5 +19,11 @@ const CodeEditor = props =>
       options={defaultOptions}
     />
   </div>
+
+CodeEditor.PropTypes = {
+  value:    React.PropTypes.string,
+  onChange: React.PropTypes.func,
+  options:  React.PropTypes.map
+}
 
 export default CodeEditor;

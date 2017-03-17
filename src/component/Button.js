@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-import {colors} from '../style/config';
-
-// background-color: #fff;
-// border: solid 1px transparent;
-// box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+import style from '../style/config.js';
 
 const Button = styled.button`
 position: relative;
@@ -14,9 +10,9 @@ color: inherit;
 transition: all 0.3s ease-in-out;
 border: solid 1px transparent;
 
-&:hover { color: ${colors.primary}; }
+&:hover { color: ${style.colors.primary}; }
 ${props => props.primary &&
-`background-color: ${colors.primary}; color: white;` 
+`background-color: ${style.colors.primary}; color: white;` 
 }
 `
 

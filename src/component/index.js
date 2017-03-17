@@ -1,8 +1,6 @@
 export {
   Block,
   Input,
-  Section,
-  SectionHeader,
   Stat,
   Switch,
   Text,
@@ -21,7 +19,7 @@ export {default as CodeEditor} from './CodeEditor';
 
 export {default as Avatar} from 'react-avatar'
 export {default as Appbar} from '../view/appbar.view';
-export {default as Browse} from '../view/home.view'
+export {default as Home} from '../view/home.view'
 export {default as Card} from './card/Card'
 export {default as ClientCard} from './client/ClientCard'
 export {default as ClientView} from './client/ClientView'
@@ -43,3 +41,8 @@ export {default as Link} from './Link';
 export {default as Nav, NavLink} from './Nav';
 export {default as List} from './List';
 export {default as HttpCodeExample} from './httpCodeExample';
+export {default as Section} from './Section';
+export {default as SectionTitle} from './SectionTitle';
+export {default as Debug} from './Debug';
+export {User, UserProfile, withUser} from '../user'
+export {ActionList, ActionView, ActionRoot} from '../action'

@@ -1,10 +1,40 @@
-import styled from 'styled-components';
+import React from 'react'
+import {connect} from 'react-redux'
+import styled from 'styled-components'
+import {compose} from 'recompose'
+import {createAction} from 'redux-actions'
+
+const initialState = {
+  open: true
+}
+
+export const toggleDrawer = createAction('DRAWER/TOGGLE_DRAWER')
+
+export const drawerActions = {
+  toggleDrawer
+}
+
+export const drawerReducer = (drawer = initialState, action) => {
+  switch (action.type) {
+    case 'DRAWER/TOGGLE_DRAWER':
+      return {
+        ...drawer,
+        open: !drawer.open
+      }
+    default:
+      return drawer;
+  }
+}
+
+export const withDrawer = compose(
+  connect(state => ({drawer: state.drawer}))
+)
 
 const Drawer = styled.div`
   position:         relative;
-  left:             ${props => props.open ? '0' : '-280px'}
+  left:             ${props => props.drawer.open ? '0' : '-280px'}
   display:          inline-block;
-  width:            ${props => props.open ? '280px' : '0'}
+  width:            ${props => props.drawer.open ? '280px' : '0'}
   min-height:       100vh;
   background-color: #444;
   flex-direction:   column;
@@ -13,15 +43,4 @@ const Drawer = styled.div`
   transition: all .2s ease-in-out;
 `
 
-export const DrawerHeader = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 16px;
-  height: 151px;
-  background-color: #37474f;
-  color: white;
-`
-
-
-export default Drawer;
+export default withDrawer(Drawer);

@@ -4,7 +4,7 @@ class UIState {
   constructor() {
     extendObservable(this, {
       sidebar:       {
-        open: false
+        open: true
       },
       routes:        [
         {}
