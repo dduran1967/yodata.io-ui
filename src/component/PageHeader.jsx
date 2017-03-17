@@ -1,10 +1,51 @@
 // @flow
 import React from 'react'
-import {Icon, Button, Link} from '../component'
+import {Icon, Button} from '../component'
 import styled from 'styled-components'
-import ui from '../store/ui'
+import {withDrawer, toggleDrawer} from './Drawer'
 
-const StyledPageHeader = styled.header`
+
+const PageHeader = ({
+  title,
+  onBack,
+  onNext,
+  onClose,
+  potentialAction,
+  toggleNav,
+  onAction,
+  className,
+  drawer,
+  dispatch,
+  ...rest
+}) => {
+  return (
+    <header className={className}>
+      <div className="text-left d-flex">
+        {!drawer.open &&
+        <Button onClick={()=>dispatch(toggleDrawer())}><Icon name="menu"/></Button>
+        }
+        {onBack &&
+        <Button onClick={onBack}><Icon name="back"/></Button>
+        }
+        <span className="px-3">{title}</span>
+      </div>
+      <div className="text-right d-flex">
+        {potentialAction && potentialAction.map(action => (
+          <Button key={action.name} onClick={onAction} rounded big>{action.name}</Button>
+        ))
+        }
+        {onNext &&
+        <Button onClick={onNext}><Icon name="next"/></Button>
+        }
+        {onClose &&
+        <Button onClick={onClose}><Icon name="close"/></Button>
+        }
+      </div>
+    </header>
+  )
+}
+
+const StyledPageHeader = styled(PageHeader)`
     display:         flex;
     flex-direction:  row;
     justify-content: space-between;
@@ -14,51 +55,19 @@ const StyledPageHeader = styled.header`
     height:          96px;
     border-bottom:   solid 1px rgba(0, 0, 0, .25);
     color:           currentColor;
-    button: {
-      height: 24px;
-      line-height: 36px;
+    font-size:       48px;
+    line-height:     1;
+    button {
+      line-height:    inherit;
       vertical-align: middle;
+    };
+    svg {
+      font-size: 48px;
+      line-height: 48px;
+      height: 48px;
+      width: 48px;
     }
 `
-
-function handleAction(action) {
-  console.log(action);
-}
-
-class PageHeader extends React.Component {
-  render() {
-    let {title, onBack, onNext, onClose, potentialAction} = this.props
-    let height = '24';
-    return (
-      <StyledPageHeader>
-
-        <div className="text-left d-flex">
-          {!ui.sidebar.open &&
-          <Button onClick={()=>ui.toggleSidebar()}><Icon name="menu" height={height} width={height}/></Button>
-          }
-          {onBack &&
-          <Link style={{display:'flex',alignItems:'center'}} to={'..'} onClick={()=>onBack()}>
-            <Icon name="back" height={height} width={height}/>
-          </Link>
-          }
-          <h2 className="d-inline-block pl-3">{title}</h2>
-        </div>
-        <div className="text-right d-flex">
-          {potentialAction && potentialAction.map(action => (
-            <Button key={action.name} onClick={()=>handleAction(action)} rounded big>{action.name}</Button>
-          ))
-          }
-          {onNext &&
-          <Button onClick={()=>onNext()}><Icon name="next" height={height} width={height}/></Button>
-          }
-          {onClose &&
-          <Button onClick={()=>onClose()}><Icon name="close" height={height} width={height}/></Button>
-          }
-        </div>
-      </StyledPageHeader>
-    )
-  }
-}
 
 PageHeader.propTypes = {
   title:       React.PropTypes.string,
@@ -68,4 +77,8 @@ PageHeader.propTypes = {
   onClose:     React.PropTypes.func,
 }
 
-export default PageHeader
+//const enhanced = compose(
+//  withDrawer()
+//)
+
+export default withDrawer(StyledPageHeader)

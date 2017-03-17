@@ -17,13 +17,18 @@ export const NavLink = styled(Link)`
   border-bottom: solid 1px #555;
   text-decoration: none;
   font-size: 1.5em;
-  line-height: 1;
+  line-height: 3;
   padding: 0 .5rem;
   &:hover, &:focus {
     background-color: rgba(255,255,255,.2);
     color: white;
     text-decoration: none;
-  } 
+  }
+  svg {
+    height: 28px;
+    width: 28px;
+    margin: 16px 0;
+  }
 `
 
 export default Nav;

@@ -1,9 +1,9 @@
 import React from 'react'
-import {Debug} from '../component'
+import {PageHeader} from '../component'
 
 const Home = () => (
   <div>
-    <Debug title="Home" />
+    <PageHeader title="HOME"/>
   </div>
 )
 

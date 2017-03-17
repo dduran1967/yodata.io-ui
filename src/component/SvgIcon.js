@@ -51,12 +51,12 @@ SvgIcon.propTypes = {
 }
 
 SvgIcon.defaultProps = {
-  xmlns:  'http://www.w3.org/2000/svg',
-  fill:   'currentColor',
-  name:   'blank',
-  width:  '24px',
-  height: '24px',
-  viewBox: '0 0 30 30'
+  xmlns:   'http://www.w3.org/2000/svg',
+  fill:    'currentColor',
+  name:    'blank',
+  width:   '24px',
+  height:  '24px',
+  viewBox: '0 0 24 24'
 }
 
 export default SvgIcon;

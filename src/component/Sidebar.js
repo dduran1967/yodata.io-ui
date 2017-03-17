@@ -1,14 +1,15 @@
 import React from 'react'
 import {Drawer, PageHeader, Icon, NavLink} from '../component'
 import {sidebarRoutes} from '../router/routes.js'
+import {withDrawer, toggleDrawer} from './Drawer.js'
 
-const Sidebar = props => (
+const Sidebar = ({drawer, dispatch}) => (
   <Drawer className="text-white">
     <div>
-      <PageHeader/>
+      <PageHeader onClose={() => dispatch(toggleDrawer())}/>
       <nav className="nav text-white flex-column">
         {sidebarRoutes.map(({name, icon, label}) =>
-          <NavLink key={name} name={name} className="py-3 nav-link">
+          <NavLink key={name} name={name} className="nav-link">
             <Icon name={icon} className="mr-2"/>
             {label}
           </NavLink>
@@ -18,4 +19,4 @@ const Sidebar = props => (
   </Drawer>
 )
 
-export default Sidebar;
+export default withDrawer(Sidebar);
