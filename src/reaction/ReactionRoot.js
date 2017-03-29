@@ -1,6 +1,4 @@
 import React from 'react'
-import {actions as routerActions} from 'redux-router5'
-import {MediaList} from '../component'
 import {withReactions} from './withReactions'
 
 const ReactionList = ({reaction: {items = []}, dispatch}) => (

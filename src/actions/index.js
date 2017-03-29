@@ -1,17 +1,16 @@
 import root from 'window-or-global'
+import channel from '../channel/channelActions'
 import schema from '../schema/schemaActions'
-import stream from '../stream/streamActions'
-import user from '../user/userActions';
-
+import user from '../user/userActions'
 
 if (!root.yo) {
   root.yo = {};
 }
 
 root.yo.act = {
-  stream,
-  schema,
-  user
+  user,
+  channel,
+  schema
 }
 
 

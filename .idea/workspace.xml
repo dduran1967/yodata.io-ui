@@ -10,268 +10,21 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="page header &amp; sidebar updates">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-exported-files.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/auth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bars.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/widget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/channel/ChannelRoot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/channel/ChannelView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Accordion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/EventList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Loading.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/MediaList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Svg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/db/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/Graph.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/schema.nt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reaction/ReactionView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reaction/reactionInitialState.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reaction/reactionLogic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reaction/withReactions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/router/withRoute.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schemaGraph.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/schemaInitialState.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/UserButton.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/UserRoot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/UserSignup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/UserWebIdForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/UserWidget.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/userActions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/userGraph.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/userInitialState.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/userLogic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/userModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/userReducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/HomeView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/yo.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_css/general.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/avatar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/clip.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/clip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/icon_right_minimizer.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/icon_right_minimizer_hover.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/icon_right_minimizer_reverse.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/icon_right_minimizer_reverse_hover.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/a_img/search_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/book.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/book.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/book.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/card.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/card.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/card.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/social_book.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/people/social_book.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App.test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/action/actionViewController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/consolidateActions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/component/Heading.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/user_model.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/schema/schema_graph.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/schema/schema_initial_state.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/store/type.store.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stream/streamClient.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/_variables.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/fab.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/fab.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/fab.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/index.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_alert.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_background-variant.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_badge.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_border-radius.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_breakpoints.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_buttons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_cards.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_clearfix.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_float.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_forms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_gradients.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_grid-framework.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_hover.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_image.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_list-group.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_lists.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_nav-divider.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_navbar-align.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_pagination.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_reset-text.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_resize.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_screen-reader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_size.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_table-row.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_text-emphasis.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_text-hide.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_text-truncate.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_transforms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/mixins/_visibility.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_alert.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_badge.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_breadcrumb.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_button-group.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_buttons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_card.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_carousel.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_close.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_code.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_custom-forms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_custom.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_dropdown.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_forms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_images.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_input-group.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_jumbotron.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_list-group.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_media.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_modal.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_nav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_navbar.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_normalize.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_pagination.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_popover.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_print.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_progress.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_reboot.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_responsive-embed.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_tables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_tooltip.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_transitions.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_type.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_utilities.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap-grid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap-grid.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap-grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap-reboot.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap-reboot.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap-reboot.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/bootstrap.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_alert.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_background-variant.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_badge.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_border-radius.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_breakpoints.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_buttons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_cards.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_clearfix.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_float.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_forms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_gradients.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_grid-framework.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_hover.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_image.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_list-group.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_lists.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_nav-divider.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_navbar-align.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_pagination.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_reset-text.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_resize.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_screen-reader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_size.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_table-row.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_text-emphasis.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_text-hide.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_text-truncate.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_transforms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/mixins/_visibility.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_align.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_background.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_borders.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_clearfix.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_display.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_flex.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_float.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_position.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_screenreaders.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_sizing.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_spacing.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_text.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/scss/utilities/_visibility.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/theme/_bootstrap.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/theme/_default.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/theme/_mui.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/style/theme/_react-ui.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/type/Type.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/type/sandbox.view.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/home.view.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/schema/schema_actions.js" afterPath="$PROJECT_DIR$/src/schema/schemaActions.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/schema/schema_logic.js" afterPath="$PROJECT_DIR$/src/schema/schemaLogic.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/schema/schema_reducer.js" afterPath="$PROJECT_DIR$/src/schema/schemaReducer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/schema/schema_service.js" afterPath="$PROJECT_DIR$/public/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/stream/stream.view.controller.js" afterPath="$PROJECT_DIR$/src/stream/StreamRoot.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/type/properties.list.view.js" afterPath="$PROJECT_DIR$/src/schema/PropertiesList.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/ViewSelector.js" afterPath="$PROJECT_DIR$/src/router/ViewSelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+    <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/channel/channelActions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/channel/channelLogic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/channel/channelReducer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/channel/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/channel/withChannels.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/yodata.io-ui.iml" afterPath="$PROJECT_DIR$/.idea/yodata.io-ui.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/signup.html" afterPath="$PROJECT_DIR$/public/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/ActionList.js" afterPath="$PROJECT_DIR$/src/action/ActionList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/ActionRoot.js" afterPath="$PROJECT_DIR$/src/action/ActionRoot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/ActionView.js" afterPath="$PROJECT_DIR$/src/action/ActionView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/index.js" afterPath="$PROJECT_DIR$/src/actions/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Button.js" afterPath="$PROJECT_DIR$/src/component/Button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Debug.js" afterPath="$PROJECT_DIR$/src/component/Debug.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Drawer.js" afterPath="$PROJECT_DIR$/src/component/Drawer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Link.js" afterPath="$PROJECT_DIR$/src/component/Link.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/List.js" afterPath="$PROJECT_DIR$/src/component/List.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Nav.js" afterPath="$PROJECT_DIR$/src/component/Nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/PageHeader.jsx" afterPath="$PROJECT_DIR$/src/component/PageHeader.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Section.js" afterPath="$PROJECT_DIR$/src/component/Section.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/SectionTitle.js" afterPath="$PROJECT_DIR$/src/component/SectionTitle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/channel/ChannelRoot.js" afterPath="$PROJECT_DIR$/src/channel/ChannelRoot.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Sidebar.js" afterPath="$PROJECT_DIR$/src/component/Sidebar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/card/Card.js" afterPath="$PROJECT_DIR$/src/component/card/Card.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/index.js" afterPath="$PROJECT_DIR$/src/component/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/Graph.js" afterPath="$PROJECT_DIR$/src/lib/Graph.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/rdf-utilities.js" afterPath="$PROJECT_DIR$/src/lib/rdf-utilities.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/index.js" afterPath="$PROJECT_DIR$/src/logic/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reaction/ReactionRoot.js" afterPath="$PROJECT_DIR$/src/reaction/ReactionRoot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reaction/index.js" afterPath="$PROJECT_DIR$/src/reaction/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/routes.js" afterPath="$PROJECT_DIR$/src/router/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/context.js" afterPath="$PROJECT_DIR$/src/schema/context.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/index.js" afterPath="$PROJECT_DIR$/src/schema/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/schema_interface.js" afterPath="$PROJECT_DIR$/src/schema/schema_interface.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/index.js" afterPath="$PROJECT_DIR$/src/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/ActionExample.js" afterPath="$PROJECT_DIR$/src/stream/ActionExample.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/StreamList.js" afterPath="$PROJECT_DIR$/src/stream/StreamList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/index.js" afterPath="$PROJECT_DIR$/src/stream/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/streamActions.js" afterPath="$PROJECT_DIR$/src/stream/streamActions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/streamInitalState.js" afterPath="$PROJECT_DIR$/src/stream/streamInitalState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/stream_logic.js" afterPath="$PROJECT_DIR$/src/stream/stream_logic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/stream_reducer.js" afterPath="$PROJECT_DIR$/src/stream/stream_reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stream/withStreams.js" afterPath="$PROJECT_DIR$/src/stream/withStreams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/type/index.js" afterPath="$PROJECT_DIR$/src/type/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/type/type.view.js" afterPath="$PROJECT_DIR$/src/type/type.view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index.js" afterPath="$PROJECT_DIR$/src/user/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/withUser.js" afterPath="$PROJECT_DIR$/src/user/withUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/connect.client.view.js" afterPath="$PROJECT_DIR$/src/view/connect.client.view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/connect.view.js" afterPath="$PROJECT_DIR$/src/view/connect.view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/index.js" afterPath="$PROJECT_DIR$/src/view/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/UserButton.js" afterPath="$PROJECT_DIR$/src/user/UserButton.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -296,18 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>USER_SIG</find>
-      <find>USER_SIGN_O</find>
-      <find>U</find>
-      <find>USER_SIGN</find>
-      <find>USER_SIGN_</find>
-      <find>USER_SIGN_OU</find>
-      <find>us</find>
-      <find>USER_SIGN_OUT</find>
-      <find>soli</find>
-      <find>s</find>
-      <find>solid</find>
-      <find>router</find>
       <find>signupSuccess</find>
       <find>solid-</find>
       <find>accou</find>
@@ -326,6 +67,18 @@
       <find>lifecyc</find>
       <find>lifecycle(</find>
       <find>lifecycle</find>
+      <find>STREAM/</find>
+      <find>o</find>
+      <find>yo.act</find>
+      <find>ch</find>
+      <find>check</find>
+      <find>asse</find>
+      <find>assert</find>
+      <find>i</find>
+      <find>initi</find>
+      <find>initiali</find>
+      <find>initialize</find>
+      <find>initializeA</find>
     </findStrings>
     <replaceStrings>
       <replace>currentSubject</replace>
@@ -333,6 +86,7 @@
       <replace>className</replace>
       <replace>icons</replace>
       <replace>className=</replace>
+      <replace>CHANNEL/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/dev</dir>
@@ -352,17 +106,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/component/EventList.js" />
-        <option value="$PROJECT_DIR$/src/actions/index.js" />
-        <option value="$PROJECT_DIR$/src/user/userModel.js" />
-        <option value="$PROJECT_DIR$/src/view/connect.view.js" />
-        <option value="$PROJECT_DIR$/src/user/UserWidget.js" />
-        <option value="$PROJECT_DIR$/src/lib/Graph.js" />
-        <option value="$PROJECT_DIR$/src/channel/ChannelView.js" />
         <option value="$PROJECT_DIR$/src/component/List.js" />
         <option value="$PROJECT_DIR$/src/component/MediaList.js" />
         <option value="$PROJECT_DIR$/src/component/Header.js" />
-        <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/router/ViewSelector.js" />
         <option value="$PROJECT_DIR$/src/view/home.view.js" />
         <option value="$PROJECT_DIR$/src/user/requireUser.js" />
@@ -370,7 +116,6 @@
         <option value="$PROJECT_DIR$/src/router/withRoute.js" />
         <option value="$PROJECT_DIR$/src/lib/rdf-utilities.js" />
         <option value="$PROJECT_DIR$/src/user/withUser.js" />
-        <option value="$PROJECT_DIR$/src/user/UserButton.js" />
         <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/public/widget.html" />
         <option value="$PROJECT_DIR$/public/app.js" />
@@ -385,24 +130,33 @@
         <option value="$PROJECT_DIR$/src/user/userActions.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/style.css" />
-        <option value="$PROJECT_DIR$/src/component/Sidebar.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/auth.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/user/userLogic.js" />
-        <option value="$PROJECT_DIR$/src/router/routes.js" />
         <option value="$PROJECT_DIR$/src/view/HomeView.js" />
         <option value="$PROJECT_DIR$/src/stream/streamActions.js" />
         <option value="$PROJECT_DIR$/src/stream/stream_logic.js" />
-        <option value="$PROJECT_DIR$/src/channel/ChannelRoot.js" />
-        <option value="$PROJECT_DIR$/src/reaction/ReactionRoot.js" />
         <option value="$PROJECT_DIR$/firebase.json" />
         <option value="$PROJECT_DIR$/src/user/UserSignup.js" />
         <option value="$PROJECT_DIR$/src/user/userInitialState.js" />
         <option value="$PROJECT_DIR$/src/user/userReducer.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/component/PageHeader.jsx" />
+        <option value="$PROJECT_DIR$/src/user/UserButton.js" />
+        <option value="$PROJECT_DIR$/src/reaction/ReactionRoot.js" />
+        <option value="$PROJECT_DIR$/src/channel/index.js" />
+        <option value="$PROJECT_DIR$/src/channel/withChannels.js" />
+        <option value="$PROJECT_DIR$/src/router/routes.js" />
+        <option value="$PROJECT_DIR$/src/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/component/Sidebar.js" />
+        <option value="$PROJECT_DIR$/src/channel/channelReducer.js" />
+        <option value="$PROJECT_DIR$/src/logic/index.js" />
+        <option value="$PROJECT_DIR$/src/channel/channelActions.js" />
+        <option value="$PROJECT_DIR$/src/channel/ChannelRoot.js" />
+        <option value="$PROJECT_DIR$/src/channel/channelLogic.js" />
       </list>
     </option>
   </component>
@@ -519,128 +273,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stream" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="router" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reaction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="channel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -706,7 +338,7 @@
     <property name="js-jscs-package" value="$USER_HOME$/node_modules/jscs" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="show hist&#9;ACTION&#9;Vcs.ShowTabbedFileHistory&#10;local his&#9;ACTION&#9;LocalHistory&#10;invali&#9;ACTION&#9;InvalidateCaches&#10;invalidate&#9;ACTION&#9;InvalidateCaches&#10;show history&#9;ACTION&#9;Vcs.ShowTabbedFileHistory&#10;scratch&#9;ACTION&#9;NewScratchFile&#10;inspections&#9;null&#9;null&#10;new scrat&#9;ACTION&#9;NewScratchFile&#10;invalid&#9;ACTION&#9;InvalidateCaches&#10;keys&#9;null&#9;null&#10;prett&#9;ACTION&#9;Tool_External Tools_Prettier&#10;type&#9;FILE&#9;file:///Users/dave/Dev/yodata/yodata.io-ui/src/type/typeStore.js&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;prettie&#9;ACTION&#9;Tool_External Tools_Prettier&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;term&#9;ACTION&#9;ActivateTerminalToolWindow&#10;index&#9;ACTION&#9;ES6.Generate.Index&#10;rest&#9;ACTION&#9;WebServicesPlugin.CreateRESTClient&#10;history&#9;ACTION&#9;Vcs.ShowTabbedFileHistory" />
+    <property name="SearchEverywhereHistoryKey" value="history&#9;ACTION&#9;Vcs.ShowTabbedFileHistory&#10;show hist&#9;ACTION&#9;Vcs.ShowTabbedFileHistory&#10;local his&#9;ACTION&#9;LocalHistory&#10;invali&#9;ACTION&#9;InvalidateCaches&#10;invalidate&#9;ACTION&#9;InvalidateCaches&#10;show history&#9;ACTION&#9;Vcs.ShowTabbedFileHistory&#10;scratch&#9;ACTION&#9;NewScratchFile&#10;inspections&#9;null&#9;null&#10;new scrat&#9;ACTION&#9;NewScratchFile&#10;invalid&#9;ACTION&#9;InvalidateCaches&#10;keys&#9;null&#9;null&#10;prett&#9;ACTION&#9;Tool_External Tools_Prettier&#10;type&#9;FILE&#9;file:///Users/dave/Dev/yodata/yodata.io-ui/src/type/typeStore.js&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;prettie&#9;ACTION&#9;Tool_External Tools_Prettier&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;term&#9;ACTION&#9;ActivateTerminalToolWindow&#10;index&#9;ACTION&#9;ES6.Generate.Index&#10;rest&#9;ACTION&#9;WebServicesPlugin.CreateRESTClient" />
     <property name="editor.config.accepted" value="true" />
     <property name="jsgraphql-schema-editor-notification" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -1270,7 +902,7 @@
       <workItem from="1490468850042" duration="19908000" />
       <workItem from="1490568064791" duration="10819000" />
       <workItem from="1490587375829" duration="114737000" />
-      <workItem from="1490787831990" duration="3517000" />
+      <workItem from="1490787831990" duration="32816000" />
     </task>
     <task id="LOCAL-00001" summary="add gh-pages">
       <created>1487102793367</created>
@@ -1307,7 +939,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489787170938</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added firebase auth">
+      <created>1490791438729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1490791438729</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1337,7 +976,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1342331000" />
+    <option name="totallyTimeSpent" value="1371630000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1351,18 +990,19 @@
   <component name="ToolWindowManager">
     <frame x="640" y="23" width="1280" height="1413" extended-state="0" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20969023" sideWeight="0.5124905" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.50753766" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="615" y="385" width="1466" height="816" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.068887204" sideWeight="0.4924623" order="8" side_tool="false" content_ui="tabs" x="76" y="195" width="1276" height="730" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20969023" sideWeight="0.48750946" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.47161242" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="640" y="23" width="1280" height="1413" />
+      <window_info id="Flow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09462529" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20969023" sideWeight="0.5124905" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.47161242" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Flow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09462529" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1373,7 +1013,6 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1407,7 +1046,8 @@
     <MESSAGE value="add gh-pages" />
     <MESSAGE value="too many changes :)" />
     <MESSAGE value="page header &amp; sidebar updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="page header &amp; sidebar updates" />
+    <MESSAGE value="added firebase auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="added firebase auth" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1416,96 +1056,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.firebaserc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/public/app.js" />
-    <entry file="file://$PROJECT_DIR$/public/bars.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/action.nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/smarter-agent-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/icon-add.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/home-banner.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bhhs-logo-dark.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic/dist/components/sidebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/semantic-ui-react/dist/es/elements/Container/Container.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1549,6 +1099,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1577,6 +1128,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="211" column="80" lean-forward="true" selection-start-line="211" selection-start-column="80" selection-end-line="211" selection-end-column="80" />
+          <folding>
+            <element signature="e#5563#7709#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1601,24 +1155,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/userActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="61" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/UserButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1633,13 +1174,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/userLogic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1664,67 +1199,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reaction/ReactionRoot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/action/ActionRoot.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/channel/ChannelRoot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stream/withStreams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stream/stream_reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stream/stream_logic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stream/streamActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="37" column="1" lean-forward="false" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="3" lean-forward="false" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1763,22 +1241,240 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="e#708#856#0" expanded="true" />
-            <element signature="e#1039#1097#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/userReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/UserButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reaction/ReactionRoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/ActionExample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/streamActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="37" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/streamInitalState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/stream_logic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/withStreams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/ChannelView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/stream_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#123#520#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/userLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="15" lean-forward="false" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/withChannels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic/tasks/install.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="e#708#856#0" expanded="false" />
+            <element signature="e#1039#1097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/rdf-utilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#4850#5044#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/channelReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/channelLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="55" lean-forward="true" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+          <folding>
+            <element signature="e#1314#1369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/channelActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="89" lean-forward="false" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/ChannelRoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding>
+            <element signature="e#669#715#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

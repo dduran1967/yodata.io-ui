@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import {actions as routerActions} from 'redux-router5';
-import { Icon, Dropdown, Menu} from 'semantic-ui-react'
+import { Icon, Dropdown} from 'semantic-ui-react'
 import {compose, withProps, withHandlers, branch, renderComponent} from 'recompose';
 import withUser from './withUser';
 import withRoute from '../router/withRoute.js';

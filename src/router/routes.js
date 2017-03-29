@@ -1,11 +1,11 @@
 import mapKeys from 'lodash/mapKeys'
 import root from 'window-or-global'
 import {ActionRoot, ActionView} from '../action'
-import ChannelRoot from '../channel/ChannelRoot.js'
+import ChannelRoot from '../channel/ChannelRoot'
 import ChannelView from '../channel/ChannelView'
 import {Home} from '../component'
 import {ReactionRoot, ReactionView} from '../reaction'
-import {UserRoot, UserSignUp} from '../user'
+import {UserRoot} from '../user'
 
 export const sidebarRoutes = [
   {

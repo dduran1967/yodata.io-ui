@@ -8,7 +8,7 @@ import {sidebarRoutes} from '../router/routes.js'
 
 export default compose(withRoute, withDrawer)(
   ({drawer, navigateTo, dispatch}) =>
-    <Sidebar as={Menu} animation='overlay' width="thin" visible={drawer.open} icon='labeled' vertical inverted>
+    <Sidebar as={Menu} animation='push' width="thin" visible={drawer.open} icon='labeled' vertical inverted>
       {sidebarRoutes.map(({name, icon, label}) =>
         <Link key={name} name={name}>
           <Menu.Item>
