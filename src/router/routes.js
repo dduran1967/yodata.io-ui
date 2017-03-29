@@ -1,9 +1,11 @@
-import {mapKeys} from 'lodash'
+import mapKeys from 'lodash/mapKeys'
+import root from 'window-or-global'
 import {ActionRoot, ActionView} from '../action'
-import {ReactionRoot} from '../reaction'
-import {StreamList, StreamView} from '../stream'
-import {User, UserProfile} from '../user'
+import ChannelRoot from '../channel/ChannelRoot.js'
+import ChannelView from '../channel/ChannelView'
 import {Home} from '../component'
+import {ReactionRoot, ReactionView} from '../reaction'
+import {UserRoot, UserSignUp} from '../user'
 
 export const sidebarRoutes = [
   {
@@ -14,33 +16,33 @@ export const sidebarRoutes = [
     label:     'Home'
   },
   {
-    name:      'stream',
-    path:      '/stream',
-    component: StreamList,
-    icon:      'stream',
-    label:     'Streams'
+    name:      'channel',
+    path:      '/channel',
+    component: ChannelRoot,
+    icon:      'hashtag',
+    label:     'Channels'
   },
   {
     name:      'action',
     path:      '/action',
     component: ActionRoot,
-    icon:      'action',
+    icon:      'lightning',
     label:     'Actions',
   },
   {
     name:      'reaction',
     path:      '/reaction',
     component: ReactionRoot,
-    icon:      'reaction',
+    icon:      'rocket',
     label:     'Reactions'
   },
   {
     name:      'user',
     path:      '/user',
-    component: User,
+    component: UserRoot,
     icon:      'user',
     label:     'User'
-  },
+  }
 ]
 
 export const innerRoutes = [
@@ -50,14 +52,14 @@ export const innerRoutes = [
     component: ActionView
   },
   {
-    name:      'stream/view',
-    path:      '/stream/view/:name',
-    component: StreamView
+    name:      'channel/view',
+    path:      '/channel/view',
+    component: ChannelView
   },
   {
-    name:      'user/profile',
-    path:      '/user/profile',
-    component: UserProfile
+    name:      'reactionView',
+    path:      '/reaction/view/*id',
+    component: ReactionView
   },
 ];
 
@@ -66,3 +68,5 @@ const routes = [...sidebarRoutes, ...innerRoutes];
 export const routeMap = mapKeys(routes, 'name');
 
 export default routes;
+
+root.routes = routes;

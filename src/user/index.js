@@ -1,12 +1,7 @@
-import React from 'react'
-import {withUser as _withUser} from './withUser'
-import Debug from '../component/Debug'
-
-/**
- * Views
- */
-export const User = _withUser(Debug);
-export const UserProfile = _withUser(Debug);
-export const withUser = _withUser;
-
-export default User;
+export {default} from './userActions'
+export {default as UserRoot} from './UserRoot'
+export {default as userReducer} from './userReducer'
+export {default as userLogic} from './userLogic'
+export {default as UserWebIdForm} from './UserWebIdForm'
+export {default as UserSignUp} from './UserSignup'
+export {default as withUser} from './withUser'

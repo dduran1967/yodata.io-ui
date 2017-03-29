@@ -1,26 +1,37 @@
-import {createStore, applyMiddleware, combineReducers, compose} from 'redux'
-import {router5Middleware, router5Reducer} from 'redux-router5'
-import {createLogicMiddleware} from 'redux-logic'
+// @flow
+
+import {combineForms} from 'react-redux-form'
+import {applyMiddleware, compose, createStore} from 'redux'
 import logger from 'redux-logger'
-import router from '../router'
-import streamReducer from '../stream/stream_reducer'
+import {createLogicMiddleware} from 'redux-logic'
+import {router5Middleware, router5Reducer} from 'redux-router5'
+import root from 'window-or-global'
 import {drawerReducer} from '../component/Drawer.js'
+import {loadingReducer} from '../component/Loading'
+import {reactionReducer} from '../reaction/reactionLogic.js'
+import router from '../router'
 import {schemaLogic, schemaReducer} from '../schema'
-import {streamLogic} from '../stream/stream_logic'
+import {streamLogic, streamReducer} from '../stream'
+import {userLogic, userReducer} from '../user'
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const rootReducer = combineReducers({
-  router: router5Reducer,
-  stream: streamReducer,
-  schema: schemaReducer,
-  drawer: drawerReducer
+const rootReducer = combineForms({
+  router:   router5Reducer,
+  stream:   streamReducer,
+  schema:   schemaReducer,
+  drawer:   drawerReducer,
+  reaction: reactionReducer,
+  user:     userReducer,
+  loading:  loadingReducer
 });
 
 const logicMiddleware = createLogicMiddleware([
   ...streamLogic,
-  ...schemaLogic]);
+  ...schemaLogic,
+  ...userLogic
+]);
 
 const enhancers = composeEnhancers(applyMiddleware(
   logger(),
@@ -28,7 +39,8 @@ const enhancers = composeEnhancers(applyMiddleware(
   logicMiddleware,
 ))
 
-const initialState = {};
-const store = createStore(rootReducer, initialState, enhancers);
-window.store = store;
-export default store;
+const initialState = {}
+const store = createStore(rootReducer, initialState, enhancers)
+export default store
+
+root.store = store

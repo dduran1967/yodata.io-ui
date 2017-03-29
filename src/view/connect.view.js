@@ -51,4 +51,4 @@ class ConnectView extends React.Component {
   }
 }
 
-export default observer(ConnectView);
+export default observer(ConnectView)

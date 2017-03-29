@@ -7,7 +7,6 @@ import List from '../component/List'
 import {PageHeader} from '../component'
 
 
-
 function StreamList({items, navigateTo, selectStream}) {
   const listItems = items.map(item => ({
     key:         item.id,

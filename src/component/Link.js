@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {actions as routerActions} from 'redux-router5'
 import {compose, getContext, setPropTypes, withHandlers, withProps} from 'recompose'
 
-const {string, object, func} = React.PropTypes;
+const {string, object} = React.PropTypes;
 
 const enhance = compose(
   setPropTypes({

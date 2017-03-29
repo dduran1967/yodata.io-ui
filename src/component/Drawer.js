@@ -4,7 +4,7 @@ import {compose} from 'recompose'
 import {createAction} from 'redux-actions'
 
 const initialState = {
-  open: true
+  open: false
 }
 
 export const toggleDrawer = createAction('DRAWER/TOGGLE_DRAWER')
@@ -30,7 +30,7 @@ export const withDrawer = compose(
 )
 
 const Drawer = styled.div`
-  position:         relative;
+  position:         fixed;
   left:             ${props => props.drawer.open ? '0' : '-280px'}
   display:          inline-block;
   width:            ${props => props.drawer.open ? '280px' : '0'}

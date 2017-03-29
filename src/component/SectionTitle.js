@@ -1,11 +1,4 @@
-import styled from 'styled-components'
+import {Header} from 'semantic-ui-react';
 
-const SectionTitle = styled.section`
-    font-size: 1em;
-    font-weight: bold;
-    display: block;
-    margin-bottom: .5em;
-`
-
-export default SectionTitle;
+export default Header;
 

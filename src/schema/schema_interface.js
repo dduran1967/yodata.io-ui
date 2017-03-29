@@ -1,4 +1,3 @@
-// @flow
 import {invert, get as getValue, set as setValue} from 'lodash'
 import CONTEXT, {sameAs as SAMEAS} from './context'
 import NAMESPACE from './context';

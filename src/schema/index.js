@@ -1,5 +1,6 @@
-export {default as schemaActions} from './schema_actions'
-export {default as schemaInitialState} from './schema_initial_state'
-export {default as schemaLogic} from './schema_logic'
-export {default as schemaReducer} from './schema_reducer'
-export {default as schemaService} from './schema_service'
+export {default as schemaActions} from './schemaActions'
+export {default as schemaInitialState} from './schemaInitialState'
+export {default as schemaLogic} from './schemaLogic'
+export {default as schemaReducer} from './schemaReducer'
+export {default as schemaGraph} from './schemaGraph'
+export {default as PropertiesList} from './PropertiesList';

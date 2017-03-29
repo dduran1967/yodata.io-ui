@@ -1,36 +1,20 @@
-import {handleActions} from 'redux-actions'
-import initialState from './streamInitalState'
-import {addStream, addAction, selectStream, selectStreamAction} from './streamActions'
+import streamInitialState from './streamInitalState'
 
-const reducer = handleActions({
-  [addStream]:          (state, {payload}) => ({
-    ...state,
-    items: [...state.items, payload],
-    json:  Object.assign({}, state.json, {[payload.name]: payload})
-  }),
-  [selectStream]:       (state, {payload: {selected}}) => ({
-    ...state,
-    selected
-  }),
-  [addAction]:          (state, action) => ({
-    ...state
+export const streamReducer = (state = streamInitialState, action) => {
+  switch (action.type) {
+    case 'STREAM/FETCH_STREAM_LIST_SUCCESS':
+      if (!action.payload) {
+        return state;
+      }
+      let stream = action.payload;
+      return {...state, ...stream}
+    case 'STREAM/FETCH_MESSAGE_SUCCESS':
+      let {id,data} = action.payload;
+      data.id = id;
+      return {...state, currentMessage: data,  [id]:data }
+    default:
+      return state;
+  }
+}
 
-  }),
-  [selectStreamAction]: (state, {payload}) => ({
-    ...state,
-    selectedAction: payload
-  })
-}, initialState)
-
-//const streamReducer = (state = initialState, {type, payload}) => {
-//  switch (type) {
-//    case 'STREAM/ADD':
-//      return {items: addToSet(state.items, payload)}
-//    case 'STREAM/SELECT':
-//
-//    default:
-//      return state;
-//  }
-//}
-
-export default reducer;
+export default streamReducer

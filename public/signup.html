@@ -27,10 +27,17 @@ limitations under the License.
 
     <link rel="stylesheet" href="main.css">
 
-    <!-- Firebase -->
-    <!-- ***********************************************************************************************************************
-         * TODO(DEVELOPER): Paste the initialization snippet from: Firebase Console > Overview > Add Firebase to your web app. *
-         *********************************************************************************************************************** -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      firebase.initializeApp({
+        apiKey:            "AIzaSyAuLfAq8F2ibOTuMe3Ql7UmwGWHEXHqkiU",
+        authDomain:        "yodata-1115.firebaseapp.com",
+        databaseURL:       "https://yodata-1115.firebaseio.com",
+        storageBucket:     "yodata-1115.appspot.com",
+        messagingSenderId: "776960890496"
+      });
+    </script>
 
     <script type="text/javascript">
 
@@ -200,7 +207,6 @@ limitations under the License.
 </head>
 <body>
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
     <!-- Header section containing title -->
     <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
         <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">

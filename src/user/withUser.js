@@ -1,9 +1,11 @@
-import {compose, defaultProps} from 'recompose'
+import {connect} from 'react-redux'
+import userActions from './userActions'
 
-export const withUser = compose(
-  defaultProps({
-    type: 'User'
-  })
-);
+const withUser = connect(
+  state => ({user: state.user}),
+  {
+    ...userActions
+  }
+)
 
-export default withUser;
+export default withUser

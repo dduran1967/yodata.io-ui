@@ -1,7 +1,17 @@
+import root from 'window-or-global'
+import schema from '../schema/schemaActions'
 import stream from '../stream/streamActions'
-import schema from '../schema/schema_actions'
+import user from '../user/userActions';
 
-const actions = window.act = Object.assign({}, stream, schema)
 
-export default actions;
+if (!root.yo) {
+  root.yo = {};
+}
+
+root.yo.act = {
+  stream,
+  schema,
+  user
+}
+
 

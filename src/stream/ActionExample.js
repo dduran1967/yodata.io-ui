@@ -5,25 +5,6 @@ import {lit} from '../lib/rdf-utilities.js'
 import {hideProperty, saveReaction} from './streamActions'
 import {withState, compose} from 'recompose'
 
-const ed = {
-  type:       'RegisterAction',
-  agent:      {
-    type:       'Person',
-    givenName:  'Alice',
-    familyName: 'Jones',
-    email:      'alice@example.com',
-  },
-  instrument: {
-    type: "SoftwareApplication",
-    id:   "http://realestatedigital.com/"
-  },
-  object:     {
-    type: "Website",
-    id:   "http://yourwebsite.com"
-  }
-}
-
-
 const Editor = properties => (
   <table className="table">
     <tbody>

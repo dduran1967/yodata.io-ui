@@ -1,5 +1,5 @@
+import invert from 'lodash/invert'
 import {Namespace} from 'rdflib'
-import {invert} from 'lodash'
 
 // Namespaces
 const acl = Namespace('http://www.w3.org/ns/auth/acl#')
@@ -13,10 +13,12 @@ const schema = Namespace('http://schema.org/')
 const owl = Namespace('http://www.w3.org/2002/07/owl#')
 const posix = Namespace('http://www.w3.org/ns/posix/stat#')
 const skos = Namespace('http://www.w3.org/2004/02/skos/core#')
+const solid = Namespace('http://www.w3.org/ns/solid/terms#')
 const vann = Namespace('http://purl.org/vocab/vann/')
 const vs = Namespace('http://www.w3.org/2003/06/sw-vocab-status/ns#')
 const xsd = Namespace('http://www.w3.org/2001/XMLSchema#')
 const link = Namespace('http://www.w3.org/2007/ont/link#')
+const pim = Namespace('http://www.w3.org/ns/pim/space#')
 
 
 export const NAMESPACE = {
@@ -30,11 +32,13 @@ export const NAMESPACE = {
   schema,
   owl,
   skos,
+  solid,
   vann,
   vs,
   xsd,
   link,
-  posix
+  posix,
+  pim
 }
 
 const baseTypes = {
@@ -57,6 +61,8 @@ const baseTypes = {
   Vocab:            owl('Ontology'),
   Document:         link('Document'),
   RDFDocument:      link('RDFDocument'),
+  Container:        ldp('Container'),
+  BasicContainer:   ldp('BasicContainer'),
 }
 
 export const context = {
@@ -73,6 +79,7 @@ export const context = {
   equivalentClass:          owl('equivalentClass'),
   equivalentProperty:       owl('equivalentProperty'),
   hasVersion:               dc('hasVersion'),
+  inbox:                    ldp('inbox'),
   intersectionOf:           owl('intersectionOf'),
   inverseOf:                schema('inverseOf'),
   isDefinedBy:              rdfs('isDefinedBy'),
@@ -83,6 +90,7 @@ export const context = {
   minCardinality:           owl('minCardinality'),
   minQualifiedCardinality:  owl('minQualifiedCardinality'),
   modificationTimestamp:    posix('mtime'),
+  name:                     foaf('name'),
   note:                     skos('note'),
   onClass:                  owl('onClass'),
   onDataRange:              owl('onDataRange'),
@@ -102,8 +110,12 @@ export const context = {
   tags:                     schema('keywords'),
   termStatus:               vs('term_status'),
   type:                     rdf('type'),
+  publicTypeIndex:          solid('publicTypeIndex'),
+  privateTypeIndex:         solid('privateTypeIndex'),
   unionOf:                  owl('unionOf'),
   versionInfo:              owl('versionInfo'),
+  storageUrl:               pim('storage'),
+  preferencesUrl:           pim('preferencesFile'),
   ...baseTypes
 };
 

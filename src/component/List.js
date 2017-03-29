@@ -1,26 +1,23 @@
-import React from 'react'
+import {compose, withProps} from 'recompose'
+import {List} from 'semantic-ui-react'
 import {lit} from '../lib/rdf-utilities'
 
-const Item = ({key, id, label, url, description, onClick}) => (
-  <a key={key || id} className="list-group-item list-group-item-action media" onClick={() => onClick({id,label,description,url})}>
-    <div className="media-body">
-      <h5 className="media-heading">{lit(label)}</h5>
-      {lit(description)}
-    </div>
-  </a>
-)
+const enhance = compose(
+  withProps(({items, onClick}) => ({
+    items:   items.map(item => ({
+      ...item,
+      header:      lit(item.label),
+      description: lit(item.description),
+      key:         item.key || item.id,
+      onClick:     event => {
+        event.preventDefault();
+        onClick(item);
+      }
+    })),
+    divided: true,
+    relaxed: true,
+    link:    true
+  }))
+);
 
-const ListView = ({listItems = [], onClick}) => (
-  <div className="ListView">
-    <div className="list-group">
-      {listItems.map(item => Item({...item, onClick}))}
-    </div>
-  </div>
-)
-
-
-ListView.propTypes = {
-  listItems: React.PropTypes.array
-}
-
-export default ListView;
+export default enhance(List);

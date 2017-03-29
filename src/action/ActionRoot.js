@@ -1,29 +1,27 @@
-import React from "react";
-import { connect } from "react-redux";
-import { PageHeader, ActionList, List } from "../component";
-import { compose, lifecycle, withHandlers } from "recompose";
-import { fetchSchema } from "../schema/schema_actions.js";
-import { values } from "lodash";
+import React from 'react'
+import {connect} from 'react-redux'
+import {compose, lifecycle} from 'recompose'
+import {navigateTo} from 'redux-router5/lib/actions'
+import {MediaList, withLoader} from '../component'
+import {fetchSchema} from '../schema/schemaActions.js'
+
+const ActionRoot = ({schema, dispatch}) => (
+  <div>
+    <MediaList items={schema.actions} onClick={item => dispatch(navigateTo('action/view', {id: item.id}))}/>
+  </div>
+);
 
 const enhance = compose(
-  connect((state, ownProps) => ({
-    schema: state.schema,
-    ...ownProps
-  })),
+  connect(state => ({schema: state.schema})),
   lifecycle({
     componentDidMount() {
       this.props.dispatch(
         fetchSchema("https://devtest.yodata.me/test/schema.nt")
       );
     }
-  })
+  }),
+  withLoader(({schema}) => !schema.hasData),
 );
 
-const ActionRoot = ({ schema }) => (
-  <div>
-    <PageHeader title="Actions" />
-    <List listItems={schema.actions} onClick={console.log} />
-  </div>
-);
 
 export default enhance(ActionRoot);

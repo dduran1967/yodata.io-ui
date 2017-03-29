@@ -1,13 +1,29 @@
 // @flow
-import $rdf, {IndexedFormula, Fetcher} from 'rdflib'
-import {NAMESPACE, context, CONTEXT_IN} from '../schema/context.js'
-import {mapStatementToContext, toJson} from './rdf-utilities'
-import {compose} from 'lodash/fp'
 
-const TYPE = NAMESPACE.rdf('type');
-const PROPERTY = NAMESPACE.rdf('property')
+import flow from 'lodash/fp/flow'
+import map from 'lodash/fp/map'
+import getProperty from 'lodash/fp/property'
+import reduce from 'lodash/fp/reduce'
+import $rdf, {IndexedFormula, Statement} from 'rdflib'
+import {context, CONTEXT_IN, NAMESPACE, sameAs} from '../schema/context.js'
+import {
+  find,
+  findSubject,
+  jsonReducer,
+  lit,
+  mapStatementToContext,
+  predicateToContext,
+  propertiesOf,
+  propertiesOfDeep,
+  subTypesOf,
+  superTypesOf,
+  sym,
+  toJson
+} from './rdf-utilities'
+
+
+const TYPE = NAMESPACE.rdf('type')
 const CLASS = NAMESPACE.rdfs('Class')
-
 
 export class Graph extends IndexedFormula {
   constructor() {
@@ -15,39 +31,29 @@ export class Graph extends IndexedFormula {
     this.init();
     this.context = context;
     this.inContext = CONTEXT_IN;
+    this.namespace = {...NAMESPACE};
+    this.equateAll(sameAs);
   }
 
   init() {
     $rdf.fetcher(this);
   }
 
-  fetch(iri) {
-    return this.fetcher.load(iri)
+  /**
+   * fetch and load the target URL into the current store.
+   * @param {string} url - the targer URL
+   * @returns {promise} */
+  fetch(url: string) {
+    return this.fetcher.load(url)
   }
 
-  find(subject, predicate, object, graph) {
-    return this.match(subject, predicate, object, graph);
-  }
+  find = find(this)
 
-  findSubject(subject: Node) {
-    return this.subjectIndex[subject];
-  }
+  findSubject = findSubject(this)
 
-  subTypesOf = type => {
-    let subTypes = this.findSubClassesNT(type);
-    return Object
-    .keys(subTypes)
-    .map(id => this.fromNT(id));
-  }
+  subTypesOf = subTypesOf(this)
 
-  superTypesOf = (subject) => {
-    if (subject) {
-      let superTypes = this.findSuperClassesNT(subject);
-
-      return Object.keys(superTypes).map(id => this.fromNT(id)).reverse();
-    }
-    return [];
-  }
+  superTypesOf = superTypesOf(this)
 
   findTypes = () => {
     return this.each(null, TYPE, CLASS).sort().map(this.findOne)
@@ -55,42 +61,69 @@ export class Graph extends IndexedFormula {
 
   findActions = () => {
     let action = this.context.Action;
-    return this
-    .subTypesOf(action)
-    .sort()
-    .map(this.findOne)
+    return this.subTypesOf(action).sort().map(this.findOne)
+  }
+
+  equateAll(pairs: [string, any]) {
+    pairs.forEach(([a, b,]) => this.equate(a, b))
   }
 
   hasGraph = (iri: string) => {
     return (!!this.whyIndex[iri]);
   }
 
-  mapToContext = (statement) => {
+  propertiesOf = propertiesOf(this);
+
+  propertiesOfDeep = propertiesOfDeep(this)
+
+  mapToContext = (statement: Statement) => {
     let ctx = this.inContext;
     return mapStatementToContext(statement, ctx);
   }
 
-  findOne = subject => {
-    let context = this.inContext;
-    return this.findSubject(subject)
-               .map(this.mapToContext)
-               .reduce((a, b) => {
-                 let {predicate, object} = b;
-                 if (!a[predicate]) {
-                   a[predicate] = [];
-                 }
-                 a[predicate].push(object);
-                 return a;
-               }, {
-                 id: (subject && subject.value) || null
-               })
+  parse = (data: string, contentType: string) => {
+    return $rdf.parse(data, this, 'http://schema.org/', 'text/n3');
   }
 
-  toJSON = (arrayOfStatements) => {
-    let sts = arrayOfStatements || this.statements;
+  toJSON = (statements: Statement[]) => {
+    let sts = statements || this.statements;
+
     sts = sts.map(this.mapToContext);
     return toJson(sts);
   }
+
+  /**
+   * returns JSON representation with the subject URL as the ROOT
+   * @param {string} url - target URL
+   * @returns {object}
+   */
+  findOne = (url: string) => {
+    return flow(
+      sym,
+      findSubject(this),
+      map(predicateToContext(this.inContext)),
+      reduce(jsonReducer, {}),
+      getProperty(sym(url))
+    )(url)
+  }
+
+
+  getSubject = (uri: string) => {
+    if (uri) {
+      let subjectNode = sym(uri);
+      let props = this.findOne(subjectNode);
+      return {
+        id:          uri,
+        type:        props.type,
+        label:       lit(props.label),
+        description: lit(props.description),
+        superTypes:  this.superTypesOf(subjectNode).map(this.findOne),
+        properties:  this.propertiesOfDeep(subjectNode).map(this.findOne),
+      }
+    }
+    throw new Error(`subject with uri ${uri} not found.`)
+  }
+
 
 }
 

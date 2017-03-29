@@ -1,22 +1,21 @@
 import React from 'react'
-import {Drawer, PageHeader, Icon, NavLink} from '../component'
+import {compose} from 'recompose'
+import {Icon, Menu, Sidebar} from 'semantic-ui-react'
+import {Link, withDrawer} from '../component'
+import {withRoute} from '../router'
 import {sidebarRoutes} from '../router/routes.js'
-import {withDrawer, toggleDrawer} from './Drawer.js'
 
-const Sidebar = ({drawer, dispatch}) => (
-  <Drawer className="text-white">
-    <div>
-      <PageHeader onClose={() => dispatch(toggleDrawer())}/>
-      <nav className="nav text-white flex-column">
-        {sidebarRoutes.map(({name, icon, label}) =>
-          <NavLink key={name} name={name} className="nav-link">
-            <Icon name={icon} className="mr-2"/>
+
+export default compose(withRoute, withDrawer)(
+  ({drawer, navigateTo, dispatch}) =>
+    <Sidebar as={Menu} animation='overlay' width="thin" visible={drawer.open} icon='labeled' vertical inverted>
+      {sidebarRoutes.map(({name, icon, label}) =>
+        <Link key={name} name={name}>
+          <Menu.Item>
+            <Icon name={icon}/>
             {label}
-          </NavLink>
-        )}
-      </nav>
-    </div>
-  </Drawer>
+          </Menu.Item>
+        </Link>
+      )}
+    </Sidebar>
 )
-
-export default withDrawer(Sidebar);

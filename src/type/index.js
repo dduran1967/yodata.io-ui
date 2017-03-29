@@ -1,11 +1,11 @@
+import {observer} from 'mobx-react'
 // @flow
-import React from 'react';
-import {Route, Switch} from 'react-router-dom';
-import {sym, lit} from '../lib/rdf-utilities';
-import TypeView from '../action/ActionView';
-import TypeListView from './type.list.view';
-import {PageHeader} from '../component';
-import {observer} from 'mobx-react';
+import React from 'react'
+import {Route, Switch} from 'react-router-dom'
+import TypeView from '../action/ActionView'
+import {PageHeader} from '../component'
+import {lit, sym} from '../lib/rdf-utilities'
+import TypeListView from './type.list.view'
 
 
 class TypeViewController extends React.Component {

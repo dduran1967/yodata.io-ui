@@ -1,59 +1,71 @@
+// @flow
+
 import React from 'react'
-import PropertiesListView from '../type/properties.list.view'
-import Link from '../component/Link'
-import {lit} from '../lib/rdf-utilities'
-import types from '../schema/schema_graph'
+import {compose, withHandlers, withProps} from 'recompose'
 
-class ActionView extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-    this.router = context.router
-  }
+import {actions as routerActions} from 'redux-router5'
+import {Breadcrumb} from 'semantic-ui-react'
+import {Link, Section, Header, withLoader} from '../component'
+import {lit, sym} from '../lib/rdf-utilities'
+import withRoute from '../router/withRoute.js'
+import PropertiesList from '../schema/PropertiesList'
+import schemas from '../schema/schemaGraph'
 
-  render() {
-    let {id, navigateTo} = this.props;
-    let subject = types.getSubject(id);
-    if (!subject) return null;
-    return (
-      <div>
 
-        <div className="breadcrumb">
-          {subject.superTypes.map(({id, label}) =>
-            <Link
-              router={this.router}
-              navigateTo={navigateTo}
-              key={id}
-              name="action.view"
-              params={{id}}
-              className="breadcrumb-item">
-              {lit(label)}
+const Breadcrumbs = props =>
+  <Breadcrumb>
+    {props.items.map(superType =>
+      <span key={superType.id}>
+          <Breadcrumb.Section>
+            <Link key={superType.id} name={'action/view'} params={{id: superType.id}}>
+              {lit(superType.label)}
             </Link>
-          )}
-        </div>
+          </Breadcrumb.Section>
+          <Breadcrumb.Divider />
+      </span>
+    )}
+  </Breadcrumb>
 
-        <div className="px-3">
-          <article>
-            <section className="mb-5">
-              <h4>{lit(subject.label)}</h4>
-              {subject.description &&
-              <div dangerouslySetInnerHTML={{__html: subject.description.toString()}}/>
-              }
-            </section>
-            <section>
-              <h4>Properties</h4>
-              <PropertiesListView properties={subject.properties}/>
-            </section>
-          </article>
-        </div>
-      </div>
-    )
-  }
-}
+const ActionView = ({subject, ...props}) =>
+  <div>
+    <Breadcrumbs items={subject.superTypes}/>
+    <Section>
+      <Header>{subject.label}</Header>
+      {subject.description &&
+      <div dangerouslySetInnerHTML={{__html: subject.description.toString()}}/>
+      }
+    </Section>
+    <Section>
+      <Header>Properties</Header>
+      <PropertiesList listItems={subject.properties} dispatch={props.dispatch}/>
+    </Section>
+  </div>
 
-ActionView.contextTypes = {
-  router: React.PropTypes.object.isRequired
-};
+const enhance = compose(
+  withRoute,
+  withProps(({route}) => {
+    let id = route.params.id;
+    let target = sym(id);
+    let subject = schemas.findOne(id);
+    return {
+      pageHeader: {
+        title: lit(subject.label)
+      },
+      subject:    {
+        id:          subject.id,
+        type:        subject.type,
+        label:       lit(subject.label),
+        description: lit(subject.description),
+        superTypes:  schemas.superTypesOf(target).map(schemas.findOne),
+        properties:  schemas.propertiesOfDeep(target).map(schemas.findOne)
+      }
+    }
+  }),
+  withHandlers({
+    onBack: ({dispatch}) => (event) => dispatch(routerActions.navigateTo('action'))
+  }),
+  withLoader(({subject}) => !subject)
+)
 
-export default ActionView;
 
-
+export default enhance(ActionView)

@@ -1,6 +1,4 @@
-import React from 'react'
 import Link from './Link'
-import Icon from './Icon'
 import styled from 'styled-components'
 
 export const Nav = styled.nav`

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from '../component';
-import PropertiesListView from './properties.list.view';
+import PropertiesListView from '../schema/PropertiesList';
 import {lit} from '../lib/rdf-utilities';
 import ActionNav from '../action/action.nav';
 

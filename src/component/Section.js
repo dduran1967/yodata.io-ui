@@ -1,9 +1,7 @@
-import styled from 'styled-components'
+import {Segment} from 'semantic-ui-react';
+import {defaultProps} from 'recompose';
 
-const StyledSection = styled.section`
-    padding-top: 1em;
-    padding-bottom: 1em;
-`
-
-export default StyledSection;
+export default defaultProps({
+  basic: true
+})(Segment)
 

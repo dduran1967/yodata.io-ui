@@ -1,5 +1,5 @@
 import {createAction} from 'redux-actions'
-import typeStore from '../schema/schema_graph.js'
+import defaultGraph from '../schema/schemaGraph.js'
 const chance = require('chance').Chance();
 
 const fakeStream = () => ({
@@ -10,7 +10,7 @@ const fakeStream = () => ({
 })
 
 const getSelectedAction = action => {
-  return typeStore.findSubject(action.id);
+  return defaultGraph.findSubject(action.id);
 }
 
 export const addStream = createAction('STREAM/ADD_STREAM', fakeStream);
@@ -20,6 +20,9 @@ export const selectStreamAction = createAction('STREAM/SELECT_STREAM_ACTION', ge
 export const hideProperty = createAction('STREAM/HIDE_PROPERTY');
 export const showProperty = createAction('STREAM/SHOW_PROPERTY');
 export const saveReaction = createAction('STREAM/SAVE_REACTION', ({url, data}) => ({url, data}))
+export const fetchStreamList = createAction('STREAM/FETCH_STREAM_LIST');
+export const fetchStreamItems = createAction('STREAM/FETCH_STREAM_ITEMS', url => ({url}));
+export const fetchMessage = createAction('STREAM/FETCH_MESSAGE', url => ({url}));
 
 export default {
   addStream,
@@ -28,5 +31,8 @@ export default {
   selectStreamAction,
   hideProperty,
   showProperty,
-  saveReaction
+  saveReaction,
+  fetchStreamList,
+  fetchStreamItems,
+  fetchMessage
 }

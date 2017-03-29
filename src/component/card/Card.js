@@ -1,27 +1,26 @@
-import React from 'react';
-import styles from '../../style/config';
-import './card.css';
+import React from 'react'
+import styles from '../../style/config'
 
-export function Card({
-  avatar,
-  backgroundColor,
-  children,
-  color,
-  footer,
-  subtitle,
-  text,
-  title,
-  ...props
-}) {
+export function MyCard({
+                         avatar,
+                         backgroundColor,
+                         children,
+                         color,
+                         footer,
+                         subtitle,
+                         text,
+                         title,
+                         ...props
+                       }) {
   let cardStyle = {};
-  if(backgroundColor) {
+  if (backgroundColor) {
     cardStyle.backgroundColor = styles.colors[backgroundColor] || backgroundColor;
   }
-  if(color) {
+  if (color) {
     cardStyle.color = styles.colors[color] || color;
   }
   return (
-    <div className={'card Card'} style={cardStyle}>
+    <div className={'card MyCard'} style={cardStyle}>
 
       {avatar &&
       <div className="card-block text-center">
@@ -53,7 +52,7 @@ export function Card({
   )
 }
 
-Card.propTypes = {
+MyCard.propTypes = {
   backgroundColor: React.PropTypes.string,
   color:           React.PropTypes.string,
   title:           React.PropTypes.string,
@@ -62,4 +61,4 @@ Card.propTypes = {
   footer:          React.PropTypes.node,
 }
 
-export default Card
+export default MyCard

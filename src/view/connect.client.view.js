@@ -1,8 +1,6 @@
 import React from 'react';
 import {Hero, PageHeader, Icon, Switch} from '../component';
-import store from '../configureStore';
 import ui from '../store/ui';
-import user from '../store/user.store';
 import {observer} from 'mobx-react';
 
 

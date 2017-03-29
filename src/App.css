@@ -1,22 +1,7 @@
 .bordered {
-  border: solid 1px #ccc;
+    border: solid 1px #CCCCCC;
 }
 
-.mfb-icon {
-  height: 56px;
-  width: 56px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.mfb-icon .add {
-  background: url('/icon-add.svg');
-}
-
-.mfb-close {
-  background: url('/icon-add.svg');
-  height: 56px;
-  width: 56px;
-  background-repeat: no-repeat;
-  background-position: center;
+.selectable:hover {
+    cursor: hand;
 }

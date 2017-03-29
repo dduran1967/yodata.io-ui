@@ -1,10 +1,15 @@
 import React from 'react'
-import {Debug} from '../component'
+import {actions as routerActions} from 'redux-router5'
+import {MediaList} from '../component'
+import {withReactions} from './withReactions'
 
-const ReactionRoot = () => (
+const ReactionList = ({reaction: {items = []}, dispatch}) => (
   <div>
-    <Debug title="Reactions" />
+    <h3>todo</h3>
+    <ul>
+      <li>wire action sandbox UI to firebase</li>
+    </ul>
   </div>
 )
 
-export default ReactionRoot;
+export default withReactions(ReactionList);

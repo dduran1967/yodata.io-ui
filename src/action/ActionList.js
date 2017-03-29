@@ -7,7 +7,7 @@ function ActionList({actions = [], onSelect}) {
     id:          action.id,
     label:       action.label,
     description: action.description,
-    onClick:      () => onSelect(action)
+    onClick:      (action) => onSelect(action)
   }))
   return <List listItems={listItems}/>
 }
