@@ -39,9 +39,8 @@ const subscribeLogic = createLogic({
     next(nextAction)
   },
   process({action}, dispatch, done) {
-    let subscription = Subscription(action) // validate action
     let {subject} = action.payload;
-    let {agent,db} = action.meta;
+    let {db} = action.meta;
     subject.map((subjectPath) => {
       let resource = db.child(subjectPath)
       dispatch(subscriptionActive(subjectPath))
@@ -60,7 +59,7 @@ const subscribeLogic = createLogic({
 
 const subscriptionActiveLogic = createLogic({
   type: 'DB/SUBSCRIPTION_ACTIVE',
-  transform({getState, action}, next) {
+  transform({action}, next) {
     next({
       type: action.type,
       payload: {

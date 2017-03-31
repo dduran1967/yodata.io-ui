@@ -11,31 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/db/dbActions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/db/dbLogic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/db/dbReducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/db/dbTypes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/db/subscriber.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/waitForUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/index.js" afterPath="$PROJECT_DIR$/src/action/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/index.js" afterPath="$PROJECT_DIR$/src/actions/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/channel/ChannelRoot.js" afterPath="$PROJECT_DIR$/src/channel/ChannelRoot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/channel/ChannelView.js" afterPath="$PROJECT_DIR$/src/channel/ChannelView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Loading.js" afterPath="$PROJECT_DIR$/src/component/Loading.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/index.js" afterPath="$PROJECT_DIR$/src/db/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/rdf-utilities.js" afterPath="$PROJECT_DIR$/src/lib/rdf-utilities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/index.js" afterPath="$PROJECT_DIR$/src/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userActions.js" afterPath="$PROJECT_DIR$/src/user/userActions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userReducer.js" afterPath="$PROJECT_DIR$/src/user/userReducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/HomeView.js" afterPath="$PROJECT_DIR$/src/view/HomeView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/yo.js" afterPath="$PROJECT_DIR$/src/yo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/dbLogic.js" afterPath="$PROJECT_DIR$/src/db/dbLogic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/dbTypes.js" afterPath="$PROJECT_DIR$/src/db/dbTypes.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -80,8 +58,37 @@
       <file leaf-file-name="dbLogic.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/db/dbLogic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+            <state relative-caret-position="136">
+              <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+              <folding>
+                <element signature="e#10#46#0" expanded="false" />
+                <element signature="e#226#423#0" expanded="false" />
+                <element signature="e#279#421#0" expanded="false" />
+                <element signature="e#342#389#0" expanded="false" />
+                <element signature="e#461#1420#0" expanded="false" />
+                <element signature="e#559#602#0" expanded="false" />
+                <element signature="e#642#947#0" expanded="false" />
+                <element signature="e#727#921#0" expanded="false" />
+                <element signature="e#772#813#0" expanded="false" />
+                <element signature="e#830#915#0" expanded="false" />
+                <element signature="e#985#1418#0" expanded="false" />
+                <element signature="e#1236#1397#0" expanded="false" />
+                <element signature="e#1303#1387#0" expanded="false" />
+                <element signature="e#1467#1638#0" expanded="false" />
+                <element signature="e#1531#1636#0" expanded="false" />
+                <element signature="e#1542#1631#0" expanded="false" />
+                <element signature="e#1584#1625#0" expanded="false" />
+                <element signature="e#1656#1714#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbTypes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/dbTypes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -219,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/db/index.js" />
         <option value="$PROJECT_DIR$/src/component/Loading.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/db/dbTypes.js" />
         <option value="$PROJECT_DIR$/src/db/dbReducer.js" />
         <option value="$PROJECT_DIR$/src/db/dbActions.js" />
         <option value="$PROJECT_DIR$/src/channel/ChannelRoot.js" />
@@ -228,6 +234,7 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/db/subscriber.js" />
         <option value="$PROJECT_DIR$/src/view/HomeView.js" />
+        <option value="$PROJECT_DIR$/src/db/dbTypes.js" />
         <option value="$PROJECT_DIR$/src/db/dbLogic.js" />
       </list>
     </option>
@@ -1194,7 +1201,7 @@
       <workItem from="1490568064791" duration="10819000" />
       <workItem from="1490587375829" duration="114737000" />
       <workItem from="1490787831990" duration="42133000" />
-      <workItem from="1490847957412" duration="43620000" />
+      <workItem from="1490847957412" duration="44248000" />
     </task>
     <task id="LOCAL-00001" summary="add gh-pages">
       <created>1487102793367</created>
@@ -1245,7 +1252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490822512669</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="data subscriptions">
+      <created>1490932742368</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1490932742368</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1275,7 +1289,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1424567000" />
+    <option name="totallyTimeSpent" value="1425195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1348,7 +1362,8 @@
     <MESSAGE value="page header &amp; sidebar updates" />
     <MESSAGE value="added firebase auth" />
     <MESSAGE value="firebase user data" />
-    <option name="LAST_COMMIT_MESSAGE" value="firebase user data" />
+    <MESSAGE value="data subscriptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="data subscriptions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1714,14 +1729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/dbTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/userReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1806,11 +1813,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/dbTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/dbLogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+          <folding>
+            <element signature="e#10#46#0" expanded="false" />
+            <element signature="e#226#423#0" expanded="false" />
+            <element signature="e#279#421#0" expanded="false" />
+            <element signature="e#342#389#0" expanded="false" />
+            <element signature="e#461#1420#0" expanded="false" />
+            <element signature="e#559#602#0" expanded="false" />
+            <element signature="e#642#947#0" expanded="false" />
+            <element signature="e#727#921#0" expanded="false" />
+            <element signature="e#772#813#0" expanded="false" />
+            <element signature="e#830#915#0" expanded="false" />
+            <element signature="e#985#1418#0" expanded="false" />
+            <element signature="e#1236#1397#0" expanded="false" />
+            <element signature="e#1303#1387#0" expanded="false" />
+            <element signature="e#1467#1638#0" expanded="false" />
+            <element signature="e#1531#1636#0" expanded="false" />
+            <element signature="e#1542#1631#0" expanded="false" />
+            <element signature="e#1584#1625#0" expanded="false" />
+            <element signature="e#1656#1714#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

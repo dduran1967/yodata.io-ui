@@ -9,6 +9,7 @@ export const User = new Type({
 }).compile('User')
 
 export const Subscription = new Type({
+  type: 'string',
   payload: {
     subject: [],
   },
