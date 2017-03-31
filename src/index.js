@@ -20,7 +20,7 @@ const config = {
 };
 firebase.initializeApp(config);
 
-firebase.auth().onAuthStateChanged(function (user, credentials, redirectUrl) {
+firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     store.dispatch({type: 'USER/USER_SIGNED_IN', payload: user.toJSON()})
   } else {

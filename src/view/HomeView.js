@@ -1,17 +1,19 @@
 import React from 'react'
-import {compose} from 'recompose'
+import {compose, withProps} from 'recompose'
 import {Debug} from '../component'
-import {subscriber} from '../db'
+import {subscribeTo} from '../db'
 import waitForUser from '../user/waitForUser.js'
+import {withUser} from '../component';
+
 
 const A = compose(
   waitForUser,
-  subscriber,
+  subscribeTo(['channel'])
 )(Debug)
 
 const Home = props =>
   <div>
-    <A refs={['/channel', '/context']}/>
+    <A/>
   </div>
 
 export default Home

@@ -13,7 +13,7 @@ import ViewSelector from './router/ViewSelector'
 import './style/semantic.css'
 
 const App = props => {
-  if (props.user.signedOut) {
+  if (props.user.signedIn === false) {
     location.assign('/widget.html');
     return (<div></div>)
   }

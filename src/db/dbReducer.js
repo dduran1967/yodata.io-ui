@@ -1,5 +1,3 @@
-import {SubscriptionUpdate} from './dbTypes'
-
 const initialState = {
   subscription: {}
 }

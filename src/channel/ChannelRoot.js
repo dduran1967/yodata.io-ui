@@ -1,13 +1,9 @@
 import values from 'lodash/values'
 import React from 'react'
-import {compose, lifecycle, withProps} from 'recompose'
+import {compose, withProps} from 'recompose'
 import {MediaList} from '../component'
-import withRoute from '../router/withRoute.js'
-import withUser from '../user/withUser.js'
-import withChannels from './withChannels'
-import subscriber from '../db/subscriber.js';
-import {withLoader} from '../component/Loading.js';
-
+import subscribeTo from '../db/subscribeTo'
+import waitForUser from '../user/waitForUser.js'
 
 
 const ChannelRoot = props =>
@@ -20,12 +16,11 @@ const ChannelRoot = props =>
 
 
 export default compose(
-  withUser,
-  withLoader(
-    props => (!(props.user && props.user.currentUser))
-  ),
+  waitForUser,
+  subscribeTo(['channel']),
   withProps(props => ({
-    listItems: values(props.channel.items)
+    listItems: values(props.channel && props.channel.item)
   }))
 )(ChannelRoot)
+
 
