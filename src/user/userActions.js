@@ -28,6 +28,8 @@ export const userSignedIn = createAction('USER/USER_SIGNED_IN')
 
 export const userSignedOut = createAction('USER/USER_SIGNED_OUT')
 
+export const foo = createAction('FOO');
+
 export default {
   fetchProfile,
   setUser,
@@ -36,5 +38,6 @@ export default {
   createUserWithEmailAndPassword,
   authStateChanged,
   userSignedIn,
-  userSignedOut
+  userSignedOut,
+  foo
 }

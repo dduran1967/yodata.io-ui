@@ -13,13 +13,9 @@ export const userReducer = (state = userInitialState, action) => {
       console.error(code, message);
       return {...state, error: action.payload}
     case 'USER/USER_SIGNED_IN':
-      return {
-        currentUser: action.payload
-      }
+      return {...state, currentUser: action.payload, signedIn: true}
     case 'USER/USER_SIGNED_OUT':
-      return {
-        signedOut: true
-      }
+      return {...state, signedIn: false}
     default:
       return state;
   }

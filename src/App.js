@@ -34,7 +34,6 @@ const App = props => {
   )
 }
 
-
 export default compose(
   withDrawer,
   withRoute,

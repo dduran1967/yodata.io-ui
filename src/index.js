@@ -7,6 +7,8 @@ import App from './App'
 import router from './router'
 import './schema/schemaGraph'
 import store from './store'
+import './yo'
+
 window.firebase = firebase;
 
 const config = {
@@ -20,7 +22,7 @@ firebase.initializeApp(config);
 
 firebase.auth().onAuthStateChanged(function (user, credentials, redirectUrl) {
   if (user) {
-    store.dispatch({type: 'USER/USER_SIGNED_IN', payload: user})
+    store.dispatch({type: 'USER/USER_SIGNED_IN', payload: user.toJSON()})
   } else {
     store.dispatch({type: 'USER/USER_SIGNED_OUT'})
   }
@@ -37,11 +39,4 @@ const app = (
 router.start((err, state) => {
   ReactDOM.render(app, document.getElementById("app"))
 })
-
-
-
-
-
-
-
 

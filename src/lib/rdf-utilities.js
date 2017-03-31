@@ -213,7 +213,6 @@ export const propertiesOfDeep = (kb: IndexedFormula) => (subject: string): Array
   )(subject)
 }
 
-
 export const toContext = (statements: Statement[], ctx: Object) => {
   return statements.map(st => mapStatementToContext(st, ctx));
 }

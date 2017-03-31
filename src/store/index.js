@@ -9,6 +9,7 @@ import root from 'window-or-global'
 import {channelLogic, channelReducer} from '../channel'
 import {drawerReducer} from '../component/Drawer.js'
 import {loadingReducer} from '../component/Loading'
+import {dbLogic, dbReducer} from '../db'
 import {reactionReducer} from '../reaction/reactionLogic.js'
 import router from '../router'
 import {schemaLogic, schemaReducer} from '../schema'
@@ -23,13 +24,15 @@ const rootReducer = combineForms({
   reaction: reactionReducer,
   user:     userReducer,
   loading:  loadingReducer,
-  channel:  channelReducer
+  channel:  channelReducer,
+  db:       dbReducer,
 });
 
 const logicMiddleware = createLogicMiddleware([
   ...schemaLogic,
   ...userLogic,
-  ...channelLogic
+  ...channelLogic,
+  ...dbLogic
 ]);
 
 const enhancers = composeEnhancers(applyMiddleware(

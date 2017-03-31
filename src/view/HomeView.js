@@ -1,10 +1,17 @@
 import React from 'react'
+import {compose} from 'recompose'
+import {Debug} from '../component'
+import {subscriber} from '../db'
+import waitForUser from '../user/waitForUser.js'
+
+const A = compose(
+  waitForUser,
+  subscriber,
+)(Debug)
+
 const Home = props =>
   <div>
-    <h3>todo</h3>
-    <ul>
-      <li>yodata overview</li>
-      <li>getting started walkthrough doc/video</li>
-    </ul>
+    <A refs={['/channel', '/context']}/>
   </div>
+
 export default Home

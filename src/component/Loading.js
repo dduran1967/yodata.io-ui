@@ -29,6 +29,10 @@ export class Loading extends React.Component {
   }
 }
 
+/**
+ * renders loading component while the passed function/value is true
+ * @param isLoading
+ */
 export const withLoader = isLoading =>
   branch(
     isLoading,
