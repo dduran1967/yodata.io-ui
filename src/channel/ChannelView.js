@@ -1,35 +1,26 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {compose, withHandlers, withState} from 'recompose'
-import {Debug, EventList, Header, List, Section} from '../component'
+import {compose} from 'recompose'
+import {Debug, Header, Section} from '../component'
+import subscribeTo from '../db/subscribeTo.js'
 
-
-const ChannelView = ({data, fetchMessage}) => (
-  <div>
-    <Header as="h2">#{data.label}</Header>
-    <Section>
-      <Header>Allowed Actions</Header>
-      <List items={data.action} relaxed={true}/>
-    </Section>
-    <Section>
-      <Header as="h3">Events</Header>
-      <EventList items={data.contains}/>
-    </Section>
-
-  </div>
-);
-
-
-const withResource = compose(
-  connect(state => ({ref: state.router.route.params.id})),
-  withState('data', 'setData', {}),
-  withHandlers({})
+const enhance = compose(
+  subscribeTo(props => [props.route.path])
 )
 
-export default compose(
-  connect(
-    ({refs = ['channel/item/zeiz'], ...rest}) => ({
-      refs: refs.reduce((a, v) => ({...a, [v]: {}}), {})
-    }))
-)(Debug)
+const ChannelView = enhance(({data = {}}) => (
+    <div>
+      <Header as="h2">#{data.label}</Header>
+      <Debug {...data} />
+      <Section>
+        <Header>Allowed Actions</Header>
+        {/*<List items={data.action} relaxed={true}/>*/}
+      </Section>
+      <Section>
+        <Header as="h3">Events</Header>
+        {/*<EventList items={data.contains}/>*/}
+      </Section>
+    </div>
+  )
+)
 
+export default ChannelView

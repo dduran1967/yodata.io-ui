@@ -8,4 +8,4 @@ const withChannels = connect(
   }
 )
 
-export default withChannels;
+export default withChannels

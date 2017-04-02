@@ -53,7 +53,7 @@ export const innerRoutes = [
   },
   {
     name:      'channel/view',
-    path:      '/channel/view',
+    path:      '/channel/item/:key',
     component: ChannelView
   },
   {

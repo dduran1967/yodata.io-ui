@@ -1,26 +1,25 @@
 import values from 'lodash/values'
 import React from 'react'
-import {compose, withProps} from 'recompose'
-import {MediaList} from '../component'
+import {compose, withHandlers, withProps} from 'recompose'
+import {MediaList, Debug} from '../component'
 import subscribeTo from '../db/subscribeTo'
-import waitForUser from '../user/waitForUser.js'
+import {createChannel} from './channelActions'
 
 
-const ChannelRoot = props =>
+const enhance = compose(
+  subscribeTo(props => [props.route.path]),
+  withHandlers({
+    createChannel: ({dispatch}) => event => dispatch(createChannel())
+  })
+)
+
+const ChannelRoot = enhance(({listItems, createChannel, navigateTo, dispatch, data}) =>
   <div>
-    <button onClick={props.createChannel}>create channel</button>
-    <MediaList items={props.listItems} onClick={item => {
-      props.navigateTo('channel/view', {id: item.id})
+    <button onClick={createChannel}>create channel</button>
+    <MediaList items={values(data && data.item)} onClick={item => {
+      navigateTo('channel/view', {key: item.label})
     }}/>
   </div>
+)
 
-
-export default compose(
-  waitForUser,
-  subscribeTo(['channel']),
-  withProps(props => ({
-    listItems: values(props.channel && props.channel.item)
-  }))
-)(ChannelRoot)
-
-
+export default ChannelRoot

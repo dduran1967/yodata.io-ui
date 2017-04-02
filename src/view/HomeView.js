@@ -1,19 +1,17 @@
 import React from 'react'
-import {compose, withProps} from 'recompose'
-import {Debug} from '../component'
-import {subscribeTo} from '../db'
-import waitForUser from '../user/waitForUser.js'
-import {withUser} from '../component';
+import Debug from '../component/Debug.js'
+import searchInterface from '../component/searchInterface.js'
+import Typeahead from '../component/Typeahead'
+
+const searchConfig = searchInterface({name: 'search'})
 
 
-const A = compose(
-  waitForUser,
-  subscribeTo(['channel'])
-)(Debug)
+const Search = searchConfig(Typeahead)
 
 const Home = props =>
   <div>
-    <A/>
+    <Search/>
   </div>
 
 export default Home
+

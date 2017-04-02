@@ -1,13 +1,12 @@
 import {createAction} from 'redux-actions'
 const chance = require('chance').Chance();
-
-const fakeChannel = () => ({
-  id:      chance.hash({length: 10}),
-  name:    chance.word(),
-  url:     chance.url(),
-  action:  [],
-  history: []
-})
+//const fakeChannel = () => ({
+//  id:      chance.hash({length: 10}),
+//  name:    chance.word(),
+//  url:     chance.url(),
+//  action:  [],
+//  history: []
+//})
 
 export const createChannel = createAction('CHANNEL/CREATE', () => ({label: chance.word()}))
 export const fetchUserChannels = createAction('CHANNEL/FETCH_USER_CHANNELS', uid => ({uid}))

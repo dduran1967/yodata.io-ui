@@ -1,7 +1,8 @@
 // @flow
 
 import {combineForms} from 'react-redux-form'
-import {applyMiddleware, compose, createStore} from 'redux'
+import {applyMiddleware, createStore} from 'redux'
+import {composeWithDevTools} from 'redux-devtools-extension'
 import logger from 'redux-logger'
 import {createLogicMiddleware} from 'redux-logic'
 import {router5Middleware, router5Reducer} from 'redux-router5'
@@ -9,13 +10,14 @@ import root from 'window-or-global'
 import {channelLogic, channelReducer} from '../channel'
 import {drawerReducer} from '../component/Drawer.js'
 import {loadingReducer} from '../component/Loading'
+import {searchReducer} from '../component/searchInterface.js'
 import {dbLogic, dbReducer} from '../db'
 import {reactionReducer} from '../reaction/reactionLogic.js'
 import router from '../router'
 import {schemaLogic, schemaReducer} from '../schema'
 import {userLogic, userReducer} from '../user'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = composeWithDevTools({})
 
 const rootReducer = combineForms({
   router:   router5Reducer,
@@ -26,6 +28,7 @@ const rootReducer = combineForms({
   loading:  loadingReducer,
   channel:  channelReducer,
   db:       dbReducer,
+  search:   searchReducer
 });
 
 const logicMiddleware = createLogicMiddleware([

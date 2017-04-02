@@ -4,7 +4,6 @@ import React from 'react'
 import {compose} from 'recompose'
 import {Container, Segment, Sidebar} from 'semantic-ui-react'
 
-import './actions/index'
 import './App.css'
 import {PageHeader, withDrawer, withUser} from './component'
 import LeftSidebar from './component/Sidebar'

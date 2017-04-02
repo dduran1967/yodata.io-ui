@@ -7,6 +7,14 @@ const dbReducer = (state = initialState, action) => {
     case 'DB/SUBSCRIPTION_UPDATED':
       let {subject, value} = action.payload;
       return {...state, [subject]: value}
+    case 'DB/SEARCH_RESET':
+      return {
+        ...state, search: {
+          isLoading: false,
+          results:   [],
+          value:     ''
+        }
+      }
     default:
       return state;
   }
