@@ -11,40 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/mocks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/util/debrac.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/util/getUrlNamespace.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/util/shrinkUrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Action.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Organization.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Person.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Place.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Thing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/User.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/types/index.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/db/dbTypes.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/action/Action.js" afterPath="$PROJECT_DIR$/src/action/types.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/lib/util/mapStatementToFirebase.js" afterPath="$PROJECT_DIR$/src/lib/util/mapStatementToDocStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/ActionList.js" afterPath="$PROJECT_DIR$/src/action/ActionList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/channel/ChannelView.js" afterPath="$PROJECT_DIR$/src/channel/ChannelView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/EventList.js" afterPath="$PROJECT_DIR$/src/component/EventList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/List.js" afterPath="$PROJECT_DIR$/src/component/List.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/searchInterface.js" afterPath="$PROJECT_DIR$/src/component/searchInterface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/DB.js" afterPath="$PROJECT_DIR$/src/db/DB.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/dbLogic.js" afterPath="$PROJECT_DIR$/src/db/dbLogic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/index.js" afterPath="$PROJECT_DIR$/src/db/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/Graph.js" afterPath="$PROJECT_DIR$/src/lib/Graph.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/rdf-utilities.js" afterPath="$PROJECT_DIR$/src/lib/rdf-utilities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/context.js" afterPath="$PROJECT_DIR$/src/schema/context.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/yo.js" afterPath="$PROJECT_DIR$/src/yo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -143,7 +112,6 @@
         <option value="$PROJECT_DIR$/src/db/subscriber.js" />
         <option value="$PROJECT_DIR$/src/db/dbTypes.js" />
         <option value="$PROJECT_DIR$/src/db/subscribe.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/channel/withChannels.js" />
         <option value="$PROJECT_DIR$/src/router/routes.js" />
         <option value="$PROJECT_DIR$/src/component/Loading.js" />
@@ -160,7 +128,6 @@
         <option value="$PROJECT_DIR$/src/lib/util/mapStatementToFirebase.js" />
         <option value="$PROJECT_DIR$/src/db/dbActions.js" />
         <option value="$PROJECT_DIR$/src/component/Typeahead.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/db/dbLogic.js" />
         <option value="$PROJECT_DIR$/src/lib/util/debrac.js" />
         <option value="$PROJECT_DIR$/src/db/DB.js" />
@@ -184,6 +151,8 @@
         <option value="$PROJECT_DIR$/src/lib/rdf-utilities.js" />
         <option value="$PROJECT_DIR$/src/channel/ChannelView.js" />
         <option value="$PROJECT_DIR$/src/db/index.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -275,6 +244,16 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="node_modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -290,24 +269,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lib">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -326,60 +287,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="db">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="component">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="channel">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="action">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1362,7 +1269,7 @@
       <workItem from="1491113941065" duration="2513000" />
       <workItem from="1491141982462" duration="16704000" />
       <workItem from="1491173651285" duration="4927000" />
-      <workItem from="1491178959062" duration="29425000" />
+      <workItem from="1491178959062" duration="30512000" />
     </task>
     <task id="LOCAL-00001" summary="add gh-pages">
       <created>1487102793367</created>
@@ -1441,7 +1348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491141804730</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="weekend updates :)">
+      <created>1491234659366</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1491234659366</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1471,7 +1385,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1578122000" />
+    <option name="totallyTimeSpent" value="1579209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1572,7 +1486,8 @@
     <MESSAGE value="fix db subscription logic issue" />
     <MESSAGE value="auth logic popup" />
     <MESSAGE value="data subscriptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="data subscriptions" />
+    <MESSAGE value="weekend updates :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="weekend updates :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1581,43 +1496,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/action/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/chance/chance.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stream/withStreams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stream/streamActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/schemaLogic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/subscribeTo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1969,9 +1847,9 @@
           <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="28" />
           <folding>
             <element signature="e#257#370#0" expanded="false" />
-            <element signature="e#844#941#0" expanded="true" />
+            <element signature="e#844#941#0" expanded="false" />
             <element signature="e#1209#1358#0" expanded="false" />
-            <element signature="e#1697#1820#0" expanded="true" />
+            <element signature="e#1697#1820#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1989,21 +1867,110 @@
         <state relative-caret-position="515">
           <caret line="223" column="1" lean-forward="false" selection-start-line="223" selection-start-column="1" selection-end-line="223" selection-end-column="1" />
           <folding>
-            <element signature="e#4711#4872#0" expanded="true" />
+            <element signature="e#4711#4872#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/ChannelView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+          <folding>
+            <element signature="n#Channel#0" expanded="false" />
+            <element signature="n#!!block;n#constructor#0;n#ActionMessage#0" expanded="false" />
+            <element signature="n#!!block;n#constructor#0;n#ActionModel#0" expanded="false" />
+            <element signature="e#1900#1997#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/schemaLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/schemaActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#797#954#0" expanded="true" />
+            <element signature="e#1137#1195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="e#436#958#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/ActionRoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/dbActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/dbLogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="55" column="40" lean-forward="false" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+        <state relative-caret-position="289">
+          <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding>
             <element signature="e#10#46#0" expanded="false" />
+            <element signature="n#!!block;n#Action#0" expanded="false" />
             <element signature="e#430#627#0" expanded="false" />
             <element signature="e#483#625#0" expanded="false" />
             <element signature="e#546#593#0" expanded="false" />
-            <element signature="e#1421#1610#0" expanded="true" />
+            <element signature="e#665#1624#0" expanded="false" />
+            <element signature="e#763#806#0" expanded="false" />
+            <element signature="e#846#1151#0" expanded="false" />
+            <element signature="e#931#1125#0" expanded="false" />
+            <element signature="e#976#1017#0" expanded="false" />
+            <element signature="e#1034#1119#0" expanded="false" />
+            <element signature="e#1189#1622#0" expanded="false" />
             <element signature="e#1440#1601#0" expanded="false" />
             <element signature="e#1507#1591#0" expanded="false" />
             <element signature="e#1671#1845#0" expanded="false" />
@@ -2026,49 +1993,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/dbReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" lean-forward="false" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        <state relative-caret-position="374">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="e#97#451#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/channel/ChannelView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="n#Channel#0" expanded="false" />
-            <element signature="n#!!block;n#constructor#0;n#ActionMessage#0" expanded="true" />
-            <element signature="n#!!block;n#constructor#0;n#ActionModel#0" expanded="true" />
-            <element signature="e#1666#1779#0" expanded="false" />
-            <element signature="e#1900#1997#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/ActionRoot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="108" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="108" />
-          <folding />
         </state>
       </provider>
     </entry>

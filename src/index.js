@@ -9,6 +9,8 @@ import './schema/schemaGraph'
 import store from './store'
 import './yo'
 
+store.dispatch({type: 'SCHEMA/FETCH_SCHEMA', payload: 'https://devtest.yodata.me/test/schema.nt'})
+
 window.firebase = firebase;
 
 const config = {

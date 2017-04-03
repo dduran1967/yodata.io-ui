@@ -1,7 +1,7 @@
 import 'codemirror/lib/codemirror.css'
 
 import React from 'react'
-import {compose} from 'recompose'
+import {compose, lifecycle} from 'recompose'
 import {Container, Segment, Sidebar} from 'semantic-ui-react'
 
 import './App.css'
@@ -36,6 +36,6 @@ const App = props => {
 export default compose(
   withDrawer,
   withRoute,
-  withUser
+  withUser,
 )(App)
 
