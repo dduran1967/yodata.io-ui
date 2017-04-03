@@ -1,25 +1,9 @@
 // @flow
 
+import Chance from 'chance'
 import React from 'react'
-import {compose, mapProps, withHandlers, withState} from 'recompose'
-import withStreams from '../stream/withStreams.js'
-
-const ChannelEvent = ({id, label, item, showContent, onHeaderClick}) =>
-  <div key={id} style={{marginBottom: '.5em'}}>
-    <div className="ui top attached menu">
-      <div className="text item">{label}</div>
-      <div className="right menu">
-        <a className="item" onClick={event => onHeaderClick(event)}>
-          <i className={'icon caret ' + (showContent ? 'down' : 'left')}></i>
-        </a>
-      </div>
-    </div>
-    {showContent && item &&
-    <div className="ui bottom attached secondary message small">
-      <pre><code>{JSON.stringify(item, null, 2)}</code></pre>
-    </div>
-    }
-  </div>
+import {compose, withHandlers, withState} from 'recompose'
+const fake = new Chance()
 
 const withShowContentToggle = compose(
   withState('showContent', 'setShowContent', false),
@@ -30,28 +14,56 @@ const withShowContentToggle = compose(
   })
 )
 
+class Person {
+  id: string = fake.url()
+  type: string = 'Person'
+  email: string = fake.email()
+  givenName: string = fake.first()
+  familyName: string = fake.last()
+}
+
+class ActionMessage {
+  id: string = fake.url()
+  type: string = 'Action'
+  actionStatus: string = 'CompletedActionStatus'
+  agent: Person = new Person
+  subject: string = fake.url()
+}
+
 const enhance = compose(
-  mapProps(props => ({
-    id:           props.item.value,
-    label:        props.item.value,
-    item:         props.stream[props.item.value],
-    fetchMessage: props.fetchMessage
-  })),
   withShowContentToggle,
   withHandlers({
-    onHeaderClick: props => event => {
+    onHeaderClick: (props) => (event, id) => {
       event.preventDefault()
       props.toggleShowContent()
-      props.fetchMessage(props.id)
+      props.fetchMessage(id)
     }
-  }),
+  })
 )
+
+const ChannelEvent = ({id, label, data, showContent, onHeaderClick}) =>
+  <div key={id} style={{marginBottom: '.5em'}}>
+    <div className="ui top attached menu">
+      <div className="text item">{label || id}</div>
+      <div className="right menu">
+        <a className="item" onClick={(e) => onHeaderClick(e, id)}>
+          <i className={'icon caret ' + (showContent ? 'down' : 'left')}></i>
+        </a>
+      </div>
+    </div>
+    {showContent && data &&
+    <div className="ui bottom attached message small inverted">
+      <pre><code style={{color: 'lime'}}>{JSON.stringify(data, null, 2)}</code></pre>
+    </div>
+    }
+  </div>
 
 const EventListItem = enhance(ChannelEvent)
 
-const EventList = ({items = [], stream, fetchMessage, ...props}) =>
-  <div>
-    {items.map(item => EventListItem({...{item, stream, fetchMessage}}))}
-  </div>
-
-export default withStreams(EventList)
+export default function EventList(props: { items: Array<any> }) {
+  return (
+    <div>
+      {props.items.map((data) => <EventListItem {...{id: data.id, data: data}} />)}
+    </div>
+  )
+}

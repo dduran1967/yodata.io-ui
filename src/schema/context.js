@@ -20,6 +20,38 @@ const xsd = Namespace('http://www.w3.org/2001/XMLSchema#')
 const link = Namespace('http://www.w3.org/2007/ont/link#')
 const pim = Namespace('http://www.w3.org/ns/pim/space#')
 
+export const NS_PREFIX = {
+  'http://www.w3.org/ns/auth/acl#':                          'acl',
+  'http://purl.org/dc/terms/':                               'dc',
+  'http://purl.org/dc/elements/1.1/':                        'dce',
+  'http://xmlns.com/foaf/0.1/':                              'foaf',
+  'http://www.w3.org/ns/ldp#':                               'ldp',
+  'http://www.w3.org/1999/02/22-rdf-syntax-ns#':             'rdf',
+  'http://www.w3.org/2000/01/rdf-schema#':                   'rdfs',
+  'http://schema.org/':                                      'schema',
+  'http://www.w3.org/2002/07/owl#':                          'owl',
+  'http://www.w3.org/ns/posix/stat#':                        'posix',
+  'http://www.w3.org/2004/02/skos/core#':                    'skos',
+  'http://www.w3.org/ns/solid/terms#':                       'solid',
+  'http://purl.org/vocab/vann/':                             'vann',
+  'http://www.w3.org/2003/06/sw-vocab-status/ns#':           'vs',
+  'http://www.w3.org/2001/XMLSchema#':                       'xsd',
+  'http://www.w3.org/2007/ont/link#':                        'link',
+  'http://www.w3.org/ns/pim/space#':                         'pim',
+  'http://purl.org/ontology/bibo/':                          'bibo',
+  'http://purl.org/ontology/mo/':                            'mo',
+  'http://rdfs.org/ns/void#':                                'void',
+  'http://www.iana.org/assignments/link-relations/':         'rel',
+  'http://www.w3.org/2007/ont/http#':                        'http',
+  'http://www.w3.org/2007/ont/httph#':                       'headers',
+  'http://www.w3.org/ns/dcat#':                              'dcat',
+  'http://www.w3.org/ns/iana/media-types/text/turtle#':      'turtle',
+  'http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#':  'schema',
+  'https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#': 'schema',
+  'http://www.wikidata.org/entity/':                         'entity',
+  'http://purl.org/dc/dcmitype/':                            'dctype'
+}
+
 
 export const NAMESPACE = {
   acl,

@@ -20,4 +20,5 @@ const enhance = compose(
   }))
 );
 
-export default enhance(List);
+export default enhance(List)
+

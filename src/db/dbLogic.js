@@ -6,13 +6,13 @@ import filter from 'lodash/filter'
 import {createLogic} from 'redux-logic'
 import {lit} from '../lib/rdf-utilities.js'
 import {subscriptionActive} from './dbActions'
+import mapStatementToDocStore from '../lib/util/mapStatementToDocStore.js';
 
 type Action = {
   type: string,
   payload?: any,
   meta?: any
 }
-
 
 const addUser = createLogic({
   type: '*',
@@ -110,11 +110,11 @@ const searchLogic = createLogic({
   }
 })
 
-const addStatement = createLogic({
-  type:      'DB/ADD_STATEMENT',
-  transform() {
-    'use strict'
+const saveGraph = createLogic({
+  type:      'DB/SAVE_GRAPH',
+  process({action},dispatch, done) {
 
+    done()
   }
 })
 

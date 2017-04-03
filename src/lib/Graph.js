@@ -1,11 +1,11 @@
 // @flow
-
+import uniq from 'lodash/uniq';
 import flow from 'lodash/fp/flow'
 import map from 'lodash/fp/map'
 import getProperty from 'lodash/fp/property'
 import reduce from 'lodash/fp/reduce'
 import $rdf, {IndexedFormula, Statement} from 'rdflib'
-import {context, CONTEXT_IN, NAMESPACE, sameAs} from '../schema/context.js'
+import {context, CONTEXT_IN, NAMESPACE, sameAs, NS_PREFIX} from '../schema/context.js'
 import {
   find,
   findSubject,
@@ -18,9 +18,9 @@ import {
   subTypesOf,
   superTypesOf,
   sym,
-  toJson
+  toJson,
+  getUrlNamespace
 } from './rdf-utilities'
-
 
 const TYPE = NAMESPACE.rdf('type')
 const CLASS = NAMESPACE.rdfs('Class')
@@ -107,7 +107,6 @@ export class Graph extends IndexedFormula {
     )(url)
   }
 
-
   getSubject = (uri: string) => {
     if (uri) {
       let subjectNode = sym(uri);
@@ -124,6 +123,14 @@ export class Graph extends IndexedFormula {
     throw new Error(`subject with uri ${uri} not found.`)
   }
 
+  checkNamespaces() {
+    let subjectNamespaces = Object.keys(this.subjectIndex).map(getUrlNamespace);
+    let predicateNamespaces = Object.keys(this.predicateIndex).map(getUrlNamespace);
+    let objectNamespaces = Object.keys(this.objectIndex).map(getUrlNamespace);
+    let allNamespaces = [...subjectNamespaces, ...predicateNamespaces, ...objectNamespaces ]
+    let uniqueNamespaces = uniq(allNamespaces);
+    return uniqueNamespaces.reduce((a,v) => ({...a,[v]: NS_PREFIX[v]}), {})
+  }
 
 }
 

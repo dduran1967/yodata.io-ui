@@ -10,11 +10,17 @@ import $rdf, {IndexedFormula, NamedNode, Node, Statement} from 'rdflib'
 import uuid from 'uuid/v1'
 import root from 'window-or-global'
 import context from '../schema/context.js'
+import getUrlNamespace from './util/getUrlNamespace'
+import debrac from './util/debrac'
+import shrinkUrl from './util/shrinkUrl';
 
 
 type SorN = string | Node
 
 const checkType = check.assert
+
+export {getUrlNamespace}
+export {debrac}
 
 export function sym(v: any): NamedNode {
   if (typeof v === 'string') {
@@ -186,7 +192,7 @@ export const superTypesOf = (kb: IndexedFormula) => (subject: NamedNode): Array<
   check.assert.instance(kb, IndexedFormula);
   check.assert.instance(subject, NamedNode);
   return flow(
-    subject => transitiveClosure(kb)(subject,context.subClassOf,false),
+    subject => transitiveClosure(kb)(subject, context.subClassOf, false),
     keys,
     map(id => kb.fromNT(id)),
     reverse
@@ -197,7 +203,7 @@ export const subTypesOf = (kb: IndexedFormula) => (subject: NamedNode): Array<Na
   check.assert.instance(kb, IndexedFormula);
   check.assert.instance(subject, NamedNode);
   return flow(
-    subject => transitiveClosure(kb)(subject,context.subClassOf,true),
+    subject => transitiveClosure(kb)(subject, context.subClassOf, true),
     keys,
     map(id => kb.fromNT(id)),
     reverse
@@ -236,7 +242,10 @@ const rdfu = {
   propertiesOfDeep,
   superTypesOf,
   subTypesOf,
-  transitiveClosure
+  transitiveClosure,
+  getUrlNamespace,
+  debrac,
+  shrinkUrl
 }
 
 export default rdfu;

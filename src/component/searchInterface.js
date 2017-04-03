@@ -60,7 +60,6 @@ const initializeSearch = createAction('SEARCH_INIT')
 const searchValue = createAction('SEARCH_VALUE')
 const searchResult = createAction('SEARCH_RESULT')
 
-
 export function searchReducer(state: SearchState, action: SearchAction): SearchState {
   switch (action.type) {
     case 'SEARCH_INIT':

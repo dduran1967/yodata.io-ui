@@ -1,15 +1,18 @@
+
+// @flow
+
 import React from 'react'
 import List from '../component/List'
+import type {Thing} from '../models/Thing.js';
 
-function ActionList({actions = [], onSelect}) {
-  const listItems = actions.map(action => ({
+
+export default function ActionList(props: {actions: Array<Thing>, onSelect: ()=> void }) {
+  const listItems = props.actions.map((action: Thing) => ({
     key:         action.id,
     id:          action.id,
     label:       action.label,
     description: action.description,
-    onClick:      (action) => onSelect(action)
+    onClick:      (action) => props.onSelect(action)
   }))
   return <List listItems={listItems}/>
 }
-
-export default ActionList;

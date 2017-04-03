@@ -3,21 +3,20 @@
 import base64url from 'base64-url'
 import store from '../store'
 import {dbGet} from './dbActions'
+import axios from 'axios'
+
 
 class DB {
-  host: string = 'dave.yodata.me';
+  host: string = 'yodata-1115.firebaseio.com';
   protocol: string = 'https:';
-  root: string = '';
-
-  constructor(baseURL: string = 'https://yodata-1115.firebaseio.com/') {
-    let url = new URL(baseURL)
-    this.host = url.host
-    this.protocol = url.protocol;
-    this.root = url.pathname;
-  }
+  root: string = '/';
 
   get origin(): string {
     return `${this.protocol}//${this.host}`
+  }
+
+  get url(): string {
+   return `${this.protocol}//${this.host + this.root}`
   }
 
   encodeKey = (iri: string) => {
@@ -27,8 +26,7 @@ class DB {
 
   decodeKey = (value: string): string => base64url.decode(value)
 
-  fetch = (id: string): void => store.dispatch(dbGet(id))
-
+  fetch = (id: string) => axios(id)
 }
 
 export default DB
