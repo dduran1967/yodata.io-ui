@@ -6,8 +6,7 @@ import {compose, withHandlers} from 'recompose'
 import {createAction} from 'redux-actions'
 import Debug from './Debug';
 
-// Search Types
-
+// SEARCH TYPES
 type SearchState = {
   +value: string,
   +result: Array<any>
@@ -54,12 +53,16 @@ type SearchUIInterface = {
   handleSearchChange: () => mixed
 }
 
-// Action Creators
+type SearchInterfaceSettings = {
+  +name: string
+}
 
+// SEARCH ACTIONS
 const initializeSearch = createAction('SEARCH_INIT')
 const searchValue = createAction('SEARCH_VALUE')
 const searchResult = createAction('SEARCH_RESULT')
 
+// SEARCH REDUCER
 export function searchReducer(state: SearchState, action: SearchAction): SearchState {
   switch (action.type) {
     case 'SEARCH_INIT':
@@ -75,8 +78,16 @@ export function searchReducer(state: SearchState, action: SearchAction): SearchS
   }
 }
 
-type SearchInterfaceSettings = {
-  +name: string
+// SEARCH UI
+export const SearchDebug = (props: SearchUIInterface) => {
+  let {search, handleSearchChange} = props
+  let {value, result} = search
+  return (
+    <div>
+      <input type="text" value={value} onChange={handleSearchChange}/>
+      <Debug {...{value, result}} />
+    </div>
+  )
 }
 
 const configureSearchInterface = (settings: SearchInterfaceSettings) => compose(
@@ -91,16 +102,5 @@ const configureSearchInterface = (settings: SearchInterfaceSettings) => compose(
       dispatch({type: 'SEARCH_VALUE', payload: target.value})
   })
 )
-
-export const SearchDebug = (props: SearchUIInterface) => {
-  let {search, handleSearchChange} = props
-  let {value, result} = search
-  return (
-    <div>
-      <input type="text" value={value} onChange={handleSearchChange}/>
-      <Debug {...{value, result}} />
-    </div>
-  )
-}
 
 export default configureSearchInterface

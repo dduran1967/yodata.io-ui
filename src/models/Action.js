@@ -1,6 +1,6 @@
 // @flow
 
-import {Thing} from './Thing'
+import type {Thing} from './Thing'
 
 export type StandardAction = {
   type: string,

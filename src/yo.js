@@ -11,6 +11,7 @@ import schema from './schema/schemaActions'
 import user from './user/userActions'
 import {Foo} from './models/index';
 import * as context from './schema/context.js';
+import axios from 'axios';
 
 class Yo {
 
@@ -50,4 +51,5 @@ yo.mock = {
 }
 
 root.yo = yo;
+root.axios = axios;
 export default yo

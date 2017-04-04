@@ -1,6 +1,7 @@
 import mapKeys from 'lodash/mapKeys'
 import root from 'window-or-global'
 import {ActionRoot, ActionView} from '../action'
+import RestApiRoot from '../apidocs/restApiRoot.js'
 import ChannelRoot from '../channel/ChannelRoot'
 import ChannelView from '../channel/ChannelView'
 import {Home} from '../component'
@@ -42,6 +43,13 @@ export const sidebarRoutes = [
     component: UserRoot,
     icon:      'user',
     label:     'User'
+  },
+  {
+    name:      'api',
+    path:      '/api',
+    component: RestApiRoot,
+    icon:      'code',
+    label:     'REST API'
   }
 ]
 

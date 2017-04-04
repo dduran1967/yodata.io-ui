@@ -1,3 +1,5 @@
+// @flow
+
 import 'codemirror/lib/codemirror.css'
 
 import React from 'react'
@@ -19,13 +21,13 @@ const App = props => {
   return (
     <div>
       <Container fluid style={{height: '100vh'}}>
+        <PageHeader title={props.route.name}/>
         <Sidebar.Pushable as={Segment}>
           <LeftSidebar />
           <Sidebar.Pusher>
-            <PageHeader title={props.route.name}/>
-            <Container style={{paddingTop: '66px'}}>
+            <div className="ui container" style={{paddingTop: '66px'}}>
               <ViewSelector />
-            </Container>
+            </div>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </Container>

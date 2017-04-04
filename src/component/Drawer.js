@@ -16,10 +16,9 @@ export const drawerActions = {
 export const drawerReducer = (drawer = initialState, action) => {
   switch (action.type) {
     case 'DRAWER/TOGGLE_DRAWER':
-      return {
-        ...drawer,
-        open: !drawer.open
-      }
+      return { ...drawer, open: !drawer.open }
+    case '@@router5/TRANSITION_SUCCESS':
+      return { ...drawer, open: false }
     default:
       return drawer;
   }

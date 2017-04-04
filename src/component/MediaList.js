@@ -1,5 +1,8 @@
+import React from 'react';
+import {connect} from 'react-redux';
+
 import {compose, mapProps} from 'recompose'
-import {ItemGroup} from 'semantic-ui-react'
+import {CardGroup} from 'semantic-ui-react'
 import {lit} from '../lib/rdf-utilities'
 
 const enhance = compose(
@@ -20,5 +23,5 @@ const enhance = compose(
   )
 )
 
-export default enhance(ItemGroup)
+export default enhance(CardGroup)
 

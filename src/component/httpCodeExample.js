@@ -1,45 +1,85 @@
+// @flow
+
+import trim from 'lodash/trim'
 import React from 'react'
 
 const entries = Object.entries;
-let newline = '\n';
+const newline = '\n';
 
-const HttpCodeExample = props => {
+function processHttpRequestResponseContent(input): string {
   let content = '';
-  if(props.method && props.url) {
-    let method = props.method.toUpperCase();
-    content = content.concat(newline + `${method} ${props.url} HTTP/1.1`)
+  if (input.method && input.url) {
+    input.method = input.method.toUpperCase();
+    content = content.concat(newline + `${input.method} ${input.url} HTTP/1.1`)
   }
-  if (props.status) {
-    content = content.concat(newline + props.status);
+  if (status) {
+    content = content.concat(newline + status + newline);
   }
-  if (props.headers) {
+  if (input.headers) {
     content += `\n`;
-    entries(props.headers).forEach(([k,v]) => {
+    entries(input.headers).forEach(([k, v]) => {
       content = content.concat(`\n${k}: ${v}`);
     })
   }
-  if (props.contentType) {
-    content = content.concat(newline + `content-type: ` + props.contentType);
+  if (input.contentType) {
+    content = content.concat(newline + `content-type: ` + input.contentType);
   }
-  if (props.body) {
-    content = content.concat(newline + newline + props.body);
+  if (input.body) {
+    content = content.concat(newline + newline + input.body);
   }
-  if (props.json) {
-    content = content.concat(JSON.stringify(props.json,null,3));
+  if (input.json) {
+    content = content.concat(JSON.stringify(input.json, null, 3));
   }
-  return (
-    <div>
-      {props.comment &&
-        <div className="bg-info p-3 my-3 strong">
-          {props.comment}
-        </div>
-      }
-      <div className="bg-faded px-3 py-2">
-        <pre><code>{content}</code></pre>
-      </div>
-    </div>
-
-  )
+  return trim(content);
 }
 
-export default HttpCodeExample
+
+export default class HttpCodeExample extends React.Component {
+  props: {
+    request: {
+      method: string,
+      contentType: string,
+      headers: {},
+      url: string,
+      body: string,
+      status: string
+    },
+    response: {
+      contentType: string,
+      headers: {},
+      body: string,
+      json: {},
+      status: string,
+    },
+    comment: string
+  }
+
+  static defaultProps = {
+    method: 'GET',
+  }
+
+  render() {
+    let request = processHttpRequestResponseContent(this.props.request)
+    let response = processHttpRequestResponseContent(this.props.response)
+    return (
+      <div style={{marginBottom: '1em'}}>
+        {this.props.comment}
+        <div className="ui inverted basic segment">
+          {this.props.request &&
+            <div>
+              REQUEST:
+              <pre><code style={{color: 'lime'}}>{request}</code></pre>
+            </div>
+
+          }
+          {this.props.response &&
+          <div>
+            RESPONSE:
+            <pre><code style={{color: 'lime'}}>{response}</code></pre>
+          </div>
+          }
+        </div>
+      </div>
+    )
+  }
+}

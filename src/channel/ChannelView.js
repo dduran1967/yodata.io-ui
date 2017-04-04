@@ -5,11 +5,10 @@ import React from 'react'
 import {compose, withHandlers, withProps, withState} from 'recompose'
 import {Header, Section} from '../component'
 import EventList from '../component/EventList.js'
+import {Message, Segment} from 'semantic-ui-react';
 
 
 let fake = new Chance()
-
-
 
 class Channel {
   id: 'channel'
@@ -55,14 +54,7 @@ class ActionModel {
 const enhance = compose(
   withProps(props => ({
     channel: new Channel,
-    action:  [
-      new ActionModel({
-        id: 'RegisterAction',
-      }),
-      new ActionModel({
-        id: 'UnRegisterAction'
-      })
-    ],
+    action:  [],
     item:    [
       new ActionMessage,
       new ActionMessage,
@@ -82,7 +74,6 @@ const withShowContentToggle = compose(
     }
   })
 )
-
 
 const withToggle = compose(
   withShowContentToggle,
@@ -115,16 +106,30 @@ const ListItem = ({id, label, data, showContent, onHeaderClick}) =>
 const ActionListItem = withToggle(ListItem)
 
 const ChannelView = enhance(({channel, action, item}) => (
-    <div>
-      <Header as="h2">#{channel.label}</Header>
-      <Section>
-        <Header>Allowed Actions</Header>
-        {action.map((data) => <ActionListItem {...{id: data.id, data: data}} />)}
-      </Section>
-      <Section>
-        <Header>Events</Header>
-        <EventList items={item}/>
-      </Section>
+    <div className="ui grid">
+      <div className="column">
+
+        <Segment basic>
+          <Header as="h2">#{channel.label}</Header>
+        </Segment>
+
+        <Segment basic>
+          <Header>Action Types</Header>
+          {action.length === 0 &&
+            <Message basic>
+              This channel will accept any action type.  To limit your channel
+              to a set of specific types, add them here.
+            </Message>
+          }
+          {action.map((data) => <ActionListItem {...{id: data.id, data: data}} />)}
+        </Segment>
+
+        <Section>
+          <Header>Events</Header>
+          <EventList items={item}/>
+        </Section>
+
+      </div>
     </div>
   )
 )

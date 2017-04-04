@@ -90,6 +90,8 @@
     "react-fab": "^1.0.0",
     "react-jsonschema-form": "^0.43.0",
     "react-mfb": "^0.4.1",
+    "react-motion": "^0.4.7",
+    "react-motion-ui-pack": "^0.10.2",
     "react-redux": "^5.0.3",
     "react-redux-form": "^1.8.1",
     "react-router5": "^4.0.1",

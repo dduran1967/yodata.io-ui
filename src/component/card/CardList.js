@@ -1,16 +1,26 @@
-import styled from 'styled-components';
+import React from 'react';
+import {connect} from 'react-redux';
 
-const CardList = styled.div`
-    display: block;
-    column-count: 3;
-    column-gap: 1em;
-  `;
+import {compose, mapProps} from 'recompose'
+import {CardGroup} from 'semantic-ui-react'
+import {lit} from '../../lib/rdf-utilities'
 
-export const CardListItem = styled.div`
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 1em;
-  `;
+const enhance = compose(
+  mapProps(({items, onClick}) => ({
+      items:     items.map(item => ({
+        header:      lit(item.label),
+        description: lit(item.description),
+        key:         item.id,
+        onClick:     event => {
+          event.preventDefault();
+          onClick(item)
+        }
+      })),
+      divided:   true,
+      relaxed:   true,
+      link:      true
+    })
+  )
+)
 
-export default CardList
-
+export default enhance(CardGroup)
