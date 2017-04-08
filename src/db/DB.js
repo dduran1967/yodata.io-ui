@@ -1,9 +1,7 @@
 // @flow
 
-import base64url from 'base64-url'
-import store from '../store'
-import {dbGet} from './dbActions'
 import axios from 'axios'
+import base64url from 'base64-url'
 
 
 class DB {
@@ -16,7 +14,7 @@ class DB {
   }
 
   get url(): string {
-   return `${this.protocol}//${this.host + this.root}`
+    return `${this.protocol}//${this.host + this.root}`
   }
 
   encodeKey = (iri: string) => {

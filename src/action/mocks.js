@@ -16,7 +16,7 @@ export class Action {
   type: string = fake.word()
   label: string = fake.word()
   description: string = fake.paragraph()
-  property: Array<Property> = times(5, new Property)
+  property: Array<Property> = times(5, new Property())
 }
 
 export default Action;

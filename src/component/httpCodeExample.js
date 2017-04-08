@@ -1,7 +1,7 @@
 // @flow
 
-import trim from 'lodash/trim'
-import React from 'react'
+import trim from 'lodash/trim';
+import React from 'react';
 
 const entries = Object.entries;
 const newline = '\n';
@@ -10,7 +10,7 @@ function processHttpRequestResponseContent(input): string {
   let content = '';
   if (input.method && input.url) {
     input.method = input.method.toUpperCase();
-    content = content.concat(newline + `${input.method} ${input.url} HTTP/1.1`)
+    content = content.concat(newline + `${input.method} ${input.url} HTTP/1.1`);
   }
   if (status) {
     content = content.concat(newline + status + newline);
@@ -19,7 +19,7 @@ function processHttpRequestResponseContent(input): string {
     content += `\n`;
     entries(input.headers).forEach(([k, v]) => {
       content = content.concat(`\n${k}: ${v}`);
-    })
+    });
   }
   if (input.contentType) {
     content = content.concat(newline + `content-type: ` + input.contentType);
@@ -33,7 +33,6 @@ function processHttpRequestResponseContent(input): string {
   return trim(content);
 }
 
-
 export default class HttpCodeExample extends React.Component {
   props: {
     request: {
@@ -42,7 +41,7 @@ export default class HttpCodeExample extends React.Component {
       headers: {},
       url: string,
       body: string,
-      status: string
+      status: string,
     },
     response: {
       contentType: string,
@@ -51,35 +50,32 @@ export default class HttpCodeExample extends React.Component {
       json: {},
       status: string,
     },
-    comment: string
-  }
+    comment: string,
+  };
 
   static defaultProps = {
     method: 'GET',
-  }
+  };
 
   render() {
-    let request = processHttpRequestResponseContent(this.props.request)
-    let response = processHttpRequestResponseContent(this.props.response)
+    let request = processHttpRequestResponseContent(this.props.request);
+    let response = processHttpRequestResponseContent(this.props.response);
     return (
-      <div style={{marginBottom: '1em'}}>
+      <div style={{ marginBottom: '1em' }}>
         {this.props.comment}
         <div className="ui inverted basic segment">
           {this.props.request &&
             <div>
               REQUEST:
-              <pre><code style={{color: 'lime'}}>{request}</code></pre>
-            </div>
-
-          }
+              <pre><code style={{ color: 'lime' }}>{request}</code></pre>
+            </div>}
           {this.props.response &&
-          <div>
-            RESPONSE:
-            <pre><code style={{color: 'lime'}}>{response}</code></pre>
-          </div>
-          }
+            <div>
+              RESPONSE:
+              <pre><code style={{ color: 'lime' }}>{response}</code></pre>
+            </div>}
         </div>
       </div>
-    )
+    );
   }
 }

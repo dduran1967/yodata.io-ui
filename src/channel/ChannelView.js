@@ -1,137 +1,103 @@
 // @flow
 
-import Chance from 'chance'
-import React from 'react'
-import {compose, withHandlers, withProps, withState} from 'recompose'
-import {Header, Section} from '../component'
-import EventList from '../component/EventList.js'
-import {Message, Segment} from 'semantic-ui-react';
-
-
-let fake = new Chance()
-
-class Channel {
-  id: 'channel'
-  type: 'Channel'
-  label: string = fake.word()
-  description: string = fake.paragraph()
-  action: Array<string> = ['a1']
-}
-
-class Person {
-  id: string = fake.url()
-  type: string = 'Person'
-  email: string = fake.email()
-  givenName: string = fake.first()
-  familyName: string = fake.last()
-}
-
-class ActionMessage {
-  id: string = fake.guid()
-  type: string = 'Action'
-  actionStatus: string = 'CompletedActionStatus'
-  agent: Person = new Person
-  subject: string = fake.url()
-
-  constructor(props) {
-    Object.assign(this, props);
-  }
-}
-
-class ActionModel {
-  id: string = fake.url()
-  type: string = 'Action'
-  label: string = fake.word()
-  description: string = fake.paragraph()
-  example: ActionMessage = new ActionMessage({type: this.id})
-
-  constructor(props) {
-    Object.assign(this, props);
-    this.example = new ActionMessage({type: this.id})
-  }
-}
-
-const enhance = compose(
-  withProps(props => ({
-    channel: new Channel,
-    action:  [],
-    item:    [
-      new ActionMessage,
-      new ActionMessage,
-      new ActionMessage,
-      new ActionMessage,
-      new ActionMessage,
-      new ActionMessage
-    ]
-  }))
-)
+import React from 'react';
+import {compose, withHandlers, flattenProp, withState} from 'recompose';
+import {Button, Message, Segment, HeaderContent} from 'semantic-ui-react';
+import {Header, Section} from '../component';
+import EventList from '../component/EventList.js';
+import Page from '../component/Page';
+import {map} from 'mobx';
+import {types, subTypesOf} from '../schema/schema_interface';
+import {createChannel} from './channelActions';
+import {subscribeTo} from '../db/index';
+import Debug from '../component/Debug';
+import SearchPill from '../component/SearchPill';
+import {SearchDebug} from '../component/searchInterface';
 
 const withShowContentToggle = compose(
   withState('showContent', 'setShowContent', false),
   withHandlers({
-    toggleShowContent: ({showContent, setShowContent}) => () => {
-      setShowContent(!showContent);
-    }
-  })
-)
+    toggleShowContent: ({showContent, setShowContent}) =>
+      () => {
+        setShowContent(!showContent);
+      },
+  }),
+);
 
 const withToggle = compose(
   withShowContentToggle,
   withHandlers({
-    onHeaderClick: (props) => (event, id) => {
-      event.preventDefault()
-      props.toggleShowContent()
-      props.fetchMessage(id)
-    }
-  })
-)
+    onHeaderClick: props =>
+      (event, id) => {
+        event.preventDefault();
+        props.toggleShowContent();
+        props.fetchMessage(id);
+      },
+  }),
+);
 
-const ListItem = ({id, label, data, showContent, onHeaderClick}) =>
+const ListItem = ({id, label, data, showContent, onHeaderClick}) => (
   <div key={id} style={{marginBottom: '.5em'}}>
     <div className="ui top attached menu">
       <div className="text item">{label || id}</div>
       <div className="right menu">
-        <a className="item" onClick={(e) => onHeaderClick(e, id)}>
-          <i className={'icon caret ' + (showContent ? 'down' : 'left')}></i>
+        <a className="item" onClick={e => onHeaderClick(e, id)}>
+          <i className={'icon caret ' + (showContent ? 'down' : 'left')} />
         </a>
       </div>
     </div>
-    {showContent && data &&
-    <div className="ui bottom attached message small secondary">
-      <pre><code>{JSON.stringify(data, null, 2)}</code></pre>
-    </div>
-    }
+    {showContent &&
+      data &&
+      <div className="ui bottom attached message small secondary">
+        <pre><code>{JSON.stringify(data, null, 2)}</code></pre>
+      </div>}
   </div>
+);
 
-const ActionListItem = withToggle(ListItem)
+const ActionListItem = withToggle(ListItem);
 
-const ChannelView = enhance(({channel, action, item}) => (
-    <div className="ui grid">
-      <div className="column">
+type Channel = {
+  id: string,
+  label: string,
+  action: Array<string>,
+  item: Array<string>,
+};
 
-        <Segment basic>
-          <Header as="h2">#{channel.label}</Header>
-        </Segment>
+const enhance = compose(
+  subscribeTo(props => [props.route.path]),
+  flattenProp('data'),
+  withHandlers({
+    createChannel: ({dispatch}) =>
+      (name: string) => dispatch(createChannel(name)),
+  }),
+);
 
-        <Segment basic>
-          <Header>Action Types</Header>
-          {action.length === 0 &&
-            <Message basic>
-              This channel will accept any action type.  To limit your channel
-              to a set of specific types, add them here.
-            </Message>
-          }
-          {action.map((data) => <ActionListItem {...{id: data.id, data: data}} />)}
-        </Segment>
+const ChannelView = ({label, action = [], item = []}) => {
+  return (
+    <Page>
+      <Section>
+        <Header icon="hashtag" content={label} />
+      </Section>
 
-        <Section>
-          <Header>Events</Header>
-          <EventList items={item}/>
-        </Section>
+      <Section>
+        <Header content="Action Types">
+          <SearchPill />
+        </Header>
+        {action.length === 0 &&
+          <Message basic>
+            This channel will accept any action type. To limit your channel
+            to a set of specific types, add them here.
+          </Message>}
+        {action.map(data => <ActionListItem {...{id: data.id, data: data}} />)}
+      </Section>
 
-      </div>
-    </div>
-  )
-)
+      <Section>
+        <Header content="Events" />
+        <EventList items={item} />
+      </Section>
 
-export default ChannelView
+    </Page>
+  );
+};
+
+export default enhance(ChannelView);

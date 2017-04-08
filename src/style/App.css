@@ -1,0 +1,21 @@
+@import 'semantic.css';
+@import 'codemirror.css';
+
+.selectable:hover {
+  cursor: hand;
+}
+.mask {
+  overflow: hidden !important;
+}
+.p-relative {
+  overflow: hidden !important;
+}
+.p-absolute {
+  position: absolute !important;
+}
+.b-red {
+  border: solid 1px #f00 !important;
+}
+.b-blue {
+  border: solid 1px #00f !important;
+}

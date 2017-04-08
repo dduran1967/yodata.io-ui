@@ -1,14 +1,10 @@
-
 // @flow
 
-import React from 'react'
-import {compose, withHandlers, withState} from 'recompose'
-import Debug from './Debug'
+import {compose, withState} from 'recompose'
 
-
-const withToggle = (config: { propName: string, initialValue: boolean }) => {
+const withToggle = (propName: string, initialValue: boolean) => {
   return compose(
-    withState(config.propName, `toggle_${config.propName}`, config.initialValue)
+    withState(propName, `toggle_${propName}`, initialValue)
   )
 }
 

@@ -1,33 +1,25 @@
 // @flow
 
-import React from 'react'
-import {Search} from 'semantic-ui-react'
+import React from 'react';
+import {Search} from 'semantic-ui-react';
+import configureSearchInterface from './searchInterface';
 
 type SearchState = {
   +value: string,
-  +result: Array<any>
-}
+  +result: Array<any>,
+};
 
 type SearchResult = {
   title: string,
   dscription?: string,
-  id: number
-}
+  id: number,
+};
 
-type SearchUIInterface = {
-  search: SearchState,
-  handleResultSelect: () => mixed,
-  handleSearchChange: () => mixed
-}
+type SearchProps = {
+  value: string,
+  results: Array<SearchResult>,
+  onResultSelect: () => void,
+  onSearchChange: () => void,
+};
 
-const SearchPill = ({search, handleResultSelect, handleSearchChange, ...rest}) => (
-  <Search
-    onResultSelect={handleResultSelect}
-    onSearchChange={handleSearchChange}
-    results={search.result}
-    value={search.value}
-    {...rest}
-  />
-)
-
-export default SearchPill
+export default configureSearchInterface()(Search);

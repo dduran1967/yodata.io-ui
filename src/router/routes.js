@@ -1,73 +1,79 @@
-import mapKeys from 'lodash/mapKeys'
-import root from 'window-or-global'
-import {ActionRoot, ActionView} from '../action'
-import RestApiRoot from '../apidocs/restApiRoot.js'
-import ChannelRoot from '../channel/ChannelRoot'
-import ChannelView from '../channel/ChannelView'
-import {Home} from '../component'
-import {ReactionRoot, ReactionView} from '../reaction'
-import {UserRoot} from '../user'
+import mapKeys from 'lodash/mapKeys';
+import root from 'window-or-global';
+import {ActionRoot, ActionView} from '../action';
+import RestApiRoot from '../apidocs/restApiRoot.js';
+import ChannelRoot from '../channel/ChannelRoot';
+import ChannelView from '../channel/ChannelView';
+import {Home} from '../component';
+import {ReactionRoot, ReactionView} from '../reaction';
+import {UserRoot} from '../user';
 
 export const sidebarRoutes = [
   {
-    name:      'home',
-    path:      '/',
+    key: 'home',
+    name: 'home',
+    path: '/',
     component: Home,
-    icon:      'home',
-    label:     'Home'
+    icon: 'home',
+    label: 'Home',
   },
   {
-    name:      'channel',
-    path:      '/channel',
+    key: 'channel',
+    name: 'channel',
+    path: '/channel',
     component: ChannelRoot,
-    icon:      'hashtag',
-    label:     'Channels'
+    icon: 'hashtag',
+    label: 'Channels',
   },
   {
-    name:      'action',
-    path:      '/action',
+    key: 'action',
+    name: 'action',
+    path: '/action',
     component: ActionRoot,
-    icon:      'lightning',
-    label:     'Actions',
+    icon: 'lightning',
+    label: 'Actions',
   },
   {
-    name:      'reaction',
-    path:      '/reaction',
+    key: 'reaction',
+    name: 'reaction',
+    path: '/reaction',
     component: ReactionRoot,
-    icon:      'rocket',
-    label:     'Reactions'
+    icon: 'rocket',
+    label: 'Reactions',
   },
   {
-    name:      'user',
-    path:      '/user',
+    key: 'user',
+    name: 'user',
+    path: '/user',
     component: UserRoot,
-    icon:      'user',
-    label:     'User'
+    icon: 'user',
+    label: 'User',
   },
   {
-    name:      'api',
-    path:      '/api',
+    key: 'api',
+    name: 'api',
+    path: '/api',
     component: RestApiRoot,
-    icon:      'code',
-    label:     'REST API'
-  }
-]
+    icon: 'code',
+    label: 'REST API',
+  },
+];
 
 export const innerRoutes = [
   {
-    name:      'action/view',
-    path:      '/action/view/*id',
-    component: ActionView
+    name: 'action/view',
+    path: '/action/view/*id',
+    component: ActionView,
   },
   {
-    name:      'channel/view',
-    path:      '/channel/item/:key',
-    component: ChannelView
+    name: 'channel/view',
+    path: '/channel/item/:key',
+    component: ChannelView,
   },
   {
-    name:      'reactionView',
-    path:      '/reaction/view/*id',
-    component: ReactionView
+    name: 'reactionView',
+    path: '/reaction/view/*id',
+    component: ReactionView,
   },
 ];
 

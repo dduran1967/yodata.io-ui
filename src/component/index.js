@@ -29,6 +29,7 @@ export {default as ClientCard} from './client/ClientCard'
 export {default as ClientView} from './client/ClientView'
 export {default as CodeMirror} from 'react-codemirror';
 export {default as CodeEditor} from './CodeEditor';
+export {Container} from 'semantic-ui-react'
 export {default as Drawer, withDrawer} from './Drawer'
 export {default as Hero} from './Hero'
 export {default as HttpCodeExample} from './httpCodeExample';
@@ -44,7 +45,7 @@ export {default as Section} from './Section';
 export {default as SectionTitle} from './SectionTitle';
 export {default as Message, MessageList, MessageListItem} from './Message'
 export {default as ClientDiscover} from './client/ClientDiscover'
-export {default as Layout, Container, Row, Column} from './Layout'
+export {default as Layout, Row, Column} from './Layout'
 export {default as Title} from './Title'
 export {default as Toolbar, ToolbarItem} from './Toolbar'
 export {default as Splash} from './Splash'
@@ -53,9 +54,9 @@ export {default as Svg} from './Svg'
 export {default as withLoader, Loading, loadingReducer, loadingActions} from './Loading'
 export {default as EventList} from './EventList'
 
+
 //  utilities
 export {default as Debug} from './Debug';
-
 
 // application components
 export {UserRoot, UserWebIdForm, userLogic, withUser} from '../user'

@@ -1,32 +1,31 @@
-import {connect} from 'react-redux'
-import styled from 'styled-components'
-import {compose} from 'recompose'
-import {createAction} from 'redux-actions'
+import {connect} from 'react-redux';
+import styled from 'styled-components';
+import {compose} from 'recompose';
+import {createAction} from 'redux-actions';
 
 const initialState = {
-  open: false
-}
+  open: false,
+};
 
-export const toggleDrawer = createAction('DRAWER/TOGGLE_DRAWER')
+export const toggleDrawer = createAction('DRAWER/TOGGLE_DRAWER');
 
 export const drawerActions = {
-  toggleDrawer
-}
+  toggleDrawer,
+};
 
 export const drawerReducer = (drawer = initialState, action) => {
   switch (action.type) {
     case 'DRAWER/TOGGLE_DRAWER':
-      return { ...drawer, open: !drawer.open }
+    case '@@Appbar/TOGGLE_NAV':
+      return {...drawer, open: !drawer.open};
     case '@@router5/TRANSITION_SUCCESS':
-      return { ...drawer, open: false }
+      return {...drawer, open: false};
     default:
       return drawer;
   }
-}
+};
 
-export const withDrawer = compose(
-  connect(state => ({drawer: state.drawer}))
-)
+export const withDrawer = compose(connect(state => ({drawer: state.drawer})));
 
 const Drawer = styled.div`
   position:         fixed;
@@ -39,6 +38,6 @@ const Drawer = styled.div`
   flex-shrink:      0;
   z-index:          100;
   transition: all .2s ease-in-out;
-`
+`;
 
 export default withDrawer(Drawer);
