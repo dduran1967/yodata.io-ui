@@ -2,7 +2,6 @@
 
 import React from 'react';
 import {Search} from 'semantic-ui-react';
-import configureSearchInterface from './searchInterface';
 
 type SearchState = {
   +value: string,
@@ -22,4 +21,4 @@ type SearchProps = {
   onSearchChange: () => void,
 };
 
-export default configureSearchInterface()(Search);
+export default Search;

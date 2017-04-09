@@ -6,8 +6,9 @@ import '../src/style/semantic.css';
 import SliderInput from '../src/component/SliderInput';
 import Header from '../src/component/Header';
 import SearchPill from '../src/component/SearchPill';
-import searchInterface, {SearchDebug} from '../src/component/searchInterface';
 import Chance from 'chance';
+import CardGroup from '../src/component/card-group';
+import {compose, withState, lifecycle, withHandlers} from 'recompose';
 const fake = new Chance();
 
 const items = [
@@ -55,3 +56,47 @@ console.log(results);
 const searchStories = storiesOf('Search', module);
 searchStories.add('initial state', () => <SearchPill />);
 searchStories.add('results visible', () => <SearchPill results={results} />);
+
+function listItem() {
+  return {
+    key: fake.guid(),
+    header: fake.sentence(),
+    description: fake.paragraph(),
+  };
+}
+
+const View = props => (
+  <div>
+    <button onClick={() => console.log(props)}>click</button>
+    <CardGroup />
+  </div>
+);
+
+const CardTest = compose(
+  withState('items', 'setItems', [listItem()]),
+  withHandlers({
+    addItem: ({setItems, items}) =>
+      () => {
+        setItems([...items, listItem()]);
+      },
+    removeItem: ({setItems, items}) =>
+      () => {
+        setItems(items.slice(0, -1));
+      },
+  }),
+  lifecycle({
+    componentDidMount() {},
+  }),
+)(props => (
+  <div>
+    <button className="ui button" onClick={props.removeItem}>-</button>
+    <button className="ui button" onClick={props.addItem}>+</button>
+    <hr />
+    <CardGroup items={props.items} />
+  </div>
+));
+
+const listStories = storiesOf('Card', module);
+listStories.add('initialState', props => {
+  return <CardTest />;
+});

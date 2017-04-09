@@ -2,13 +2,8 @@
 
 import React from 'react';
 import {Button, Icon} from '../component';
-
-import searchInterface from '../component/searchInterface.js';
-import SearchPill from '../component/SearchPill';
 import UserButton from '../user/UserButton.js';
 import {toggleDrawer, withDrawer} from './Drawer';
-const searchConfig = searchInterface({name: 'search'});
-const Search = searchConfig(SearchPill);
 
 const PageHeader = ({title, dispatch}) => (
   <header className="ui fixed menu">

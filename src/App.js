@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import {compose} from 'recompose';
-import {Container, Segment, Sidebar} from 'semantic-ui-react';
+import {Container, Sidebar} from 'semantic-ui-react';
 import './style/App.css';
 import Appbar from './component/Appbar';
 import {withDrawer, withUser} from './component';

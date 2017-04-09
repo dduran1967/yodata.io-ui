@@ -2,17 +2,14 @@
 
 import React from 'react';
 import {compose, withHandlers, flattenProp, withState} from 'recompose';
-import {Button, Message, Segment, HeaderContent} from 'semantic-ui-react';
+import {Message} from 'semantic-ui-react';
 import {Header, Section} from '../component';
 import EventList from '../component/EventList.js';
 import Page from '../component/Page';
-import {map} from 'mobx';
-import {types, subTypesOf} from '../schema/schema_interface';
-import {createChannel} from './channelActions';
 import {subscribeTo} from '../db/index';
-import Debug from '../component/Debug';
-import SearchPill from '../component/SearchPill';
-import {SearchDebug} from '../component/searchInterface';
+import SearchInterface from '../component/searchInterface';
+import values from 'lodash/values';
+import {Debug} from '../component/index';
 
 const withShowContentToggle = compose(
   withState('showContent', 'setShowContent', false),
@@ -31,7 +28,6 @@ const withToggle = compose(
       (event, id) => {
         event.preventDefault();
         props.toggleShowContent();
-        props.fetchMessage(id);
       },
   }),
 );
@@ -56,23 +52,14 @@ const ListItem = ({id, label, data, showContent, onHeaderClick}) => (
 
 const ActionListItem = withToggle(ListItem);
 
-type Channel = {
-  id: string,
-  label: string,
-  action: Array<string>,
-  item: Array<string>,
-};
-
 const enhance = compose(
   subscribeTo(props => [props.route.path]),
   flattenProp('data'),
-  withHandlers({
-    createChannel: ({dispatch}) =>
-      (name: string) => dispatch(createChannel(name)),
-  }),
 );
 
-const ChannelView = ({label, action = [], item = []}) => {
+const ChannelView = enhance(({id, label, action = {}, item = {}, dispatch}) => {
+  let actions = values(action);
+  let items = values(item);
   return (
     <Page>
       <Section>
@@ -80,24 +67,38 @@ const ChannelView = ({label, action = [], item = []}) => {
       </Section>
 
       <Section>
-        <Header content="Action Types">
-          <SearchPill />
+        <Header
+          content="Action Types"
+          subheader="Actions not on this list will be rejected by this channel"
+        >
+          <SearchInterface
+            onResultSelect={(e, selected) =>
+              dispatch({
+                type: 'CHANNEL/ADD_ACTION',
+                payload: {
+                  channel: id,
+                  action: selected.id,
+                },
+              })}
+          />
         </Header>
         {action.length === 0 &&
-          <Message basic>
+          <Message>
             This channel will accept any action type. To limit your channel
             to a set of specific types, add them here.
           </Message>}
-        {action.map(data => <ActionListItem {...{id: data.id, data: data}} />)}
+        {actions.map(data => <ActionListItem {...{id: data.id, data: data}} />)}
       </Section>
 
       <Section>
         <Header content="Events" />
-        <EventList items={item} />
+        <EventList items={items} />
       </Section>
+
+      <Debug {...{id, label, action, item}} />
 
     </Page>
   );
-};
+});
 
 export default enhance(ChannelView);

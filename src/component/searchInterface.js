@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import {compose, withHandlers, lifecycle} from 'recompose';
 import {createAction} from 'redux-actions';
 import Debug from './Debug';
+import {Search} from 'semantic-ui-react';
 
-// SEARCH TYPES
 type SearchState = {
   +value: string,
   +result: Array<any>,
@@ -39,27 +39,13 @@ type SearchResult = {
   image: string,
 };
 
-type SearchUIInterface = {
-  value: string,
-  results: Array<SearchResult>,
-  onResultSelect: () => mixed,
-  onSearchChange: () => mixed,
-};
-
-type SearchInterfaceSettings = {
-  +name: string,
-};
-
 // SEARCH ACTIONS
 const initializeSearch = createAction('SEARCH_INIT');
 const searchValue = createAction('SEARCH_VALUE');
 const searchResult = createAction('SEARCH_RESULT');
 
 // SEARCH REDUCER
-export function searchReducer(
-  state: SearchState,
-  action: SearchAction,
-): SearchState {
+export function searchReducer(state: SearchState, action: SearchAction) {
   switch (action.type) {
     case 'SEARCH_INIT':
       return {value: '', results: []};
@@ -94,15 +80,38 @@ function configureSearchInterface(name: string) {
       },
     }),
     withHandlers({
-      resetComponent: ({dispatch}) => () => dispatch({type: 'SEARCH_INIT'}),
-      onResultSelect: ({dispatch}) =>
-        (e, result) => {
-          dispatch({type: 'SEARCH_RESULT_SELECTED', payload: result});
-        },
       onSearchChange: ({dispatch}) =>
         ({target}) => dispatch({type: 'SEARCH_VALUE', payload: target.value}),
     }),
   );
 }
 
-export default configureSearchInterface;
+class SearchInterface extends React.Component {
+  props: {
+    name: string,
+    value: string,
+    results: Array<SearchResult>,
+    dispatch: () => void,
+  };
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'SEARCH_INIT',
+      payload: {name: this.props.name},
+    });
+  }
+  // onSearchChange = event =>
+  //   this.props.dispatch({type: 'SEARCH_VALUE', payload: event.target.value});
+
+  render() {
+    let {value, results, onSearchChange, onFocus} = this.props;
+    return <Search {...{value, results, onSearchChange, onFocus}} />;
+  }
+}
+
+export default connect(
+  state => ({value: state.search.value, results: state.search.results}),
+  {
+    onSearchChange: (e, v) => searchValue(v),
+    onFocus: e => initializeSearch(),
+  },
+)(Search);

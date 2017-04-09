@@ -2,6 +2,7 @@
 
 import * as firebase from 'firebase';
 import {createLogic} from 'redux-logic';
+import urlToKey from '../lib/util/urlToKey';
 
 const createChannel = createLogic({
   type: 'CHANNEL/CREATE',
@@ -52,4 +53,45 @@ const fetchUserChannels = createLogic({
   },
 });
 
-export default [createChannel, fetchUserChannels];
+type ChannelAddAction = {
+  type: 'CHANNEL/ADD_ACTION',
+  payload: {
+    channel: string,
+    action: string,
+  },
+};
+
+const channelAddAction = createLogic({
+  type: 'CHANNEL/ADD_ACTION',
+  processOptions: {
+    successType: 'CHANNEL/ADD_ACTION_COMPLETED',
+    failType: 'CHANNEL/ADD_ACTION_FAILED',
+  },
+  transform({getState, action}, next) {
+    let {user: {currentUser: {uid}}} = getState();
+    let channelPath = action.payload.channel;
+    let actionId = action.payload.action;
+    let key = urlToKey(actionId);
+    let path = [channelPath, 'action', key].join('/');
+    let res = {
+      type: action.type,
+      payload: {
+        id: actionId,
+      },
+      meta: {
+        uid: uid,
+        path: path,
+      },
+    };
+    next(res);
+  },
+  process({action}) {
+    return firebase
+      .database()
+      .ref(action.meta.path)
+      .set(action.payload)
+      .then(() => action);
+  },
+});
+
+export default [createChannel, fetchUserChannels, channelAddAction];

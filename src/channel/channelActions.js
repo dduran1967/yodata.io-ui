@@ -5,10 +5,7 @@ export const fetchUserChannels = createAction(
   'CHANNEL/FETCH_USER_CHANNELS',
   uid => ({uid}),
 );
-export const addActionToChannel = createAction(
-  'CHANNEL/ADD_ACTION',
-  (channelId, actionId) => ({channelId, actionId}),
-);
+export const channelAddAction = createAction('CHANNEL/ADD_ACTION');
 export const selectChannel = createAction('CHANNEL/SELECT');
 export const fetchChannelItems = createAction('CHANNEL/FETCH_CHANNEL_ITEMS');
 export const fetchChannelItem = createAction('CHANNEL/FETCH_ITEM');
@@ -16,7 +13,7 @@ export const fetchChannelItem = createAction('CHANNEL/FETCH_ITEM');
 export default {
   createChannel,
   fetchUserChannels,
-  addActionToChannel,
+  channelAddAction,
   selectChannel,
   fetchChannelItem,
   fetchChannelItems,
