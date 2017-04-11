@@ -1,25 +1,27 @@
-declare class Node {
+declare type Node = {
   termType: 'NamedNode' | 'BlankNode' | 'Literal' | 'Collection',
   value: string,
-  substitute(bindings: Map): Node,
+  substitute(bindings: any): Node,
   compareTerm(Node): -1 | 0 | 1,
   equals(Node): boolean,
   hashString(void): Node,
   sameTerm(Node): boolean,
   toCanonical(): string,
   toNT(): string,
-}
+};
 
-declare class NamedNode extends Node {
+declare type NamedNode = {
   termType: 'NamedNode',
-}
+  value: string,
+};
 
-declare class BlankNode extends Node {
-  termType: 'NamedNode',
-}
+declare type BlankNode = {
+  termType: 'BlankNode',
+  value: string,
+};
 
-declare class Literal extends Node {
+declare type Literal = {
   termType: 'Literal',
   lang?: string,
   datatype?: NamedNode,
-}
+};

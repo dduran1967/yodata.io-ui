@@ -3,7 +3,6 @@
 import Chance from 'chance';
 import React from 'react';
 import {compose, withHandlers, withState} from 'recompose';
-const fake = new Chance();
 
 const withShowContentToggle = compose(
   withState('showContent', 'setShowContent', false),

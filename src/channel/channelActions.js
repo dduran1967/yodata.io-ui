@@ -9,6 +9,7 @@ export const channelAddAction = createAction('CHANNEL/ADD_ACTION');
 export const selectChannel = createAction('CHANNEL/SELECT');
 export const fetchChannelItems = createAction('CHANNEL/FETCH_CHANNEL_ITEMS');
 export const fetchChannelItem = createAction('CHANNEL/FETCH_ITEM');
+export const sendMessageToChannel = createAction('CHANNEL/SEND_MESSAGE');
 
 export default {
   createChannel,
@@ -17,4 +18,5 @@ export default {
   selectChannel,
   fetchChannelItem,
   fetchChannelItems,
+  sendMessageToChannel,
 };

@@ -1,27 +1,24 @@
 import * as firebase from 'firebase';
 import {Statement} from 'rdflib';
 import root from 'window-or-global';
-import * as mockActions from './action/mocks';
-import channel from './channel/channelActions';
-import {dbAction} from './db';
-import {default as DB} from './db/DB';
+import * as db from './db';
 import {default as bsf} from './lib/util/base64urlEncode';
 import mapStatementToDoc from './lib/util/mapStatementToDocStore.js';
-import schema from './schema/schemaActions';
-import user from './user/userActions';
 import * as context from './schema/context.js';
 import axios from 'axios';
 import keyToUrl from './lib/util/keyToUrl';
 import urlToKey from './lib/util/urlToKey';
 import lodash from 'lodash';
+import Action from './action/Action';
 
 class Yo {
-  act = {
-    user,
-    channel,
-    schema,
-    db: dbAction,
-  };
+  get db() {
+    return db;
+  }
+
+  get Action() {
+    return Action;
+  }
 
   get keyToUrl() {
     return keyToUrl;
@@ -33,12 +30,6 @@ class Yo {
 
   get currentUser() {
     return firebase.auth().currentUser;
-  }
-
-  get db() {
-    return new DB(
-      firebase.database().ref(firebase.auth().currentUser.uid).toString(),
-    );
   }
 
   get bsf() {
@@ -53,10 +44,6 @@ class Yo {
 }
 
 const yo = new Yo();
-
-yo.mock = {
-  actions: mockActions,
-};
 
 root.yo = yo;
 root.axios = axios;

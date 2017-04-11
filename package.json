@@ -80,6 +80,7 @@
     "mobx": "^3.1.0",
     "mobx-react": "^4.1.0",
     "mobx-utils": "^2.0.1",
+    "pouchdb": "^6.1.2",
     "rdf-store-inmemory": "^0.3.0",
     "rdflib": "^0.14.1",
     "re-base": "^2.7.0",

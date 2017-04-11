@@ -7,6 +7,9 @@ import ChannelView from '../channel/ChannelView';
 import {Home} from '../component';
 import {ReactionRoot, ReactionView} from '../reaction';
 import {UserRoot} from '../user';
+import Debug from '../component/Debug';
+import TypesRoot from '../types/TypesRoot';
+import TypeView from '../types/TypeView';
 
 export const sidebarRoutes = [
   {
@@ -24,6 +27,14 @@ export const sidebarRoutes = [
     component: ChannelRoot,
     icon: 'hashtag',
     label: 'Channels',
+  },
+  {
+    key: 'types',
+    name: 'types',
+    path: '/types',
+    component: TypesRoot,
+    icon: 'code',
+    label: 'Types',
   },
   {
     key: 'action',
@@ -74,6 +85,11 @@ export const innerRoutes = [
     name: 'reactionView',
     path: '/reaction/view/*id',
     component: ReactionView,
+  },
+  {
+    name: 'types/view',
+    path: '/types/:id',
+    component: TypeView,
   },
 ];
 

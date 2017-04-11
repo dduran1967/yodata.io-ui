@@ -9,6 +9,9 @@ import {subscriptionActive} from './dbActions';
 import mapStatementToDocStore from '../lib/util/mapStatementToDocStore.js';
 import mapValues from 'lodash/mapValues';
 import isArray from 'lodash/isArray';
+import axios from 'axios';
+
+const DB_ORIGIN = 'https://yodata-1115.firebaseio.com';
 
 type Action = {
   type: string,
@@ -25,6 +28,48 @@ const addUser = createLogic({
       currentUser,
     };
     next({...action, meta});
+  },
+});
+
+export const fetch = createLogic({
+  type: 'DB/FETCH_URL',
+  processOptions: {
+    successType: 'DB/FETCH_URL_COMPLETED',
+    failType: 'DB/FETCH_URL_ERROR',
+  },
+  transform({getState, action}, next) {
+    let target = action.payload;
+    let {user: {currentUser}} = getState();
+    if (typeof target === 'string') {
+      if (target.startsWith('/')) {
+        target = DB_ORIGIN + target + '.json';
+      }
+      if (target.startsWith('~')) {
+        target = DB_ORIGIN +
+          '/' +
+          action.meta.currentUser +
+          target.slice(1) +
+          '.json';
+      }
+    }
+    let nextPayload = {
+      agent: currentUser,
+      object: {
+        id: action.payload,
+        url: target,
+      },
+    };
+    next({...action, payload: nextPayload});
+  },
+  process({action}) {
+    return axios(action.payload.object.url).then(res => {
+      return {
+        agent: action.payload.agent,
+        object: action.payload.object,
+        result: res,
+        actionStatus: 'CompletedActionStatus',
+      };
+    });
   },
 });
 
@@ -87,7 +132,7 @@ export const searchLogic = createLogic({
     action.meta = {
       searchValue: action.payload,
       instrument: 'searchLogic',
-      source: getState().schema.types,
+      source: getState().schema.actions,
     };
     next(action);
   },
@@ -172,4 +217,5 @@ export default [
   subscriptionActiveLogic,
   searchLogic,
   saveJsonObject,
+  fetch,
 ];

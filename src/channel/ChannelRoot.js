@@ -3,13 +3,12 @@
 import values from 'lodash/values';
 import React from 'react';
 import {compose, withHandlers} from 'recompose';
-import {Message, Segment, Grid, GridColumn} from 'semantic-ui-react';
+import {Segment} from 'semantic-ui-react';
 import {CardList, Header} from '../component';
 import subscribeTo from '../db/subscribeTo';
 import {createChannel} from './channelActions';
 import SliderInput from '../component/SliderInput';
 import Page from '../component/Page';
-import {connect} from 'react-redux';
 
 const enhance = compose(
   subscribeTo(props => [props.route.path]),

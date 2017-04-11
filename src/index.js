@@ -9,10 +9,7 @@ import './schema/schemaGraph';
 import store from './store';
 import './yo';
 
-store.dispatch({
-  type: 'SCHEMA/FETCH_SCHEMA',
-  payload: 'https://devtest.yodata.me/test/schema.nt',
-});
+store.dispatch({type: 'SCHEMA/FETCH_SCHEMA'});
 
 window.firebase = firebase;
 

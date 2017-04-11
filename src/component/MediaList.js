@@ -6,16 +6,13 @@ const enhance = compose(
   mapProps(({items, onClick}) => ({
     items: items.map(item => ({
       header: lit(item.label),
-      description: lit(item.description),
+      description: lit(item.description).replace(/<\/?[^>]+(>|$)/g, ''),
       key: item.id,
       onClick: event => {
         event.preventDefault();
         onClick(item);
       },
     })),
-    divided: true,
-    relaxed: true,
-    link: true,
   })),
 );
 

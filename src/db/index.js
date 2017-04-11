@@ -1,4 +1,17 @@
-export * from './dbActions';
-export {default as dbReducer} from './dbReducer'
-export {default as dbLogic} from './dbLogic'
-export {default as subscribeTo} from './subscribeTo'
+import * as action from './dbActions';
+import * as logic from './dbLogic';
+import * as reducer from './dbReducer';
+import subscribeTo from './subscribeTo';
+
+const helper = {
+  subscribeTo,
+};
+
+export {action, logic, reducer, helper};
+
+export default {
+  action,
+  logic,
+  reducer,
+  helper,
+};

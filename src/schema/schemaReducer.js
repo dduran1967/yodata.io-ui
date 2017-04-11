@@ -1,11 +1,11 @@
 // @flow
-import initialState from './schemaInitialState'
-import schemas from './schemaGraph';
+import initialState from './schemaInitialState';
+import values from 'lodash/values';
 
 type Action = {
   type: string,
-  payload: any
-}
+  payload: any,
+};
 
 const schemaReducer = (state: any = initialState, action: Action) => {
   switch (action.type) {
@@ -13,12 +13,19 @@ const schemaReducer = (state: any = initialState, action: Action) => {
       if (!action.payload) {
         return state;
       }
-      let types = schemas.findTypes();
-      let actions = schemas.findActions();
-      return {...state, types, actions, hasData: true}
+      let index = action.payload.result.data;
+      let items = values(index);
+      let types = items.filter(prop => prop.type === 'Type');
+      let properties = items.filter(prop => prop.type === 'Property');
+      let actions = types.filter(type => type.label.endsWith('Action'));
+      return {
+        ...state,
+        hasData: true,
+        ...{index, actions, items, types, properties},
+      };
     default:
       return state;
   }
-}
+};
 
 export default schemaReducer;

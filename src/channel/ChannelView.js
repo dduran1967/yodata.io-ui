@@ -2,14 +2,17 @@
 
 import React from 'react';
 import {compose, withHandlers, flattenProp, withState} from 'recompose';
-import {Message} from 'semantic-ui-react';
+import {Message, Segment} from 'semantic-ui-react';
 import {Header, Section} from '../component';
 import EventList from '../component/EventList.js';
 import Page from '../component/Page';
-import {subscribeTo} from '../db/index';
 import SearchInterface from '../component/searchInterface';
 import values from 'lodash/values';
 import {Debug} from '../component/index';
+import subscribeTo from '../db/subscribeTo';
+import Action from '../action/Action';
+import {sendMessageToChannel} from './channelActions';
+import {connect} from 'react-redux';
 
 const withShowContentToggle = compose(
   withState('showContent', 'setShowContent', false),
@@ -22,6 +25,7 @@ const withShowContentToggle = compose(
 );
 
 const withToggle = compose(
+  connect(state => ({}), {sendMessageToChannel}),
   withShowContentToggle,
   withHandlers({
     onHeaderClick: props =>
@@ -29,10 +33,16 @@ const withToggle = compose(
         event.preventDefault();
         props.toggleShowContent();
       },
+    sendMessage: ({data, sendMessageToChannel}) =>
+      (event, message) => {
+        sendMessageToChannel({...data});
+      },
   }),
 );
 
-const ListItem = ({id, label, data, showContent, onHeaderClick}) => (
+const ListItem = (
+  {id, label, data, showContent, onHeaderClick, sendMessage},
+) => (
   <div key={id} style={{marginBottom: '.5em'}}>
     <div className="ui top attached menu">
       <div className="text item">{label || id}</div>
@@ -46,6 +56,12 @@ const ListItem = ({id, label, data, showContent, onHeaderClick}) => (
       data &&
       <div className="ui bottom attached message small secondary">
         <pre><code>{JSON.stringify(data, null, 2)}</code></pre>
+        <button
+          className="ui button primary"
+          onClick={e => sendMessage(e, data)}
+        >
+          send
+        </button>
       </div>}
   </div>
 );
@@ -72,6 +88,8 @@ const ChannelView = enhance(({id, label, action = {}, item = {}, dispatch}) => {
           subheader="Actions not on this list will be rejected by this channel"
         >
           <SearchInterface
+            icon="add"
+            placeholder="Add action type..."
             onResultSelect={(e, selected) =>
               dispatch({
                 type: 'CHANNEL/ADD_ACTION',
@@ -87,15 +105,16 @@ const ChannelView = enhance(({id, label, action = {}, item = {}, dispatch}) => {
             This channel will accept any action type. To limit your channel
             to a set of specific types, add them here.
           </Message>}
-        {actions.map(data => <ActionListItem {...{id: data.id, data: data}} />)}
+        {actions.map(value => {
+          let action = new Action(value.id);
+          return <ActionListItem {...{id: value.id, data: action.mock()}} />;
+        })}
       </Section>
 
       <Section>
         <Header content="Events" />
         <EventList items={items} />
       </Section>
-
-      <Debug {...{id, label, action, item}} />
 
     </Page>
   );

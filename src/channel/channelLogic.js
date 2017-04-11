@@ -37,6 +37,37 @@ const createChannel = createLogic({
   },
 });
 
+const channelSendMessage = createLogic({
+  type: 'CHANNEL/SEND_MESSAGE',
+  processOptions: {
+    dispatchReturn: true,
+    successType: 'CHANNEL/SEND_MESSAGE_COMPLETED',
+    failType: 'CHANNEL/SEND_MESSAGE_FAILED',
+  },
+  transform({getState, action}, next) {
+    let {router, user} = getState();
+    let nextAction = {
+      ...action,
+      meta: {
+        channel: user.currentUser.uid + router.route.path,
+      },
+    };
+    next(nextAction);
+  },
+  process({action}) {
+    return firebase
+      .database()
+      .ref(action.meta.channel)
+      .child('item')
+      .push()
+      .then(ref => {
+        let message = {...action.payload, id: ref.key};
+        ref.set(message);
+        return message;
+      });
+  },
+});
+
 const fetchUserChannels = createLogic({
   type: 'CHANNEL/FETCH_USER_CHANNELS',
   cancelType: 'CHANNEL/FETCH_USER_CHANNELS_CANCEL',
@@ -70,13 +101,12 @@ const channelAddAction = createLogic({
   transform({getState, action}, next) {
     let {user: {currentUser: {uid}}} = getState();
     let channelPath = action.payload.channel;
-    let actionId = action.payload.action;
-    let key = urlToKey(actionId);
+    let key = action.payload.action;
     let path = [channelPath, 'action', key].join('/');
     let res = {
       type: action.type,
       payload: {
-        id: actionId,
+        id: key,
       },
       meta: {
         uid: uid,
@@ -94,4 +124,9 @@ const channelAddAction = createLogic({
   },
 });
 
-export default [createChannel, fetchUserChannels, channelAddAction];
+export default [
+  createChannel,
+  fetchUserChannels,
+  channelAddAction,
+  channelSendMessage,
+];

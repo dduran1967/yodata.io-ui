@@ -100,6 +100,7 @@ const actionTypes = {
   Action: schema('Action'),
   RegisterAction: schema('RegisterAction'),
   UnRegisterAction: schema('UnRegisterAction'),
+  AchieveAction: schema('AchieveAction'),
 };
 
 export const context = {
@@ -153,6 +154,7 @@ export const context = {
   versionInfo: owl('versionInfo'),
   storageUrl: pim('storage'),
   preferencesUrl: pim('preferencesFile'),
+  linkURI: link('uri'),
   ...baseTypes,
   ...actionTypes,
 };
