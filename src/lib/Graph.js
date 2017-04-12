@@ -18,7 +18,6 @@ import {
   jsonReducer,
   lit,
   mapStatementToContext,
-  predicateToContext,
   statementToContext,
   propertiesOf,
   propertiesOfDeep,
@@ -30,7 +29,6 @@ import {
   termToContext,
   createContextTransformer,
 } from './rdf-utilities';
-import {namespace} from '../schema/schema_interface';
 import mapValues from 'lodash/mapValues';
 
 const TYPE = NAMESPACE.rdf('type');

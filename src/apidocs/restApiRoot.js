@@ -1,14 +1,16 @@
-import React from 'react'
-import {Header, HttpCodeExample} from '../component'
-import {Segment, Message} from 'semantic-ui-react';
+import React from 'react';
+import {Header, HttpCodeExample} from '../component';
+import {Message} from 'semantic-ui-react';
 
 export default () => (
   <div className="ui grid">
     <div className="column">
       <Header as="h2">REST API</Header>
 
-      <p>You can use any Database URL as a REST endpoint. All you need to do is append .json to the end of the URL
-        and send a request from your favorite HTTPS client.</p>
+      <p>
+        You can use any Database URL as a REST endpoint. All you need to do is append .json to the end of the URL
+        and send a request from your favorite HTTPS client.
+      </p>
 
       <p>HTTPS is required to make sure your data remains safe.</p>
 
@@ -16,24 +18,26 @@ export default () => (
 
       <p>
         Data from your Realtime Database can be read by issuing an HTTP GET request to an endpoint. The following
-        example demonstrates how you might retrieve a user&#39;s name that you had previously stored in Realtime
+        example demonstrates how you might retrieve a user's name that you had previously stored in Realtime
         Database.
       </p>
 
       <HttpCodeExample
         request={{
           method: 'get',
-          url:    'https://dave.yodata.me/channel/website/'
+          url: 'https://dave.yodata.me/channel/website/',
         }}
         response={{
-          body: `{...}`
+          body: `{...}`,
         }}
       />
 
-      <p>A successful request is indicated by a 200 OK HTTP status code. The response contains the data associated with
-        the path in the GET request.</p>
+      <p>
+        A successful request is indicated by a 200 OK HTTP status code. The response contains the data associated with
+        the path in the GET request.
+      </p>
 
-      <div className="ui divider"></div>
+      <div className="ui divider" />
 
       <Header>PUT - Writing Data</Header>
 
@@ -42,8 +46,8 @@ export default () => (
       <HttpCodeExample
         request={{
           method: 'PUT',
-          url:    '/users/jack/.json',
-          json:   {name: 'Rob'},
+          url: '/users/jack/.json',
+          json: {name: 'Rob'},
         }}
         response={{}}
       />
@@ -58,18 +62,22 @@ export default () => (
       <HttpCodeExample
         request={{
           method: 'PUT',
-          url:    '/users/jack/name.json',
-          body:   `"Robert"`,
+          url: '/users/jack/name.json',
+          body: `"Robert"`,
         }}
         response={{}}
       />
 
-      <p>You can also write deep property values independently from the parent object</p>
+      <p>
+        You can also write deep property values independently from the parent object
+      </p>
 
-      <p>A successful request is indicated by a 200 OK HTTP status code. The response contains the data specified in
-        the PUT request.</p>
+      <p>
+        A successful request is indicated by a 200 OK HTTP status code. The response contains the data specified in
+        the PUT request.
+      </p>
 
-      <div className="ui divider"></div>
+      <div className="ui divider" />
 
       <Header>POST - Pushing Data</Header>
 
@@ -80,18 +88,18 @@ export default () => (
 
       <HttpCodeExample
         request={{
-          method:'post',
+          method: 'post',
           url: '/inbox',
-          json: {name:'dave'}
+          json: {name: 'dave'},
         }}
         response={{
           json: {
-            "name": "-KguGSWQH-pf9rQ6Dq3b"
-          }
+            name: '-KguGSWQH-pf9rQ6Dq3b',
+          },
         }}
       />
 
     </div>
 
   </div>
-)
+);

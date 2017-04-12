@@ -1,28 +1,24 @@
 // @flow
 
 import React from 'react';
-import {compose, withHandlers, withProps, lifecycle} from 'recompose';
+import {compose, withHandlers} from 'recompose';
 import {actions as routerActions} from 'redux-router5';
 import {Breadcrumb, Header} from 'semantic-ui-react';
 import {Link, Section, withLoader} from '../component';
-import {lit, sym} from '../lib/rdf-utilities';
-import withRoute from '../router/withRoute.js';
+import {lit} from '../lib/rdf-utilities';
 import PropertiesList from '../schema/PropertiesList';
-import schemas from '../schema/schemaGraph';
 import {connect} from 'react-redux';
-import Debug from '../component/Debug';
+import {Debug} from '../component/index';
+import {flatten} from 'lodash';
+import {listItems} from '../component/Data';
 
 const Breadcrumbs = props => (
   <Breadcrumb>
     {props.items.map(superType => (
-      <span key={superType.id}>
+      <span key={superType}>
         <Breadcrumb.Section>
-          <Link
-            key={superType.id}
-            name={'action/view'}
-            params={{id: superType.id}}
-          >
-            {lit(superType.label)}
+          <Link key={superType} name={'types/view'} params={{id: superType}}>
+            {lit(superType)}
           </Link>
         </Breadcrumb.Section>
         <Breadcrumb.Divider />
@@ -31,66 +27,93 @@ const Breadcrumbs = props => (
   </Breadcrumb>
 );
 
-const withController = compose(
-  connect(({schema, router}) => {
-    let isLoading = router.route === null || schema.hasData === false;
-    let data, properties = false;
-    if (!isLoading) {
-      data = schema.index[router.route.params.id];
-      properties = schema.properties.filter(({domainIncludes}) => {
-        if (Array.isArray(domainIncludes)) {
-          return domainIncludes.includes(data.id);
-        }
-        if (typeof domainIncludes === 'string') {
-          return domainIncludes === data.id;
-        }
-        return false;
-      });
+const propertiesOf = propSource =>
+  id =>
+    propSource.filter(({domainIncludes}) => {
+      if (Array.isArray(domainIncludes)) {
+        return domainIncludes.includes(id);
+      }
+      if (typeof domainIncludes === 'string') {
+        return domainIncludes === id;
+      }
+      return false;
+    });
+
+function getProperties(
+  propSource: Array<any>,
+  domainKey: string = 'domainIncludes',
+  subjectId: string,
+): Array<any> {
+  return propSource.filter(currentProp => {
+    let domains = currentProp[domainKey];
+    if (Array.isArray(domains)) {
+      return domains.includes(subjectId);
     }
-    return {
-      isLoading,
-      data,
-      properties,
-    };
-  }),
+    if (typeof domains === 'string') {
+      return domains === subjectId;
+    }
+    return false;
+  });
+}
+
+function getSuperTypes(typeIndex, subject) {
+  let superTypes = [subject.id];
+  let nextParent = subject.subClassOf;
+  while (nextParent && nextParent !== subject.id) {
+    superTypes.push(nextParent);
+    nextParent = typeIndex[nextParent] && typeIndex[nextParent].subClassOf;
+  }
+  return superTypes;
+}
+
+const withController = compose(
+  connect(
+    ({schema, router}) => {
+      let isLoading = router.route === null || schema.hasData === false;
+      let subject, properties, superTypes;
+      if (!isLoading) {
+        subject = schema.index[router.route.params.id];
+        superTypes = getSuperTypes(schema.index, subject);
+        let findProperties = propertiesOf(schema.properties);
+        properties = superTypes.reduce(
+          (state, superType) => {
+            return {...state, [superType]: findProperties(superType)};
+          },
+          {},
+        );
+      }
+      return {
+        isLoading,
+        subject,
+        superTypes,
+        properties,
+      };
+    },
+    {
+      navigateTo: routerActions.navigateTo,
+    },
+  ),
   withLoader(props => props.isLoading),
-  withProps(({data}) => {
-    return {
-      header: {
-        as: 'h1',
-        content: data.label,
-        subheader: data.description,
-      },
-      subject: {
-        id: data.id,
-        type: data.type,
-        label: data.label,
-        description: data.description,
-        superTypes: [],
-        properties: [],
-      },
-    };
-  }),
   withHandlers({
-    onBack: ({dispatch}) =>
-      event => dispatch(routerActions.navigateTo('action')),
+    onBack: ({navigateTo}) => event => navigateTo('types'),
   }),
 );
 
-const TypeView = (props: {subject: Type, dispatch: () => void}) => {
-  let {label, description} = props.subject;
+const TypeView = props => {
+  let {subject, superTypes, properties, dispatch} = props;
   return (
     <div>
-      {/*<Breadcrumbs items={subject.superTypes} />*/}
+      <Breadcrumbs items={superTypes.reverse()} />
       <Section>
-        <Header {...props.header} />
+        <Header
+          as="h1"
+          content={subject.label}
+          subheader={subject.description}
+        />
       </Section>
       <Section>
         <Header content="Properties" />
-        <PropertiesList
-          listItems={props.properties}
-          dispatch={props.dispatch}
-        />
+        <PropertiesList items={properties} dispatch={dispatch} />
       </Section>
     </div>
   );

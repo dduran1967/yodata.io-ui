@@ -4,6 +4,7 @@ import React from 'react';
 import {CardGroup, Card} from 'semantic-ui-react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import './CardGroup.css';
+
 const AnimatedCardGroup = ({items = [], ...groupSettings}) => {
   let cards = items.map(itemContent => <Card {...itemContent} />);
   let transitionSettings = {

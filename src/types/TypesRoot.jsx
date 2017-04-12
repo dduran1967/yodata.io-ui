@@ -3,15 +3,12 @@
 import React from 'react';
 import Page from '../component/Page';
 import Header from '../component/Header';
-import {Card} from 'semantic-ui-react';
 import MediaList from '../component/MediaList';
 import {connect} from 'react-redux';
-import {compose, withState, withHandlers, lifecycle} from 'recompose';
+import {compose, withState, withHandlers} from 'recompose';
 import {withLoader} from '../component/Loading';
 import {Input} from '../component/index';
 import filter from 'lodash/filter';
-import subscribeTo from '../db/subscribeTo';
-import values from 'lodash/values';
 
 const enhance = compose(
   connect(({schema, router}) => {
@@ -41,7 +38,7 @@ const TypesRoot = enhance(({
   let filteredItems = filter(schema.items, entity => {
     let re = new RegExp(typeFilter, 'gi');
     return re.test(entity.id);
-  }).slice(0, 24);
+  }).slice(0, 12);
   return (
     <Page>
       <Header icon="code" content="Type Library">
@@ -55,8 +52,10 @@ const TypesRoot = enhance(({
       </Header>
       <MediaList
         items={filteredItems}
-        onClick={item => dispatch(navigateTo('types/view', {id: item.id}))}
-        children={Card}
+        handleClick={(event, value) => {
+          event.preventDefault();
+          navigateTo('types/view', {id: value.id});
+        }}
         itemsPerRow={3}
       />
     </Page>

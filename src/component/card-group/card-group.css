@@ -1,0 +1,21 @@
+ui.card.fadeup {
+  opacity: 1;
+}
+
+.fadeup-enter {
+    opacity: 0.01;
+}
+
+.fadeup-enter.fadeup-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+}
+
+.fadeup-leave {
+    opacity: 1;
+}
+
+.fadeup-leave.fadeup-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in-out;
+}

@@ -2,13 +2,12 @@
 
 import React from 'react';
 import {compose, withHandlers, flattenProp, withState} from 'recompose';
-import {Message, Segment} from 'semantic-ui-react';
+import {Message} from 'semantic-ui-react';
 import {Header, Section} from '../component';
 import EventList from '../component/EventList.js';
 import Page from '../component/Page';
 import SearchInterface from '../component/searchInterface';
 import values from 'lodash/values';
-import {Debug} from '../component/index';
 import subscribeTo from '../db/subscribeTo';
 import Action from '../action/Action';
 import {sendMessageToChannel} from './channelActions';

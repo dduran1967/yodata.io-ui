@@ -1,13 +1,10 @@
 import mapKeys from 'lodash/mapKeys';
 import root from 'window-or-global';
-import {ActionRoot, ActionView} from '../action';
 import RestApiRoot from '../apidocs/restApiRoot.js';
 import ChannelRoot from '../channel/ChannelRoot';
 import ChannelView from '../channel/ChannelView';
 import {Home} from '../component';
-import {ReactionRoot, ReactionView} from '../reaction';
 import {UserRoot} from '../user';
-import Debug from '../component/Debug';
 import TypesRoot from '../types/TypesRoot';
 import TypeView from '../types/TypeView';
 
@@ -37,22 +34,6 @@ export const sidebarRoutes = [
     label: 'Types',
   },
   {
-    key: 'action',
-    name: 'action',
-    path: '/action',
-    component: ActionRoot,
-    icon: 'lightning',
-    label: 'Actions',
-  },
-  {
-    key: 'reaction',
-    name: 'reaction',
-    path: '/reaction',
-    component: ReactionRoot,
-    icon: 'rocket',
-    label: 'Reactions',
-  },
-  {
     key: 'user',
     name: 'user',
     path: '/user',
@@ -72,19 +53,9 @@ export const sidebarRoutes = [
 
 export const innerRoutes = [
   {
-    name: 'action/view',
-    path: '/action/view/*id',
-    component: ActionView,
-  },
-  {
     name: 'channel/view',
     path: '/channel/item/:key',
     component: ChannelView,
-  },
-  {
-    name: 'reactionView',
-    path: '/reaction/view/*id',
-    component: ReactionView,
   },
   {
     name: 'types/view',

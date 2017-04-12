@@ -1,6 +1,5 @@
 // @flow
 
-import Chance from 'chance';
 import React from 'react';
 import {compose, withHandlers, withState} from 'recompose';
 

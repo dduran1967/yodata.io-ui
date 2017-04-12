@@ -1,9 +1,11 @@
 import React from 'react';
-const Home = props => (
-  <div>
-    <h1>home</h1>
+import Page from '../component/Page';
+import {Header} from '../component/index';
 
-  </div>
+const Home = props => (
+  <Page>
+    <Header icon="home" content="Home" />
+  </Page>
 );
 
 export default Home;

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
-import {compose, withHandlers, lifecycle} from 'recompose';
 import {createAction} from 'redux-actions';
 import Debug from './Debug';
 import {Search} from 'semantic-ui-react';
@@ -32,13 +31,6 @@ type SearchResultAction = {
 
 type SearchAction = SearchValueAction | SearchResultAction | SearchInitAction;
 
-type SearchResult = {
-  title: string,
-  dscription?: string,
-  id: number,
-  image: string,
-};
-
 // SEARCH ACTIONS
 const initializeSearch = createAction('SEARCH_INIT');
 const searchValue = createAction('SEARCH_VALUE');
@@ -67,46 +59,6 @@ export const SearchDebug = props => {
     </div>
   );
 };
-
-function configureSearchInterface(name: string) {
-  return compose(
-    connect(({search}) => ({results: search.results})),
-    lifecycle({
-      componentDidMount() {
-        this.props.dispatch({
-          type: 'SEARCH_INIT',
-          payload: {name},
-        });
-      },
-    }),
-    withHandlers({
-      onSearchChange: ({dispatch}) =>
-        ({target}) => dispatch({type: 'SEARCH_VALUE', payload: target.value}),
-    }),
-  );
-}
-
-class SearchInterface extends React.Component {
-  props: {
-    name: string,
-    value: string,
-    results: Array<SearchResult>,
-    dispatch: () => void,
-  };
-  componentDidMount() {
-    this.props.dispatch({
-      type: 'SEARCH_INIT',
-      payload: {name: this.props.name},
-    });
-  }
-  // onSearchChange = event =>
-  //   this.props.dispatch({type: 'SEARCH_VALUE', payload: event.target.value});
-
-  render() {
-    let {value, results, onSearchChange, onFocus} = this.props;
-    return <Search {...{value, results, onSearchChange, onFocus}} />;
-  }
-}
 
 export default connect(
   state => ({value: state.search.value, results: state.search.results}),
