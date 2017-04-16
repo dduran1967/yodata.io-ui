@@ -17,7 +17,7 @@ declare module 'rdflib' {
   declare class Node {
     termType: 'NamedNode' | 'BlankNode' | 'Literal' | 'Collection',
     value: string,
-    substitute(bindings: Map): Node,
+    substitute(bindings: Object): Node,
     compareTerm(Node): -1 | 0 | 1,
     equals(Node): boolean,
     hashString(void): Node,
