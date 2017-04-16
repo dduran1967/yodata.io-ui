@@ -11,6 +11,9 @@ import CardGroup from '../src/component/card-group';
 import {compose, withState, lifecycle, withHandlers} from 'recompose';
 const fake = new Chance();
 
+import buttonStories from './buttonStories';
+import './ActionCardStories';
+
 const items = [
   {key: 'toggle', icon: 'bars'},
   {key: 'brand', content: <strong>Yodata</strong>},
