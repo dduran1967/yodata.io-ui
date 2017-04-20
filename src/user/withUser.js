@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import userActions from './userActions'
+import userActions from './user-actions'
 
 const withUser = connect(
   state => ({user: state.user}),

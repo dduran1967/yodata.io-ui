@@ -1,7 +1,53 @@
-import {createLogic} from 'redux-logic'
-import userGraph from './userGraph'
-import * as firebase from 'firebase'
+// @flow
 
+import * as firebase from 'firebase'
+import {createLogic} from 'redux-logic'
+import createUserAccountData from './createUserAccountData'
+import currentUser from './currentUser'
+import {USER_BASE} from './user-config'
+import userGraph from './userGraph'
+
+async function accountExists(uid) {
+  return firebase.database().ref(`user/${uid}/profile/${uid}`).once('value').then(snap => {
+    return snap.val() !== null
+  })
+}
+
+function userBase(uid) {
+  return USER_BASE.replace('{uid}', uid)
+}
+
+export const accountInit = createLogic({
+  type:           'USER/ACCOUNT_INIT',
+  processOptions: {
+    successType: 'USER/ACCOUNT_INIT_COMPLETED',
+    failType:    'USER/ACCOUNT_INIT_FAILED',
+  },
+  validate({action}, allow, reject) {
+    let user = currentUser();
+    if (!user) {
+      return reject();
+    }
+    accountExists(user.uid)
+    .then(exists => {
+      if (exists) {
+        reject(action);
+      } else {
+        let base = userBase(user.uid);
+        let data = createUserAccountData(base, user);
+        allow({...action, payload: {id: base, uid: user.uid, ...data}})
+      }
+    })
+  },
+  process({action}) {
+    return firebase.database()
+                   .ref(action.payload.id)
+                   .set({...action.payload})
+                   .then(() => {
+                     return (action.payload)
+                   })
+  }
+})
 
 const userFetchProfile = createLogic({
   type:           'USER/FETCH_PROFILE',
@@ -12,10 +58,9 @@ const userFetchProfile = createLogic({
     successType:    'USER/FETCH_PROFILE_SUCCESS',
     failType:       'USER/FETCH_PROFILE_FAIL'
   },
-  process({getState, action}, dispatch) {
+  process({action}, dispatch) {
     let {url} = action.payload;
-    return userGraph.fetch(url)
-                    .then(() => dispatch(userGraph.findOne(url)))
+    return userGraph.fetch(url).then(() => dispatch(userGraph.findOne(url)));
   }
 });
 
@@ -26,12 +71,15 @@ const createUserWithEmailAndPassword = createLogic({
     successType:    'USER/CREATE_USER_WITH_EMAIL_AND_PASSWORD_SUCCESS',
     failType:       'USER/CREATE_USER_WITH_EMAIL_AND_PASSWORD_FAIL'
   },
-  process({getState, action}) {
+  process({action}) {
     let {email, password} = action.payload;
-    return firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(console.log).catch(console.error)
+    return firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(console.log)
+    .catch(console.error);
   }
-})
+});
 
 const signOut = createLogic({
   type:           'USER/SIGN_OUT',
@@ -40,10 +88,10 @@ const signOut = createLogic({
     successType:    'USER/SIGN_OUT_SUCCESS',
     failType:       'USER/SIGN_OUT_FAIL'
   },
-  process({getState, action},) {
+  process() {
     firebase.auth().signOut();
   }
-})
+});
 
 const signInWithEmailAndPassword = createLogic({
   type:           'USER/SIGN_IN_WITH_EMAIL_AND_PASSWORD',
@@ -54,15 +102,18 @@ const signInWithEmailAndPassword = createLogic({
     successType:    'USER/SIGN_IN_WITH_EMAIL_AND_PASSWORD_SUCCESS',
     failType:       'USER/SIGN_IN_WITH_EMAIL_AND_PASSWORD_FAIL'
   },
-  process({getState, action}, dispatch) {
+  process({action}) {
     let {email, password} = action.payload;
-    return firebase.auth().signInWithEmailAndPassword(email, password).then(console.log);
+    return firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then(console.log);
   }
-})
+});
 
 export default [
   userFetchProfile,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
-]
+  signOut,
+];

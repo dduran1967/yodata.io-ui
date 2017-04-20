@@ -11,8 +11,6 @@ export {compose} from 'recompose';
 export {default as Accordion} from './Accordion';
 export {default as Avatar} from 'react-avatar';
 export {default as Button} from './Button';
-export {default as Card} from './card/Card';
-export {default as CardList, CardListItem} from './card/CardList';
 export {default as ClientCard} from './client/ClientCard';
 export {default as ClientView} from './client/ClientView';
 export {default as CodeMirror} from 'react-codemirror';
@@ -45,7 +43,6 @@ export {
   loadingReducer,
   loadingActions,
 } from './Loading';
-export {default as EventList} from './EventList';
 export {Input} from 'semantic-ui-react';
 
 //  utilities

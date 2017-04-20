@@ -1,6 +1,7 @@
 import {createAction} from 'redux-actions';
 
 export const createChannel = createAction('CHANNEL/CREATE');
+export const deleteChannel = createAction('CHANNEL/DELETE_CHANNEL');
 export const fetchUserChannels = createAction(
   'CHANNEL/FETCH_USER_CHANNELS',
   uid => ({uid}),

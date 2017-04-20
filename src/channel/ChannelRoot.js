@@ -3,18 +3,18 @@
 import values from 'lodash/values';
 import React from 'react';
 import {compose, withHandlers} from 'recompose';
-import {Segment} from 'semantic-ui-react';
-import {CardList, Header} from '../component';
 import subscribeTo from '../db/subscribeTo';
 import {createChannel} from './channelActions';
 import SliderInput from '../component/SliderInput';
 import Page from '../component/Page';
+import Section from '../component/Section';
+import CardList from '../component/CardList';
+import Header from '../component/Header';
 
 const enhance = compose(
   subscribeTo(props => [props.route.path]),
   withHandlers({
-    createChannel: ({dispatch}) =>
-      (name: string) => dispatch(createChannel(name)),
+    createChannel: ({dispatch}) => name => dispatch(createChannel(name)),
   }),
 );
 
@@ -26,24 +26,24 @@ const ChannelRoot = enhance(({
   data,
 }) => (
   <Page>
-    <Segment basic>
+    <Section>
       <Header
         icon="hashtag"
         content="Channels"
-        subheader="Channels connect things to your data."
+        subheader="Organize and manage access to your data events."
       >
         <SliderInput placeholder="channel name" onSubmit={createChannel} />
       </Header>
-    </Segment>
+    </Section>
 
-    <Segment basic>
+    <Section>
       <CardList
         items={values(data && data.item)}
         onClick={item => {
           navigateTo('channel/view', {key: item.label});
         }}
       />
-    </Segment>
+    </Section>
   </Page>
 ));
 

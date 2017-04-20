@@ -1,5 +1,4 @@
 export {default as schemaActions} from './schemaActions'
-export {default as schemaInitialState} from './schemaInitialState'
 export {default as schemaLogic} from './schemaLogic'
 export {default as schemaReducer} from './schemaReducer'
 export {default as schemaGraph} from './schemaGraph'

@@ -1,10 +1,8 @@
-// @flow
-
 import React from 'react';
 import {Header} from 'semantic-ui-react';
 
-const SplitHeader = ({icon, content, subheader, children}) => {
-  const splitHeaderStyle = {
+export default function SplitHeader({content, subheader, children, ...rest}) {
+  const twoColumnStyle = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -13,11 +11,9 @@ const SplitHeader = ({icon, content, subheader, children}) => {
     paddingBottom: '1em',
   };
   return (
-    <div style={splitHeaderStyle}>
-      <Header {...{icon, content, subheader}} />
+    <div style={twoColumnStyle}>
+      <Header {...{content, subheader, ...rest}} />
       <div>{children}</div>
     </div>
   );
-};
-
-export default SplitHeader;
+}

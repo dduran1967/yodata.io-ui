@@ -1,90 +1,82 @@
 // @flow
 
 import React from 'react';
-import {compose, withHandlers, flattenProp, withState} from 'recompose';
-import {Message} from 'semantic-ui-react';
-import {Header, Section} from '../component';
-import EventList from '../component/EventList.js';
+import {compose, withProps, withState, setDisplayName} from 'recompose';
+import {Dropdown, Confirm} from 'semantic-ui-react';
+import {Section} from '../component';
 import Page from '../component/Page';
 import SearchInterface from '../component/searchInterface';
 import values from 'lodash/values';
 import subscribeTo from '../db/subscribeTo';
-import Action from '../action/Action';
-import {sendMessageToChannel} from './channelActions';
-import {connect} from 'react-redux';
+import {ActionCards} from '../component/ActionCard';
+import {withLoader} from '../component/Loading';
+import {EventCards} from '../component/EventCards';
+import Header from '../component/Header'
+import {Label} from 'semantic-ui-react';
 
-const withShowContentToggle = compose(
-  withState('showContent', 'setShowContent', false),
-  withHandlers({
-    toggleShowContent: ({showContent, setShowContent}) =>
-      () => {
-        setShowContent(!showContent);
-      },
-  }),
-);
 
-const withToggle = compose(
-  connect(state => ({}), {sendMessageToChannel}),
-  withShowContentToggle,
-  withHandlers({
-    onHeaderClick: props =>
-      (event, id) => {
-        event.preventDefault();
-        props.toggleShowContent();
-      },
-    sendMessage: ({data, sendMessageToChannel}) =>
-      (event, message) => {
-        sendMessageToChannel({...data});
-      },
-  }),
-);
-
-const ListItem = (
-  {id, label, data, showContent, onHeaderClick, sendMessage},
-) => (
-  <div key={id} style={{marginBottom: '.5em'}}>
-    <div className="ui top attached menu">
-      <div className="text item">{label || id}</div>
-      <div className="right menu">
-        <a className="item" onClick={e => onHeaderClick(e, id)}>
-          <i className={'icon caret ' + (showContent ? 'down' : 'left')} />
-        </a>
-      </div>
-    </div>
-    {showContent &&
-      data &&
-      <div className="ui bottom attached message small secondary">
-        <pre><code>{JSON.stringify(data, null, 2)}</code></pre>
-        <button
-          className="ui button primary"
-          onClick={e => sendMessage(e, data)}
-        >
-          send
-        </button>
-      </div>}
-  </div>
-);
-
-const ActionListItem = withToggle(ListItem);
-
-const enhance = compose(
+const channelContainer = compose(
+  setDisplayName('ChannelItemView'),
   subscribeTo(props => [props.route.path]),
-  flattenProp('data'),
+  withLoader(props => {
+    let ready = props.data && props.data.id;
+    return !ready;
+  }),
+  withProps(props => ({
+    channel: {
+      id: props.data.id,
+      label: props.data.label,
+      description: props.data.description,
+      actions: values(props.data.action),
+      messages: values(props.data.item),
+    },
+  })),
+  withState('confirmDeleteOpen', 'setConfirmDeleteOpen', false),
 );
 
-const ChannelView = enhance(({id, label, action = {}, item = {}, dispatch}) => {
-  let actions = values(action);
-  let items = values(item);
+const ChannelItemView = (
+  {
+    channel,
+    dispatch,
+    confirmDeleteOpen,
+    setConfirmDeleteOpen,
+  },
+) => {
+  const dropdownConfig = {
+    text: 'options',
+    button: true,
+    options: [
+      {
+        text: 'delete channel',
+        value: 'delete',
+        icon: 'delete',
+        onClick: () => setConfirmDeleteOpen(true),
+      },
+    ],
+  };
   return (
     <Page>
+      <Confirm
+        open={confirmDeleteOpen}
+        header="Permanently delete this channel?"
+        content="Messages will NOT be deleted, but all subscriptions to this channel will be canceled,"
+        confirmButton={<button className="ui red button">delete</button>}
+        onCancel={() => setConfirmDeleteOpen(false)}
+        onConfirm={() => {
+          setConfirmDeleteOpen(false);
+          dispatch({type: 'CHANNEL/DELETE_CHANNEL', payload: channel.id});
+        }}
+      />
       <Section>
-        <Header icon="hashtag" content={label} />
+        <Header as="h1" icon="hashtag" content={channel.label} subheader={channel.subheader}>
+          <Dropdown {...dropdownConfig} />
+        </Header>
       </Section>
 
       <Section>
         <Header
           content="Action Types"
-          subheader="Actions not on this list will be rejected by this channel"
+          subheader="Channel subscribers only receive these actions."
         >
           <SearchInterface
             icon="add"
@@ -93,30 +85,24 @@ const ChannelView = enhance(({id, label, action = {}, item = {}, dispatch}) => {
               dispatch({
                 type: 'CHANNEL/ADD_ACTION',
                 payload: {
-                  channel: id,
+                  channel: channel.id,
                   action: selected.id,
                 },
               })}
           />
         </Header>
-        {action.length === 0 &&
-          <Message>
-            This channel will accept any action type. To limit your channel
-            to a set of specific types, add them here.
-          </Message>}
-        {actions.map(value => {
-          let action = new Action(value.id);
-          return <ActionListItem {...{id: value.id, data: action.mock()}} />;
-        })}
+        <ActionCards items={channel.actions} />
       </Section>
 
       <Section>
         <Header content="Events" />
-        <EventList items={items} />
+        <EventCards items={channel.messages} />
       </Section>
 
     </Page>
   );
-});
+};
 
-export default enhance(ChannelView);
+const ChannelView = channelContainer(ChannelItemView);
+
+export default ChannelView;

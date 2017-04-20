@@ -1,6 +1,6 @@
 import store from '../store'
 // @flow
-import userActions from './userActions'
+import userActions from './user-actions'
 
 type User = {
   uid: string,

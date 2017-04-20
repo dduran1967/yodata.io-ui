@@ -1,9 +1,10 @@
 import {createLogic} from 'redux-logic';
+import * as firebase from 'firebase';
 import axios from 'axios';
-const DB_ORIGIN = 'https://yodata-1115.firebaseio.com';
+import {DB_ORIGIN} from '../db/db-config'
 
 const fetchSchema = createLogic({
-  type: 'SCHEMA/FETCH_SCHEMA',
+  type: ['SCHEMA/FETCH_SCHEMA', 'USER/USER_SIGNED_IN'],
   cancelType: 'SCHEMA/CANCEL_FETCH_SCHEMA',
   latest: true,
   processOptions: {
@@ -12,7 +13,8 @@ const fetchSchema = createLogic({
     failType: 'SCHEMA/FETCH_SCHEMA_FAIL',
   },
   process({getState, action}) {
-    let href = DB_ORIGIN + '/schema.json';
+    let {schema: {config}} = getState()
+    let href = `${DB_ORIGIN}${config.root}.json`;
     return axios(href).then(res => {
       return {
         object: href,
@@ -20,6 +22,27 @@ const fetchSchema = createLogic({
         actionStatus: 'CompletedActionStatus',
       };
     });
+  },
+});
+
+const updateSchema = createLogic({
+  type: 'SCHEMA/UPDATE_SCHEMA',
+  processOptions: {
+    successType: 'SCHEMA/UPDATE_SCHEMA_COMPLETED',
+    failType: 'SCHEMA/UPDATE_SCHEMA_FAIL',
+  },
+  transform({getState, action}, next, reject) {
+    next(action);
+  },
+  process({action}) {
+    let data = action.payload;
+    return firebase
+      .database()
+      .ref(`schema/${data.id}`)
+      .update(data)
+      .then(() => {
+        return data;
+      });
   },
 });
 
@@ -65,4 +88,4 @@ export const fetch = createLogic({
   },
 });
 
-export default [fetchSchema];
+export default [fetchSchema, updateSchema];

@@ -15,7 +15,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/scripts/start.js"
+            "program": "${workspaceRoot}/scripts/start.js",
+            "protocol": "auto"
         },
         {
             "type": "node",

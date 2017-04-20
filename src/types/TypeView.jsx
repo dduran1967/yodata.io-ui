@@ -1,122 +1,102 @@
 // @flow
 
-import React from 'react';
-import {compose, withHandlers} from 'recompose';
-import {actions as routerActions} from 'redux-router5';
-import {Breadcrumb, Header} from 'semantic-ui-react';
-import {Link, Section, withLoader} from '../component';
-import {lit} from '../lib/rdf-utilities';
-import PropertiesList from '../schema/PropertiesList';
-import {connect} from 'react-redux';
-import {Debug} from '../component/index';
-import {flatten} from 'lodash';
-import {listItems} from '../component/Data';
+import isNull from "lodash/isNull";
+import React from "react";
+import { connect } from "react-redux";
+import {compose, withHandlers, withProps, withState} from "recompose";
+import {Label} from "semantic-ui-react";
+import { Section, withLoader } from "../component";
+import Page from "../component/Page";
+import PropertiesList from "../schema/PropertiesList";
+import Debug from "../component/Debug";
+import Link from '../component/Link'
+import castArray from 'lodash/castArray'
+import Editable from '../component/Editable'
+import CardEditable from '../component/CardEditable'
+import Header from '../component/Header'
+import BasicCard from '../component/BasicCard'
+import isArray from 'lodash/isArray'
+import FieldEditable from '../component/FieldEditable'
+import getSuperTypes from '../schema/getSuperTypes.js';
 
-const Breadcrumbs = props => (
-  <Breadcrumb>
-    {props.items.map(superType => (
-      <span key={superType}>
-        <Breadcrumb.Section>
-          <Link key={superType} name={'types/view'} params={{id: superType}}>
-            {lit(superType)}
-          </Link>
-        </Breadcrumb.Section>
-        <Breadcrumb.Divider />
-      </span>
-    ))}
-  </Breadcrumb>
-);
-
-const propertiesOf = propSource =>
-  id =>
-    propSource.filter(({domainIncludes}) => {
-      if (Array.isArray(domainIncludes)) {
-        return domainIncludes.includes(id);
-      }
-      if (typeof domainIncludes === 'string') {
-        return domainIncludes === id;
-      }
-      return false;
-    });
-
-function getProperties(
-  propSource: Array<any>,
-  domainKey: string = 'domainIncludes',
-  subjectId: string,
-): Array<any> {
-  return propSource.filter(currentProp => {
-    let domains = currentProp[domainKey];
-    if (Array.isArray(domains)) {
-      return domains.includes(subjectId);
+const propertiesOf = propSource => id =>
+  propSource.filter(({ domainIncludes }) => {
+    if (isArray(domainIncludes)) {
+      return domainIncludes.includes(id);
     }
-    if (typeof domains === 'string') {
-      return domains === subjectId;
+    if (typeof domainIncludes === "string") {
+      return domainIncludes === id;
     }
     return false;
   });
-}
 
-function getSuperTypes(typeIndex, subject) {
-  let superTypes = [subject.id];
-  let nextParent = subject.subClassOf;
-  while (nextParent && nextParent !== subject.id) {
-    superTypes.push(nextParent);
-    nextParent = typeIndex[nextParent] && typeIndex[nextParent].subClassOf;
-  }
-  return superTypes;
-}
-
-const withController = compose(
-  connect(
-    ({schema, router}) => {
-      let isLoading = router.route === null || schema.hasData === false;
-      let subject, properties, superTypes;
-      if (!isLoading) {
-        subject = schema.index[router.route.params.id];
+const typeViewContainer = compose(
+  connect(({ schema, router }) => {
+    let isLoading = isNull(router.route) || schema.hasData === false;
+    let subject, properties, superTypes;
+    if (!isLoading) {
+      subject = schema.index[router.route.params.id];
+      if (subject.type === "Type") {
         superTypes = getSuperTypes(schema.index, subject);
         let findProperties = propertiesOf(schema.properties);
-        properties = superTypes.reduce(
-          (state, superType) => {
-            return {...state, [superType]: findProperties(superType)};
-          },
-          {},
-        );
+        properties = superTypes.reduce((state, superType) => {
+          return { ...state, [superType]: findProperties(superType) };
+        }, {});
       }
-      return {
-        isLoading,
-        subject,
-        superTypes,
-        properties,
-      };
-    },
-    {
-      navigateTo: routerActions.navigateTo,
-    },
-  ),
-  withLoader(props => props.isLoading),
-  withHandlers({
-    onBack: ({navigateTo}) => event => navigateTo('types'),
+    }
+    return {
+      isLoading,
+      subject,
+      superTypes,
+      properties
+    };
   }),
+  withLoader(props => props.isLoading),
+  withProps(({subject, superTypes}) => {
+    let extra = [];
+    if (subject.domainIncludes) {
+      let domains = castArray(subject.domainIncludes).map(domain => <Link key={domain} name="types/view" params={{id:domain}}>{domain}  </Link>)
+      extra.push(<Label key="domain" basic content="domain:" detail={domains} />)
+    }
+    if (subject.rangeIncludes) {
+      let ranges = castArray(subject.rangeIncludes).map(range => <Link key={range} name="types/view" params={{id:range}}>{range}  </Link>)
+      extra.push(<Label key="range" basic content="range:" detail={ranges} />)
+    }
+    if (superTypes) {
+      let types = castArray(superTypes).map(type => <Link key={type} name="types/view" params={{id:type}}>{type}  </Link>)
+      extra.push(<Label key="implements" basic content="implements:" detail={types} />)
+    }
+    return {
+      header: subject.label,
+      meta: subject.type,
+      description: subject.description,
+      extra
+    }
+  }),
+  withHandlers({
+    onBack: ({ navigateTo }) => event => navigateTo("types")
+  })
 );
 
 const TypeView = props => {
-  let {subject, superTypes, properties, dispatch} = props;
+  let { subject, properties, dispatch, header, meta, description, extra } = props;
   return (
-    <div>
-      <Breadcrumbs items={superTypes.reverse()} />
+    <Page>
       <Section>
-        <Header
-          as="h1"
-          content={subject.label}
-          subheader={subject.description}
+        <BasicCard
+          header={header}
+          meta={meta}
+          description={description}
+          extra={extra}
         />
       </Section>
-      <Section>
-        <Header content="Properties" />
-        <PropertiesList items={properties} dispatch={dispatch} />
-      </Section>
-    </div>
+      {properties &&
+        <Section>
+          <Header content="Properties" />
+          <PropertiesList items={properties} dispatch={dispatch} />
+        </Section>}
+    </Page>
   );
 };
 
-export default withController(TypeView);
+export default typeViewContainer(TypeView)

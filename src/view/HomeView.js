@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from '../component/Page';
-import {Header} from '../component/index';
+import Header from '../component/Header';
 
 const Home = props => (
   <Page>
@@ -9,3 +9,4 @@ const Home = props => (
 );
 
 export default Home;
+

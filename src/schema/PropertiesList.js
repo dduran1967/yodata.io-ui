@@ -1,15 +1,17 @@
-import React from 'react';
-import {compose, withHandlers} from 'recompose';
-import {lit} from '../lib/rdf-utilities';
-import {Table, List} from 'semantic-ui-react';
-import {track} from 'react-redux-form';
-import {Debug} from '../component/index';
-import entries from 'lodash/entries';
+// @flow
 
-const ListItem = ({property, choose, dispatch}) => (
+import React from "react";
+import { lit } from "../lib/rdf-utilities";
+import { Table, List } from "semantic-ui-react";
+import entries from "lodash/entries";
+import Link from "../component/Link";
+
+const ListItem = ({ property, choose, dispatch }) => (
   <tr>
     <td className="top aligned">
-      {lit(property.label)}
+      <Link name="types/view" params={{ id: property.label }}>
+        {lit(property.label)}
+      </Link>
     </td>
     <td>
       <List horizontal>
@@ -23,23 +25,14 @@ const ListItem = ({property, choose, dispatch}) => (
       </List>
       <div className="hidden">
         <div
-          dangerouslySetInnerHTML={{__html: property.description.toString()}}
+          dangerouslySetInnerHTML={{ __html: property.description.toString() }}
         />
       </div>
     </td>
   </tr>
 );
 
-const PropertiesListItem = compose(
-  withHandlers({
-    choose: props =>
-      event => {
-        event.preventDefault();
-      },
-  }),
-)(ListItem);
-
-export const PropertiesList = ({items = []}) => (
+export const PropertiesList = ({ items = [] }) => (
   <Table>
     <thead>
       <tr>

@@ -1,138 +1,127 @@
 // @flow
-import shrinkRdfNode from '../lib/util/shrinkRdfNode';
-import * as firebase from 'firebase';
-import escapeRegExp from 'lodash/escapeRegExp';
-import filter from 'lodash/filter';
-import {createLogic} from 'redux-logic';
-import {lit} from '../lib/rdf-utilities.js';
-import {subscriptionActive} from './dbActions';
-import mapStatementToDocStore from '../lib/util/mapStatementToDocStore.js';
-import mapValues from 'lodash/mapValues';
-import isArray from 'lodash/isArray';
-import axios from 'axios';
 
-const DB_ORIGIN = 'https://yodata-1115.firebaseio.com';
+import axios from 'axios'
+import check from 'check-types'
+import * as firebase from 'firebase'
+import escapeRegExp from 'lodash/escapeRegExp'
+import filter from 'lodash/filter'
+import isArray from 'lodash/isArray'
+import isNull from 'lodash/isNull'
+import mapValues from 'lodash/mapValues'
+import {createLogic} from 'redux-logic'
+import {lit} from '../lib/rdf-utilities.js'
 
-type Action = {
-  type: string,
-  payload?: any,
-  meta?: any,
-};
+import shrinkRdfNode from '../lib/util/shrinkRdfNode'
 
-const addUser = createLogic({
-  type: '*',
-  transform({getState, action}, next) {
-    let {user: {currentUser}} = getState();
-    const meta = {
-      ...action.meta,
-      currentUser,
-    };
-    next({...action, meta});
+import {DB_ORIGIN} from './db-config'
+
+const onSubscribe = createLogic({
+  type:           'DB/SUBSCRIBE',
+  cancelType:     'DB/CANCEL_SUBSCRIPTION',
+  processOptions: {
+    failType: 'DB/SUBSCRIPTION_ERROR'
   },
+  validate({action}, allow, reject) {
+    let valid = check.all(
+      check.map(action, {
+        payload: {
+          type:         check.string, // 'SubscribeAction'
+          name:         check.string, // 'thrume@now'
+          agent:        check.string, // '/user/{uid}
+          object:       check.string, // '/user/{uid}/thrume/
+          actionStatus: check.string // 'PotentialActionStatus'
+        }
+      })
+    );
+    if (valid) {
+      allow(action);
+    } else {
+      console.error('invalid subscription input', action);
+      reject(action);
+    }
+  },
+  process({action}, dispatch, done) {
+    const {agent, object, name} = action.payload;
+    const ref = firebase.database().ref(object);
+    dispatch({
+      type:    'DB/SUBSCRIPTION_ACTIVE',
+      payload: {...action.payload, actionStatue: 'ActiveActionStatus'}
+    });
+    ref.on('value', nextState => {
+      let value = nextState.val();
+      let type = isNull(value) ? 'DB/SUBSCRIPTION_ERROR' : 'DB/SUBSCRIPTION_UPDATED'
+      dispatch({
+        type,
+        payload: {
+          name:  name,
+          agent: agent,
+          object,
+          value
+        }
+      });
+    });
+  }
 });
 
-export const fetch = createLogic({
-  type: 'DB/FETCH_URL',
+const fetch = createLogic({
+  type:           'DB/FETCH_URL',
   processOptions: {
     successType: 'DB/FETCH_URL_COMPLETED',
-    failType: 'DB/FETCH_URL_ERROR',
+    failType:    'DB/FETCH_URL_ERROR'
   },
-  transform({getState, action}, next) {
+  transform({getState, action}, next, reject) {
     let target = action.payload;
-    let {user: {currentUser}} = getState();
-    if (typeof target === 'string') {
-      if (target.startsWith('/')) {
-        target = DB_ORIGIN + target + '.json';
-      }
-      if (target.startsWith('~')) {
-        target = DB_ORIGIN +
-          '/' +
-          action.meta.currentUser +
-          target.slice(1) +
-          '.json';
-      }
+    console.error('fetch data needs to be updated');
+    return reject();
+
+    if (!target) {
+      console.error('DB/FETCH_URL CALLED WITH NO URL');
+      return reject();
     }
+
+    let {user: {currentUser}} = getState();
+
+    switch (target[0]) {
+      case '~':
+        target =
+          DB_ORIGIN + target.replace('~', `/${currentUser.uid}`) + '.json';
+        break;
+      case '/':
+        target = DB_ORIGIN + target + '.json';
+        break;
+      default:
+        return reject(action);
+    }
+
     let nextPayload = {
-      agent: currentUser,
+      agent:  currentUser,
       object: {
-        id: action.payload,
-        url: target,
-      },
+        id:  action.payload,
+        url: target
+      }
     };
     next({...action, payload: nextPayload});
   },
   process({action}) {
     return axios(action.payload.object.url).then(res => {
       return {
-        agent: action.payload.agent,
-        object: action.payload.object,
-        result: res,
-        actionStatus: 'CompletedActionStatus',
+        agent:        action.payload.agent,
+        object:       action.payload.object,
+        result:       res,
+        actionStatus: 'CompletedActionStatus'
       };
     });
-  },
+  }
 });
 
-const subscribeLogic = createLogic({
-  type: 'DB/SUBSCRIBE',
-  cancelType: 'DB/CANCEL_SUBSCRIPTION',
-  processOptions: {
-    failType: 'DB/SUBSCRIPTION_ERROR',
-  },
-  transform({getState, action}, next) {
-    let {user} = getState();
-    let agent = user.currentUser;
-    let nextAction = {
-      type: action.type,
-      payload: {
-        subject: action.payload,
-      },
-      meta: {
-        agent: agent.uid,
-        db: firebase.database().ref(agent.uid),
-      },
-    };
-    next(nextAction);
-  },
-  process({action}, dispatch, done) {
-    let {subject} = action.payload;
-    let {db} = action.meta;
-    subject.map(subjectPath => {
-      let resource = db.child(subjectPath);
-      dispatch(subscriptionActive(subjectPath));
-      resource.on('value', nextState => {
-        dispatch({
-          type: 'DB/SUBSCRIPTION_UPDATED',
-          payload: {
-            subject: subjectPath,
-            value: nextState.val(),
-          },
-        });
-      });
-    });
-  },
-});
-
-const subscriptionActiveLogic = createLogic({
-  type: 'DB/SUBSCRIPTION_ACTIVE',
-  transform({action}, next) {
-    next({
-      type: action.type,
-      payload: {
-        subject: action.payload,
-      },
-    });
-  },
-});
-
-export const searchLogic = createLogic({
-  type: 'SEARCH_VALUE',
+const searchLogic = createLogic({
+  type:   'SEARCH_VALUE',
   latest: true,
   transform({getState, action}, next) {
     action.meta = {
       searchValue: action.payload,
-      instrument: 'searchLogic',
-      source: getState().schema.actions,
+      instrument:  'searchLogic',
+      source:      getState().schema.actions
     };
     next(action);
   },
@@ -146,55 +135,43 @@ export const searchLogic = createLogic({
       let isMatch = result => re.test(result.label);
       let source = action.meta.source;
       let searchResults = filter(source, isMatch).map(item => ({
-        id: item.id,
-        title: lit(item.label),
-        description: lit(item.description),
+        id:          item.id,
+        title:       lit(item.label),
+        description: lit(item.description)
       }));
       dispatch({
-        type: 'SEARCH_RESULT',
+        type:    'SEARCH_RESULT',
         payload: searchResults,
-        meta: action.meta,
+        meta:    action.meta
       });
     }
     dispatch({type: 'SEARCH_LOADING', payload: false, meta: action.meta});
     done();
-  },
+  }
 });
 
-const saveGraph = createLogic({
-  type: 'DB/SAVE_GRAPH',
-  process({action}, dispatch, done) {
-    done();
+const dbSET = createLogic({
+  type:           'DB/SET',
+  processOptions: {
+    successType: 'DB/SET_COMPLETED',
+    failType:    'DB/SET_FAIL'
   },
+  process({action}) {
+    return firebase
+    .database()
+    .ref(action.payload.id)
+    .set(action.payload.nextValue)
+    .then(() => {
+      return action.payload;
+    });
+  }
 });
-
-type NamedNode = {
-  termType: 'NamedNode',
-  value: string,
-};
-
-type Literal = {
-  termType: 'Literal',
-  value: string,
-  datatype: NamedNodeMap,
-  lang: string,
-};
-
-type SaveJsonObjectAction = {
-  payload: {
-    id: string,
-    type: string,
-    label: Array<Literal>,
-    description: Array<Literal>,
-    subClassOf: Array<NamedNode>,
-  },
-};
 
 const saveJsonObject = createLogic({
-  type: 'DB/SAVE_JSON_OBJECT',
+  type:           'DB/SAVE_JSON_OBJECT',
   processOptions: {
     successType: 'DB/SAVE_JSON_OBJECT_SUCCESS',
-    failType: 'DB/SAVE_JSON_OBJECT_FAIL',
+    failType:    'DB/SAVE_JSON_OBJECT_FAIL'
   },
   transform({action}, next) {
     let nextPayload = mapValues(action.payload, value => {
@@ -209,13 +186,7 @@ const saveJsonObject = createLogic({
   },
   process({action}) {
     return action.payload;
-  },
+  }
 });
 
-export default [
-  subscribeLogic,
-  subscriptionActiveLogic,
-  searchLogic,
-  saveJsonObject,
-  fetch,
-];
+export default [onSubscribe];

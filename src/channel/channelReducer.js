@@ -1,18 +1,31 @@
-export const initialState = {
-  id: '',
-  items: [],
-  itemType: 'Channel',
-  type: 'Container',
-  url: '',
+// @flow
+
+interface ChannelState {
+  _acl: any,
+  _config: {
+    baseUrlTemplate: string,
+  },
+  _meta: any,
+  id: string,
+  contains: Object
+}
+
+export const channelDefaultState = {
+  _acl:     {},
+  _config:  {
+    baseUrlTemplate: '/user/{uid}/channel'
+  },
+  _meta:    {},
+  id:       '',
+  contains: {}
 };
 
-export const channelReducer = (state = initialState, action) => {
+export default function channelReducer(state: ChannelState = channelDefaultState,
+                                       action: FluxAction): ChannelState {
   switch (action.type) {
     case 'CHANNEL/USER_CHANNELS_ITEMS_NEXT':
       return {...state, items: action.payload};
     default:
       return state;
   }
-};
-
-export default channelReducer;
+}

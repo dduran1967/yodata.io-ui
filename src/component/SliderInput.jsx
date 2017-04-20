@@ -34,7 +34,6 @@ class SliderInput extends React.Component {
     placeholder: '',
     input: {},
     button: {
-      primary: true,
       style: {},
     },
   };

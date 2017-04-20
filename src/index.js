@@ -5,13 +5,8 @@ import {Provider} from 'react-redux';
 import {RouterProvider} from 'react-router5';
 import App from './App';
 import router from './router';
-import './schema/schemaGraph';
 import store from './store';
 import './yo';
-
-store.dispatch({type: 'SCHEMA/FETCH_SCHEMA'});
-
-window.firebase = firebase;
 
 const config = {
   apiKey: 'AIzaSyAuLfAq8F2ibOTuMe3Ql7UmwGWHEXHqkiU',
@@ -41,3 +36,5 @@ const app = (
 router.start((err, state) => {
   ReactDOM.render(app, document.getElementById('app'));
 });
+
+window.firebase = firebase;

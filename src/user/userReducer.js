@@ -1,6 +1,6 @@
 import userInitialState from './userInitialState'
 
-export const userReducer = (state = userInitialState, action) => {
+function userReducer(state = userInitialState, action) {
   switch (action.type) {
     case 'USER/FETCH_PROFILE_SUCCESS':
       if (!action.payload) {

@@ -1,23 +1,44 @@
 @import 'semantic.css';
 @import 'codemirror.css';
 
+body {
+    background-color: #F3F4F5;
+}
+
 .selectable:hover {
-  cursor: hand;
+    cursor: hand;
 }
+
 .mask {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
+
 .p-relative {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
+
 .p-absolute {
-  position: absolute !important;
+    position: absolute !important;
 }
+
 .b-red {
-  border: solid 1px #f00 !important;
+    border: solid 1px #FF0000 !important;
 }
+
 .b-blue {
-  border: solid 1px #00f !important;
+    border: solid 1px #0000FF !important;
+}
+
+[contenteditable] {
+    padding: .5em;
+    margin: -.5em;
+    border-left: solid 2px transparent;
+}
+[contenteditable]:hover,
+[contenteditable]:focus {
+    outline: dashed 1px #7860F9;
+    cursor:        text;
+    border-left-color: red;
 }
 
 

@@ -1,5 +1,4 @@
 [ignore]
-./node_modules/
 .*broken.json
 .*node_modules/findup
 .*node_modules/react-motion
@@ -8,5 +7,6 @@
 [include]
 
 [libs]
+./flowtypes.flow.js
 
 [options]

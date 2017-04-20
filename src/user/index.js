@@ -1,4 +1,4 @@
-export {default} from './userActions'
+export {default as userActions} from './user-actions'
 export {default as UserRoot} from './UserRoot'
 export {default as userReducer} from './userReducer'
 export {default as userLogic} from './userLogic'

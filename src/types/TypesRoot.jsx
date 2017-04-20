@@ -41,7 +41,11 @@ const TypesRoot = enhance(({
   }).slice(0, 12);
   return (
     <Page>
-      <Header icon="code" content="Type Library">
+      <Header
+        icon="code"
+        content="Type Library"
+        subheader="standard actions and models from schema.org, linked-data, RESO and others..."
+      >
         <div>
           <Input
             icon="search"

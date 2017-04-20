@@ -3,10 +3,10 @@ import {Grid, GridColumn} from 'semantic-ui-react';
 
 class Page extends React.Component {
   render() {
-    let {children, ...rest} = this.props;
+    let {children} = this.props;
     return (
       <Grid>
-        <GridColumn>{children}</GridColumn>
+        <GridColumn style={{paddingBottom: '200px'}}>{children}</GridColumn>
       </Grid>
     );
   }

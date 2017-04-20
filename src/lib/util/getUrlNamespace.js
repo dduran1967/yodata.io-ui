@@ -3,7 +3,6 @@
 import debrac from './debrac';
 
 export default function getUrlNamespace(url: string) {
-  (url: string);
   let target = debrac(url);
   if (target.startsWith('_')) {
     return url;

@@ -1,19 +1,27 @@
+// @flow
+
 const initialState = {
   subscription: {},
 };
 
-const dbReducer = (state = initialState, action) => {
+export default function dbReducer(state = initialState, action) {
   switch (action.type) {
+    case 'DB/SUBSCRIPTION_ACTIVE':
+      let {name} = action.payload;
+      let nextSubscription = {...state.subscription, [name]: action.payload}
+      return {
+        ...state,
+        subscription: nextSubscription
+      };
     case 'DB/SUBSCRIPTION_UPDATED':
-      let {subject, value} = action.payload;
-      return {...state, [subject]: value};
+      return {...state, [action.payload.name]: action.payload.value};
     case 'DB/SEARCH_RESET':
       return {
         ...state,
         search: {
           isLoading: false,
-          results: [],
-          value: '',
+          results:   [],
+          value:     '',
         },
       };
     case 'DB/FETCH_URL_COMPLETED':
@@ -24,6 +32,4 @@ const dbReducer = (state = initialState, action) => {
     default:
       return state;
   }
-};
-
-export default dbReducer;
+}
