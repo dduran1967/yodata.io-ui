@@ -1,21 +1,27 @@
 // @flow
 
-import values from 'lodash/values';
-import React from 'react';
-import {compose, withHandlers} from 'recompose';
-import subscribeTo from '../db/subscribeTo';
-import {createChannel} from './channelActions';
-import SliderInput from '../component/SliderInput';
-import Page from '../component/Page';
-import Section from '../component/Section';
-import CardList from '../component/CardList';
-import Header from '../component/Header';
+import values from "lodash/values";
+import React from "react";
+import { compose, withHandlers, withProps } from "recompose";
+import { createChannel } from "./channelActions";
+import SliderInput from "../component/SliderInput";
+import Page from "../component/Page";
+import Section from "../component/Section";
+import CardList from "../component/CardList";
+import Header from "../component/Header";
+import { connect } from "react-redux";
+import Debug from "../component/Debug";
 
 const enhance = compose(
-  subscribeTo(props => [props.route.path]),
+  connect(state => ({
+    data: state.db["channel@root"]
+  })),
+  withProps(({ data }) => ({
+    channels: data && data.item && values(data.item)
+  })),
   withHandlers({
-    createChannel: ({dispatch}) => name => dispatch(createChannel(name)),
-  }),
+    createChannel: ({ dispatch }) => name => dispatch(createChannel(name))
+  })
 );
 
 const ChannelRoot = enhance(({
@@ -24,6 +30,7 @@ const ChannelRoot = enhance(({
   navigateTo,
   dispatch,
   data,
+  channels = []
 }) => (
   <Page>
     <Section>
@@ -38,9 +45,9 @@ const ChannelRoot = enhance(({
 
     <Section>
       <CardList
-        items={values(data && data.item)}
+        items={channels}
         onClick={item => {
-          navigateTo('channel/view', {key: item.label});
+          navigateTo("channel/view", { key: item.label });
         }}
       />
     </Section>

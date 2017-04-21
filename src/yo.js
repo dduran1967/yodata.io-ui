@@ -13,6 +13,8 @@ import * as context from './schema/context.js'
 import getSuperTypes from './schema/getSuperTypes.js'
 import store from './store'
 import * as thrume from './thrume'
+import * as channelActions from './channel/channelActions.js';
+
 import currentUser from './user/currentUser.js'
 import currentUserAgent from './user/currentUserAgent.js'
 
@@ -23,6 +25,12 @@ class Yo {
 
   get Action() {
     return Action;
+  }
+
+  get channel() {
+    return {
+      action: channelActions
+    }
   }
 
   get context() {

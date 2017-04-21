@@ -6,7 +6,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {compose, withHandlers, withProps, withState} from 'recompose'
 import {Label, Popup, Segment} from 'semantic-ui-react'
-import BaseCard from '../component/BaseCard'
 import Header from '../component/Header'
 import Page from '../component/Page'
 import CodeEditor from '../component/CodeEditor'
@@ -16,12 +15,9 @@ import {Button} from '../component/index'
 import stringify from '../component/stringify'
 import check from 'check-types'
 
-
 function getUrl(ref: string) {
   return firebase.database().ref(ref).toString();
 }
-
-const CodeCard = compose(connect(state => ({})))(BaseCard);
 
 const ThrumeRootView = props => {
   const example = stringify({

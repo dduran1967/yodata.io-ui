@@ -189,4 +189,4 @@ const saveJsonObject = createLogic({
   }
 });
 
-export default [onSubscribe];
+export default [onSubscribe, searchLogic];

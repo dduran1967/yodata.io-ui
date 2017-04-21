@@ -82,3 +82,11 @@ declare interface FirebaseUser {
   isAnonymous: boolean,
   providerData: Array<any>
 }
+
+declare interface SubscribeAction {
+  type: 'SubscribeAction',
+  name: string,
+  agent: string,
+  object: string,
+  actionStatus: string
+}

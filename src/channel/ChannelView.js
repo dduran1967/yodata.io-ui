@@ -1,47 +1,53 @@
 // @flow
 
-import React from 'react';
-import {compose, withProps, withState, setDisplayName} from 'recompose';
-import {Dropdown, Confirm} from 'semantic-ui-react';
-import {Section} from '../component';
-import Page from '../component/Page';
-import SearchInterface from '../component/searchInterface';
-import values from 'lodash/values';
-import subscribeTo from '../db/subscribeTo';
-import {ActionCards} from '../component/ActionCard';
-import {withLoader} from '../component/Loading';
-import {EventCards} from '../component/EventCards';
+import React from 'react'
+import {compose, setDisplayName, withProps, withState} from 'recompose'
+import {Confirm, Dropdown} from 'semantic-ui-react'
+import {Section} from '../component'
+import Page from '../component/Page'
+import SearchInterface from '../component/searchInterface'
+import values from 'lodash/values'
+import {ActionCards} from '../component/ActionCard'
+import {withLoader} from '../component/Loading'
+import {EventCards} from '../component/EventCards'
 import Header from '../component/Header'
-import {Label} from 'semantic-ui-react';
-
+import {connect} from 'react-redux'
 
 const channelContainer = compose(
   setDisplayName('ChannelItemView'),
-  subscribeTo(props => [props.route.path]),
+  connect(
+    state => ({
+      route: state.router.route,
+      channelRoot: state.db['channel@root'],
+      currentUser: state.user && state.user.currentUser,
+    }),
+  ),
   withLoader(props => {
-    let ready = props.data && props.data.id;
+    let ready = props.currentUser && props.currentUser.uid && props.channelRoot
     return !ready;
   }),
-  withProps(props => ({
-    channel: {
-      id: props.data.id,
-      label: props.data.label,
-      description: props.data.description,
-      actions: values(props.data.action),
-      messages: values(props.data.item),
-    },
-  })),
+  withProps(props => {
+    let key = props.route.params.key;
+    let channel = props.channelRoot.item[key]
+    return {
+      channel: {
+        id: channel.id,
+        label: channel.label,
+        description: channel.description,
+        actions: values(channel.action),
+        messages: values(channel.item),
+      },
+    }
+  }),
   withState('confirmDeleteOpen', 'setConfirmDeleteOpen', false),
 );
 
-const ChannelItemView = (
-  {
-    channel,
-    dispatch,
-    confirmDeleteOpen,
-    setConfirmDeleteOpen,
-  },
-) => {
+const ChannelItemView = ({
+                           channel,
+                           dispatch,
+                           confirmDeleteOpen,
+                           setConfirmDeleteOpen,
+                         },) => {
   const dropdownConfig = {
     text: 'options',
     button: true,
@@ -91,18 +97,16 @@ const ChannelItemView = (
               })}
           />
         </Header>
-        <ActionCards items={channel.actions} />
+        <ActionCards items={channel.actions}/>
       </Section>
 
       <Section>
-        <Header content="Events" />
-        <EventCards items={channel.messages} />
+        <Header content="Events"/>
+        <EventCards items={channel.messages}/>
       </Section>
 
     </Page>
   );
 };
 
-const ChannelView = channelContainer(ChannelItemView);
-
-export default ChannelView;
+export default channelContainer(ChannelItemView);
