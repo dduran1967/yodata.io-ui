@@ -17,6 +17,7 @@ import * as channelActions from './channel/channelActions.js';
 
 import currentUser from './user/currentUser.js'
 import currentUserAgent from './user/currentUserAgent.js'
+import * as ho from 'object-hash';
 
 class Yo {
   get db() {
@@ -35,6 +36,10 @@ class Yo {
 
   get context() {
     return context;
+  }
+
+  get ho() {
+    return ho.sha1;
   }
 
   get thrume() {
