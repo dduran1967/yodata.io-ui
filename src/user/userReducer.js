@@ -13,9 +13,21 @@ function userReducer(state = userInitialState, action) {
       console.error(code, message);
       return {...state, error: action.payload}
     case 'USER/USER_SIGNED_IN':
-      return {...state, currentUser: action.payload, signedIn: true}
+      return {
+        ...state,
+        uid: action.payload.uid,
+        currentUser: action.payload,
+        signedIn: true,
+        origin: 'https://yodata.io',
+        root: `/user/${action.payload.uid}`,
+      }
     case 'USER/USER_SIGNED_OUT':
       return {...state, signedIn: false}
+    case 'NOTIFICATIONS/ADD':
+      return {
+        ...state,
+        nextNotification: action.payload
+      }
     default:
       return state;
   }

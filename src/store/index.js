@@ -18,19 +18,21 @@ import thrumeReducer from '../thrume/thrume-reducer'
 import {userLogic, userReducer} from '../user'
 import dbReducer from '../db/dbReducer'
 import dbLogic from '../db/dbLogic'
+import {notificiationsReducer} from '../component/Notifications.js'
 
 const composeEnhancers = composeWithDevTools({});
 
 const rootReducer = combineForms({
-  user:    userReducer,
-  router:  router5Reducer,
-  db:      dbReducer,
-  schema:  schemaReducer,
+  user: userReducer,
+  router: router5Reducer,
+  db: dbReducer,
+  schema: schemaReducer,
   loading: loadingReducer,
-  drawer:  drawerReducer,
+  drawer: drawerReducer,
   channel: channelReducer,
-  search:  searchReducer,
-  thrume:  thrumeReducer
+  search: searchReducer,
+  thrume: thrumeReducer,
+  notifications: notificiationsReducer,
 });
 
 const logicMiddleware = createLogicMiddleware([

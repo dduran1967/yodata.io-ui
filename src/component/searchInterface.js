@@ -34,7 +34,6 @@ type SearchAction = SearchValueAction | SearchResultAction | SearchInitAction;
 // SEARCH ACTIONS
 const initializeSearch = createAction('SEARCH_INIT');
 const searchValue = createAction('SEARCH_VALUE');
-const searchResult = createAction('SEARCH_RESULT');
 
 // SEARCH REDUCER
 export function searchReducer(state: SearchState, action: SearchAction) {

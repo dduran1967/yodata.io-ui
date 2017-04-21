@@ -1,95 +1,133 @@
+// @flow
+
 import * as firebase from 'firebase'
 import values from 'lodash/values'
 import React from 'react'
 import {connect} from 'react-redux'
-import {compose, withProps} from 'recompose'
-import {Segment} from 'semantic-ui-react'
+import {compose, withHandlers, withProps, withState} from 'recompose'
+import {Label, Popup, Segment} from 'semantic-ui-react'
 import BaseCard from '../component/BaseCard'
-import Debug from '../component/Debug.js'
-import EventCards from '../component/EventCards.js'
 import Header from '../component/Header'
 import Page from '../component/Page'
+import CodeEditor from '../component/CodeEditor'
+import Link from '../component/Link.js'
+import TextPopup from '../component/TextPopup.jsx'
+import {Button} from '../component/index'
+import stringify from '../component/stringify'
+import check from 'check-types'
 
 
 function getUrl(ref: string) {
   return firebase.database().ref(ref).toString();
 }
 
-const Description = () =>
-  <div>
-    <p>To send yourself a message, HTTP post to your inbox URL.</p>
-    <p>All actions require a type. You can find hundreds of existing actions from schema.org, linked-data notifications,
-      and others in the Schema directory.</p>
-    <p>
-      Most actions will have an agent (the person or entity who is the direct performer of the action) and an object,
-      which is the thing being acted upon.
-      Mutations (actions that modify the state of an object) are expected to be execute upon the actions object.
-    </p>
+const CodeCard = compose(connect(state => ({})))(BaseCard);
 
-  </div>
-
-const jsonData = {
-  type:        'AskAction',
-  agent:       '/user/{uid}/profile/card#me',
-  object:      {
-    type:     'Question',
-    question: {
-      text: 'How are you today?'
-    }
-  },
-  participant: {
-    recipient: {
+const ThrumeRootView = props => {
+  const example = stringify({
+    '@context': 'http://schema.org/',
+    type: 'CommunicateAction',
+    agent: {
       type: 'Person',
-      id:   '/user/{uid}/profile/card#me'
-    }
-  }
-}
+      id: props.agent,
+      name: props.currentUser && props.currentUser.displayName,
+    },
+    object: {
+      type: 'Text',
+      value: 'Hello World!',
+    },
+    participant: {
+      recipient: props.agent,
+    },
+    target: {
+      type: 'EntryPoint',
+      httpMethod: 'POST',
+      contentType: 'application/ld+json',
+      urlTemplate: props.agent + '/thrume',
+    },
+  })
 
-const GreetingCard = compose(
-  connect(state => ({})),
-  withProps(props => ({
-    header:          'Send an action.',
-    description:     <Description/>,
-    json:            jsonData,
-    open:            true,
-    potentialAction: {
-      type:    'THRUME/SEND',
-      payload: jsonData
-    }
-  }))
-)(BaseCard)
+  return (
+    <Page>
 
-const ThrumeRootView = props => (
-  <Page>
-    <Segment style={{marginTop: '1em'}}>
-      <Header
-        icon="feed"
-        content="Thrume"
-        subheader="Open source, decentralized data integration toolkit."
-      />
-    </Segment>
+      <Segment style={{marginTop: '1em'}}>
+        <Header
+          icon="feed"
+          content="Quickstart"
+          subheader="Open source, decentralized data integration toolkit."
+        />
+      </Segment>
 
-    <Header content="Quickstart" as="h1"/>
-    <GreetingCard />
+      <Segment id="sending_actions">
+        <Header content="Sending Actions"/>
+        <p>
+          To send a message, simply http POST to your inbound URL.
+        </p>
+        <p>
+          <Label basic color={'blue'} content="Your inbound URL" detail={props.thrumeUrl}/>
+        </p>
+        <p>
+          Key properties of Actions are <Popup trigger={<span>type</span>} header="type" content="Action identifier"/>
+          (required),
+          <TextPopup trigger="agent" content="The direct performer of the action"/> and <TextPopup trigger="object"
+                                                                                                   content="The thing (subject) being acted upon, whos state may be changed by the action."/>.
+        </p>
+        <p>
+          View the <Link name="types/view" params={{id: 'Action'}}>Action Specification</Link> for complete
+          specifications.
+        </p>
 
-    <Header content="Events"/>
-    <EventCards items={props.items}/>
-  </Page>
-)
+        <CodeEditor
+          value={props.nextSendAction || example }
+          onChange={(nextValue) => props.setNextSendAction(nextValue)}
+        />
+        <hr/>
+        <Button primary content="SEND" onClick={() => props.notify(props.nextSendAction || example)}/>
+      </Segment>
+
+    </Page>
+  );
+};
 
 const thrumeRootContainer = compose(
-  connect(
-    state => ({
-      thrume: state.thrume,
-      root:   state.db['thrume@root']
-    }),
-  ),
+  connect(state => ({
+    agent: state.user.root,
+    thrume: state.thrume,
+    root: state.db['thrume@root'],
+    currentUser: state.user && state.user.currentUser,
+  })),
+  withState('nextSendAction', 'setNextSendAction', null),
   withProps(props => {
     return {
       thrumeUrl: getUrl(props.thrume.base),
-      items:     values(props.root && props.root.now)
-    }
-  })
-)
+      items: values(props.root && props.root.now),
+    };
+  }),
+  withHandlers({
+    notify: ({dispatch}) => next => {
+      try {
+        let data = JSON.parse(next);
+        check.assert(data.object.value)
+        dispatch({
+          type: 'NOTIFICATIONS/ADD',
+          payload: {
+            level: 'success',
+            title: `Message from: ${data.agent && (data.agent.name || data.agent.id)}`,
+            message: data.object.value,
+          },
+        })
+      } catch (e) {
+        dispatch({
+          type: 'NOTIFICATIONS/ADD',
+          payload: {
+            level: 'error',
+            title: 'Uh oh.',
+            message: 'invalid message format',
+          },
+        })
+      }
+    },
+  }),
+);
 
-export default thrumeRootContainer(ThrumeRootView)
+export default thrumeRootContainer(ThrumeRootView);

@@ -5,11 +5,10 @@ import ChannelRoot from '../channel/ChannelRoot'
 import ChannelView from '../channel/ChannelView'
 import {Home} from '../component'
 import DataBrowser from '../component/DataBrowser'
+import ThrumeRoot from '../thrume/thrume-root'
 import TypesRoot from '../types/TypesRoot'
 import TypeView from '../types/TypeView'
 import {UserRoot} from '../user'
-import Debug from '../component/Debug'
-import ThrumeRoot from '../thrume/thrume-root'
 
 export const sidebarRoutes = [
   {
