@@ -19,6 +19,8 @@ import {userLogic, userReducer} from '../user'
 import dbReducer from '../db/dbReducer'
 import dbLogic from '../db/dbLogic'
 import {notificiationsReducer} from '../component/Notifications.js'
+import reactionReducer from '../reaction/reactionReducer.js';
+import reactionLogic from '../reaction/reactionLogic.js';
 
 const composeEnhancers = composeWithDevTools({});
 
@@ -33,6 +35,7 @@ const rootReducer = combineForms({
   search: searchReducer,
   thrume: thrumeReducer,
   notifications: notificiationsReducer,
+  reactions: reactionReducer
 });
 
 const logicMiddleware = createLogicMiddleware([
@@ -40,7 +43,8 @@ const logicMiddleware = createLogicMiddleware([
   ...dbLogic,
   ...schemaLogic,
   ...channelLogic,
-  ...thrumeLogic
+  ...thrumeLogic,
+  ...reactionLogic
 ]);
 
 const enhancers = composeEnhancers(

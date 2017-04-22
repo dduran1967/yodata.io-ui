@@ -36,9 +36,7 @@ class Notifications extends React.Component {
   _notificationSytem = null;
 
   componentWillReceiveProps({notifications}) {
-    console.debug('receiving props', notifications.next);
     if (notifications && notifications.next) {
-      console.debug('adding notification', notifications.next);
       this._notificationSystem.addNotification(notifications.next)
     }
   }

@@ -40,7 +40,7 @@ const ThrumeRootView = props => {
       type: 'EntryPoint',
       httpMethod: 'POST',
       contentType: 'application/ld+json',
-      urlTemplate: props.agent + '/thrume',
+      urlTemplate: `/in/${props.currentUser && props.currentUser.uid}`,
     },
   })
 
@@ -61,7 +61,7 @@ const ThrumeRootView = props => {
           To send a message, simply http POST to your inbound URL.
         </p>
         <p>
-          <Label basic color={'blue'} content="Your inbound URL" detail={props.thrumeUrl}/>
+          <Label basic color={'blue'} content="Your inbound URL" detail={getUrl(props.thrumeUrl)}/>
         </p>
         <p>
           Key properties of Actions are <Popup trigger={<span>type</span>} header="type" content="Action identifier"/>
@@ -70,8 +70,7 @@ const ThrumeRootView = props => {
                                                                                                    content="The thing (subject) being acted upon, whos state may be changed by the action."/>.
         </p>
         <p>
-          View the <Link name="types/view" params={{id: 'Action'}}>Action Specification</Link> for complete
-          specifications.
+          See <Link name="types/view" params={{id: 'Action'}}>Actions</Link> for the complete spec.
         </p>
 
         <CodeEditor
@@ -101,7 +100,7 @@ const thrumeRootContainer = compose(
   withState('nextSendAction', 'setNextSendAction', null),
   withProps(props => {
     return {
-      thrumeUrl: getUrl(props.thrume.base),
+      thrumeUrl: `/in/${props.currentUser && props.currentUser.uid}`,
       items: values(props.root && props.root.now),
     };
   }),

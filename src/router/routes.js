@@ -9,6 +9,8 @@ import ThrumeRoot from '../thrume/thrume-root'
 import TypesRoot from '../types/TypesRoot'
 import TypeView from '../types/TypeView'
 import {UserRoot} from '../user'
+import Reactions from '../reaction/ReactionRoot.js';
+
 
 export const sidebarRoutes = [
   {
@@ -20,11 +22,27 @@ export const sidebarRoutes = [
     icon:      'home',
   },
   {
+    key:       'schema',
+    name:      'schema',
+    path:      '/schema',
+    label:     'Schema',
+    component: TypesRoot,
+    icon:      'code',
+  },
+  {
     key:       'thrume',
     name:      'thrume',
     path:      '/thrume',
-    label:     'Thrume',
+    label:     'Actions',
     component: ThrumeRoot,
+    icon:      'feed',
+  },
+  {
+    key:       'reactions',
+    name:      'reactions',
+    path:      '/reactions',
+    label:     'Reactions',
+    component: Reactions,
     icon:      'feed',
   },
   {
@@ -34,14 +52,6 @@ export const sidebarRoutes = [
     label:     'Channels',
     component: ChannelRoot,
     icon:      'hashtag',
-  },
-  {
-    key:       'types',
-    name:      'types',
-    path:      '/schema',
-    label:     'Schema',
-    component: TypesRoot,
-    icon:      'code',
   },
   {
     key:       'user',

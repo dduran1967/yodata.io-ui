@@ -1,28 +1,48 @@
-import {reactionInitialState} from './reactionInitialState'
+import {createLogic} from 'redux-logic'
+import * as firebase from 'firebase'
 
-//export const reactionLogic = createLogic({
-//  type:           'SCHEMA/FETCH_SCHEMA',
-//  cancelType:     'SCHEMA/CANCEL_FETCH_SCHEMA',
-//  latest:         true,
-//  processOptions: {
-//    dispatchReturn: true,
-//    successType:    'SCHEMA/FETCH_SCHEMA_SUCCESS',
-//    failType:       'SCHEMA/FETCH_SCHEMA_FAIL'
-//  },
-//  process({getState, action}) {
-//    let url = action.payload;
-//    if (!url) throw new Error('action.payload.url is required');
-//
-//    if (schemas.hasGraph(url)) {
-//      return;
-//    }
-//
-//    return schemas.fetch(url)
-//                  .then(() => ({url: url}));
-//
-//  }
-//});
+const saveFile = createLogic({
+  type: 'REACTIONS/SAVE_FILE',
+  transform({action}, next) {
+    next({...action, meta: {contentType: 'text/javascript'}});
+  },
+  process({action}, dispatch, done) {
+    let user = firebase.auth().currentUser;
+    let storageRef = firebase
+      .storage()
+      .ref(`/user/${user.uid}/reaction/index.js`);
+    return storageRef
+      .putString(action.payload)
+      .then(snap => {
 
-export const reactionReducer = (state = reactionInitialState, action) => {
-  return state;
-}
+        dispatch({
+          type: 'REACTIONS/SAVE_FILE_COMPLETED',
+          payload: {
+            totalBytes: snap.totalBytes,
+            metadata: snap.metadata,
+            downloadURL: snap.downloadURL,
+          },
+        });
+
+        dispatch({
+          type: 'NOTIFICATIONS/ADD',
+          payload: {
+            level: 'success',
+            title: `File Saved`,
+          },
+        });
+
+        done();
+
+      })
+      .catch(e =>
+        dispatch({
+          type: 'NOTIFICATIONS/ADD',
+          payload: {level: 'error', message: 'Failed'},
+        }),
+      );
+    done();
+  },
+});
+
+export default [saveFile];
