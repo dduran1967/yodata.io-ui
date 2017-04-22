@@ -3,21 +3,17 @@
 import isNull from "lodash/isNull";
 import React from "react";
 import { connect } from "react-redux";
-import {compose, withHandlers, withProps, withState} from "recompose";
-import {Label} from "semantic-ui-react";
+import { compose, withHandlers, withProps } from "recompose";
+import { Label } from "semantic-ui-react";
 import { Section, withLoader } from "../component";
 import Page from "../component/Page";
 import PropertiesList from "../schema/PropertiesList";
-import Debug from "../component/Debug";
-import Link from '../component/Link'
-import castArray from 'lodash/castArray'
-import Editable from '../component/Editable'
-import CardEditable from '../component/CardEditable'
-import Header from '../component/Header'
-import BasicCard from '../component/BasicCard'
-import isArray from 'lodash/isArray'
-import FieldEditable from '../component/FieldEditable'
-import getSuperTypes from '../schema/getSuperTypes.js';
+import Link from "../component/Link";
+import castArray from "lodash/castArray";
+import Header from "../component/Header";
+import BasicCard from "../component/BasicCard";
+import isArray from "lodash/isArray";
+import getSuperTypes from "../schema/getSuperTypes.js";
 
 const propertiesOf = propSource => id =>
   propSource.filter(({ domainIncludes }) => {
@@ -52,26 +48,40 @@ const typeViewContainer = compose(
     };
   }),
   withLoader(props => props.isLoading),
-  withProps(({subject, superTypes}) => {
+  withProps(({ subject, superTypes }) => {
     let extra = [];
     if (subject.domainIncludes) {
-      let domains = castArray(subject.domainIncludes).map(domain => <Link key={domain} name="types/view" params={{id:domain}}>{domain}  </Link>)
-      extra.push(<Label key="domain" basic content="domain:" detail={domains} />)
+      let domains = castArray(subject.domainIncludes).map(domain => (
+        <Link key={domain} name="types/view" params={{ id: domain }}>
+          {domain}{" "}
+        </Link>
+      ));
+      extra.push(
+        <Label key="domain" basic content="domain:" detail={domains} />
+      );
     }
     if (subject.rangeIncludes) {
-      let ranges = castArray(subject.rangeIncludes).map(range => <Link key={range} name="types/view" params={{id:range}}>{range}  </Link>)
-      extra.push(<Label key="range" basic content="range:" detail={ranges} />)
+      let ranges = castArray(subject.rangeIncludes).map(range => (
+        <Link key={range} name="types/view" params={{ id: range }}>
+          {range}{" "}
+        </Link>
+      ));
+      extra.push(<Label key="range" basic content="range:" detail={ranges} />);
     }
     if (superTypes) {
-      let types = castArray(superTypes).map(type => <Link key={type} name="types/view" params={{id:type}}>{type}  </Link>)
-      extra.push(<Label key="implements" basic content="implements:" detail={types} />)
+      let types = castArray(superTypes).map(type => (
+        <Link key={type} name="types/view" params={{ id: type }}>{type} </Link>
+      ));
+      extra.push(
+        <Label key="implements" basic content="implements:" detail={types} />
+      );
     }
     return {
       header: subject.label,
       meta: subject.type,
       description: subject.description,
       extra
-    }
+    };
   }),
   withHandlers({
     onBack: ({ navigateTo }) => event => navigateTo("types")
@@ -79,7 +89,14 @@ const typeViewContainer = compose(
 );
 
 const TypeView = props => {
-  let { subject, properties, dispatch, header, meta, description, extra } = props;
+  let {
+    properties,
+    dispatch,
+    header,
+    meta,
+    description,
+    extra
+  } = props;
   return (
     <Page>
       <Section>
@@ -99,4 +116,4 @@ const TypeView = props => {
   );
 };
 
-export default typeViewContainer(TypeView)
+export default typeViewContainer(TypeView);

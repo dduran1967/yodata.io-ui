@@ -12,7 +12,7 @@ export default function (state:S = initialState, action: Action) {
       let base = getThrumeBaseUrl(action.payload.uid);
       return {...state, base}
     case 'THRUME/SUBSCRIPTION_UPDATED':
-      return {...state, ['@now']: action.payload};
+      return {...state, '@now': action.payload};
     default:
       return state
   }

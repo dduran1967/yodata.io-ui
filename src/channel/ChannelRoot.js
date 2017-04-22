@@ -10,7 +10,6 @@ import Section from "../component/Section";
 import CardList from "../component/CardList";
 import Header from "../component/Header";
 import { connect } from "react-redux";
-import Debug from "../component/Debug";
 
 const enhance = compose(
   connect(state => ({
@@ -24,34 +23,29 @@ const enhance = compose(
   })
 );
 
-const ChannelRoot = enhance(({
-  listItems,
-  createChannel,
-  navigateTo,
-  dispatch,
-  data,
-  channels = []
-}) => (
-  <Page>
-    <Section>
-      <Header
-        icon="hashtag"
-        content="Channels"
-        subheader="Organize and manage access to your data events."
-      >
-        <SliderInput placeholder="channel name" onSubmit={createChannel} />
-      </Header>
-    </Section>
+const ChannelRoot = enhance(
+  ({ listItems, createChannel, navigateTo, dispatch, data, channels = [] }) => (
+    <Page>
+      <Section>
+        <Header
+          icon="hashtag"
+          content="Channels"
+          subheader="Organize and manage access to your data events."
+        >
+          <SliderInput placeholder="channel name" onSubmit={createChannel} />
+        </Header>
+      </Section>
 
-    <Section>
-      <CardList
-        items={channels}
-        onClick={item => {
-          navigateTo("channel/view", { key: item.label });
-        }}
-      />
-    </Section>
-  </Page>
-));
+      <Section>
+        <CardList
+          items={channels}
+          onClick={item => {
+            navigateTo("channel/view", { key: item.label });
+          }}
+        />
+      </Section>
+    </Page>
+  )
+);
 
 export default ChannelRoot;

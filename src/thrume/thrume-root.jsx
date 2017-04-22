@@ -14,6 +14,7 @@ import TextPopup from '../component/TextPopup.jsx'
 import {Button} from '../component/index'
 import stringify from '../component/stringify'
 import check from 'check-types'
+// import {Checkbox} from 'semantic-ui-react'
 
 function getUrl(ref: string) {
   return firebase.database().ref(ref).toString();
@@ -78,7 +79,12 @@ const ThrumeRootView = props => {
           onChange={(nextValue) => props.setNextSendAction(nextValue)}
         />
         <hr/>
-        <Button primary content="SEND" onClick={() => props.notify(props.nextSendAction || example)}/>
+        <Segment attached="bottom">
+          <Button primary content="SEND" onClick={() => props.notify(props.nextSendAction || example)}/>
+
+
+        </Segment>
+
       </Segment>
 
     </Page>

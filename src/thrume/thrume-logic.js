@@ -103,5 +103,6 @@ const send = createLogic({
 export default [
   onUserSignedIn,
   handleNewAccount,
-  send
+  send,
+  initContainer
 ];

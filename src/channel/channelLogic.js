@@ -115,28 +115,6 @@ export const onCreateAccount = createLogic({
   },
 })
 
-const publish = createLogic({
-  type: 'CHANNEL/PUBLISH',
-  processOptions: {
-    successType: 'CHANNEL/PUBLISH_COMPLETED',
-    failType: 'CHANNEL/PUBLISH_FAIL',
-  },
-  transform({getState, action}, next, reject) {
-    let errors = [];
-    let {channel, message} = action.payload;
-    if (!channel) {
-      errors.push('Action payload must include a channel property');
-    }
-    if (!message) {
-      errors.push('Action payload must include a message property');
-    }
-    if (errors.length > 0) {
-      reject(errors);
-    } else {
-      next(action);
-    }
-  },
-});
 
 const sendMessage = createLogic({
   type: 'CHANNEL/SEND_MESSAGE',

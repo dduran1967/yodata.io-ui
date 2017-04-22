@@ -1,5 +1,5 @@
-import {compose} from 'recompose'
 // @flow
+import {compose} from 'recompose'
 import root from 'window-or-global'
 
 export const blue = "#027cb1";

@@ -22,8 +22,6 @@ import debrac from './util/debrac';
 import shrinkUrl from './util/shrinkUrl';
 import shrinkRdfNode from './util/shrinkRdfNode';
 
-type SorN = string | Node;
-
 const checkType = check.assert;
 
 export {getUrlNamespace};
@@ -170,9 +168,7 @@ export const findSubject = (graph: IndexedFormula) =>
     return graph.match(sym(subject));
   };
 
-export function toJson(statements: Array<Statement>): Object {
-  return statements.reduce(jsonReducer, {});
-}
+
 
 export const jsonReducer = (doc: Object = {}, statement: Statement) => {
   let {subject, predicate, object} = statement;
@@ -187,6 +183,20 @@ export const jsonReducer = (doc: Object = {}, statement: Statement) => {
 
   doc[subject][predicate].push(object);
   return doc;
+};
+
+export function toJson(statements: Array<Statement>): Object {
+  return statements.reduce(jsonReducer, {});
+}
+
+export const createContextTransformer = (
+  context: Object = {},
+  vocab: string = '',
+  shrinkLiterals: boolean = false,
+) => {
+  return function(term: Term) {
+    return termToContext(term, context, vocab, shrinkLiterals);
+  };
 };
 
 export const mapStatementToContext = (
@@ -303,15 +313,7 @@ export function termToContext(term: Term, context, vocab, shrinkLiterals) {
   }
 }
 
-export const createContextTransformer = (
-  context: Object = {},
-  vocab: string = '',
-  shrinkLiterals: boolean = false,
-) => {
-  return function(term: Term) {
-    return termToContext(term, context, vocab, shrinkLiterals);
-  };
-};
+
 
 export const serialize = (sts: Statement[], config: ?Object) => {
   //target, kb, base, contentType, callback

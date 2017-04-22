@@ -4,14 +4,14 @@ import NotificationSytem from 'react-notification-system'
 import {createAction} from 'redux-actions'
 import {connect} from 'react-redux'
 
-type NotificationState = {
-  next: Action | null;
-}
-
 type Action = {
   +type: string,
   payload?: any,
   meta?: any
+}
+
+type NotificationState = {
+  next: Action | null;
 }
 
 export const send = createAction('NOTIFICATIONS/SEND')

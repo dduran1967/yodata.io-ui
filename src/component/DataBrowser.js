@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {connect} from 'react-redux'
-import {compose, lifecycle, withHandlers, withProps, withState} from 'recompose'
+import {compose, lifecycle} from 'recompose'
 import {fetchUrl} from '../db/dbActions'
 import {DB_ORIGIN} from '../db/db-config'
 import CodeEditor from './CodeEditor'
