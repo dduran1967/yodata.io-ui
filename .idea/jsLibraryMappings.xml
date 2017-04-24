@@ -3,7 +3,6 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{yodata.io-ui/node_modules}" />
     <file url="PROJECT" libraries="{aws-sdk-DefinitelyTyped, firebase, flowjs-DefinitelyTyped, yodata.io-ui/node_modules}" />
-    <includedPredefinedLibrary name="Node.js Core" />
     <excludedPredefinedLibrary name="yodata.io-ui/functions/node_modules" />
   </component>
 </project>
