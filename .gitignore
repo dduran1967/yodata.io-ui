@@ -1,23 +1,17 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+## webstorm
+/.idea/workspace.xml
+
 # dependencies
 node_modules
 
 # testing
-coverage
 
 # production
-../../node_modules/babel-jest/build
 
 # misc
-.DS_Store
-
-npm-debug.log
-.firebaserc
 .idea/dictionaries/
-database.rules.json
-firebase.json
-node_modules/
 semantic/
 src/style/components/
 src/style/semantic.js

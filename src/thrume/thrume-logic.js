@@ -88,7 +88,7 @@ const send = createLogic({
       check.assert.string(action.payload.type);
       allow(action)
     } catch (e) {
-      console.error(e);
+      console.error('THRUME/SEND ERROR', e);
       reject(action);
     }
   },
@@ -98,7 +98,10 @@ const send = createLogic({
     if (user && user.uid) {
       let inboxURL = settings && settings.inboxURL || `/in/${user.uid}`
       let inbox = firebase.database().ref(inboxURL)
-      return inbox.push(action.payload).then(snap => snap.val())
+      return inbox.push(action.payload).then(snap => {
+        console.info(snap.toString());
+        return action.payload;
+      })
     }
   },
 });
@@ -139,8 +142,8 @@ const setWebhook = createLogic({
     let user = currentUser();
     if (user && user.uid) {
       let base = getThrumeBaseUrl(user.uid)
-      return firebase.database().ref(base).update({'webhook':action.payload}).then(snap => {
-        return {'webhook':action.payload}
+      return firebase.database().ref(base).update({'webhook': action.payload}).then(snap => {
+        return {'webhook': action.payload}
       })
     }
   },
@@ -152,5 +155,5 @@ export default [
   send,
   initContainer,
   sendToURL,
-  setWebhook
+  setWebhook,
 ];

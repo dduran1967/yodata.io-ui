@@ -2,7 +2,6 @@ import React from 'react'
 import {Header, Section} from '../component'
 import withUser from './withUser'
 
-
 export const UserRootView = ({user, dispatch, fetchProfile, ...props}) => (
   <div className="ui grid">
     <Section>
