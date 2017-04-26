@@ -1,3 +1,4 @@
+import * as firebase from 'firebase'
 import axios from 'axios'
 import check from 'check-types'
 import lodash from 'lodash'
@@ -13,11 +14,14 @@ import * as context from './schema/context.js'
 import getSuperTypes from './schema/getSuperTypes.js'
 import store from './store'
 import * as thrume from './thrume'
-import * as channelActions from './channel/channelActions.js';
+import * as channelActions from './channel/channelActions.js'
 
 import currentUser from './user/currentUser.js'
 import currentUserAgent from './user/currentUserAgent.js'
-import * as ho from 'object-hash';
+import * as ho from 'object-hash'
+import fetchSQSMessage from './lib/util/fetchSQSMessage'
+
+const defaultSQSQueue = 'https://sqs.us-west-2.amazonaws.com/746950044014/red-rdesk-queue';
 
 class Yo {
   get db() {
@@ -30,7 +34,7 @@ class Yo {
 
   get channel() {
     return {
-      action: channelActions
+      action: channelActions,
     }
   }
 
@@ -75,6 +79,24 @@ class Yo {
 
   dispatch(type, payload) {
     store.dispatch({type, payload});
+  }
+
+  fetchSQSMessage() {
+    return fetchSQSMessage(defaultSQSQueue)
+  }
+
+  fetchSQSSampleData(props) {
+    let opts = Object.assign({
+      numberOfMessagesToFetch: 1,
+      destinationPath: '/in/test/sqs/',
+    }, props)
+    let db = firebase.database().ref(opts.destinationPath);
+    for (let i = 0; i < opts.numberOfMessagesToFetch; i++) {
+      fetchSQSMessage(defaultSQSQueue).then(message => {
+        db.push(message);
+      })
+    }
+    console.log('done');
   }
 }
 

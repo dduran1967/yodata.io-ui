@@ -10,16 +10,14 @@
     },
     "user": {
       "$uid": {
-        "channel": {
-          ".write": "auth === $uid"
-        },
-        "thrume": {
-          ".write": "true"
-        }
+        ".write": "auth.uid === $uid"
       }
     },
     "in": {
       "$uid": {
+        ".write": "true"
+      },
+      "test": {
         ".write": "true"
       }
     }
