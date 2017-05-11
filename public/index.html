@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.css" />
     <script>
       var _rollbarConfig = {
         accessToken: 'cca85fb8f46447c592f3ed1b638f117d',
@@ -175,7 +176,22 @@
 </head>
 
 <body>
-<div id="app"></div>
 <div id="authui"></div>
+<div id="app"></div>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAuLfAq8F2ibOTuMe3Ql7UmwGWHEXHqkiU",
+    authDomain: "yodata-1115.firebaseapp.com",
+    databaseURL: "https://yodata-1115.firebaseio.com",
+    projectId: "yodata-1115",
+    storageBucket: "yodata-1115.appspot.com",
+    messagingSenderId: "776960890496"
+  };
+  firebase.initializeApp(config);
+  var ui = new firebaseui.auth.AuthUI(firebase.auth());
+</script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 .*node_modules/findup
 .*node_modules/react-motion
 .*node_modules/styled-components
+./flow-typed/npm/semantic-ui-react_vx.x.x.js
 
 [include]
 

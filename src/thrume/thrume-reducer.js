@@ -15,7 +15,7 @@ export default function (state: S = initialState, action: Action) {
       if (action.payload && action.payload.name === 'thrume@root') {
         return {...state, ...action.payload.value};
       }
-
+      return state;
     default:
       return state
   }

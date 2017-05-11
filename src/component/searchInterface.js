@@ -50,7 +50,7 @@ export function searchReducer(state: SearchState, action: SearchAction) {
 }
 
 // SEARCH UI
-export const SearchDebug = props => {
+export const SearchDebug = (props:any) => {
   return (
     <div>
       <input type="text" value={props.value} onChange={props.onSearchChange} />

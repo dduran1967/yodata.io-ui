@@ -2,7 +2,7 @@
 @import 'codemirror.css';
 
 body {
-    background-color: #F3F4F5;
+    background-color: #fff;
 }
 
 .selectable:hover {
@@ -41,4 +41,23 @@ body {
     border-left-color: red;
 }
 
+.field-editable-container textarea.field-editable {
+    font: inherit;
+    padding: .5em;
+    margin: -.5em;
+    border: dashed 2px transparent;
+}
+
+.field-editable-container textarea.field-editable:hover {
+    border-color: #7860F9;
+    cursor: text;
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
 

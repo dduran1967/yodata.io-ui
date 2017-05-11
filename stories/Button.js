@@ -1,14 +1,15 @@
 import React from 'react';
+import {style}  from 'typestyle';
+import * as csx from 'csx';
 
-const buttonStyles = {
-  border: '1px solid #eee',
+const buttonStyles = style({
+  border: 'solid 1px #eee',
   borderRadius: 3,
-  backgroundColor: '#FFFFFF',
-  cursor: 'pointer',
-  fontSize: 15,
-  padding: '3px 10px',
-  margin: 10,
-};
+  backgroundColor: csx.red,
+  color: csx.white,
+  padding: csx.em(.5),
+  margin: csx.em(.5)
+})
 
 const Button = ({ children, onClick }) => (
   <button

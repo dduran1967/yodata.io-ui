@@ -4,7 +4,6 @@ import check from 'check-types'
 import lodash from 'lodash'
 import {Statement} from 'rdflib'
 import root from 'window-or-global'
-import Action from './action/Action'
 import * as db from './db'
 import {default as bsf} from './lib/util/base64urlEncode'
 import keyToUrl from './lib/util/keyToUrl'
@@ -15,27 +14,41 @@ import getSuperTypes from './schema/getSuperTypes.js'
 import store from './store'
 import * as thrume from './thrume'
 import * as channelActions from './channel/channelActions.js'
-
+import authService from './services/auth_service.js'
+import actionService from './services/action_service.js'
 import currentUser from './user/currentUser.js'
 import currentUserAgent from './user/currentUserAgent.js'
 import * as ho from 'object-hash'
 import fetchSQSMessage from './lib/util/fetchSQSMessage'
+import getSubClassesOf from './schema/getSubClassesOf.js';
+import {getExampleValue, createMockValue, createMockType} from './schema/getExampleValue.js'
+import getPropertiesOf from './schema/getPropertiesOf.js';
 
-const defaultSQSQueue = 'https://sqs.us-west-2.amazonaws.com/746950044014/red-rdesk-queue';
+function getSubject(subjectId) {
+  return store.getState().schema.index[subjectId];
+}
+
+const defaultSQSQueue =
+  'https://sqs.us-west-2.amazonaws.com/746950044014/red-rdesk-queue';
 
 class Yo {
-  get db() {
-    return db;
+
+  get action() {
+    return actionService
   }
 
-  get Action() {
-    return Action;
+  get auth() {
+    return authService
+  }
+
+  get db() {
+    return db;
   }
 
   get channel() {
     return {
       action: channelActions,
-    }
+    };
   }
 
   get context() {
@@ -47,7 +60,7 @@ class Yo {
   }
 
   get thrume() {
-    return thrume
+    return thrume;
   }
 
   get keyToUrl() {
@@ -62,19 +75,16 @@ class Yo {
     return bsf;
   }
 
-  statementToDoc = (statement: Statement) => mapStatementToDoc(statement);
-
-
   get currentUser() {
-    return currentUser(store.getState())
+    return currentUser();
   }
 
   get currentUserId() {
-    return currentUser(store.getState()).uid
+    return currentUser(store.getState()).uid;
   }
 
   get currentUserAgent() {
-    return currentUserAgent
+    return currentUserAgent;
   }
 
   dispatch(type, payload) {
@@ -82,22 +92,74 @@ class Yo {
   }
 
   fetchSQSMessage() {
-    return fetchSQSMessage(defaultSQSQueue)
+    return fetchSQSMessage(defaultSQSQueue);
   }
 
   fetchSQSSampleData(props) {
-    let opts = Object.assign({
-      numberOfMessagesToFetch: 1,
-      destinationPath: '/in/test/sqs/',
-    }, props)
+    let opts = Object.assign(
+      {
+        numberOfMessagesToFetch: 1,
+        destinationPath: '/in/test/sqs/',
+      },
+      props,
+    );
     let db = firebase.database().ref(opts.destinationPath);
     for (let i = 0; i < opts.numberOfMessagesToFetch; i++) {
       fetchSQSMessage(defaultSQSQueue).then(message => {
         db.push(message);
-      })
+      });
     }
     console.log('done');
   }
+
+  statementToDoc = (statement: Statement) => mapStatementToDoc(statement);
+
+  subscribe(url, name) {
+    store.dispatch({
+      type: 'DB/SUBSCRIBE',
+      payload: {
+        type: 'SubscribeAction',
+        name: name || url,
+        agent: '/user/' + currentUser().uid,
+        object: url,
+        actionStatus: 'PotentialActionStatus',
+      },
+    })
+  }
+
+  getSchemaObject(key) {
+    return store.getState().schema.index[key]
+  }
+
+  subClassOf(subject) {
+    const types = store.getState().schema.types
+    return getSubClassesOf(types,subject)
+  }
+
+  getPropertiesOf(subjectId) {
+    return getPropertiesOf(subjectId);
+  }
+
+  getExampleValue(subjectId) {
+    let subject = store.getState().schema.index[subjectId]
+    return getExampleValue(subject);
+  }
+
+  createMockValue(subjectId) {
+    return createMockValue(subjectId);
+  }
+
+  createMockType(subjectId) {
+    let subject = store.getState().schema.index[subjectId];
+    let properties = getPropertiesOf(subjectId);
+    return createMockType(subjectId, properties);
+  }
+
+  addExampleValue(subjectId, value) {
+    let subject = getSubject(subjectId);
+    return actionService.call('createExampleValue', subject, JSON.stringify(value,null,2) )
+  }
+
 }
 
 const yo = new Yo();
@@ -106,5 +168,5 @@ root.yo = yo;
 root.axios = axios;
 root.lodash = lodash;
 root.check = check;
-root.getSuperTypes = getSuperTypes
+root.getSuperTypes = getSuperTypes;
 export default yo;

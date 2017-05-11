@@ -1,11 +1,19 @@
+// @flow
 import React from 'react'
 
-const BasicCard = ({header, meta, description, extra}) => (
+type CardInstance = {
+  header?: String,
+  meta?: String,
+  description?: String,
+  extra?: any
+}
+
+const BasicCard = ({ header, meta, description, extra, ...props }: CardInstance) => (
   <div className="ui fluid card">
-    <div className="content" style={{position: 'relative'}}>
-      <div className="header">{header}</div>
-      <div className="meta">{meta}</div>
-      <div className="description">{description}</div>
+    <div className="content" style={{ position: 'relative' }}>
+      {header && <div className="header">{header}</div>}
+      {meta && <div className="meta">{meta}</div>}
+      {description && <div className="description">{description}</div>}
     </div>
     {extra && <div className="extra">{extra}</div>}
   </div>

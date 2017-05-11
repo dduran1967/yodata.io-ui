@@ -1,8 +1,7 @@
-import React from 'react';
-import {storiesOf, action, linkTo} from '@kadira/storybook';
-import {Card, Button} from 'semantic-ui-react';
-import Action from '../src/action/Action';
-import {compose, lifecycle, withState, withHandlers} from 'recompose';
+import React from 'react'
+import {action, linkTo, storiesOf} from '@kadira/storybook'
+import Action from '../src/action/Action'
+import {compose, lifecycle, withHandlers, withState} from 'recompose'
 
 const enhance = compose(
   withState('open', 'setOpen', false),

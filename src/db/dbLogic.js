@@ -1,59 +1,101 @@
 // @flow
 
-import check from 'check-types'
-import * as firebase from 'firebase'
-import escapeRegExp from 'lodash/escapeRegExp'
-import filter from 'lodash/filter'
-import isNull from 'lodash/isNull'
-import {createLogic} from 'redux-logic'
-import {lit} from '../lib/rdf-utilities.js'
+import check from 'check-types';
+import escapeRegExp from 'lodash/escapeRegExp';
+import filter from 'lodash/filter';
+import isNull from 'lodash/isNull';
+import { createLogic } from 'redux-logic';
+import Ajv from 'ajv';
+import has from 'lodash/has';
 
+const ajv = new Ajv({ allErrors: true });
+const subscribePayloadSchema = {
+  properties: {
+    name: { type: 'string' },
+    object: { type: 'string' }
+  }
+};
+const validate = ajv.compile(subscribePayloadSchema);
 
 const onSubscribe = createLogic({
-  type:           'DB/SUBSCRIBE',
-  cancelType:     'DB/CANCEL_SUBSCRIPTION',
+  type: 'DB/SUBSCRIBE',
+  cancelType: 'DB/CANCEL_SUBSCRIPTION',
   processOptions: {
     failType: 'DB/SUBSCRIPTION_ERROR'
   },
-  validate({action}, allow, reject) {
-    let valid = check.all(
-      check.map(action, {
-        payload: {
-          type:         check.string, // 'SubscribeAction'
-          name:         check.string, // 'thrume@now'
-          agent:        check.string, // '/user/{uid}
-          object:       check.string, // '/user/{uid}/thrume/
-          actionStatus: check.string // 'PotentialActionStatus'
-        }
-      })
+  validate({ action, getState, firebase }, allow, reject) {
+    const payloadIsValid = validate(action.payload);
+    const subscriptionExists = has(
+      getState().db.subscription,
+      action.payload.name
     );
-    if (valid) {
-      allow(action);
-    } else {
-      console.error('invalid subscription input', action);
+    if (!firebase) {
       reject(action);
     }
+    const valid = payloadIsValid && !subscriptionExists;
+    if (valid) {
+      allow({
+        ...action,
+        payload: {
+          ...action.payload,
+          actionStatus: 'PotentialActionStatus'
+        }
+      });
+    } else {
+      if (subscriptionExists) {
+        console.info('skipping existing subscription', action);
+        reject();
+      } else {
+        console.error('invalid subscription input', action);
+        reject(action);
+      }
+    }
   },
-  process({action}, dispatch, done) {
-    const {agent, object, name} = action.payload;
+  process({ action, firebase }, dispatch, done) {
+    const { object, name } = action.payload;
     const ref = firebase.database().ref(object);
     dispatch({
-      type:    'DB/SUBSCRIPTION_ACTIVE',
-      payload: {...action.payload, actionStatue: 'ActiveActionStatus'}
+      type: 'DB/SUBSCRIPTION_ACTIVE',
+      payload: { ...action.payload, actionStatue: 'ActiveActionStatus' }
     });
     ref.on('value', nextState => {
-      let value = nextState.val();
-      let type = isNull(value) ? 'DB/SUBSCRIPTION_ERROR' : 'DB/SUBSCRIPTION_UPDATED'
+      const value = nextState.val();
+      const type = isNull(value)
+        ? 'DB/SUBSCRIPTION_ERROR'
+        : 'DB/SUBSCRIPTION_UPDATED';
       dispatch({
         type,
         payload: {
-          name:  name,
-          agent: agent,
+          name,
           object,
           value
         }
       });
     });
+  }
+});
+
+const patch = createLogic({
+  type: 'DB/PATCH',
+  validate({ action }, allow, reject) {
+    let valid = check.all(
+      check.map(action.payload, {
+        entity: check.string,
+        attribute: check.string,
+        nextValue: check.nonEmptyString
+      })
+    );
+    if (valid) {
+      allow(action);
+    } else {
+      console.error('invalid DB/PATCH payload', action.payload);
+      reject(action);
+    }
+  },
+  process({ action, firebase }) {
+    let { entity, attribute, nextValue } = action.payload;
+    let targetRef = firebase.database().ref(entity);
+    return targetRef.update({ [attribute]: nextValue });
   }
 });
 
@@ -109,38 +151,35 @@ const onSubscribe = createLogic({
 // });
 
 const searchLogic = createLogic({
-  type:   'SEARCH_VALUE',
+  type: 'SEARCH/QUERY',
   latest: true,
-  transform({getState, action}, next) {
-    action.meta = {
-      searchValue: action.payload,
-      instrument:  'searchLogic',
-      source:      getState().schema.actions
-    };
-    next(action);
-  },
-  process({action}, dispatch, done) {
-    dispatch({type: 'SEARCH_LOADING', payload: true});
-    let value = action.payload;
-    if (value.length < 2) {
-      dispatch({type: 'SEARCH_RESULT', payload: [], meta: action.meta});
-    } else {
-      let re = new RegExp(escapeRegExp(action.payload), 'gi');
-      let isMatch = result => re.test(result.label);
-      let source = action.meta.source;
-      let searchResults = filter(source, isMatch).map(item => ({
-        id:          item.id,
-        title:       lit(item.label),
-        description: lit(item.description)
-      }));
-      dispatch({
-        type:    'SEARCH_RESULT',
-        payload: searchResults,
-        meta:    action.meta
-      });
+  validate({ action }, allow, reject) {
+    const query =
+      action.payload &&
+      action.payload.instrument &&
+      action.payload.instrument.query;
+    if (query) {
+      return allow(action);
     }
-    dispatch({type: 'SEARCH_LOADING', payload: false, meta: action.meta});
+    reject(action);
+  },
+  process({ getState, action, getAction }, dispatch, done) {
+    const query = action.payload.instrument.query;
+    if (query.length > 2) {
+      const re = new RegExp(escapeRegExp(query), 'gi');
+      const isMatch = result => re.test(result.label);
+      const source = getState().db.schema;
+      const searchResults = filter(source, isMatch);
+      dispatch(getAction('SEARCH/FIND')(searchResults));
+    }
     done();
+  }
+});
+
+const searchInit = createLogic({
+  type: 'SEARCH/INIT',
+  process({ getAction }, dispatch) {
+    dispatch(getAction('subscribe')('schema', '/public/schema'));
   }
 });
 
@@ -183,4 +222,28 @@ const searchLogic = createLogic({
 //   }
 // });
 
-export default [onSubscribe, searchLogic];
+const addActionLogic = createLogic({
+  type: 'AddAction',
+  validate({ action }, allow, reject) {
+    if (
+      action.targetCollection &&
+      action.targetCollection.startsWith('/public/schema/') &&
+      action.actionStatus === 'PotentialActionStatus'
+    ) {
+      allow(action);
+    } else {
+      reject(action);
+    }
+  },
+  process({ action, firebase }, dispatch) {
+    let ref = firebase.database().ref(action.targetCollection).push();
+    let data = { ...action.object, url: ref.toString() };
+    ref.set(data).then(e => {
+      console.log(e);
+      let nextAction = { ...action, status: 'CompletedActionStatus' };
+      console.log(nextAction);
+    });
+  }
+});
+
+export default [onSubscribe, searchLogic, patch, searchInit, addActionLogic];

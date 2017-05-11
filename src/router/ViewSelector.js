@@ -1,15 +1,39 @@
+// @flow
 import React from 'react'
-import {Debug} from '../component'
-import {routeMap} from './routes.js'
-import withRoute from './withRoute'
+import { routeMap } from './routes.js'
+import { connect } from 'react-redux'
+import SearchResult from '../component/SearchResult'
 
-const ViewSelector = props => {
-  if (props.route) {
-    let {name} = props.route
-    let view = routeMap[name] || {component: Debug}
+
+const controller = connect(state => ({
+  search: state.search,
+  route: state.router.route,
+  user: state.user,
+}));
+
+const ViewSelector = (props, context) => {
+  let { search, route, user } = props;
+
+  if (!route) {
+    return <div/>
+  }
+
+  if (user.signedIn === false) {
+    location.assign('/widget.html')
+    return <div/>
+  }
+
+  let view = routeMap[ route.name ];
+
+  if (search && search.results.length > 0) {
+    return React.createElement(SearchResult, props);
+  }
+
+  if (view && view.component) {
     return React.createElement(view.component, props);
   }
-  return Debug(props)
-}
 
-export default withRoute(ViewSelector);
+  return null;
+};
+
+export default controller(ViewSelector);

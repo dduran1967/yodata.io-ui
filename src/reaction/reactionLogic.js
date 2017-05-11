@@ -41,7 +41,6 @@ const saveFile = createLogic({
           payload: {level: 'error', message: 'Failed'},
         }),
       );
-    done();
   },
 });
 

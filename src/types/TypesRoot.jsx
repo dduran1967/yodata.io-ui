@@ -4,66 +4,55 @@ import React from 'react';
 import Page from '../component/Page';
 import Header from '../component/Header';
 import MediaList from '../component/MediaList';
-import {connect} from 'react-redux';
-import {compose, withState, withHandlers} from 'recompose';
-import {withLoader} from '../component/Loading';
-import {Input} from '../component/index';
-import filter from 'lodash/filter';
+import { connect } from 'react-redux';
+import { compose, getContext, lifecycle, withProps } from 'recompose';
+import actionSevice from '../services/action_service.js';
+import sampleSize from 'lodash/sampleSize';
 
-const enhance = compose(
-  connect(({schema, router}) => {
-    let isLoading = router.route === null || schema.hasData === false;
+const controller = compose(
+  getContext({
+    router: React.PropTypes.object
+  }),
+  connect(
+    state => ({
+      schema: state.db.schema,
+      user: state.user
+    }),
+    {
+      subscribe: actionSevice.getAction('subscribe')
+    }
+  ),
+  withProps(props => {
+    let listItems = sampleSize(props.schema, 25);
     return {
-      isLoading,
-      schema: isLoading ? false : schema,
+      items: listItems
     };
   }),
-  withLoader(props => props.isLoading),
-  withState('typeFilter', 'setTypeFilter', ''),
-  withHandlers({
-    handleFilterChange: ({typeFilter, setTypeFilter}) =>
-      event => {
-        setTypeFilter(event.target.value);
-      },
-  }),
+  lifecycle({
+    componentDidMount() {
+      this.props.subscribe('schema', '/public/schema');
+    }
+  })
 );
 
-const TypesRoot = enhance(({
-  schema,
-  dispatch,
-  navigateTo,
-  handleFilterChange,
-  typeFilter,
-}) => {
-  let filteredItems = filter(schema.items, entity => {
-    let re = new RegExp(typeFilter, 'gi');
-    return re.test(entity.id);
-  }).slice(0, 12);
+const TypesRoot = props => {
   return (
     <Page>
       <Header
         icon="code"
         content="Type Library"
         subheader="standard actions and models from schema.org, linked-data, RESO and others..."
-      >
-        <div>
-          <Input
-            icon="search"
-            value={typeFilter}
-            onChange={handleFilterChange}
-          />
-        </div>
-      </Header>
+      />
       <MediaList
-        items={filteredItems}
+        items={props.items}
         handleClick={(event, value) => {
           event.preventDefault();
-          navigateTo('types/view', {id: value.id});
+          props.router.navigate('types/view', { id: value.id });
         }}
         itemsPerRow={3}
       />
     </Page>
   );
-});
+};
 
-export default TypesRoot;
+export default controller(TypesRoot);

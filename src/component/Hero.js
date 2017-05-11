@@ -1,45 +1,29 @@
-import React from 'react';
-import {Heading, Block} from './index';
+import React from 'react'
+import {Button, Input, Segment} from 'semantic-ui-react'
+import {compose, withState} from 'recompose'
 
-export const Hero = ({
-  header,
-  footer,
-  title,
-  text,
-  logo,
-  styles = {}
-}) => {
-  let logoStyles = {
-    width:        '120px',
-    marginBottom: '3em'
-  };
-  let heroStyles = {
-    textAlign:       'center',
-    backgroundColor: '#d3d3d7',
-    borderRadius:    '8px'
-  };
-  return (
-    <Block mt={0} mb={3} px={2} py={4} style={{...heroStyles, ...styles.hero}}>
-      {header}
-      <img src={logo} alt="" style={logoStyles}/>
-      <Heading size={0}>{title}</Heading>
-      <p>{text}</p>
-      {footer &&
-      <div className="footer mb-0 mt-5">
-        {footer}
-      </div>
-      }
-    </Block>
-  )
-};
+const Hero = props =>
+  <Segment vertical inverted color="grey" style={{height: '50vh', padding: '8.75%'}}>
+    <h1 style={{
+      fontSize: '5.875em',
+    }}>{props.title}</h1>
+    <Input
+      name="email"
+      size="huge"
+      placeholder="Email address"
+      value={props.email}
+      onChange={e => props.setEmail(e.target.value)}
+    />
+    <Button
+      content="Get Started"
+      size="huge"
+      style={{marginLeft: '12px'}}
+      onClick={event => props.onSubmit(event, props.email)}
+    />
+  </Segment>
 
-Hero.propTypes = {
-  "header": React.PropTypes.node,
-  "footer": React.PropTypes.node,
-  "title":  React.PropTypes.string,
-  "text":   React.PropTypes.string,
-  "logo":   React.PropTypes.string,
-  "styles": React.PropTypes.object,
-};
+const container = compose(
+  withState('email', 'setEmail', ''),
+)
 
-export default Hero
+module.exports = container(Hero)

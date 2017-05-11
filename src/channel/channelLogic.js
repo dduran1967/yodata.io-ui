@@ -18,7 +18,6 @@ const onUserSignedIn = createLogic({
       payload: {
         type: 'SubscribeAction',
         name: 'channel@root',
-        agent: currentUserAgent(),
         object: channelRoot(uid),
         actionStatus: 'PotentialActionStatus',
       },

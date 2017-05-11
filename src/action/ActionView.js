@@ -1,71 +1,118 @@
 // @flow
 
+import isNull from 'lodash/isNull'
 import React from 'react'
-import {compose, withHandlers, withProps} from 'recompose'
-
-import {actions as routerActions} from 'redux-router5'
-import {Breadcrumb} from 'semantic-ui-react'
-import {Link, Section, Header, withLoader} from '../component'
-import {lit, sym} from '../lib/rdf-utilities'
-import withRoute from '../router/withRoute.js'
+import { connect } from 'react-redux'
+import { compose, withHandlers, withProps } from 'recompose'
+import { Label } from 'semantic-ui-react'
+import Page from '../component/Page'
 import PropertiesList from '../schema/PropertiesList'
-import schemas from '../schema/schemaGraph'
+import Link from '../component/Link'
+import castArray from 'lodash/castArray'
+import Header from '../component/Header'
+import isArray from 'lodash/isArray'
+import getSuperTypes from '../schema/getSuperTypes.js'
+import TypeCard from '../component/TypeCard'
+import { withLoader } from '../component/Loading'
+import Section from '../component/Section'
+import ExampleValues from '../component/ExampleValue'
 
 
-const Breadcrumbs = props =>
-  <Breadcrumb>
-    {props.items.map(superType =>
-      <span key={superType.id}>
-          <Breadcrumb.Section>
-            <Link key={superType.id} name={'action/view'} params={{id: superType.id}}>
-              {lit(superType.label)}
-            </Link>
-          </Breadcrumb.Section>
-          <Breadcrumb.Divider />
-      </span>
-    )}
-  </Breadcrumb>
+const propertiesOf = propSource => id =>
+  propSource.filter(({ domainIncludes }) => {
+    if (isArray(domainIncludes)) {
+      return domainIncludes.includes(id);
+    }
+    if (typeof domainIncludes === 'string') {
+      return domainIncludes === id;
+    }
+    return false;
+  });
 
-const ActionView = ({subject, ...props}) =>
-  <div>
-    <Breadcrumbs items={subject.superTypes}/>
-    <Section>
-      <Header>{subject.label}</Header>
-      {subject.description &&
-      <div dangerouslySetInnerHTML={{__html: subject.description.toString()}}/>
-      }
-    </Section>
-    <Section>
-      <Header>Properties</Header>
-      <PropertiesList listItems={subject.properties} dispatch={props.dispatch}/>
-    </Section>
-  </div>
-
-const enhance = compose(
-  withRoute,
-  withProps(({route}) => {
-    let id = route.params.id;
-    let target = sym(id);
-    let subject = schemas.findOne(id);
-    return {
-      pageHeader: {
-        title: lit(subject.label)
-      },
-      subject:    {
-        id:          subject.id,
-        type:        subject.type,
-        label:       lit(subject.label),
-        description: lit(subject.description),
-        superTypes:  schemas.superTypesOf(target).map(schemas.findOne),
-        properties:  schemas.propertiesOfDeep(target).map(schemas.findOne)
+const actionViewContainer = compose(
+  connect(({ schema, router }) => {
+    let isLoading = isNull(router.route) || schema.hasData === false;
+    let subject, properties, superTypes;
+    if (!isLoading) {
+      subject = schema.index[ router.route.params.id ];
+      if (subject.type === 'Type') {
+        superTypes = getSuperTypes(schema.index, subject);
+        let findProperties = propertiesOf(schema.properties);
+        properties = superTypes.reduce((state, superType) => {
+          return { ...state, [superType]: findProperties(superType) };
+        }, {});
       }
     }
+    return {
+      isLoading,
+      subject,
+      superTypes,
+      properties,
+    };
+  }),
+  withLoader(props => props.isLoading),
+  withProps(({ subject, superTypes }) => {
+    let extra = [];
+    if (subject.domainIncludes) {
+      let domains = castArray(subject.domainIncludes).map(domain => (
+        <Link key={domain} name="types/view" params={{ id: domain }}>
+          {domain}{' '}
+        </Link>
+      ));
+      extra.push(
+        <Label key="domain" basic content="domain:" detail={domains}/>,
+      );
+    }
+    if (subject.rangeIncludes) {
+      let ranges = castArray(subject.rangeIncludes).map(range => (
+        <Link key={range} name="types/view" params={{ id: range }}>
+          {range}{' '}
+        </Link>
+      ));
+      extra.push(<Label key="range" basic content="range:" detail={ranges}/>);
+    }
+    if (superTypes) {
+      let types = castArray(superTypes).map(type => (
+        <Link key={type} name="types/view" params={{ id: type }}>{type} </Link>
+      ));
+      extra.push(
+        <Label key="implements" basic content="implements:" detail={types}/>,
+      );
+    }
+    return {
+      header: subject.label,
+      meta: subject.type,
+      description: subject.description,
+      extra,
+    };
   }),
   withHandlers({
-    onBack: ({dispatch}) => (event) => dispatch(routerActions.navigateTo('action'))
+    onBack: ({ navigateTo }) => event => navigateTo('types'),
   }),
-  withLoader(({subject}) => !subject)
-)
+);
 
+const ActionView = props => {
+  let {
+    properties,
+    dispatch,
+    extra,
+    subject,
+  } = props;
+  return (
+    <Page>
+      <Section>
+        <TypeCard subject={subject} extra={extra}/>
+      </Section>
 
-export default enhance(ActionView)
+      <ExampleValues subject={subject}/>
+
+      {properties &&
+      <Section>
+        <Header content="Properties"/>
+        <PropertiesList items={properties} dispatch={dispatch}/>
+      </Section>}
+    </Page>
+  );
+};
+
+export default actionViewContainer(ActionView)

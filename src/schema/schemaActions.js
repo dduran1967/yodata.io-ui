@@ -1,8 +1,6 @@
 import {createAction} from 'redux-actions'
+import actionService from '../services/action_service.js';
 
 export const fetchSchema = createAction('SCHEMA/FETCH_SCHEMA')
-export const chooseAction = createAction('SCHEMA/CHOOSE_ACTION')
-
-export default {
-  fetchSchema
-}
+export default fetchSchema
+actionService.register('fetchSchema', fetchSchema)

@@ -2,7 +2,15 @@
 
 import * as firebase from 'firebase';
 
-export default function currentUser(): FirebaseUser | null {
-  let user = firebase.auth().currentUser;
-  return user && user.toJSON()
+function currentUser(): firebase.UserInfo | null {
+  if (
+    window.firebase &&
+    window.firebase.auth() &&
+    window.firebase.auth().currentUser
+  ) {
+    return window.firebase.auth().currentUser.toJSON();
+  }
+  return null;
 }
+
+export default currentUser;

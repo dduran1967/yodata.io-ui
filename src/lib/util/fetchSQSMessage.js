@@ -20,7 +20,6 @@ export default function (sqsUrl: string) {
       }
     })
     .catch(error => {
-      console.error(error);
-      throw ('Error recieving SQS message', {sqsUrl, error})
+      throw new Error({message: 'Error recieving SQS message', sqsUrl, error})
     })
 }

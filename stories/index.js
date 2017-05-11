@@ -10,9 +10,11 @@ import Chance from 'chance';
 import CardGroup from '../src/component/card-group';
 import {compose, withState, lifecycle, withHandlers} from 'recompose';
 const fake = new Chance();
+// import FieldEditable from '../src/component/FieldEditable';
 
-import buttonStories from './buttonStories';
 import './ActionCardStories';
+import Page from '../src/component/Page'
+
 
 const items = [
   {key: 'toggle', icon: 'bars'},
@@ -103,3 +105,8 @@ const listStories = storiesOf('Card', module);
 listStories.add('initialState', props => {
   return <CardTest />;
 });
+
+storiesOf('Page', module)
+.add('full screen', () => (
+  <Page style={{backgroundColor: 'red'}}><h1>page a</h1></Page>
+))

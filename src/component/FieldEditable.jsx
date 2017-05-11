@@ -1,50 +1,64 @@
+// @flow
+
 import React from 'react'
-import {connect} from 'react-redux'
 import {compose, withHandlers, withState} from 'recompose'
+import isFunction from 'lodash/isFunction'
+import store from '../store/index.js'
+import {Form, TextArea} from 'semantic-ui-react'
 
 const fieldEditableContainer = compose(
-  connect(
-    (state, props) => {
-      if (props && props.id) {
-        return {
-          dbValue: state.db[props.id]
-        }
-      }
-    }
-  ),
-  withState('fieldEditable', 'setFieldEditable', props => ({
-    id:        props.id,
-    value:     props.value,
-    nextValue: props.value,
-    editing:   false,
-    dirty:     false
-  })),
+  withState('fieldEditable', 'setFieldEditable', {editing: false}),
   withHandlers({
-    setEditing:  ({fieldEditable, setFieldEditable}) => (val: boolean) => {
-      setFieldEditable({...fieldEditable, editing: val})
+    handleFocus: ({entity, attribute, value, fieldEditable, setFieldEditable}) => (e) => {
+      setFieldEditable({
+        ...fieldEditable,
+        entity,
+        attribute,
+        value,
+        nextValue: value,
+        editing: true,
+      })
     },
-    setDirty:    ({fieldEditable, setFieldEditable}) => (val: boolean) => {
-      setFieldEditable({...fieldEditable, dirty: val})
+    handleInput: ({fieldEditable, setFieldEditable}) => (e, data) => {
+      setFieldEditable({
+        ...fieldEditable,
+        editing: true,
+        nextValue: data.value,
+      });
     },
-    handleInput: ({fieldEditable, setFieldEditable}) => event => {
-      setFieldEditable({...fieldEditable, nextValue: event.target.innerText});
+    saveChanges: ({fieldEditable, setFieldEditable, onChange, dispatch}) => () => {
+      let {entity, attribute, value, nextValue} = fieldEditable;
+      store.dispatch({
+        type: 'DB/PATCH',
+        payload: {entity, attribute, nextValue},
+      })
+      if (isFunction(onChange)) {
+        onChange({entity, attribute, value, nextValue})
+      }
+      setFieldEditable({editing: false})
     },
-    saveChanges: ({fieldEditable, dispatch}) => (event) => {
-      let {id, value, nextValue} = fieldEditable
-      dispatch({type: 'DB/SET', payload: {id, value, nextValue}})
-    }
-  })
+    getNextValue: props => () => {
+      return props.fieldEditable.editing ? props.fieldEditable.nextValue : props.value
+    },
+  }),
 )
 
-const FieldEditable = ({id, className, value, nextValue, handleInput, saveChanges, fieldEditable}) =>
-  <div
-    contentEditable={true}
-    key={id}
-    className={className}
-    onInputCapture={handleInput}
-    onBlurCapture={saveChanges}
-  >
-    {fieldEditable.nextValue}
-  </div>
+const FieldEditable = props => {
+  let {handleInput, saveChanges, handleFocus} = props
+  return (
+    <Form className="field-editable-container">
+      <TextArea
+        autoHeight
+        // contentEditable={true}
+        onFocusCapture={handleFocus}
+        onChange={handleInput}
+        onBlurCapture={saveChanges}
+        value={props.getNextValue()}
+        className="field-editable"
+      />
+    </Form>
+  )
+}
+
 
 export default fieldEditableContainer(FieldEditable)

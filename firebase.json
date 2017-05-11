@@ -10,6 +10,10 @@
         "destination": "/widget.html"
       },
       {
+        "source": "/signup",
+        "destination": "/signup.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

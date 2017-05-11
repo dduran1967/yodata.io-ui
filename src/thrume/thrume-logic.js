@@ -4,7 +4,6 @@ import check from 'check-types'
 import * as firebase from 'firebase'
 import {createLogic} from 'redux-logic'
 import currentUser from '../user/currentUser.js'
-import currentUserAgent from '../user/currentUserAgent'
 import getThrumeBaseUrl from './getThrumeBaseUrl'
 import {THRUME_BASE} from './thrume-config'
 import createDefaultContainer from './thrumeDefaultContainer'
@@ -19,7 +18,6 @@ const onUserSignedIn = createLogic({
       payload: {
         type: 'SubscribeAction',
         name: 'thrume@root',
-        agent: currentUserAgent(),
         object: getThrumeBaseUrl(uid),
         actionStatus: 'PotentialActionStatus',
       },
@@ -96,7 +94,7 @@ const send = createLogic({
     let user = currentUser();
     let settings = getState().thrume;
     if (user && user.uid) {
-      let inboxURL = settings && settings.inboxURL || `/in/${user.uid}`
+      let inboxURL = (settings && settings.inboxURL) ?  settings.inboxURL : `/in/${user.uid}`
       let inbox = firebase.database().ref(inboxURL)
       return inbox.push(action.payload).then(snap => {
         console.info(snap.toString());
@@ -125,7 +123,7 @@ const sendToURL = createLogic({
     let user = currentUser();
     let settings = getState().thrume;
     if (user && user.uid) {
-      let inboxURL = settings && settings.inboxURL || `/in/${user.uid}`
+      let inboxURL = (settings && settings.inboxURL) ? settings.inboxURL : `/in/${user.uid}`
       let inbox = firebase.database().ref(inboxURL)
       return inbox.push(action.payload.message);
     }

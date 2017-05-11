@@ -10,7 +10,7 @@ import root from 'window-or-global'
 import {channelLogic, channelReducer} from '../channel'
 import {drawerReducer} from '../component/Drawer.js'
 import {loadingReducer} from '../component/Loading'
-import {searchReducer} from '../component/searchInterface.js'
+import {searchReducer} from '../services/search_service'
 import router from '../router'
 import {schemaLogic, schemaReducer} from '../schema'
 import thrumeLogic from '../thrume/thrume-logic'
@@ -19,8 +19,9 @@ import {userLogic, userReducer} from '../user'
 import dbReducer from '../db/dbReducer'
 import dbLogic from '../db/dbLogic'
 import {notificiationsReducer} from '../component/Notifications.js'
-import reactionReducer from '../reaction/reactionReducer.js';
-import reactionLogic from '../reaction/reactionLogic.js';
+import reactionReducer from '../reaction/reactionReducer.js'
+import reactionLogic from '../reaction/reactionLogic.js'
+import {getAction} from '../services/action_service.js'
 
 const composeEnhancers = composeWithDevTools({});
 
@@ -35,8 +36,15 @@ const rootReducer = combineForms({
   search: searchReducer,
   thrume: thrumeReducer,
   notifications: notificiationsReducer,
-  reactions: reactionReducer
+  reactions: reactionReducer,
 });
+
+const logicDependencies = {
+  firebase: window.firebase,
+  db: window.firebase.database,
+  auth: window.firebase.auth,
+  getAction
+}
 
 const logicMiddleware = createLogicMiddleware([
   ...userLogic,
@@ -45,7 +53,7 @@ const logicMiddleware = createLogicMiddleware([
   ...channelLogic,
   ...thrumeLogic,
   ...reactionLogic
-]);
+], logicDependencies);
 
 const enhancers = composeEnhancers(
   applyMiddleware(logicMiddleware, router5Middleware(router), logger()),

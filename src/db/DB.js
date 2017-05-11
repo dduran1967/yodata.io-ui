@@ -3,7 +3,6 @@
 import axios from 'axios'
 import base64url from 'base64-url'
 
-
 class DB {
   host: string = 'yodata-1115.firebaseio.com';
   protocol: string = 'https:';

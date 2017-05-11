@@ -3,96 +3,103 @@ import root from 'window-or-global'
 import RestApiRoot from '../apidocs/restApiRoot.js'
 import ChannelRoot from '../channel/ChannelRoot'
 import ChannelView from '../channel/ChannelView'
-import {Home} from '../component'
+import { Home } from '../component'
 import DataBrowser from '../component/DataBrowser'
-import ThrumeRoot from '../thrume/thrume-root'
 import TypesRoot from '../types/TypesRoot'
 import TypeView from '../types/TypeView'
-import {UserRoot} from '../user'
-import Reactions from '../reaction/ReactionRoot.js';
-
+import { UserRoot } from '../user'
+import Reactions from '../reaction/ReactionRoot.js'
+import ActionRoot from '../action/ActionRoot.js'
+import ActionView from '../action/ActionView'
 
 export const sidebarRoutes = [
   {
-    key:       'home',
-    name:      'home',
-    path:      '/',
-    label:     'Home',
+    key: 'home',
+    name: 'home',
+    path: '/',
+    label: 'Home',
     component: Home,
-    icon:      'home',
+    icon: 'home',
+    requiresLogin: true,
   },
   {
-    key:       'schema',
-    name:      'schema',
-    path:      '/schema',
-    label:     'Schema',
+    key: 'schema',
+    name: 'schema',
+    path: '/schema',
+    label: 'Schema',
     component: TypesRoot,
-    icon:      'code',
+    icon: 'code',
   },
   {
-    key:       'thrume',
-    name:      'thrume',
-    path:      '/thrume',
-    label:     'Actions',
-    component: ThrumeRoot,
-    icon:      'feed',
+    key: 'actions',
+    name: 'actions',
+    path: '/actions',
+    label: 'Actions',
+    component: ActionRoot,
+    icon: 'feed',
   },
   {
-    key:       'reactions',
-    name:      'reactions',
-    path:      '/reactions',
-    label:     'Reactions',
+    key: 'reactions',
+    name: 'reactions',
+    path: '/reactions',
+    label: 'Reactions',
     component: Reactions,
-    icon:      'feed',
+    icon: 'feed',
   },
   {
-    key:       'channel',
-    name:      'channel',
-    path:      '/channel',
-    label:     'Channels',
+    key: 'channel',
+    name: 'channel',
+    path: '/channel',
+    label: 'Channels',
     component: ChannelRoot,
-    icon:      'hashtag',
+    icon: 'hashtag',
   },
   {
-    key:       'user',
-    name:      'user',
-    path:      '/user',
-    label:     'User',
+    key: 'user',
+    name: 'user',
+    path: '/user',
+    label: 'User',
     component: UserRoot,
-    icon:      'user',
+    icon: 'user',
   },
   {
-    key:       'api',
-    name:      'api',
-    path:      '/api',
-    label:     'REST API',
+    key: 'api',
+    name: 'api',
+    path: '/api',
+    label: 'REST API',
     component: RestApiRoot,
-    icon:      'code',
+    icon: 'code',
   },
 
 ];
 
 export const innerRoutes = [
   {
-    name:      'channel/view',
-    path:      '/channel/item/:key',
+    name: 'channel/view',
+    path: '/channel/item/:key',
     component: ChannelView,
   },
   {
-    name:      'types/view',
-    path:      '/schema/:id',
+    name: 'types/view',
+    path: '/schema/:id',
     component: TypeView,
   },
   {
-    name:      'databrowser',
-    path:      '/u/*path',
-    component: DataBrowser
-  }
+    name: 'databrowser',
+    path: '/u/*path',
+    component: DataBrowser,
+  },
+  {
+    name: 'action/view',
+    path: '/actions/:id',
+    component: ActionView,
+  },
 ];
 
-const routes = [...sidebarRoutes, ...innerRoutes];
+const routes = [ ...sidebarRoutes, ...innerRoutes ];
 
-export const routeMap = mapKeys(routes, 'name');
+export const routeNameIndex = mapKeys(routes, 'name');
+export const routeMap = routeNameIndex;
 
 export default routes;
 

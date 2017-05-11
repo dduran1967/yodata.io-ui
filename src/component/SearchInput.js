@@ -1,33 +1,14 @@
 // @flow
-import React from 'react';
-import {Input, Button} from 'semantic-ui-react';
-import {Motion, spring} from 'react-motion';
-import isFunction from 'lodash/isFunction';
 
-class SliderInput extends React.Component {
+import React from 'react'
+import {searchController} from '../services/search_service.js'
+import {Button, Input} from 'semantic-ui-react'
+import {Motion, spring} from 'react-motion'
+import SearchIcon from 'react-icons/lib/fa/search'
+
+class SearchInput extends React.Component {
   state = {
     isOpen: false,
-    inputValue: '',
-  };
-
-  toggleOpen() {
-    this.setState({isOpen: !this.state.isOpen});
-  }
-
-  handleChange = (e: Event) => {
-    this.setState({inputValue: e.target.value});
-  };
-
-  handleSubmit = (e: Event) => {
-    e.preventDefault();
-    let {inputValue} = this.state;
-    this.setState({inputValue: '', isOpen: false});
-
-    if (isFunction(this.props.onSubmit)) {
-      this.props.onSubmit(inputValue);
-    } else {
-      console.error('SliderInput: no onSubmit handler provided');
-    }
   };
 
   static defaultProps = {
@@ -37,6 +18,10 @@ class SliderInput extends React.Component {
       style: {},
     },
   };
+
+  toggleOpen() {
+    this.setState({isOpen: !this.state.isOpen});
+  }
 
   render() {
     const maskStyle = {
@@ -56,17 +41,18 @@ class SliderInput extends React.Component {
       <Motion style={this.state.isOpen ? {t: spring(1)} : {t: spring(0)}}>
         {({t}) => (
           <div style={maskStyle}>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={() => {return false}}>
               <Input
                 placeholder={placeholder}
-                value={this.state.inputValue}
+                value={this.props.value}
                 style={{transform: `translateX(${(1 - t) * 200}px)`}}
-                onChange={this.handleChange}
+                onChange={this.props.onChange}
+                onFocus={this.props.onFocus}
               />
             </form>
             <Button
               {...button}
-              icon={this.props.icon}
+              icon={<SearchIcon />}
               onClick={() => this.toggleOpen()}
             />
           </div>
@@ -76,4 +62,10 @@ class SliderInput extends React.Component {
   }
 }
 
-export default SliderInput
+export default searchController(({search, resetSearch, setSearchQuery}) => (
+  <SearchInput
+    onChange={event => setSearchQuery(event.target.value)}
+    onFocus={resetSearch}
+    value={search.query}
+  />
+));

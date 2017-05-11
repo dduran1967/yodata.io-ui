@@ -1,6 +1,5 @@
 // @flow
 
-import * as firebase from 'firebase'
 import {createLogic} from 'redux-logic'
 import createUserAccountData from './createUserAccountData'
 import currentUser from './currentUser'
@@ -8,7 +7,7 @@ import {USER_BASE} from './user-config'
 import userGraph from './userGraph'
 
 async function accountExists(uid) {
-  return firebase.database().ref(`user/${uid}/profile/${uid}`).once('value').then(snap => {
+  return window.firebase.database().ref(`user/${uid}/profile/${uid}`).once('value').then(snap => {
     return snap.val() !== null
   })
 }
@@ -39,7 +38,7 @@ export const accountInit = createLogic({
       }
     })
   },
-  process({action}) {
+  process({action, firebase}) {
     return firebase.database()
                    .ref(action.payload.id)
                    .set({...action.payload})
@@ -71,7 +70,7 @@ const createUserWithEmailAndPassword = createLogic({
     successType:    'USER/CREATE_USER_WITH_EMAIL_AND_PASSWORD_SUCCESS',
     failType:       'USER/CREATE_USER_WITH_EMAIL_AND_PASSWORD_FAIL'
   },
-  process({action}) {
+  process({action, firebase}) {
     let {email, password} = action.payload;
     return firebase
     .auth()
@@ -88,7 +87,7 @@ const signOut = createLogic({
     successType:    'USER/SIGN_OUT_SUCCESS',
     failType:       'USER/SIGN_OUT_FAIL'
   },
-  process() {
+  process({firebase}) {
     firebase.auth().signOut();
   }
 });
@@ -102,7 +101,7 @@ const signInWithEmailAndPassword = createLogic({
     successType:    'USER/SIGN_IN_WITH_EMAIL_AND_PASSWORD_SUCCESS',
     failType:       'USER/SIGN_IN_WITH_EMAIL_AND_PASSWORD_FAIL'
   },
-  process({action}) {
+  process({action, firebase}) {
     let {email, password} = action.payload;
     return firebase
     .auth()

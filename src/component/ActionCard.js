@@ -1,5 +1,5 @@
 // @flow
-import type { Resource } from "../../flowtypes.flow";
+
 import React from "react";
 import { compose, withHandlers, withProps, withState } from "recompose";
 import Action from "../action/Action";

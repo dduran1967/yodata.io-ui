@@ -51,15 +51,6 @@ export {default as Debug} from './Debug';
 // application components
 export {UserRoot, UserWebIdForm, userLogic, withUser} from '../user';
 export {ActionList, ActionView, ActionRoot} from '../action';
-export {
-  StreamRoot,
-  StreamList,
-  StreamView,
-  withStreams,
-  streamActions,
-  streamLogic,
-  streamReducer,
-} from '../stream';
 export {default as withRoute} from '../router/withRoute';
 export {default as Home} from '../view/HomeView';
 export {default as UserButton} from '../user/UserButton.js';
