@@ -246,4 +246,27 @@ const addActionLogic = createLogic({
   }
 });
 
-export default [onSubscribe, searchLogic, patch, searchInit, addActionLogic];
+const updateActionLogic = createLogic({
+  type: 'UpdateAction',
+  validate({ action }, allow, reject) {
+    if (
+      action.target &&
+      action.target.startsWith('/public/schema/') &&
+      action.actionStatus === 'PotentialActionStatus'
+    ) {
+      allow(action);
+    } else {
+      reject(action);
+    }
+  },
+  process({ action, firebase }, dispatch) {
+    let ref = firebase.database().ref(action.target);
+    let data = action.object;
+    ref.update(data).then(() => {
+      let nextAction = { ...action, status: 'CompletedActionStatus' };
+      console.log(nextAction);
+    });
+  }
+});
+
+export default [onSubscribe, searchLogic, patch, searchInit, addActionLogic, updateActionLogic];

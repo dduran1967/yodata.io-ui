@@ -13,7 +13,7 @@ export default function SplitHeader({content, subheader, children, ...rest}) {
   return (
     <div style={twoColumnStyle}>
       <Header {...{content, subheader, ...rest}} />
-      <div>{children}</div>
+      {children && <div>{children}</div>}
     </div>
   );
 }

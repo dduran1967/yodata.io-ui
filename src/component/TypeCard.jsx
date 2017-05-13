@@ -22,7 +22,7 @@ export const TypeCard = (props: TypeCardProps) => {
   return (
     <Card
       header={props.subject.label}
-      meta={props.subject.type}
+      meta={`http://schema.org/${props.subject.label}`}
       description={
         <FieldEditable
           entity={`/public/schema/${props.subject.label}`}

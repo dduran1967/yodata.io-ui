@@ -10,6 +10,13 @@ const defaultActions = {
       targetCollection,
     }
   },
+  update: (targetCollection, object) => {
+    return {
+      type: 'UpdateAction',
+      object,
+      targetCollection,
+    }
+  },
   SubscribeAction: (name, url) => {
     t.String(name);
     t.String(url);

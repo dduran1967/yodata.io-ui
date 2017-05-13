@@ -132,8 +132,7 @@ class Yo {
   }
 
   subClassOf(subject) {
-    const types = store.getState().schema.types
-    return getSubClassesOf(types,subject)
+    return getSubClassesOf(subject)
   }
 
   getPropertiesOf(subjectId) {

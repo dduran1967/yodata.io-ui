@@ -2,7 +2,7 @@
 import store from '../store'
 import isArray from 'lodash/isArray'
 
-export default function getPropertiesOf(id) {
+export default function getPropertiesOf(id: string) {
   let propSource = store.getState().schema.properties;
   return propSource.filter(({ domainIncludes }) => {
     if (isArray(domainIncludes)) {

@@ -2014,9 +2014,9 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codemirror@^5.18.2, codemirror@^5.23.0:
-  version "5.23.0"
-  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.23.0.tgz#ac9b6b2e163a79e915b44cf0f43cd115cf6982dc"
+codemirror@^5.18.2, codemirror@^5.25.2:
+  version "5.25.2"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.25.2.tgz#8c77677ca9c9248d757d3a07ed1e89a8404850b7"
 
 collections@^0.2.0:
   version "0.2.2"
@@ -2253,7 +2253,7 @@ crc@^3.4.4:
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/crc/-/crc-3.4.4.tgz#9da1e980e3bd44fc5c93bf5ab3da3378d85e466b"
 
-create-react-class@^15.5.2:
+create-react-class@^15.5.1, create-react-class@^15.5.2:
   version "15.5.2"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.2.tgz#6a8758348df660b88326a0e764d569f274aad681"
   dependencies:
@@ -7136,7 +7136,7 @@ promise@7.1.1, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@15.5.8, prop-types@^15.5.8:
+prop-types@15.5.8, prop-types@^15.5.6, prop-types@^15.5.8:
   version "15.5.8"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
   dependencies:
@@ -7424,15 +7424,17 @@ react-hotkeys@^0.10.0:
     mousetrap "^1.5.2"
     prop-types "^15.5.8"
 
-react-icon-base@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/react-icon-base/-/react-icon-base-2.0.4.tgz#b6b7662e8b009b270a4f0c213c222f5d6eca3b22"
-
-react-icons@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-2.2.3.tgz#3b4847923065ecb09f8ba7f7e422112de0195196"
+react-icon-base@2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/react-icon-base/-/react-icon-base-2.0.7.tgz#0bd18736bd6ce79ca6d69ce8387a07fb8d4ceffe"
   dependencies:
-    react-icon-base "2.0.4"
+    prop-types "15.5.8"
+
+react-icons@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-2.2.5.tgz#f942501c21a4cc0456ce2bbee5032c93f6051dcf"
+  dependencies:
+    react-icon-base "2.0.7"
 
 react-inspector@^1.1.0:
   version "1.1.2"
@@ -7498,11 +7500,21 @@ react-motion@^0.4.5, react-motion@^0.4.7:
     performance-now "^0.2.0"
     raf "^3.1.0"
 
-react-notification-system@^0.2.13:
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/react-notification-system/-/react-notification-system-0.2.13.tgz#59b4778b6befd950e9075738a7f61122afaa150c"
+react-motion@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.0.tgz#1708fc2aee552900d21c1e6bed28346863e017b6"
   dependencies:
+    performance-now "^0.2.0"
+    prop-types "^15.5.8"
+    raf "^3.1.0"
+
+react-notification-system@^0.2.14:
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/react-notification-system/-/react-notification-system-0.2.14.tgz#21f917f39feee145516864350875041433c4d5c0"
+  dependencies:
+    create-react-class "^15.5.1"
     object-assign "^4.0.1"
+    prop-types "^15.5.6"
 
 react-notifications@^1.3.0:
   version "1.3.0"

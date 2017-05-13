@@ -1,134 +1,115 @@
 // @flow
 
-import React from 'react'
-import { compose, withHandlers, withProps, withState } from 'recompose'
-import { Form, Header, Input } from 'semantic-ui-react'
-import CodeEditor from './CodeEditor'
-import Section from './Section'
-import Button from './Button'
-import { connect } from 'react-redux'
-import actionService from '../services/action_service.js'
-import { createMockType, createMockValue } from '../schema/getExampleValue'
-import { castArray, flatten, values } from 'lodash'
+import React from 'react';
+import {
+  compose,
+  flattenProp,
+  lifecycle,
+  shouldUpdate,
+  withHandlers,
+  withProps,
+  withState
+} from 'recompose';
+import { Form, Header, Input } from 'semantic-ui-react';
+import CodeEditor from './CodeEditor';
+import Section from './Section';
+import Button from './Button';
+import { connect } from 'react-redux';
+import { createMockType } from '../schema/getExampleValue';
+import { castArray, flatten, values } from 'lodash';
+import Debug from './Debug';
+import url from 'url';
+import getPropertiesOf from '../schema/getPropertiesOf.js';
 
-const DATA_TYPES = [
-  'Boolean',
-  'Number',
-  'Date',
-  'DateTime',
-  'Text',
-  'URL',
-]
-
-// todo: move to util folder
-function first(val) {
-  if (Array.isArray(val)) {
-    return val[ 0 ]
-  }
-  return val;
-}
-
-const CodeEditorView = compose(
+const ExampleValues = compose(
   connect(),
-  withState('nextValue', 'setNextValue', props => ({ description: '', text: props.initialValue })),
-  withHandlers({
-    save: props => event => {
-      console.log(props, event);
-    },
-  }),
-)(props => (
-  <Form>
-    <Input
-      fluid
-      placeholder={`Help us out! Add example value.`}
-      action={
-        <Button content="save" onClick={e => {
-          e.preventDefault()
-          props.onSubmit(props.nextValue)
-        }}/>
+  withState('index', 'setIndex', 0),
+  withProps(props => {
+    if (props.subject) {
+      let subject = props.subject;
+      let items = values(subject.exampleValue);
+      if (items[props.index]) {
+        return {
+          currentValue: items[props.index]
+        };
       }
-      onChange={(event, data) => props.setNextValue({ ...props.nextValue, description: data.value })}
-    />
-    <CodeEditor
-      value={props.nextValue.text}
-      onChange={text => props.setNextValue({ ...props.nextValue, text })}
-    />
-  </Form>
-));
-
-const SimpleInputView = compose(
-  withState('nextValue', 'setNextValue', {}),
-
-)(props => (
-  <Form>
-    <Input
-      fluid
-      placeholder={`Help us out! Add example value.`}
-      action={
-        <Button content="save" onClick={e => {
-          e.preventDefault()
-          props.onSubmit(props.nextValue)
-        }}/>
+      if (subject.type === 'Type') {
+        let json = createMockType(subject.id, getPropertiesOf(subject.id));
+        return {
+          currentValue: {
+            type: 'SoftwareSourceCode',
+            exampleOfWork: subject.id,
+            json: json,
+            text: JSON.stringify(json, null, 2)
+          }
+        };
       }
-      onChange={e => props.setNextValue(e.target.value)}
-    />
-  </Form>
-));
-
-export const AddExampleValue = props => {
-  return (
-    <div>
-      <CodeEditorView initialValue={props.initialValue} onSubmit={props.onSubmit}/>
-    </div>
-  );
-};
-
-const ExampleValueItem = item => {
-  return (
-    <pre>
-      <code>
-        {item.description && `## ${item.description}`}
-        {item.text}
-      </code>
-    </pre>
-  )
-}
-
-const ExampleValuesUI = props => {
-  let addValue;
-  if (props.exampleValue.length == 0) {
-    let type = props.subject.type === 'Type' ? props.subject.id : first(props.subject.rangeIncludes)
-    let mockValue;
-    if (DATA_TYPES.includes(type)) {
-      mockValue = createMockValue(type)
-    } else {
-      let properties = props.properties && props.properties[ type ]
-      mockValue = createMockType(type, properties);
     }
-    addValue = <AddExampleValue
-      initialValue={JSON.stringify(mockValue,null,2)}
-      onSubmit={next => {
-        props.dispatch(actionService.call('createExampleValue', props.subject, next.text, next.description))
-      }}
-    />
-  }
-
+  }),
+  withState('nextValue', 'setNextValue', props => ({ ...props.currentValue })),
+  withHandlers({
+    onSubmit: props => () => {
+      let object = props.nextValue;
+      try {
+        object.json = JSON.parse(object.text);
+      }
+      catch (e) {
+        console.error('Unable to parse JSON', object)
+        return;
+      }
+      finally {
+        if (object.url) {
+          props.dispatch({
+            type: 'UpdateAction',
+            object: object,
+            target: url.parse(object.url).pathname,
+            actionStatus: 'PotentialActionStatus'
+          });
+        } else {
+          props.dispatch({
+            type: 'AddAction',
+            object: object,
+            targetCollection: `/public/schema/${props.subject.id}/exampleValue`,
+            actionStatus: 'PotentialActionStatus'
+          });
+        }
+      }
+    }
+  }),
+  lifecycle({
+    componentWillReceiveProps(next) {
+      if (this.props.subject.id !== next.subject.id) {
+        this.props.setNextValue({ ...next.currentValue });
+      }
+    }
+  })
+)(props => {
   return (
-    <Section>
-      <Header content="Example Values"/>
-      {addValue}
-      {props.exampleValue && props.exampleValue.map(item => ExampleValueItem(item))}
-    </Section>
+    <Form>
+      <Input
+        fluid
+        placeholder={`Help us out! Add example value.`}
+        action={
+          <Button
+            content="save"
+            onClick={e => {
+              e.preventDefault();
+              props.onSubmit(props.nextValue);
+            }}
+          />
+        }
+        value={props.nextValue.description}
+        onChange={(event, data) =>
+          props.setNextValue({ ...props.nextValue, description: data.value })}
+      />
+      <CodeEditor
+        value={props.nextValue.text}
+        onChange={text => {
+          props.setNextValue({...props.nextValue, text})
+        }}
+      />
+    </Form>
   );
-};
-
-const controller = compose(
-  connect(),
-  withProps(props => ({
-    exampleValue: props.subject && values(props.subject.exampleValue),
-  })),
-)
-
-const ExampleValues = controller(ExampleValuesUI);
+});
 
 export default ExampleValues;
