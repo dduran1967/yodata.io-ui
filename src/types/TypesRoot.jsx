@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import { compose, getContext, lifecycle, withProps } from 'recompose';
 import actionSevice from '../services/action_service.js';
 import sampleSize from 'lodash/sampleSize';
+import keyBy from 'lodash/keyBy';
 
 const controller = compose(
   getContext({
@@ -15,7 +16,7 @@ const controller = compose(
   }),
   connect(
     state => ({
-      schema: state.db.schema,
+      schema: keyBy(state.schema.types,'id'),
       user: state.user
     }),
     {

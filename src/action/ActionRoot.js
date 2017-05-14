@@ -15,7 +15,7 @@ export default enhance(({ schema, dispatch }) => (
   <div>
     <CardList
       items={schema.actions}
-      onSelect={item => dispatch(navigateTo('action/view', { id: item.id }))}
+      onSelect={item => dispatch(navigateTo('types/view', { id: item.id }))}
     />
   </div>
 ))

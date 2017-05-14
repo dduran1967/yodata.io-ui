@@ -23,6 +23,8 @@ import fetchSQSMessage from './lib/util/fetchSQSMessage'
 import getSubClassesOf from './schema/getSubClassesOf.js';
 import {getExampleValue, createMockValue, createMockType} from './schema/getExampleValue.js'
 import getPropertiesOf from './schema/getPropertiesOf.js';
+import propertiesOfDeep from './schema/propertiesOfDeep';
+
 
 function getSubject(subjectId) {
   return store.getState().schema.index[subjectId];
@@ -157,6 +159,11 @@ class Yo {
   addExampleValue(subjectId, value) {
     let subject = getSubject(subjectId);
     return actionService.call('createExampleValue', subject, JSON.stringify(value,null,2) )
+  }
+
+  propertiesOfDeep(subjectId) {
+    let subject = store.getState().schema.index[subjectId];
+    return propertiesOfDeep(subject);
   }
 
 }

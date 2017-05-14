@@ -12,8 +12,8 @@ import {
 
 export const codeBlockContainerStyle = createStyle(
   padding(1, 2),
-  backgroundColor(darkGray),
-  color(veryLightGray)
+  backgroundColor("#eee"),
+  color("#333")
 )({});
 
 export default function CodeBlock(
@@ -21,7 +21,7 @@ export default function CodeBlock(
 ) {
   return (
     <div style={codeBlockContainerStyle}>
-      <pre><code>{props.content}</code></pre>
+      <pre><code>{props.currentValue.text}</code></pre>
     </div>
   );
 }

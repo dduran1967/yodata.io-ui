@@ -32,20 +32,18 @@ const exampleData = JSON.stringify(ed, null, 2)
 
 class CodeView extends React.Component {
   render() {
-    let {user, docs} = this.props.store;
-    return (
+        return (
       <div className="px-3">
 
         <ActionNav/>
 
         <section className="card">
-          <CodeEditor value={exampleData}/>
+          <CodeEditor value={this.props.value}/>
           <div className="card-block d-flex justify-content-between">
             <span className="btn btn-outline-success">POST</span>
-            <input className="form-control mx-1" type="text" defaultValue={user.inbox}/>
+            <input className="form-control mx-1" type="text" />
             <button
               className="btn btn-success"
-              onClick={()=> docs.post({url: user.inbox, data: exampleData}) }
             >SEND
             </button>
           </div>

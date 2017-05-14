@@ -36,7 +36,7 @@ const actionViewContainer = compose(
     if (!isLoading) {
       subject = schema.index[ router.route.params.id ];
       if (subject.type === 'Type') {
-        superTypes = getSuperTypes(schema.index, subject);
+        superTypes = getSuperTypes(subject);
         let findProperties = propertiesOf(schema.properties);
         properties = superTypes.reduce((state, superType) => {
           return { ...state, [superType]: findProperties(superType) };

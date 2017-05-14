@@ -1,5 +1,6 @@
 // @flow
 
+import store from '../store';
 import flatten from 'lodash/flatten'
 
 type Resource = {
@@ -7,7 +8,12 @@ type Resource = {
   subClassOf?: string
 }
 
-export default function getSuperTypes(typeIndex, subject: Resource) {
+export default function getSuperTypes(subject: Resource) {
+  let state = store.getState();
+  let typeIndex = {};
+  if (state && state.schema && state.schema.index) {
+    typeIndex = state.schema.index;
+  }
   let superTypes = [subject.id];
   let nextParent = subject.subClassOf;
   while (nextParent && nextParent !== subject.id) {

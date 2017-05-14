@@ -6,34 +6,28 @@ import 'codemirror/mode/javascript/javascript'
 import '../style/codemirror.css'
 import {codeBlockContainerStyle} from './CodeBlock'
 import stringify from './stringify'
+import { compose, withProps } from 'recompose';
 
-export const codeMirrorDefaultProps = {
-  options: {
-    lineNumbers: true,
-    mode: {name: 'javascript', json: true},
-    theme: 'base16-dark',
-  },
-}
-
-type CodeEditorProps = {
-  value: string | Object,
-  onChange?: (string) => void,
-  editorOptions?: Map<string, any>,
-  style?: Map<string, string>
-}
-
-const CodeEditor = (props: CodeEditorProps) => {
-  const value = (typeof props.value === 'object' ? stringify(props.value) : props.value )
-  const options = {...codeMirrorDefaultProps.options, ...props.editorOptions}
+const CodeEditor = compose(
+  withProps(props => ({
+    value: typeof props.value === 'object' ? stringify(props.value) : props.value,
+    options: {
+      lineNumbers: false,
+      mode: {name: 'javascript', json: true},
+      readOnly: props.hasOwnProperty('readOnly'),
+      matchTags: true,
+      ...props.options
+    },
+    style: {...codeBlockContainerStyle, ...props.style}
+  }))
+)(props => {
   return (
-    <div style={{...codeBlockContainerStyle, ...props.style}}>
-      <CodeMirror
-        value={value}
-        onChange={props.onChange}
-        options={options}
-      />
-    </div>
+    <CodeMirror
+      value={props.value}
+      onChange={props.onChange}
+      options={props.options}
+    />
   )
-};
+})
 
 export default CodeEditor;

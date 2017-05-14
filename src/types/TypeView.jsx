@@ -9,60 +9,33 @@ import Page from '../component/Page'
 import PropertiesList from '../schema/PropertiesList'
 import Link from '../component/Link'
 import castArray from 'lodash/castArray'
-import Header from '../component/Header'
-import isArray from 'lodash/isArray'
 import getSuperTypes from '../schema/getSuperTypes.js'
 import TypeCard from '../component/TypeCard'
 import { withLoader } from '../component/Loading'
-import Section from '../component/Section'
 import ExampleValues from '../component/ExampleValue'
 import SubClassesOf from '../schema/SubClassesOf'
 import subClassesOf from '../schema/getSubClassesOf'
+import Debug from '../component/Debug'
+import propertiesOfDeep from '../schema/propertiesOfDeep'
 
-
-const propertiesOf = propSource => id =>
-  propSource.filter(({ domainIncludes }) => {
-    if (isArray(domainIncludes)) {
-      return domainIncludes.includes(id);
-    }
-    if (typeof domainIncludes === 'string') {
-      return domainIncludes === id;
-    }
-    return false;
-  });
 
 const typeViewContainer = compose(
-  withState('tab','setTab',{
-    currentTab: 'Properties',
-    items: [
-      'Properties',
-      'Examples',
-      'More Specific Types'
-    ]
-  }),
   connect(({ schema, router }) => {
     let isLoading = isNull(router.route) || schema.hasData === false;
-    let subject, properties, superTypes;
+    let subject;
     if (!isLoading) {
       subject = schema.index[ router.route.params.id ];
-      if (subject.type === 'Type') {
-        superTypes = getSuperTypes(schema.index, subject);
-        let findProperties = propertiesOf(schema.properties);
-        properties = superTypes.reduce((state, superType) => {
-          return { ...state, [superType]: findProperties(superType) };
-        }, {});
-      }
     }
     return {
       isLoading,
       subject,
-      superTypes,
-      properties,
     };
   }),
   withLoader(props => props.isLoading),
-  withProps(({ subject, superTypes }) => {
-    let extra = [];
+  withProps(({ subject }) => {
+    const extra = [];
+    const superTypes = getSuperTypes(subject);
+
     if (subject.domainIncludes) {
       let domains = castArray(subject.domainIncludes).map(domain => (
         <Link key={domain} name="types/view" params={{ id: domain }}>
@@ -95,16 +68,28 @@ const typeViewContainer = compose(
       meta: subject.type,
       description: subject.description,
       extra,
-    };
+      superTypes,
+      subTypes: subClassesOf(subject.id),
+      properties: propertiesOfDeep(subject),
+    }
+  }),
+  withState('tab', 'setTab', {
+    currentTab: '',
+    items: [
+      'Properties',
+      'Examples',
+      'More Specific Types',
+      'Debug',
+    ],
   }),
   withHandlers({
     onBack: ({ navigateTo }) => event => navigateTo('types'),
-    selectTab: ({tab, setTab}) => (event, selected) => {
-      setTab({...tab, currentTab: selected.name})
+    selectTab: ({ tab, setTab }) => (event, selected) => {
+      setTab({ ...tab, currentTab: selected.name })
     },
     isActive: props => name => {
       return props.tab.currentTab === name;
-    }
+    },
   }),
 );
 
@@ -115,31 +100,41 @@ const TypeView = props => {
     extra,
     subject,
   } = props;
-  let subTypes = subClassesOf(subject && subject.id);
   let currentTab = props.tab.currentTab;
   return (
-    <Page style={{paddingBottom: '10em'}}>
+    <Page style={{ paddingBottom: '10em' }}>
       <TypeCard subject={subject} extra={extra}/>
 
       <Menu tabular>
+        {subject.type === 'Type' &&
         <MenuItem
           name="Properties"
           onClick={props.selectTab}
           active={props.isActive('Properties')}
         />
-        <MenuItem
-          name="Examples"
-          onClick={props.selectTab}
-          active={props.isActive('Examples')}
-        />
+        }
+        {props.subTypes && props.subTypes.length > 0 &&
         <MenuItem
           name="More Specific Types"
           onClick={props.selectTab}
           active={props.isActive('More Specific Types')}
         />
+        }
+
+        <MenuItem
+          name="Examples"
+          onClick={props.selectTab}
+          active={props.isActive('Examples')}
+        />
+
+        <MenuItem
+          name="Debug"
+          onClick={props.selectTab}
+          active={props.isActive('Debug')}
+        />
       </Menu>
 
-      {currentTab === 'Properties' &&
+      {currentTab === 'Properties' && subject.type === 'Type' &&
       <PropertiesList items={properties} dispatch={dispatch}/>
       }
 
@@ -149,6 +144,10 @@ const TypeView = props => {
 
       {currentTab === 'More Specific Types' &&
       <SubClassesOf subject={subject.id}/>
+      }
+
+      {currentTab === 'Debug' &&
+      <Debug {...{ subject }}/>
       }
     </Page>
   );
