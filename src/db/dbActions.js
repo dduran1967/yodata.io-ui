@@ -3,7 +3,7 @@ import {createAction} from 'redux-actions'
 import t from 'tcomb'
 import actionService from '../services/action_service.js';
 
-export function subscribe(name, url) {
+export function subscribe(name: string, url: string) {
   t.String(name);
   t.String(url);
   return {
@@ -12,6 +12,7 @@ export function subscribe(name, url) {
       name,
       type: 'SubscribeAction',
       object: url,
+      status: 'PotentialActionStatus'
     },
   }
 }

@@ -22,9 +22,9 @@ import * as ho from 'object-hash'
 import fetchSQSMessage from './lib/util/fetchSQSMessage'
 import getSubClassesOf from './schema/getSubClassesOf.js';
 import {getExampleValue, createMockValue, createMockType} from './schema/getExampleValue.js'
-import getPropertiesOf from './schema/getPropertiesOf.js';
+import getPropertiesOf from './schema/propertiesOf.js';
 import propertiesOfDeep from './schema/propertiesOfDeep';
-
+import getSchemaObject from './schema/getSchemaObject';
 
 function getSubject(subjectId) {
   return store.getState().schema.index[subjectId];
@@ -129,40 +129,39 @@ class Yo {
     })
   }
 
-  getSchemaObject(key) {
-    return store.getState().schema.index[key]
+  getSchemaObject(id) {
+    return getSchemaObject(id);
   }
 
   subClassOf(subject) {
     return getSubClassesOf(subject)
   }
 
-  getPropertiesOf(subjectId) {
-    return getPropertiesOf(subjectId);
+  propertiesOf(id) {
+    return getPropertiesOf(id);
   }
 
-  getExampleValue(subjectId) {
-    let subject = store.getState().schema.index[subjectId]
+  getExampleValue(id) {
+    let subject = store.getState().schema.index[id]
     return getExampleValue(subject);
   }
 
-  createMockValue(subjectId) {
-    return createMockValue(subjectId);
+  createMockValue(id) {
+    return createMockValue(id);
   }
 
-  createMockType(subjectId) {
-    let subject = store.getState().schema.index[subjectId];
-    let properties = getPropertiesOf(subjectId);
-    return createMockType(subjectId, properties);
+  createMockType(id) {
+    let properties = getPropertiesOf(id);
+    return createMockType(id, properties);
   }
 
-  addExampleValue(subjectId, value) {
-    let subject = getSubject(subjectId);
+  addExampleValue(id, value) {
+    let subject = getSubject(id);
     return actionService.call('createExampleValue', subject, JSON.stringify(value,null,2) )
   }
 
-  propertiesOfDeep(subjectId) {
-    let subject = store.getState().schema.index[subjectId];
+  propertiesOfDeep(id) {
+    let subject = store.getState().schema.index[id];
     return propertiesOfDeep(subject);
   }
 

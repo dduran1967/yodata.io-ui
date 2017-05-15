@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/propertiesMap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/schema/getPropertiesOf.js" afterPath="$PROJECT_DIR$/src/schema/propertiesOf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/asset-manifest.json" afterPath="$PROJECT_DIR$/build/asset-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/ActionRoot.js" afterPath="$PROJECT_DIR$/src/action/ActionRoot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/ActionView.js" afterPath="$PROJECT_DIR$/src/action/ActionView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/code.view.js" afterPath="$PROJECT_DIR$/src/action/code.view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/CodeBlock.jsx" afterPath="$PROJECT_DIR$/src/component/CodeBlock.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/CodeEditor.js" afterPath="$PROJECT_DIR$/src/component/CodeEditor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/ExampleValue.js" afterPath="$PROJECT_DIR$/src/component/ExampleValue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/getPropertiesOf.js" afterPath="$PROJECT_DIR$/src/schema/getPropertiesOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/TypeCard.jsx" afterPath="$PROJECT_DIR$/src/component/TypeCard.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/dbActions.js" afterPath="$PROJECT_DIR$/src/db/dbActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/getSchemaObject.js" afterPath="$PROJECT_DIR$/src/schema/getSchemaObject.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/getSuperTypes.js" afterPath="$PROJECT_DIR$/src/schema/getSuperTypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/codemirror.css" afterPath="$PROJECT_DIR$/src/style/codemirror.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" afterPath="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/types/TypeView.jsx" afterPath="$PROJECT_DIR$/src/types/TypeView.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/types/TypesRoot.jsx" afterPath="$PROJECT_DIR$/src/types/TypesRoot.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/yo.js" afterPath="$PROJECT_DIR$/src/yo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,87 +33,7 @@
     <favorites_list name="yodata.io-ui" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExampleValue.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/component/ExampleValue.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-              <folding>
-                <element signature="e#10#35#0" expanded="true" />
-                <element signature="e#641#1078#0" expanded="true" />
-                <element signature="e#1207#1928#0" expanded="true" />
-                <element signature="e#1475#1653#0" expanded="false" />
-                <element signature="e#2134#3209#0" expanded="true" />
-                <element signature="e#2581#2776#0" expanded="false" />
-                <element signature="e#3067#3145#0" expanded="true" />
-                <element signature="e#3455#3614#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getPropertiesOf.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/schema/getPropertiesOf.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="e#128#538#0" expanded="true" />
-                <element signature="e#340#534#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getExampleValue.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/schema/getExampleValue.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!block;n#createMockValue#0" expanded="true" />
-                <element signature="e#953#1111#0" expanded="true" />
-                <element signature="n#!!block;n#createMockType#0" expanded="true" />
-                <element signature="e#1501#1610#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeView.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/types/TypeView.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-              <folding>
-                <element signature="e#10#44#0" expanded="true" />
-                <element signature="e#1183#2399#0" expanded="true" />
-                <element signature="e#1367#1468#0" expanded="false" />
-                <element signature="e#1692#1790#0" expanded="false" />
-                <element signature="e#2697#2756#0" expanded="true" />
-                <element signature="e#2789#2840#0" expanded="true" />
-                <element signature="e#2878#4234#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/yo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-                <element signature="n#!!block;n#getSchemaObject#0;n#Yo#0" expanded="true" />
-                <element signature="n#!!block;n#propertiesOfDeep#0;n#Yo#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,9 +45,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>withProps</find>
-      <find>onChang</find>
-      <find>life</find>
       <find>actions</find>
       <find>mo</find>
       <find>console</find>
@@ -160,6 +72,9 @@
       <find>flatten</find>
       <find>pre</find>
       <find>cli</find>
+      <find>getsche</find>
+      <find>typecard</find>
+      <find>getSuper</find>
     </findStrings>
     <replaceStrings>
       <replace>var</replace>
@@ -176,8 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/component/FieldEditable.jsx" />
-        <option value="$PROJECT_DIR$/src/schema/schemaLogic.js" />
         <option value="$PROJECT_DIR$/src/component/LoginForm.js" />
         <option value="$PROJECT_DIR$/src/user/currentUser.js" />
         <option value="$PROJECT_DIR$/src/services/auth_service.js" />
@@ -202,9 +115,7 @@
         <option value="$PROJECT_DIR$/src/style/App.css" />
         <option value="$PROJECT_DIR$/src/db/subscribeTo.js" />
         <option value="$PROJECT_DIR$/src/component/Appbar.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/schema/getSchemaObject.js" />
         <option value="$PROJECT_DIR$/src/schema/getExampleValue.js" />
         <option value="$PROJECT_DIR$/database.rules.json" />
         <option value="$PROJECT_DIR$/src/services/action_service.js" />
@@ -213,20 +124,24 @@
         <option value="$PROJECT_DIR$/src/schema/SubclassesOf.js" />
         <option value="$PROJECT_DIR$/src/schema/getSubClassesOf.js" />
         <option value="$PROJECT_DIR$/src/schema/SubClassesOf.js" />
-        <option value="$PROJECT_DIR$/src/component/TypeCard.jsx" />
         <option value="$PROJECT_DIR$/src/action/ActionRoot.js" />
         <option value="$PROJECT_DIR$/src/action/code.view.js" />
         <option value="$PROJECT_DIR$/src/style/codemirror.css" />
         <option value="$PROJECT_DIR$/src/component/CodeEditor.js" />
-        <option value="$PROJECT_DIR$/src/component/CodeBlock.jsx" />
-        <option value="$PROJECT_DIR$/src/schema/getSuperTypes.js" />
         <option value="$PROJECT_DIR$/src/schema/getPropertiesOf.js" />
         <option value="$PROJECT_DIR$/src/action/ActionView.js" />
-        <option value="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" />
         <option value="$PROJECT_DIR$/src/types/TypesRoot.jsx" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/component/CodeBlock.jsx" />
+        <option value="$PROJECT_DIR$/src/db/dbActions.js" />
+        <option value="$PROJECT_DIR$/src/schema/getSchemaObject.js" />
         <option value="$PROJECT_DIR$/src/yo.js" />
+        <option value="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" />
+        <option value="$PROJECT_DIR$/src/schema/propertiesMap.js" />
         <option value="$PROJECT_DIR$/src/types/TypeView.jsx" />
+        <option value="$PROJECT_DIR$/src/schema/getSuperTypes.js" />
         <option value="$PROJECT_DIR$/src/component/ExampleValue.js" />
+        <option value="$PROJECT_DIR$/src/component/TypeCard.jsx" />
       </list>
     </option>
   </component>
@@ -392,6 +307,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="schema" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -411,6 +344,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="router" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -726,7 +677,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.searchInterface.js">
+  <component name="RunManager" selected="npm.start">
     <configuration default="false" name="eject" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -841,8 +792,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.searchInterface.js" />
-        <item index="1" class="java.lang.String" itemvalue="npm.start" />
+        <item index="0" class="java.lang.String" itemvalue="npm.start" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.searchInterface.js" />
         <item index="2" class="java.lang.String" itemvalue="npm.test" />
         <item index="3" class="java.lang.String" itemvalue="npm.build" />
         <item index="4" class="java.lang.String" itemvalue="npm.eject" />
@@ -996,7 +947,7 @@
       <workItem from="1494243327989" duration="4698000" />
       <workItem from="1494260393699" duration="138857000" />
       <workItem from="1494651443622" duration="18381000" />
-      <workItem from="1494700896495" duration="25662000" />
+      <workItem from="1494700896495" duration="37007000" />
     </task>
     <task id="LOCAL-00001" summary="add gh-pages">
       <created>1487102793367</created>
@@ -1215,11 +1166,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494694671286</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="clean up examplevalues &amp; codeedit UI">
+      <created>1494788683698</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1494788683698</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="381800000" />
+    <option name="totallyTimeSpent" value="393145000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1232,7 +1190,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="640" y="23" width="1280" height="1413" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28160486" sideWeight="0.5114885" order="2" side_tool="true" content_ui="tabs" />
@@ -1242,7 +1199,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="640" y="23" width="1280" height="1413" />
       <window_info id="Flow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27403483" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23431295" sideWeight="0.5124905" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23431295" sideWeight="0.5124905" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.47161242" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -1329,44 +1286,16 @@
     <MESSAGE value="add firebase config" />
     <MESSAGE value="add firebase config&#10;add onAccountCreate event handler" />
     <MESSAGE value="add tabs to typeView" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tabs to typeView" />
+    <MESSAGE value="clean up examplevalues &amp; codeedit UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up examplevalues &amp; codeedit UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/component/SearchInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="70" column="3" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="70" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/search_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1106">
-          <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Appbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="57" column="6" lean-forward="true" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getSchemaObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript7.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1396,13 +1325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/dbActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/schema/schema_interface.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
@@ -1411,22 +1333,6 @@
             <element signature="e#0#63#0" expanded="false" />
             <element signature="e#3464#3592#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/action_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="42" column="68" lean-forward="true" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/PropertiesList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1477,24 +1383,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/TypeCard.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/BasicCard.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1503,16 +1395,6 @@
         <state relative-caret-position="420">
           <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/SubClassesOf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#10#35#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1585,16 +1467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getSubClassesOf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-          <folding>
-            <element signature="e#10#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -1617,17 +1489,6 @@
           <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#9#34#0" expanded="false" />
-            <element signature="n#!!block;n#constructor#0;n#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1688,16 +1549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/CodeBlock.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="e#10#36#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/action/ActionView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -1724,92 +1575,213 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getSuperTypes.js">
+    <entry file="file://$PROJECT_DIR$/src/component/CodeBlock.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="42">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding>
-            <element signature="e#10#39#0" expanded="false" />
-            <element signature="e#192#608#0" expanded="false" />
+            <element signature="e#349#499#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding>
+            <element signature="e#9#34#0" expanded="false" />
+            <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/BasicCard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/schemaLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/SubClassesOf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/PropertiesList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/getSubClassesOf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/getExampleValue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+          <folding>
+            <element signature="e#10#44#0" expanded="false" />
+            <element signature="n#!!block;n#first#0" expanded="false" />
+            <element signature="n#!!block;n#getExampleValue#0" expanded="false" />
+            <element signature="n#!!block;n#createMockValue#0" expanded="false" />
+            <element signature="e#953#1111#0" expanded="false" />
+            <element signature="n#!!block;n#createMockType#0" expanded="false" />
+            <element signature="e#1501#1610#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/action_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding>
+            <element signature="e#606#1005#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/propertiesOf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/getSchemaObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/subscribeTo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/dbActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!block;n#subscribe#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/schema/propertiesOfDeep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        <state relative-caret-position="231">
+          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
           <folding>
-            <element signature="e#204#383#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/types/TypeView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-          <folding>
-            <element signature="e#10#44#0" expanded="true" />
-            <element signature="e#1183#2399#0" expanded="true" />
-            <element signature="e#1367#1468#0" expanded="false" />
-            <element signature="e#1692#1790#0" expanded="false" />
-            <element signature="e#2697#2756#0" expanded="true" />
-            <element signature="e#2789#2840#0" expanded="true" />
-            <element signature="e#2878#4234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/yo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="n#!!block;n#getSchemaObject#0;n#Yo#0" expanded="true" />
-            <element signature="n#!!block;n#propertiesOfDeep#0;n#Yo#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getPropertiesOf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#538#0" expanded="true" />
-            <element signature="e#340#534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getExampleValue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#createMockValue#0" expanded="true" />
-            <element signature="e#953#1111#0" expanded="true" />
-            <element signature="n#!!block;n#createMockType#0" expanded="true" />
-            <element signature="e#1501#1610#0" expanded="true" />
+            <element signature="e#10#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/ExampleValue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        <state relative-caret-position="432">
+          <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
           <folding>
             <element signature="e#10#35#0" expanded="true" />
-            <element signature="e#641#1078#0" expanded="true" />
-            <element signature="e#1207#1928#0" expanded="true" />
-            <element signature="e#1475#1653#0" expanded="false" />
-            <element signature="e#2134#3209#0" expanded="true" />
-            <element signature="e#2581#2776#0" expanded="false" />
-            <element signature="e#3067#3145#0" expanded="true" />
-            <element signature="e#3455#3614#0" expanded="false" />
+            <element signature="e#603#1080#0" expanded="true" />
+            <element signature="e#1209#1930#0" expanded="true" />
+            <element signature="e#2652#2760#0" expanded="true" />
+            <element signature="e#3069#3147#0" expanded="true" />
+            <element signature="e#3243#3315#0" expanded="true" />
+            <element signature="e#3514#3604#0" expanded="true" />
+            <element signature="e#3859#3925#0" expanded="true" />
+            <element signature="e#4119#4623#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/TypeCard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types/TypeView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="e#916#1252#0" expanded="true" />
+            <element signature="e#1697#2914#0" expanded="true" />
+            <element signature="e#3180#3240#0" expanded="true" />
+            <element signature="e#3273#3324#0" expanded="true" />
+            <element signature="e#3360#4686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/getSuperTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/yo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1086">
+          <caret line="173" column="21" lean-forward="true" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="n#!!block;n#getSchemaObject#0;n#Yo#0" expanded="true" />
+            <element signature="n#!!block;n#propertiesOf#0;n#Yo#0" expanded="true" />
+            <element signature="n#!!block;n#getExampleValue#0;n#Yo#0" expanded="true" />
+            <element signature="n#!!block;n#createMockValue#0;n#Yo#0" expanded="true" />
+            <element signature="n#!!block;n#createMockType#0;n#Yo#0" expanded="true" />
+            <element signature="n#!!block;n#addExampleValue#0;n#Yo#0" expanded="true" />
+            <element signature="n#!!block;n#propertiesOfDeep#0;n#Yo#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/propertiesMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#10#53#0" expanded="true" />
+            <element signature="e#365#442#0" expanded="true" />
           </folding>
         </state>
       </provider>

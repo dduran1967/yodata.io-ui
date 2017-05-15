@@ -5,9 +5,7 @@ import {
   backgroundColor,
   color,
   createStyle,
-  darkGray,
   padding,
-  veryLightGray
 } from "../style/theme.js";
 
 export const codeBlockContainerStyle = createStyle(
@@ -21,7 +19,7 @@ export default function CodeBlock(
 ) {
   return (
     <div style={codeBlockContainerStyle}>
-      <pre><code>{props.currentValue.text}</code></pre>
+      <pre><code>{props.currentValue && props.currentValue.text}</code></pre>
     </div>
   );
 }

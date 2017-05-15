@@ -7,6 +7,9 @@ import { connect } from 'react-redux'
 import FieldEditable from './FieldEditable'
 import { propTypes } from 'tcomb-react'
 import t from 'tcomb'
+import Debug from './Debug'
+import {subscribe} from '../db/dbActions.js';
+
 
 const TypeCardProps = t.struct({
   header: t.maybe(t.String),
@@ -15,7 +18,6 @@ const TypeCardProps = t.struct({
   subject: t.Object,
   extra: t.Any,
   data: t.Any,
-  dispatch: t.Function,
 });
 
 export const TypeCard = (props: TypeCardProps) => {
@@ -36,24 +38,4 @@ export const TypeCard = (props: TypeCardProps) => {
 };
 TypeCard.propTypes = propTypes(TypeCardProps);
 
-export default compose(
-  connect((state, props) => {
-    return {
-      data: state.db[ props.subject && props.subject.id ],
-    };
-  }),
-  lifecycle({
-    componentWillReceiveProps(nextProps) {
-      let { subject, dispatch } = nextProps;
-      if (subject && dispatch) {
-        dispatch({
-          type: 'DB/SUBSCRIBE',
-          payload: {
-            name: subject.id,
-            object: `/public/schema/${subject.id}`,
-          },
-        });
-      }
-    },
-  }),
-)(TypeCard);
+export default TypeCard

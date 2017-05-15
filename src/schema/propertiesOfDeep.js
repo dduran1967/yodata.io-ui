@@ -1,7 +1,8 @@
 // @flow
 
 import superTypesOf from './getSuperTypes';
-import propertiesOf from './getPropertiesOf';
+import propertiesOf from './propertiesOf';
+import flatMap from 'lodash/flatMap';
 
 type S = {
   id: string,
@@ -10,7 +11,8 @@ type S = {
 
 export default function propertiesOfDeep(subject: S) {
   let superTypes = superTypesOf(subject);
-  return superTypes.reduce((properties, superType) => {
+  let propMap = superTypes.reduce((properties, superType) => {
     return { ...properties, [superType]: propertiesOf(superType) };
   }, {});
+  return flatMap(propMap);
 }

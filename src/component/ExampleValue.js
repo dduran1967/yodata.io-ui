@@ -1,16 +1,17 @@
 // @flow
 
 import React from 'react'
-import { compose, flattenProp, lifecycle, shouldUpdate, withHandlers, withProps, withState } from 'recompose'
+import { compose, lifecycle, withHandlers, withProps, withState } from 'recompose'
 import { Form, Header, Input, List } from 'semantic-ui-react'
 import CodeEditor from './CodeEditor'
 import Section from './Section'
 import Button from './Button'
 import { connect } from 'react-redux'
 import { createMockType } from '../schema/getExampleValue'
-import { castArray, flatten, values } from 'lodash'
+import { flatMap, values } from 'lodash'
 import url from 'url'
-import getPropertiesOf from '../schema/getPropertiesOf.js'
+import propertiesOfDeep from '../schema/propertiesOfDeep'
+
 
 const ExampleValues = compose(
   connect(),
@@ -20,7 +21,8 @@ const ExampleValues = compose(
     if (props.subject) {
       let subject = props.subject;
       if (subject.type === 'Type') {
-        let json = createMockType(subject.id, getPropertiesOf(subject.id));
+        let allProperties = propertiesOfDeep(subject)
+        let json = createMockType(subject.id, allProperties);
         currentValue = {
           type: 'SoftwareSourceCode',
           exampleOfWork: subject.id,

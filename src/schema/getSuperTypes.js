@@ -9,16 +9,19 @@ type Resource = {
 }
 
 export default function getSuperTypes(subject: Resource) {
-  let state = store.getState();
-  let typeIndex = {};
-  if (state && state.schema && state.schema.index) {
-    typeIndex = state.schema.index;
+  if (subject && subject.id) {
+    let state = store.getState();
+    let typeIndex = {};
+    if (state && state.schema && state.schema.index) {
+      typeIndex = state.schema.index;
+    }
+    let superTypes = [subject.id];
+    let nextParent = subject.subClassOf;
+    while (nextParent && nextParent !== subject.id) {
+      superTypes.push(nextParent);
+      nextParent = typeIndex[nextParent] && typeIndex[nextParent].subClassOf;
+    }
+    return flatten(superTypes)
   }
-  let superTypes = [subject.id];
-  let nextParent = subject.subClassOf;
-  while (nextParent && nextParent !== subject.id) {
-    superTypes.push(nextParent);
-    nextParent = typeIndex[nextParent] && typeIndex[nextParent].subClassOf;
-  }
-  return flatten(superTypes)
+  throw new Error('getSuperTypes called without a subject', subject)
 }
