@@ -1,19 +1,77 @@
-import React from 'react'
-import {Header, Section} from '../component'
-import withUser from './withUser'
+import React from 'react';
+import { Header, Section } from '../component';
+import { compose, withHandlers, withState } from 'recompose';
+import { connect } from 'react-redux';
+import Page from '../component/Page';
+import CodeEditor from '../component/CodeEditor';
+import { Button, Form, Input, SegmentGroup } from 'semantic-ui-react';
 
-export const UserRootView = ({user, dispatch, fetchProfile, ...props}) => (
-  <div className="ui grid">
+const UserRoot = compose(
+  connect(state => ({
+    user: state.user,
+    thrume: state.thrume
+  })),
+  withState(
+    'webhookURL',
+    'setWebhookURL',
+    ({ thrume }) => thrume.webhook && thrume.webhook.url
+  ),
+  withHandlers({
+    saveFile: ({ store, codeValue }) => event => {
+      store.dispatch({ type: 'REACTIONS/SAVE_FILE', payload: codeValue });
+    },
+    sendToWebhook: ({ store, webhookURL, codeValue }) => event => {
+      store.dispatch({
+        type: 'THRUME/SET_WEBHOOK',
+        payload: {
+          enabled: true,
+          url: webhookURL
+        }
+      });
+      store.dispatch({
+        type: 'THRUME/SEND',
+        payload: {
+          type: 'LikeAction',
+          agent: {
+            type: 'Organization',
+            name: 'Yodata'
+          },
+          object: {
+            type: 'Text',
+            value: 'We think you are pretty neat.'
+          }
+        }
+      });
+    }
+  })
+)(({ user, dispatch, fetchProfile, ...props }) => (
+  <Page>
     <Section>
-      <Header>User Authentication</Header>
-      <p>The easiest way to authenticate API access with firebase auth is with the firebase client package.</p>
+      <Header
+        content="Webhooks"
+        subheader="Push actions to your server in real time."
+      />
+      <CodeEditor />
+      <SegmentGroup horizontal>
+        <Section style={{ flexGrow: 1 }}>
+          <Form>
+            <Input
+              onChange={e => props.setWebhookURL(e.target.value)}
+              fluid
+              name={'webhookURL'}
+              label={'URL'}
+              placeholder="http://requestb.in/1kbym8l1"
+              value={props.webhookURL}
+            />
+          </Form>
+        </Section>
+        <Section>
+          <Button primary content="Send" onClick={props.sendToWebhook} />
+        </Section>
+      </SegmentGroup>
 
-      <p><a href="https://firebase.google.com/docs/auth/web/password-auth">Firebase Password Authentication with
-        Javascript Documentation and client downloads</a></p>
-
-      <p>You will need an API key, contact <a href="mailto:dave@yodata.io">dave@yodata.io</a> to get one.</p>
     </Section>
-  </div>
-)
+  </Page>
+));
 
-export default withUser(UserRootView);
+export default UserRoot;

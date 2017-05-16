@@ -2,6 +2,7 @@
 
 import trim from 'lodash/trim';
 import React from 'react';
+import CodeEditor from './CodeEditor';
 
 const entries = Object.entries;
 const newline = '\n';
@@ -41,20 +42,20 @@ export default class HttpCodeExample extends React.Component {
       headers: {},
       url: string,
       body: string,
-      status: string,
+      status: string
     },
     response: {
       contentType: string,
       headers: {},
       body: string,
       json: {},
-      status: string,
+      status: string
     },
-    comment: string,
+    comment: string
   };
 
   static defaultProps = {
-    method: 'GET',
+    method: 'GET'
   };
 
   render() {
@@ -63,16 +64,26 @@ export default class HttpCodeExample extends React.Component {
     return (
       <div style={{ marginBottom: '1em' }}>
         {this.props.comment}
-        <div className="ui inverted basic segment">
+        <div>
+
           {this.props.request &&
             <div>
-              REQUEST:
-              <pre><code style={{ color: 'lime' }}>{request}</code></pre>
+              <h3>REQUEST</h3>
+              <CodeEditor
+                readonly
+                value={request}
+                style={{ marginBottom: '1em' }}
+              />
             </div>}
+
           {this.props.response &&
             <div>
-              RESPONSE:
-              <pre><code style={{ color: 'lime' }}>{response}</code></pre>
+              <h3>RESPONSE</h3>
+              <CodeEditor
+                readonly
+                value={response}
+                style={{ marginBottom: '1em' }}
+              />
             </div>}
         </div>
       </div>
