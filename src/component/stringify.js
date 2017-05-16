@@ -1,6 +1,9 @@
 
 // @flow
 
+import json from 'json5';
+
+
 interface Resource {
   type?: string,
   id?: string
@@ -8,5 +11,5 @@ interface Resource {
 
 export default function stringify(value:Resource) {
   let {type, id, ...rest} = value;
-  return JSON.stringify({type,id, ...rest},null,2)
+  return json.stringify({type,id, ...rest},null,2)
 }

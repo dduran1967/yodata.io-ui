@@ -12,7 +12,6 @@ import { flatMap, values } from 'lodash'
 import url from 'url'
 import propertiesOfDeep from '../schema/propertiesOfDeep'
 
-
 const ExampleValues = compose(
   connect(),
   withState('index', 'setIndex', 0),
@@ -75,42 +74,38 @@ const ExampleValues = compose(
 )(props => {
   let items = values(props.subject.exampleValue);
   let listItems = items.map(item => (
-    <Section>
-      <CodeEditor readOnly value={item.text}/>
-    </Section>
+    <ViewEditExample subject={props.subject} currentValue={item} />
   ));
   return (
     <div>
       <List>
         {listItems}
       </List>
-      <Section>
-        <Header content="Add a new example"/>
-        <Form>
-          <Input
-            fluid
-            placeholder={`Help us out! Add example value.`}
-            action={
-              <Button
-                content="save"
-                onClick={e => {
-                  e.preventDefault();
-                  props.onSubmit(props.nextValue);
-                }}
-              />
-            }
-            value={props.nextValue.description}
-            onChange={(event, data) =>
-              props.setNextValue({ ...props.nextValue, description: data.value })}
-          />
-          <CodeEditor
-            value={props.nextValue.text}
-            onChange={text => {
-              props.setNextValue({ ...props.nextValue, text })
-            }}
-          />
-        </Form>
-      </Section>
+      <Header content="Add a new example"/>
+      <Form>
+        <Input
+          fluid
+          placeholder={`Help us out! Add example value.`}
+          action={
+            <Button
+              content="save"
+              onClick={e => {
+                e.preventDefault();
+                props.onSubmit(props.nextValue);
+              }}
+            />
+          }
+          value={props.nextValue.description}
+          onChange={(event, data) =>
+            props.setNextValue({ ...props.nextValue, description: data.value })}
+        />
+        <CodeEditor
+          value={props.nextValue.text}
+          onChange={text => {
+            props.setNextValue({ ...props.nextValue, text })
+          }}
+        />
+      </Form>
     </div>
   )
 })

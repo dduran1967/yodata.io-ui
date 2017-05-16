@@ -22,9 +22,11 @@ import * as ho from 'object-hash'
 import fetchSQSMessage from './lib/util/fetchSQSMessage'
 import getSubClassesOf from './schema/getSubClassesOf.js';
 import {getExampleValue, createMockValue, createMockType} from './schema/getExampleValue.js'
-import getPropertiesOf from './schema/propertiesOf.js';
+import propertiesOf from './schema/propertiesOf.js';
 import propertiesOfDeep from './schema/propertiesOfDeep';
 import getSchemaObject from './schema/getSchemaObject';
+import json from 'json5';
+import superTypesOf from './schema/getSuperTypes.js';
 
 function getSubject(subjectId) {
   return store.getState().schema.index[subjectId];
@@ -138,7 +140,7 @@ class Yo {
   }
 
   propertiesOf(id) {
-    return getPropertiesOf(id);
+    return propertiesOf(id);
   }
 
   getExampleValue(id) {
@@ -150,8 +152,7 @@ class Yo {
     return createMockValue(id);
   }
 
-  createMockType(id) {
-    let properties = getPropertiesOf(id);
+  createMockType(id, properties) {
     return createMockType(id, properties);
   }
 
@@ -163,6 +164,14 @@ class Yo {
   propertiesOfDeep(id) {
     let subject = store.getState().schema.index[id];
     return propertiesOfDeep(subject);
+  }
+
+  superTypesOf(id) {
+    return superTypesOf(getSchemaObject(id))
+  }
+
+  get json() {
+    return json;
   }
 
 }

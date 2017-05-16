@@ -9,6 +9,9 @@ import { compose, getContext, lifecycle, withProps } from 'recompose';
 import actionSevice from '../services/action_service.js';
 import sampleSize from 'lodash/sampleSize';
 import keyBy from 'lodash/keyBy';
+import subClassesOf from '../schema/getSubClassesOf';
+import values from 'lodash/values';
+
 
 const controller = compose(
   getContext({
@@ -16,7 +19,7 @@ const controller = compose(
   }),
   connect(
     state => ({
-      schema: keyBy(state.schema.types,'id'),
+      schema: keyBy(subClassesOf('Thing'),'id'),
       user: state.user
     }),
     {
@@ -24,9 +27,8 @@ const controller = compose(
     }
   ),
   withProps(props => {
-    let listItems = sampleSize(props.schema, 25);
     return {
-      items: listItems
+      items: values(props.schema)
     };
   }),
   lifecycle({

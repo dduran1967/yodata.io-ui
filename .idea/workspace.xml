@@ -2,19 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/schema/propertiesMap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/schema/getPropertiesOf.js" afterPath="$PROJECT_DIR$/src/schema/propertiesOf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/red-card-image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/red-logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/AppView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/AppsRoot.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/CodeBlock.jsx" afterPath="$PROJECT_DIR$/src/component/CodeBlock.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flowtypes.flow.js" afterPath="$PROJECT_DIR$/flowtypes.flow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/ActionCard.js" afterPath="$PROJECT_DIR$/src/component/ActionCard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/ExampleValue.js" afterPath="$PROJECT_DIR$/src/component/ExampleValue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/TypeCard.jsx" afterPath="$PROJECT_DIR$/src/component/TypeCard.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/dbActions.js" afterPath="$PROJECT_DIR$/src/db/dbActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/SpringCard.jsx" afterPath="$PROJECT_DIR$/src/component/SpringCard.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/stringify.js" afterPath="$PROJECT_DIR$/src/component/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/routes.js" afterPath="$PROJECT_DIR$/src/router/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/SubClassesOf.js" afterPath="$PROJECT_DIR$/src/schema/SubClassesOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/getExampleValue.js" afterPath="$PROJECT_DIR$/src/schema/getExampleValue.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/getSchemaObject.js" afterPath="$PROJECT_DIR$/src/schema/getSchemaObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/getSuperTypes.js" afterPath="$PROJECT_DIR$/src/schema/getSuperTypes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/getSubClassesOf.js" afterPath="$PROJECT_DIR$/src/schema/getSubClassesOf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" afterPath="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thrume/thrume-logic.js" afterPath="$PROJECT_DIR$/src/thrume/thrume-logic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thrume/thrume-root.jsx" afterPath="$PROJECT_DIR$/src/thrume/thrume-root.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/types/TypeView.jsx" afterPath="$PROJECT_DIR$/src/types/TypeView.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/types/TypesRoot.jsx" afterPath="$PROJECT_DIR$/src/types/TypesRoot.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/yo.js" afterPath="$PROJECT_DIR$/src/yo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +43,145 @@
     <favorites_list name="yodata.io-ui" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AppView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/AppView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding>
+                <element signature="e#714#1112#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getExampleValue.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/schema/getExampleValue.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+              <folding>
+                <element signature="e#10#44#0" expanded="true" />
+                <element signature="n#!!block;n#first#0" expanded="true" />
+                <element signature="n#!!block;n#hasExample#0" expanded="true" />
+                <element signature="n#!!block;n#createMockType#0" expanded="true" />
+                <element signature="e#2219#2272#0" expanded="true" />
+                <element signature="n#!!block;n#getExampleValue#0" expanded="true" />
+                <marker date="1494948697000" expanded="true" signature="2102:2746" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/yo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1734">
+              <caret line="154" column="34" lean-forward="false" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+                <element signature="n#!!block;n#propertiesOf#0;n#Yo#0" expanded="true" />
+                <element signature="n#!!block;n#createMockValue#0;n#Yo#0" expanded="true" />
+                <element signature="n#!!block;n#superTypesOf#0;n#Yo#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getSchemaObject.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/schema/getSchemaObject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+              <folding>
+                <element signature="e#292#472#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flowtypes.flow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flowtypes.flow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="propertiesOfDeep.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/schema/propertiesOfDeep.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <element signature="e#288#589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleValue.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/component/ExampleValue.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="819">
+              <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+              <folding>
+                <element signature="e#654#1036#0" expanded="false" />
+                <element signature="e#726#1030#0" expanded="false" />
+                <element signature="e#867#1022#0" expanded="false" />
+                <element signature="e#1048#1075#0" expanded="false" />
+                <element signature="e#1177#1934#0" expanded="false" />
+                <element signature="e#1256#1312#0" expanded="false" />
+                <element signature="e#1329#1408#0" expanded="false" />
+                <element signature="e#1423#1923#0" expanded="false" />
+                <element signature="e#1449#1666#0" expanded="false" />
+                <element signature="e#1476#1654#0" expanded="false" />
+                <element signature="e#1672#1915#0" expanded="false" />
+                <element signature="e#1699#1903#0" expanded="false" />
+                <element signature="e#1949#2121#0" expanded="false" />
+                <element signature="e#1987#2116#0" expanded="false" />
+                <element signature="e#2042#2110#0" expanded="false" />
+                <element signature="e#2544#2727#0" expanded="false" />
+                <element signature="e#3002#3076#0" expanded="true" />
+                <element signature="e#3151#3223#0" expanded="true" />
+                <element signature="e#3365#3524#0" expanded="false" />
+                <element signature="e#3767#3833#0" expanded="true" />
+                <element signature="e#4027#4531#0" expanded="true" />
+                <element signature="e#4112#4280#0" expanded="false" />
+                <element signature="e#4321#4515#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="thrume-logic.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thrume/thrume-logic.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="584">
+              <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+              <folding>
+                <element signature="e#10#41#0" expanded="true" />
+                <element signature="e#2731#2771#0" expanded="true" />
+                <element signature="e#4259#4316#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/router/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -45,13 +193,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>actions</find>
-      <find>mo</find>
-      <find>console</find>
-      <find>mock</find>
-      <find>map</find>
-      <find>sub</find>
-      <find>Input</find>
       <find>reduc</find>
       <find>de</find>
       <find>init</find>
@@ -75,6 +216,13 @@
       <find>getsche</find>
       <find>typecard</find>
       <find>getSuper</find>
+      <find>firebase</find>
+      <find>x</find>
+      <find>return 'x'</find>
+      <find>thrume</find>
+      <find>routes</find>
+      <find>json</find>
+      <find>getSubject</find>
     </findStrings>
     <replaceStrings>
       <replace>var</replace>
@@ -91,21 +239,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/component/LoginForm.js" />
-        <option value="$PROJECT_DIR$/src/user/currentUser.js" />
-        <option value="$PROJECT_DIR$/src/services/auth_service.js" />
-        <option value="$PROJECT_DIR$/public/signup.html" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/widget.html" />
-        <option value="$PROJECT_DIR$/public/config.js" />
-        <option value="$PROJECT_DIR$/src/component/List.js" />
         <option value="$PROJECT_DIR$/src/component/CardList.js" />
-        <option value="$PROJECT_DIR$/src/router/routes.js" />
         <option value="$PROJECT_DIR$/src/component/Layout.js" />
         <option value="$PROJECT_DIR$/src/channel/channelLogic.js" />
         <option value="$PROJECT_DIR$/src/channel/ChannelRoot.js" />
         <option value="$PROJECT_DIR$/src/router/ViewSelector.js" />
-        <option value="$PROJECT_DIR$/src/component/ActionCard.js" />
         <option value="$PROJECT_DIR$/src/component/BasicCard.jsx" />
         <option value="$PROJECT_DIR$/src/component/SearchResult.js" />
         <option value="$PROJECT_DIR$/src/component/AddExampleValue.js" />
@@ -116,32 +254,42 @@
         <option value="$PROJECT_DIR$/src/db/subscribeTo.js" />
         <option value="$PROJECT_DIR$/src/component/Appbar.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/schema/getExampleValue.js" />
         <option value="$PROJECT_DIR$/database.rules.json" />
         <option value="$PROJECT_DIR$/src/services/action_service.js" />
         <option value="$PROJECT_DIR$/src/db/dbLogic.js" />
         <option value="$PROJECT_DIR$/src/component/Header.js" />
         <option value="$PROJECT_DIR$/src/schema/SubclassesOf.js" />
-        <option value="$PROJECT_DIR$/src/schema/getSubClassesOf.js" />
-        <option value="$PROJECT_DIR$/src/schema/SubClassesOf.js" />
         <option value="$PROJECT_DIR$/src/action/ActionRoot.js" />
         <option value="$PROJECT_DIR$/src/action/code.view.js" />
         <option value="$PROJECT_DIR$/src/style/codemirror.css" />
         <option value="$PROJECT_DIR$/src/component/CodeEditor.js" />
         <option value="$PROJECT_DIR$/src/schema/getPropertiesOf.js" />
         <option value="$PROJECT_DIR$/src/action/ActionView.js" />
-        <option value="$PROJECT_DIR$/src/types/TypesRoot.jsx" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/component/CodeBlock.jsx" />
         <option value="$PROJECT_DIR$/src/db/dbActions.js" />
+        <option value="$PROJECT_DIR$/src/schema/propertiesMap.js" />
+        <option value="$PROJECT_DIR$/src/schema/getSuperTypes.js" />
+        <option value="$PROJECT_DIR$/src/component/TypeCard.jsx" />
+        <option value="$PROJECT_DIR$/src/apps/AppsRoot.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_20.json" />
+        <option value="$PROJECT_DIR$/src/apps/AppView.js" />
+        <option value="$PROJECT_DIR$/src/component/stringify.js" />
+        <option value="$PROJECT_DIR$/src/component/SpringCard.jsx" />
+        <option value="$PROJECT_DIR$/src/types/TypesRoot.jsx" />
+        <option value="$PROJECT_DIR$/src/schema/getSubClassesOf.js" />
+        <option value="$PROJECT_DIR$/src/schema/SubClassesOf.js" />
+        <option value="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" />
+        <option value="$PROJECT_DIR$/src/types/TypeView.jsx" />
+        <option value="$PROJECT_DIR$/src/router/routes.js" />
+        <option value="$PROJECT_DIR$/src/thrume/thrume-root.jsx" />
+        <option value="$PROJECT_DIR$/src/thrume/thrume-logic.js" />
+        <option value="$PROJECT_DIR$/src/component/ActionCard.js" />
+        <option value="$PROJECT_DIR$/flowtypes.flow.js" />
         <option value="$PROJECT_DIR$/src/schema/getSchemaObject.js" />
         <option value="$PROJECT_DIR$/src/yo.js" />
-        <option value="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" />
-        <option value="$PROJECT_DIR$/src/schema/propertiesMap.js" />
-        <option value="$PROJECT_DIR$/src/types/TypeView.jsx" />
-        <option value="$PROJECT_DIR$/src/schema/getSuperTypes.js" />
         <option value="$PROJECT_DIR$/src/component/ExampleValue.js" />
-        <option value="$PROJECT_DIR$/src/component/TypeCard.jsx" />
+        <option value="$PROJECT_DIR$/src/schema/getExampleValue.js" />
       </list>
     </option>
   </component>
@@ -271,6 +419,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="types" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -289,7 +455,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="style" />
+              <option name="myItemId" value="thrume" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,7 +473,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="stream" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,7 +563,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
+              <option name="myItemId" value="apps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -451,7 +617,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="addon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,11 +639,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="addon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="edit" />
+              <option name="myItemId" value="mode" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,10 +808,10 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="add_unversioned_files" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;term&#9;ACTION&#9;ActivateTerminalToolWindow&#10;restart&#9;ACTION&#9;InvalidateCaches&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;hist&#9;ACTION&#9;Vcs.ShowTabbedFileHistory&#10;invalidat&#9;ACTION&#9;InvalidateCaches&#10;invalidate&#9;ACTION&#9;InvalidateCaches&#10;scratch&#9;ACTION&#9;NewScratchFile" />
+    <property name="SearchEverywhereHistoryKey" value="scratch&#9;ACTION&#9;NewScratchFile&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;term&#9;ACTION&#9;ActivateTerminalToolWindow&#10;restart&#9;ACTION&#9;InvalidateCaches&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;hist&#9;ACTION&#9;Vcs.ShowTabbedFileHistory&#10;invalidat&#9;ACTION&#9;InvalidateCaches&#10;invalidate&#9;ACTION&#9;InvalidateCaches" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JSON" />
     <property name="jsgraphql-schema-editor-notification" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.10.0" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
@@ -658,11 +824,12 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/component" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/component" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -948,6 +1115,7 @@
       <workItem from="1494260393699" duration="138857000" />
       <workItem from="1494651443622" duration="18381000" />
       <workItem from="1494700896495" duration="37007000" />
+      <workItem from="1494872726832" duration="27932000" />
     </task>
     <task id="LOCAL-00001" summary="add gh-pages">
       <created>1487102793367</created>
@@ -1173,11 +1341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494788683698</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="clean up examplevalues &amp; codeedit UI">
+      <created>1494822094118</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1494822094118</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="393145000" />
+    <option name="totallyTimeSpent" value="438057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1190,20 +1365,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="640" y="23" width="1280" height="1413" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28160486" sideWeight="0.5114885" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="615" y="385" width="1466" height="816" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28160486" sideWeight="0.4885115" order="8" side_tool="false" content_ui="tabs" x="76" y="195" width="1276" height="730" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="615" y="385" width="1466" height="816" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20969023" sideWeight="0.48750946" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="640" y="23" width="1280" height="1413" />
       <window_info id="Flow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27403483" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23431295" sideWeight="0.5124905" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23431295" sideWeight="0.5124905" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.47161242" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1216,6 +1392,32 @@
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.50753766" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="GraphQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="615" y="385" width="1466" height="816" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20969023" sideWeight="0.48750946" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28160486" sideWeight="0.4924623" order="8" side_tool="false" content_ui="tabs" x="76" y="195" width="1276" height="730" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="640" y="23" width="1280" height="1413" />
+      <window_info id="Flow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27403483" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20492454" sideWeight="0.5124905" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.47161242" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1296,256 +1498,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript7.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database.rules.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/FieldEditable.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/schema_interface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="124" column="48" lean-forward="true" selection-start-line="124" selection-start-column="48" selection-end-line="124" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#63#0" expanded="false" />
-            <element signature="e#3464#3592#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/dbLogic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="981">
-          <caret line="263" column="29" lean-forward="false" selection-start-line="263" selection-start-column="29" selection-end-line="263" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Section.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/List.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Link.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1491">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/context.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
-          <caret line="147" column="14" lean-forward="true" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/ViewSelector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/action.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/action.mson">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/action.nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/action_interface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/ActionRoot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/Actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/MediaList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/mocks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/code.view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/codemirror/src/edit/CodeMirror.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/codemirror.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="142" column="39" lean-forward="true" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#39#66#0" expanded="false" />
-            <element signature="e#718#777#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/theme.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="74" column="29" lean-forward="false" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!block;n#padding#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="77" column="27" lean-forward="true" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/CodeEditor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1563,36 +1519,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/types/TypesRoot.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="e#10#36#0" expanded="false" />
-            <element signature="e#930#1372#0" expanded="false" />
-            <element signature="e#1209#1319#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/CodeBlock.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding>
-            <element signature="e#349#499#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding>
-            <element signature="e#9#34#0" expanded="false" />
-            <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1600,7 +1530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1608,75 +1537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/SubClassesOf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/PropertiesList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getSubClassesOf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getExampleValue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-          <folding>
-            <element signature="e#10#44#0" expanded="false" />
-            <element signature="n#!!block;n#first#0" expanded="false" />
-            <element signature="n#!!block;n#getExampleValue#0" expanded="false" />
-            <element signature="n#!!block;n#createMockValue#0" expanded="false" />
-            <element signature="e#953#1111#0" expanded="false" />
-            <element signature="n#!!block;n#createMockType#0" expanded="false" />
-            <element signature="e#1501#1610#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/action_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <element signature="e#606#1005#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/propertiesOf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getSchemaObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1700,34 +1560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/propertiesOfDeep.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-          <folding>
-            <element signature="e#10#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/ExampleValue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
-          <folding>
-            <element signature="e#10#35#0" expanded="true" />
-            <element signature="e#603#1080#0" expanded="true" />
-            <element signature="e#1209#1930#0" expanded="true" />
-            <element signature="e#2652#2760#0" expanded="true" />
-            <element signature="e#3069#3147#0" expanded="true" />
-            <element signature="e#3243#3315#0" expanded="true" />
-            <element signature="e#3514#3604#0" expanded="true" />
-            <element signature="e#3859#3925#0" expanded="true" />
-            <element signature="e#4119#4623#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/TypeCard.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1736,52 +1568,467 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/types/TypeView.jsx">
+    <entry file="file://$PROJECT_DIR$/src/schema/propertiesMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="189">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
-            <element signature="e#916#1252#0" expanded="true" />
-            <element signature="e#1697#2914#0" expanded="true" />
-            <element signature="e#3180#3240#0" expanded="true" />
-            <element signature="e#3273#3324#0" expanded="true" />
-            <element signature="e#3360#4686#0" expanded="true" />
+            <element signature="e#10#53#0" expanded="false" />
+            <element signature="e#365#442#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/PropertiesList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/release.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="63">
+            <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/ActionCardStories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/ViewSelector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/MediaList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/PageHeader.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/AppsRoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+            <element signature="e#693#792#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/channel/ChannelView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding>
+            <element signature="e#10#35#0" expanded="false" />
+            <element signature="e#825#929#0" expanded="false" />
+            <element signature="e#953#1264#0" expanded="false" />
+            <element signature="e#2183#2308#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_20.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="58" column="36" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/withSchemaItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding>
+            <element signature="e#95#334#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream/stream_logic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#145#673#0" expanded="false" />
+            <element signature="e#280#411#0" expanded="false" />
+            <element signature="e#443#671#0" expanded="false" />
+            <element signature="e#463#641#0" expanded="false" />
+            <element signature="e#589#635#0" expanded="false" />
+            <element signature="e#720#1172#0" expanded="false" />
+            <element signature="e#863#1003#0" expanded="false" />
+            <element signature="e#1035#1170#0" expanded="false" />
+            <element signature="e#1208#1669#0" expanded="false" />
+            <element signature="e#1343#1474#0" expanded="false" />
+            <element signature="e#1516#1667#0" expanded="false" />
+            <element signature="e#1605#1656#0" expanded="false" />
+            <element signature="e#1702#2029#0" expanded="false" />
+            <element signature="e#1761#1886#0" expanded="false" />
+            <element signature="e#1908#2027#0" expanded="false" />
+            <element signature="e#2047#2113#0" expanded="false" />
+            <element signature="e#2116#2150#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/schema/getSuperTypes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="189">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#192#736#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types/TypesRoot.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#10#36#0" expanded="false" />
+            <element signature="e#785#844#0" expanded="false" />
+            <element signature="e#985#1427#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/dbLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#10#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/SpringCard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/codemirror/addon/mode/overlay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#MessageList#0" expanded="false" />
+            <element signature="n#!!block;n#render#0;n#MessageList#0" expanded="false" />
+            <element signature="e#626#665#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Notifications.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding>
+            <element signature="e#9#34#0" expanded="false" />
+            <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/getSubClassesOf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!block;n#getSubClassesOf#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types/TypeView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1867">
+          <caret line="152" column="38" lean-forward="false" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="38" />
+          <folding>
+            <element signature="e#10#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/SubClassesOf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="e#10#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/HomeView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thrume/thrumeDefaultContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#77#265#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thrume/thrume-root.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="117" column="10" lean-forward="true" selection-start-line="110" selection-start-column="8" selection-end-line="117" selection-end-column="10" />
+          <folding>
+            <element signature="e#10#44#0" expanded="false" />
+            <element signature="n#!!block;n#getUrl#0" expanded="false" />
+            <element signature="e#722#2773#0" expanded="false" />
+            <element signature="e#3065#3211#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thrume/thrume-logic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <folding>
+            <element signature="e#10#41#0" expanded="true" />
+            <element signature="e#2731#2771#0" expanded="true" />
+            <element signature="e#4259#4316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/stringify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#144#233#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/action_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#606#1005#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/propertiesOf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/ActionCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="52" lean-forward="true" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding>
+            <element signature="e#10#35#0" expanded="false" />
+            <element signature="e#478#1028#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/AppView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="e#714#1112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/ExampleValue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+          <folding>
+            <element signature="e#654#1036#0" expanded="false" />
+            <element signature="e#726#1030#0" expanded="false" />
+            <element signature="e#867#1022#0" expanded="false" />
+            <element signature="e#1048#1075#0" expanded="false" />
+            <element signature="e#1177#1934#0" expanded="false" />
+            <element signature="e#1256#1312#0" expanded="false" />
+            <element signature="e#1329#1408#0" expanded="false" />
+            <element signature="e#1423#1923#0" expanded="false" />
+            <element signature="e#1449#1666#0" expanded="false" />
+            <element signature="e#1476#1654#0" expanded="false" />
+            <element signature="e#1672#1915#0" expanded="false" />
+            <element signature="e#1699#1903#0" expanded="false" />
+            <element signature="e#1949#2121#0" expanded="false" />
+            <element signature="e#1987#2116#0" expanded="false" />
+            <element signature="e#2042#2110#0" expanded="false" />
+            <element signature="e#2544#2727#0" expanded="false" />
+            <element signature="e#3002#3076#0" expanded="true" />
+            <element signature="e#3151#3223#0" expanded="true" />
+            <element signature="e#3365#3524#0" expanded="false" />
+            <element signature="e#3767#3833#0" expanded="true" />
+            <element signature="e#4027#4531#0" expanded="true" />
+            <element signature="e#4112#4280#0" expanded="false" />
+            <element signature="e#4321#4515#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/propertiesOfDeep.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#288#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flowtypes.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/getSchemaObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="e#292#472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/yo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1086">
-          <caret line="173" column="21" lean-forward="true" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
+        <state relative-caret-position="1734">
+          <caret line="154" column="34" lean-forward="false" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="n#!!block;n#getSchemaObject#0;n#Yo#0" expanded="true" />
             <element signature="n#!!block;n#propertiesOf#0;n#Yo#0" expanded="true" />
-            <element signature="n#!!block;n#getExampleValue#0;n#Yo#0" expanded="true" />
             <element signature="n#!!block;n#createMockValue#0;n#Yo#0" expanded="true" />
-            <element signature="n#!!block;n#createMockType#0;n#Yo#0" expanded="true" />
-            <element signature="n#!!block;n#addExampleValue#0;n#Yo#0" expanded="true" />
-            <element signature="n#!!block;n#propertiesOfDeep#0;n#Yo#0" expanded="true" />
+            <element signature="n#!!block;n#superTypesOf#0;n#Yo#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/propertiesMap.js">
+    <entry file="file://$PROJECT_DIR$/src/schema/getExampleValue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="440">
+          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
           <folding>
-            <element signature="e#10#53#0" expanded="true" />
-            <element signature="e#365#442#0" expanded="true" />
+            <element signature="e#10#44#0" expanded="true" />
+            <element signature="n#!!block;n#first#0" expanded="true" />
+            <element signature="n#!!block;n#hasExample#0" expanded="true" />
+            <element signature="n#!!block;n#createMockType#0" expanded="true" />
+            <element signature="e#2219#2272#0" expanded="true" />
+            <element signature="n#!!block;n#getExampleValue#0" expanded="true" />
+            <marker date="1494948697000" expanded="true" signature="2102:2746" ph="..." />
           </folding>
         </state>
       </provider>

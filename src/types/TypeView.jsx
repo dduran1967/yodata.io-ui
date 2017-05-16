@@ -150,7 +150,7 @@ const TypeView = props => {
       {currentTab === 'Examples' && <ExampleValues subject={subject} />}
 
       {currentTab === 'More Specific Types' &&
-        <SubClassesOf subject={subject.id} />}
+        <SubClassesOf subject={subject} />}
 
       {currentTab === 'Debug' && <Debug {...{ subject }} />}
     </Page>

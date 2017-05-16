@@ -11,6 +11,10 @@ import { UserRoot } from '../user'
 import Reactions from '../reaction/ReactionRoot.js'
 import ActionRoot from '../action/ActionRoot.js'
 import ActionView from '../action/ActionView'
+import AppsRoot from '../apps/AppsRoot'
+import AppView from '../apps/AppView'
+import ThrumeRoot from '../thrume/thrume-root';
+
 
 export const sidebarRoutes = [
   {
@@ -37,6 +41,14 @@ export const sidebarRoutes = [
     label: 'Actions',
     component: ActionRoot,
     icon: 'feed',
+  },
+  {
+    key: 'apps',
+    name: 'apps',
+    path: '/apps',
+    label: 'Applications',
+    component: AppsRoot,
+    icon: 'code',
   },
   {
     key: 'reactions',
@@ -70,7 +82,6 @@ export const sidebarRoutes = [
     component: RestApiRoot,
     icon: 'code',
   },
-
 ];
 
 export const innerRoutes = [
@@ -93,6 +104,16 @@ export const innerRoutes = [
     name: 'action/view',
     path: '/actions/:id',
     component: ActionView,
+  },
+  {
+    name: 'app/view',
+    path: '/apps/:id',
+    component: AppView,
+  },
+  {
+    name: 'thrume',
+    path: '/quickstart',
+    component: ThrumeRoot,
   },
 ];
 

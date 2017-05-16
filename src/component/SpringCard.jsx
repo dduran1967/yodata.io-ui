@@ -2,6 +2,7 @@ import React from "react";
 import { Button, ButtonGroup, Icon } from "semantic-ui-react";
 import CodeEditor from "./CodeEditor";
 import stringify from "./stringify";
+import Link from './Link'
 
 export default function SpringCard({
   header,
@@ -13,16 +14,25 @@ export default function SpringCard({
   toggle,
   open,
   potentialAction,
-  dispatch
+  dispatch,
+  text,
 }) {
-  if (typeof json === "object") {
-    content = <CodeEditor value={stringify(json)} />;
-  }
+  content = (
+    <div>
+      <div className="description" style={{paddingLeft: '1em'}}>{description}</div>
+      <CodeEditor value={text || stringify(json)} />
+    </div>
+  )
+
   if (potentialAction) {
     extra = (
-      <ButtonGroup>
-        <Button content={"send"} onClick={e => dispatch(potentialAction)} />
-      </ButtonGroup>
+      <div>
+        <ButtonGroup>
+          <Button content={"send to inbox"} onClick={e => dispatch(potentialAction)} />
+          <Button><Link name="types/view" params={{id: header}}>View Schema</Link></Button>
+        </ButtonGroup>
+      </div>
+
     );
   }
   return (
@@ -30,7 +40,6 @@ export default function SpringCard({
       <div className="content">
         <div className="header">{header}</div>
         <div className="meta">{meta}</div>
-        <div className="description">{description}</div>
       </div>
       {open && content}
       {open && extra && <div className="extra">{extra}</div>}

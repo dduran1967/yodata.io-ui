@@ -1,6 +1,5 @@
 // @flow
 
-import * as firebase from 'firebase'
 import values from 'lodash/values'
 import React from 'react'
 import {connect} from 'react-redux'
@@ -14,10 +13,10 @@ import TextPopup from '../component/TextPopup.jsx'
 import {Button} from '../component/index'
 import stringify from '../component/stringify'
 import check from 'check-types'
-// import {Checkbox} from 'semantic-ui-react'
+import json from 'json5';
 
 function getUrl(ref: string) {
-  return firebase.database().ref(ref).toString();
+  return window.firebase.database().ref(ref).toString();
 }
 
 const ThrumeRootView = props => {
@@ -107,7 +106,7 @@ const thrumeRootContainer = compose(
   withHandlers({
     notify: ({dispatch}) => next => {
       try {
-        let data = JSON.parse(next);
+        let data = json.parse(next);
         check.assert(data.object.value)
         dispatch({
           type: 'NOTIFICATIONS/ADD',
