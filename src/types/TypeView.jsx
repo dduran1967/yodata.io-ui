@@ -114,7 +114,6 @@ const TypeView = props => {
   return (
     <Page style={{ paddingBottom: '10em' }}>
       <TypeCard subject={subject} extra={extra} />
-
       <Menu tabular>
         {subject.type === 'Type' &&
           <MenuItem
