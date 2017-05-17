@@ -94,7 +94,7 @@ const typeViewContainer = compose(
     };
   }),
   withState('tab', 'setTab', {
-    currentTab: '',
+    currentTab: 'Properties',
     items: ['Properties', 'Examples', 'More Specific Types', 'Debug']
   }),
   withHandlers({
@@ -142,7 +142,7 @@ const TypeView = props => {
         />
       </Menu>
 
-      {currentTab === 'Properties' &&
+      {properties && (currentTab === 'Properties' || currentTab === '') &&
         subject.type === 'Type' &&
         <PropertiesList items={properties} dispatch={dispatch} />}
 

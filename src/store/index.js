@@ -3,7 +3,7 @@
 import {combineForms} from 'react-redux-form'
 import {applyMiddleware, createStore} from 'redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
-import logger from 'redux-logger'
+import {createLogger} from 'redux-logger'
 import {createLogicMiddleware} from 'redux-logic'
 import {router5Middleware, router5Reducer} from 'redux-router5'
 import root from 'window-or-global'
@@ -56,7 +56,7 @@ const logicMiddleware = createLogicMiddleware([
 ], logicDependencies);
 
 const enhancers = composeEnhancers(
-  applyMiddleware(logicMiddleware, router5Middleware(router), logger()),
+  applyMiddleware(logicMiddleware, router5Middleware(router), createLogger()),
 );
 
 const initialState = {};

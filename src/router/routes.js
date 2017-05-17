@@ -15,7 +15,6 @@ import AppsRoot from '../apps/AppsRoot'
 import AppView from '../apps/AppView'
 import ThrumeRoot from '../thrume/thrume-root';
 
-
 export const sidebarRoutes = [
   {
     key: 'home',
@@ -70,7 +69,7 @@ export const sidebarRoutes = [
     key: 'user',
     name: 'user',
     path: '/user',
-    label: 'User',
+    label: 'Settings',
     component: UserRoot,
     icon: 'user',
   },

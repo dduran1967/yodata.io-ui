@@ -3,8 +3,9 @@ import { Header, Section } from '../component';
 import { compose, withHandlers, withState } from 'recompose';
 import { connect } from 'react-redux';
 import Page from '../component/Page';
-import CodeEditor from '../component/CodeEditor';
-import { Button, Form, Input, SegmentGroup } from 'semantic-ui-react';
+import { Button, Form, FormInput } from 'semantic-ui-react';
+import TabGroup, { TabGroupItem } from '../component/TabGroup'
+import InboxSettings from './InboxSettings'
 
 const UserRoot = compose(
   connect(state => ({
@@ -21,6 +22,7 @@ const UserRoot = compose(
       store.dispatch({ type: 'REACTIONS/SAVE_FILE', payload: codeValue });
     },
     sendToWebhook: ({ store, webhookURL, codeValue }) => event => {
+      event.preventDefault();
       store.dispatch({
         type: 'THRUME/SET_WEBHOOK',
         payload: {
@@ -46,31 +48,11 @@ const UserRoot = compose(
   })
 )(({ user, dispatch, fetchProfile, ...props }) => (
   <Page>
-    <Section>
-      <Header
-        content="Webhooks"
-        subheader="Push actions to your server in real time."
-      />
-      <CodeEditor />
-      <SegmentGroup horizontal>
-        <Section style={{ flexGrow: 1 }}>
-          <Form>
-            <Input
-              onChange={e => props.setWebhookURL(e.target.value)}
-              fluid
-              name={'webhookURL'}
-              label={'URL'}
-              placeholder="http://requestb.in/1kbym8l1"
-              value={props.webhookURL}
-            />
-          </Form>
-        </Section>
-        <Section>
-          <Button primary content="Send" onClick={props.sendToWebhook} />
-        </Section>
-      </SegmentGroup>
-
-    </Section>
+    <TabGroup items={['Inbox']} defaultTab="Inbox">
+      <TabGroupItem name="Inbox">
+        <InboxSettings/>
+      </TabGroupItem>
+    </TabGroup>
   </Page>
 ));
 
