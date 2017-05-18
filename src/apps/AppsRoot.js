@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../component/Header'
 import Page from '../component/Page'
-import MediaList from '../component/MediaList'
+
 import { compose, getContext, withProps } from 'recompose'
 import { Card, Image } from 'semantic-ui-react'
 

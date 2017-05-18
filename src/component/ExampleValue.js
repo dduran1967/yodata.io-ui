@@ -1,16 +1,21 @@
 // @flow
 
-import React from 'react'
-import { compose, lifecycle, withHandlers, withProps, withState } from 'recompose'
-import { Form, Header, Input, List } from 'semantic-ui-react'
-import CodeEditor from './CodeEditor'
-import Section from './Section'
-import Button from './Button'
-import { connect } from 'react-redux'
-import { createMockType } from '../schema/getExampleValue'
-import { flatMap, values } from 'lodash'
-import url from 'url'
-import propertiesOfDeep from '../schema/propertiesOfDeep'
+import React from 'react';
+import {
+  compose,
+  lifecycle,
+  withHandlers,
+  withProps,
+  withState
+} from 'recompose';
+import { Form, Header, Input, List } from 'semantic-ui-react';
+import CodeEditor from './CodeEditor';
+import Button from './Button';
+import { connect } from 'react-redux';
+import { createMockType } from '../schema/getExampleValue';
+import values from 'lodash/values';
+import url from 'url';
+import propertiesOfDeep from '../schema/propertiesOfDeep';
 
 const ExampleValues = compose(
   connect(),
@@ -20,19 +25,19 @@ const ExampleValues = compose(
     if (props.subject) {
       let subject = props.subject;
       if (subject.type === 'Type') {
-        let allProperties = propertiesOfDeep(subject)
+        let allProperties = propertiesOfDeep(subject);
         let json = createMockType(subject.id, allProperties);
         currentValue = {
           type: 'SoftwareSourceCode',
           exampleOfWork: subject.id,
           json: json,
-          text: JSON.stringify(json, null, 2),
-        }
+          text: JSON.stringify(json, null, 2)
+        };
       }
     }
     return {
-      currentValue,
-    }
+      currentValue
+    };
   }),
   withState('nextValue', 'setNextValue', props => ({ ...props.currentValue })),
   withHandlers({
@@ -40,38 +45,36 @@ const ExampleValues = compose(
       let object = props.nextValue;
       try {
         object.json = JSON.parse(object.text);
-      }
-      catch (e) {
-        console.error('Unable to parse JSON', object)
+      } catch (e) {
+        console.error('Unable to parse JSON', object);
         return;
-      }
-      finally {
+      } finally {
         if (object.url) {
           props.dispatch({
             type: 'UpdateAction',
             object: props.currentValue,
             result: object,
             target: url.parse(object.url).pathname,
-            actionStatus: 'PotentialActionStatus',
+            actionStatus: 'PotentialActionStatus'
           });
         } else {
           props.dispatch({
             type: 'AddAction',
             object: object,
             targetCollection: `/public/schema/${props.subject.id}/exampleValue`,
-            actionStatus: 'PotentialActionStatus',
+            actionStatus: 'PotentialActionStatus'
           });
         }
       }
-    },
+    }
   }),
   lifecycle({
     componentWillReceiveProps(next) {
       if (this.props.subject.id !== next.subject.id) {
         this.props.setNextValue({ ...next.currentValue });
       }
-    },
-  }),
+    }
+  })
 )(props => {
   let items = values(props.subject.exampleValue);
   let listItems = items.map(item => (
@@ -82,7 +85,7 @@ const ExampleValues = compose(
       <List>
         {listItems}
       </List>
-      <Header content="Add a new example"/>
+      <Header content="Add a new example" />
       <Form>
         <Input
           fluid
@@ -103,19 +106,14 @@ const ExampleValues = compose(
         <CodeEditor
           value={props.nextValue.text}
           onChange={text => {
-            props.setNextValue({ ...props.nextValue, text })
+            props.setNextValue({ ...props.nextValue, text });
           }}
         />
       </Form>
     </div>
-  )
-})
+  );
+});
 
-const ViewExample = props => {
-  return (
-    <CodeEditor readOnly value={props.currentValue}/>
-  )
-}
 
 const EditExample = props => (
   <Form>
@@ -138,11 +136,11 @@ const EditExample = props => (
     <CodeEditor
       value={props.nextValue.text}
       onChange={text => {
-        props.setNextValue({ ...props.nextValue, text })
+        props.setNextValue({ ...props.nextValue, text });
       }}
     />
   </Form>
-)
+);
 
 const ViewEditExample = compose(
   connect(),
@@ -152,31 +150,30 @@ const ViewEditExample = compose(
       let object = props.nextValue;
       if (object.url) {
         if (!object.id) {
-          object.id = url.parse(object.url).pathname
+          object.id = url.parse(object.url).pathname;
         }
         props.dispatch({
           type: 'UpdateAction',
           object: props.currentValue,
-          result: object,
+          result: object
         });
       } else {
         props.dispatch({
           type: 'AddAction',
           object: object,
           targetCollection: `/public/schema/${props.subject.id}/exampleValue`,
-          actionStatus: 'PotentialActionStatus',
+          actionStatus: 'PotentialActionStatus'
         });
       }
-    },
+    }
   }),
   lifecycle({
     componentWillReceiveProps(next) {
       if (this.props.subject.id !== next.subject.id) {
         this.props.setNextValue({ ...next.currentValue });
       }
-    },
-  }),
-)(EditExample)
+    }
+  })
+)(EditExample);
 
-export default ExampleValues
-
+export default ExampleValues;

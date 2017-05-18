@@ -6,7 +6,6 @@ import currentUser from '../user/currentUser.js'
 import getThrumeBaseUrl from './getThrumeBaseUrl'
 import { THRUME_BASE } from './thrume-config'
 import createDefaultContainer from './thrumeDefaultContainer'
-import json from 'json5';
 
 
 const onUserSignedIn = createLogic({

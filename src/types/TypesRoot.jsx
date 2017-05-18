@@ -7,7 +7,6 @@ import MediaList from '../component/MediaList';
 import { connect } from 'react-redux';
 import { compose, getContext, lifecycle, withProps } from 'recompose';
 import actionSevice from '../services/action_service.js';
-import sampleSize from 'lodash/sampleSize';
 import keyBy from 'lodash/keyBy';
 import subClassesOf from '../schema/getSubClassesOf';
 import values from 'lodash/values';

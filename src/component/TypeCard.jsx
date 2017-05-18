@@ -1,15 +1,10 @@
 // @flow
 
-import React from 'react'
-import Card from './BasicCard'
-import { compose, lifecycle } from 'recompose'
-import { connect } from 'react-redux'
-import FieldEditable from './FieldEditable'
-import { propTypes } from 'tcomb-react'
-import t from 'tcomb'
-import Debug from './Debug'
-import {subscribe} from '../db/dbActions.js';
-
+import React from 'react';
+import Card from './BasicCard';
+import FieldEditable from './FieldEditable';
+import { propTypes } from 'tcomb-react';
+import t from 'tcomb';
 
 const TypeCardProps = t.struct({
   header: t.maybe(t.String),
@@ -17,7 +12,7 @@ const TypeCardProps = t.struct({
   description: t.maybe(t.String),
   subject: t.Object,
   extra: t.Any,
-  data: t.Any,
+  data: t.Any
 });
 
 export const TypeCard = (props: TypeCardProps) => {
@@ -38,4 +33,4 @@ export const TypeCard = (props: TypeCardProps) => {
 };
 TypeCard.propTypes = propTypes(TypeCardProps);
 
-export default TypeCard
+export default TypeCard;

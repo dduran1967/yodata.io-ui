@@ -2,7 +2,6 @@ import React from 'react';
 import {HttpCodeExample} from '../component';
 import { Header, Message } from 'semantic-ui-react';
 import Page from '../component/Page'
-import Section from '../component/Section'
 
 export default () => (
   <Page>

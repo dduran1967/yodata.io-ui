@@ -1,9 +1,8 @@
 import React from 'react'
-import { compose, renderNothing, withHandlers, withProps } from 'recompose'
+import { compose, withHandlers, withProps } from 'recompose'
 import { Header } from 'semantic-ui-react'
 import Form from '../component/SchemaForm'
 import Button from '../component/Button'
-import Debug from '../component/Debug'
 import { connect } from 'react-redux'
 
 const OBJECT = 'object'

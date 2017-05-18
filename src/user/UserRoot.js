@@ -1,21 +1,19 @@
-import React from 'react';
-import { Header, Section } from '../component';
-import { compose, withHandlers, withState } from 'recompose';
-import { connect } from 'react-redux';
-import Page from '../component/Page';
-import { Button, Form, FormInput } from 'semantic-ui-react';
+import React from 'react'
+import { compose, withHandlers, withState } from 'recompose'
+import { connect } from 'react-redux'
+import Page from '../component/Page'
 import TabGroup, { TabGroupItem } from '../component/TabGroup'
 import InboxSettings from './InboxSettings'
 
 const UserRoot = compose(
   connect(state => ({
     user: state.user,
-    thrume: state.thrume
+    thrume: state.thrume,
   })),
   withState(
     'webhookURL',
     'setWebhookURL',
-    ({ thrume }) => thrume.webhook && thrume.webhook.url
+    ({ thrume }) => thrume.webhook && thrume.webhook.url,
   ),
   withHandlers({
     saveFile: ({ store, codeValue }) => event => {
@@ -27,8 +25,8 @@ const UserRoot = compose(
         type: 'THRUME/SET_WEBHOOK',
         payload: {
           enabled: true,
-          url: webhookURL
-        }
+          url: webhookURL,
+        },
       });
       store.dispatch({
         type: 'THRUME/SEND',
@@ -36,21 +34,21 @@ const UserRoot = compose(
           type: 'LikeAction',
           agent: {
             type: 'Organization',
-            name: 'Yodata'
+            name: 'Yodata',
           },
           object: {
             type: 'Text',
-            value: 'We think you are pretty neat.'
-          }
-        }
+            value: 'We think you are pretty neat.',
+          },
+        },
       });
-    }
-  })
+    },
+  }),
 )(({ user, dispatch, fetchProfile, ...props }) => (
   <Page>
-    <TabGroup items={['Inbox']} defaultTab="Inbox">
+    <TabGroup items={[ 'Inbox' ]} defaultTab="Inbox">
       <TabGroupItem name="Inbox">
-        <InboxSettings/>
+        <InboxSettings />
       </TabGroupItem>
     </TabGroup>
   </Page>

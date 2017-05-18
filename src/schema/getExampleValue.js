@@ -1,10 +1,8 @@
 // @flow
 
 import values from 'lodash/values'
-import actionService from '../services/action_service.js'
 import json from 'json5'
 import getSchemaObject from './getSchemaObject'
-const createExampleValue = actionService.getAction('createExampleValue')
 import isArray from 'lodash/isArray';
 
 type WorkExample = {

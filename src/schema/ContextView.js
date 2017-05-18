@@ -1,6 +1,5 @@
 import React from 'react'
-import { withSubscription } from '../db/subscribeTo'
-import { compose, withProps } from 'recompose'
+import { compose } from 'recompose'
 import Debug from '../component/Debug'
 
 const SAMPLE_MESSAGE = {
@@ -208,7 +207,6 @@ const CONTEXT = {
   timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
   timestampModified: '2017-04-22T14:40:46.0775524-05:00'
 }
-
 
 const ContextView = compose(
 )(props => {
