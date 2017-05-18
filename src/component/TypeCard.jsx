@@ -16,10 +16,12 @@ const TypeCardProps = t.struct({
 });
 
 export const TypeCard = (props: TypeCardProps) => {
+  let url = `http://schema.org/${props.subject.label}`;
+  let meta = <a href={url}>{url}</a>
   return (
     <Card
       header={props.subject.label}
-      meta={`http://schema.org/${props.subject.label}`}
+      meta={meta}
       description={
         <FieldEditable
           entity={`/public/schema/${props.subject.label}`}

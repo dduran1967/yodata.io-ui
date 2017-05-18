@@ -23,6 +23,7 @@ import subClassesOf from '../schema/getSubClassesOf';
 import Debug from '../component/Debug';
 import propertiesMap from '../schema/propertiesMap';
 import { subscribe } from '../db/dbActions.js';
+import TabGroup, { TabGroupItem } from '../component/TabGroup'
 
 const typeViewContainer = compose(
   connect(
@@ -93,65 +94,37 @@ const typeViewContainer = compose(
       properties: propertiesMap(subject.id)
     };
   }),
-  withState('tab', 'setTab', {
-    currentTab: 'Properties',
-    items: ['Properties', 'Examples', 'More Specific Types', 'Debug']
-  }),
   withHandlers({
     onBack: ({ navigateTo }) => event => navigateTo('types'),
-    selectTab: ({ tab, setTab }) => (event, selected) => {
-      setTab({ ...tab, currentTab: selected.name });
-    },
-    isActive: props => name => {
-      return props.tab.currentTab === name;
-    }
   })
 );
 
 const TypeView = props => {
   let { properties, dispatch, extra, subject } = props;
-  let currentTab = props.tab.currentTab;
   return (
     <Page style={{ paddingBottom: '10em' }}>
       <TypeCard subject={subject} extra={extra} />
-      <Menu tabular>
-        {subject.type === 'Type' &&
-          <MenuItem
-            name="Properties"
-            onClick={props.selectTab}
-            active={props.isActive('Properties')}
-          />}
-        {props.subTypes &&
-          props.subTypes.length > 0 &&
-          <MenuItem
-            name="More Specific Types"
-            onClick={props.selectTab}
-            active={props.isActive('More Specific Types')}
-          />}
-
-        <MenuItem
-          name="Examples"
-          onClick={props.selectTab}
-          active={props.isActive('Examples')}
-        />
-
-        <MenuItem
-          name="Debug"
-          onClick={props.selectTab}
-          active={props.isActive('Debug')}
-        />
-      </Menu>
-
-      {properties && (currentTab === 'Properties' || currentTab === '') &&
-        subject.type === 'Type' &&
-        <PropertiesList items={properties} dispatch={dispatch} />}
-
-      {currentTab === 'Examples' && <ExampleValues subject={subject} />}
-
-      {currentTab === 'More Specific Types' &&
-        <SubClassesOf subject={subject} />}
-
-      {currentTab === 'Debug' && <Debug {...{ subject }} />}
+      <TabGroup
+        items={[
+          'Properties',
+          'Related',
+          'Examples',
+          'Debug'
+        ]}
+      >
+        <TabGroupItem name="Properties">
+          <PropertiesList items={properties} dispatch={dispatch} />
+        </TabGroupItem>
+        <TabGroupItem name="Related">
+          <SubClassesOf subject={subject} />
+        </TabGroupItem>
+        <TabGroupItem name="Examples">
+          <ExampleValues subject={subject} />
+        </TabGroupItem>
+        <TabGroupItem name="Debug">
+          <Debug {...{ subject }} />
+        </TabGroupItem>
+      </TabGroup>
     </Page>
   );
 };

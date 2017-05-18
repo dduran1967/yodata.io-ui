@@ -56,7 +56,7 @@ const logicMiddleware = createLogicMiddleware([
 ], logicDependencies);
 
 const enhancers = composeEnhancers(
-  applyMiddleware(logicMiddleware, router5Middleware(router), createLogger()),
+  applyMiddleware(logicMiddleware, router5Middleware(router)),
 );
 
 const initialState = {};
