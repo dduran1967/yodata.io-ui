@@ -1,16 +1,10 @@
 // @flow
 
-import * as firebase from 'firebase';
+import store from '../store';
 
-function currentUser(): firebase.UserInfo | null {
-  if (
-    window.firebase &&
-    window.firebase.auth() &&
-    window.firebase.auth().currentUser
-  ) {
-    return window.firebase.auth().currentUser.toJSON();
-  }
-  return null;
+function currentUser() {
+  let state = store.getState();
+  return state && state.user;
 }
 
 export default currentUser;

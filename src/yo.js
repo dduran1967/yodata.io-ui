@@ -27,6 +27,8 @@ import propertiesOfDeep from './schema/propertiesOfDeep';
 import getSchemaObject from './schema/getSchemaObject';
 import json from 'json5';
 import superTypesOf from './schema/getSuperTypes.js';
+var winston = require('winston')
+
 
 function getSubject(subjectId) {
   return store.getState().schema.index[subjectId];
@@ -91,8 +93,8 @@ class Yo {
     return currentUserAgent;
   }
 
-  dispatch(type, payload) {
-    store.dispatch({type, payload});
+  dispatch(action) {
+    store.dispatch(action);
   }
 
   fetchSQSMessage() {
@@ -172,6 +174,10 @@ class Yo {
 
   get json() {
     return json;
+  }
+
+  get log() {
+    return winston
   }
 
 }

@@ -49,7 +49,8 @@ const ExampleValues = compose(
         if (object.url) {
           props.dispatch({
             type: 'UpdateAction',
-            object: object,
+            object: props.currentValue,
+            result: object,
             target: url.parse(object.url).pathname,
             actionStatus: 'PotentialActionStatus',
           });
@@ -150,11 +151,13 @@ const ViewEditExample = compose(
     onSubmit: props => () => {
       let object = props.nextValue;
       if (object.url) {
+        if (!object.id) {
+          object.id = url.parse(object.url).pathname
+        }
         props.dispatch({
           type: 'UpdateAction',
-          object: object,
-          target: url.parse(object.url).pathname,
-          actionStatus: 'PotentialActionStatus',
+          object: props.currentValue,
+          result: object,
         });
       } else {
         props.dispatch({

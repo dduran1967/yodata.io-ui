@@ -250,23 +250,35 @@ const updateActionLogic = createLogic({
   type: 'UpdateAction',
   validate({ action }, allow, reject) {
     if (
-      action.target &&
-      action.target.startsWith('/public/schema/') &&
-      action.actionStatus === 'PotentialActionStatus'
+      action.object &&
+      action.result &&
+      typeof action.actionStatus === 'undefined'
     ) {
+      action.actionStatus = 'ActiveActionStatus'
+      if (typeof action.target === 'undefined') {
+        action.target = action.result.id;
+      }
       allow(action);
     } else {
+      console.error('unable to proccess UpdateAction', action);
       reject(action);
     }
   },
   process({ action, firebase }, dispatch) {
     let ref = firebase.database().ref(action.target);
-    let data = action.object;
+    let data = action.result;
     ref.update(data).then(() => {
-      let nextAction = { ...action, status: 'CompletedActionStatus' };
+      let nextAction = { ...action, actionStatus: 'CompletedActionStatus' };
       console.log(nextAction);
     });
   }
 });
 
-export default [onSubscribe, searchLogic, patch, searchInit, addActionLogic, updateActionLogic];
+export default [
+  onSubscribe,
+  searchLogic,
+  patch,
+  searchInit,
+  addActionLogic,
+  updateActionLogic
+];
