@@ -1,4 +1,5 @@
 import * as firebase from 'firebase'
+import stampit from 'stampit';
 import axios from 'axios'
 import check from 'check-types'
 import lodash from 'lodash'
@@ -27,7 +28,10 @@ import propertiesOfDeep from './schema/propertiesOfDeep';
 import getSchemaObject from './schema/getSchemaObject';
 import json from 'json5';
 import superTypesOf from './schema/getSuperTypes.js';
-var winston = require('winston')
+import ExampleService from './services/exampleService';
+import Service from './services/serviceFactory'
+import * as Rx from 'rxjs'
+import appService from './services';
 
 
 function getSubject(subjectId) {
@@ -176,17 +180,20 @@ class Yo {
     return json;
   }
 
-  get log() {
-    return winston
-  }
-
 }
 
 const yo = new Yo();
 
 root.yo = yo;
+root.action = actionService;
 root.axios = axios;
 root.lodash = lodash;
 root.check = check;
+root.example = ExampleService;
+root.store = store;
+root.Service = Service;
 root.getSuperTypes = getSuperTypes;
+root.stampit = stampit;
+root.rx = Rx;
+root.yap = appService;
 export default yo;

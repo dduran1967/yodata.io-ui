@@ -225,13 +225,18 @@ const searchInit = createLogic({
 const addActionLogic = createLogic({
   type: 'AddAction',
   validate({ action }, allow, reject) {
+    const allowed = false;
     if (
       action.targetCollection &&
       action.targetCollection.startsWith('/public/schema/') &&
       action.actionStatus === 'PotentialActionStatus'
     ) {
       allow(action);
+    } else if (typeof action.targetCollection === 'string') {
+      console.debug('allowing', action)
+      allow(action);
     } else {
+      console.error('invalid action', action);
       reject(action);
     }
   },
@@ -254,7 +259,7 @@ const updateActionLogic = createLogic({
       action.result &&
       typeof action.actionStatus === 'undefined'
     ) {
-      action.actionStatus = 'ActiveActionStatus'
+      action.actionStatus = 'ActiveActionStatus';
       if (typeof action.target === 'undefined') {
         action.target = action.result.id;
       }

@@ -1,4 +1,4 @@
-// flow-typed signature: 4a237a251cab548c70abe2f3697874e6
+// flow-typed signature: 2b3efb3c65b0568d2322579954685b0e
 // flow-typed version: <<STUB>>/object-hash_v1.1.8/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

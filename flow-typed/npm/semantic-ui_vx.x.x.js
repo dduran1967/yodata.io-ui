@@ -1,4 +1,4 @@
-// flow-typed signature: 27a0d7ab2c9ee09ceceeddb64666f1d6
+// flow-typed signature: 26e15a33820c62d565e518a51d97a054
 // flow-typed version: <<STUB>>/semantic-ui_v^2.2.9/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

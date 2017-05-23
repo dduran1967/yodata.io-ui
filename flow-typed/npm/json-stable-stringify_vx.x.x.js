@@ -1,4 +1,4 @@
-// flow-typed signature: c20b37af7d4aa92121489b390e217507
+// flow-typed signature: 5ea8696f1d1c69d529b5920ad735bdef
 // flow-typed version: <<STUB>>/json-stable-stringify_v^1.0.1/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

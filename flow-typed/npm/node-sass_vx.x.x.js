@@ -1,4 +1,4 @@
-// flow-typed signature: f2960ea9c041295e7fe5f92aa9777bfd
+// flow-typed signature: d6c0c46d1c6b83572cff642cfcd577d2
 // flow-typed version: <<STUB>>/node-sass_v^4.5.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

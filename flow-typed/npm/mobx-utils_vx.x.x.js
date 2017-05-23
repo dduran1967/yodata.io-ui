@@ -1,4 +1,4 @@
-// flow-typed signature: c9a62301bea98f6126e0ae7052c282d0
+// flow-typed signature: 3bb76f1f03b7b5f16edea34a968e677e
 // flow-typed version: <<STUB>>/mobx-utils_v^2.0.1/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

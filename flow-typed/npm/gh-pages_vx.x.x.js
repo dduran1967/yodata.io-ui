@@ -1,4 +1,4 @@
-// flow-typed signature: a2698138af783b9c4bb2914b271cd1c6
+// flow-typed signature: 6fd7565e48e2c1f4655b51c3d542cf9f
 // flow-typed version: <<STUB>>/gh-pages_v^0.12.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

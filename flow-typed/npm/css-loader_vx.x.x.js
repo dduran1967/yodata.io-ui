@@ -1,4 +1,4 @@
-// flow-typed signature: 47526c56659a8d0aed63a7d1dc8826a6
+// flow-typed signature: 68346410ce8455b9403abd33f8efeef6
 // flow-typed version: <<STUB>>/css-loader_v0.26.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,4 +1,4 @@
-// flow-typed signature: 73d3e5121b2afc2ce22d456172cfeb81
+// flow-typed signature: bbf1b78d1ad9c6cc4c8c4f048ca4f6ab
 // flow-typed version: <<STUB>>/react-motion-ui-pack_v^0.10.2/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

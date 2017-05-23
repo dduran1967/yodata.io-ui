@@ -1,4 +1,4 @@
-// flow-typed signature: d66f0807866d789d2aae867197c4394f
+// flow-typed signature: 0e72636df1268f45497ec78d4c5fa52c
 // flow-typed version: <<STUB>>/case-sensitive-paths-webpack-plugin_v1.1.4/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

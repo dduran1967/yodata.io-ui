@@ -1,4 +1,4 @@
-// flow-typed signature: b8950e2fbb11b0096f8885f0b16facba
+// flow-typed signature: 4081d402d93ec793c77334decaeae4ed
 // flow-typed version: <<STUB>>/stylus_v^0.54.5/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

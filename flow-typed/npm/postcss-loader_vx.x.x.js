@@ -1,4 +1,4 @@
-// flow-typed signature: fd02643deeae475e5f7b6d8e894b8fd8
+// flow-typed signature: bc040e680a0b6864b0dee3272d2da33b
 // flow-typed version: <<STUB>>/postcss-loader_v1.0.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,4 +1,4 @@
-// flow-typed signature: d13651fe6c6d987b0c2fb009f9e74747
+// flow-typed signature: 73f27191fa491b2e53eb0a1e709b4ac1
 // flow-typed version: <<STUB>>/@kadira/storybook_v^2.21.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,4 +1,4 @@
-// flow-typed signature: 8956c5949e8161311a7c3de24ec83068
+// flow-typed signature: 8594e2901aa8b9714eeb5b357bf916da
 // flow-typed version: <<STUB>>/rebass_v^0.3.4/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,4 +1,4 @@
-// flow-typed signature: 5608b4026d46265423dc69fec6eaf13c
+// flow-typed signature: 229ec6a717d6c9b36a6c3d464b3a5516
 // flow-typed version: <<STUB>>/babel-plugin-transform-decorators-legacy_v^1.3.4/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

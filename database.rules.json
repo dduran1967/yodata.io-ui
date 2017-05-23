@@ -20,6 +20,11 @@
       "test": {
         ".write": "true"
       }
+    },
+    "example": {
+      "$ns": {
+        ".write": "true"
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-// flow-typed signature: 341d384494e75cfeed6edb25159acea9
+// flow-typed signature: 58637973d4c3d2051b231d4d4af59df4
 // flow-typed version: <<STUB>>/react-avatar_v^2.3.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

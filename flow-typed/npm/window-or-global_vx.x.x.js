@@ -1,4 +1,4 @@
-// flow-typed signature: cd2d51718252e7bfea3fc133614191b7
+// flow-typed signature: fb729ea1a6941b185c7b755098f87a97
 // flow-typed version: <<STUB>>/window-or-global_v^1.0.1/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

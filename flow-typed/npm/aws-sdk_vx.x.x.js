@@ -1,4 +1,4 @@
-// flow-typed signature: ffe5d7373be6f61dc33e8e6e90fee633
+// flow-typed signature: a3b6f8714d45ba5af333199b86eba4b2
 // flow-typed version: <<STUB>>/aws-sdk_v^2.22.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

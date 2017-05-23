@@ -1,4 +1,4 @@
-// flow-typed signature: 26291cd6941b3b81a5f280694ba3a32f
+// flow-typed signature: 65a58635f09a62c9375848bb0f4350bc
 // flow-typed version: <<STUB>>/react-mfb_v^0.4.1/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

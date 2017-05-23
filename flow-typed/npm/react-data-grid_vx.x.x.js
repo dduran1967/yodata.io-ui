@@ -1,4 +1,4 @@
-// flow-typed signature: 9391d9cb8739d8d4b6d8f5e1660bec05
+// flow-typed signature: 0b879aea4fd81ca134dc7c7ba74edfce
 // flow-typed version: <<STUB>>/react-data-grid_v^2.0.19/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

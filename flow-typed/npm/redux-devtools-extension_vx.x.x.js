@@ -1,4 +1,4 @@
-// flow-typed signature: 69d42078a0de45dca626b17f7d7556d7
+// flow-typed signature: 3d4e223bbdc045009f19e70cc18ac704
 // flow-typed version: <<STUB>>/redux-devtools-extension_v^2.13.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

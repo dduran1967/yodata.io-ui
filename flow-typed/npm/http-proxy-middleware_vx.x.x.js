@@ -1,4 +1,4 @@
-// flow-typed signature: dd37ebbc2014ae29d369ba46618a3445
+// flow-typed signature: 44537c35433ca04bc1efefdff6129263
 // flow-typed version: <<STUB>>/http-proxy-middleware_v0.17.2/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,4 +1,4 @@
-// flow-typed signature: 8b9a2802a82d189f779aff62c6420676
+// flow-typed signature: 260e3e57827f0b50e19465abbd7e4094
 // flow-typed version: <<STUB>>/react-redux-form_v^1.8.1/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

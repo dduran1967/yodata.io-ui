@@ -1,4 +1,4 @@
-// flow-typed signature: f0a346eb20ae73ec39b5f5dc619b2be7
+// flow-typed signature: df1bb12a7edb69bc132b85462a70f65a
 // flow-typed version: <<STUB>>/detect-port_v1.0.1/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,4 +1,4 @@
-// flow-typed signature: bdfa42072f3d5c954997c2a9e950c492
+// flow-typed signature: 9b1dd52b1f41157c7fb3f48e5a47b984
 // flow-typed version: <<STUB>>/rdflib_v^0.14.1/flow_v0.38.0
 
 /**
@@ -8,38 +8,12 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 
 declare module 'rdflib' {
-  declare class Node {
-    termType: 'NamedNode' | 'BlankNode' | 'Literal' | 'Collection',
-    value: string,
-    substitute(bindings: Object): Node,
-    compareTerm(value: Node): -1 | 0 | 1,
-    equals(value: Node): boolean,
-    hashString(): Node,
-    sameTerm(value: Node): boolean,
-    toCanonical(): string,
-    toNT(): string,
-  }
-
-  declare class NamedNode extends Node {
-    termType: 'NamedNode',
-  }
-
-  declare class BlankNode extends Node {
-    termType: 'NamedNode',
-  }
-
-  declare class Literal extends Node {
-    termType: 'Literal',
-    lang?: string,
-    datatype?: NamedNode,
-  }
-
   declare module.exports: any;
 }
 

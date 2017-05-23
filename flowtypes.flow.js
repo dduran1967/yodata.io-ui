@@ -1,6 +1,7 @@
 
 // @flow
 
+
 declare interface Resource {
   id: string
 }
@@ -42,16 +43,6 @@ declare type Literal = {
   datatype?: NamedNode,
 };
 
-
-declare type User = {
-  uid: string,
-  name: string,
-  image: string,
-  email: string,
-  emailVerified: boolean,
-  isAnonymous: boolean,
-}
-
 declare interface ActionInterface {
   type: string,
 }
@@ -62,7 +53,7 @@ declare interface FluxAction {
   meta: any,
 }
 
-declare interface Action {
+export interface Action {
   +type: string,
   agent: URL | Thing,
   object: URL | Thing,
@@ -72,6 +63,17 @@ declare interface Action {
   startTime: string,
   endTime: string,
   actionStatus: ActionStatusType,
+}
+
+declare function Reducer(state: Object, action: Action): Object;
+
+declare type User = {
+  uid: string,
+  name: string,
+  image: string,
+  email: string,
+  emailVerified: boolean,
+  isAnonymous: boolean,
 }
 
 declare interface FirebaseUser {

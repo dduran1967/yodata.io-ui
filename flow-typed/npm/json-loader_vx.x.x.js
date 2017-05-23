@@ -1,4 +1,4 @@
-// flow-typed signature: e3baa315cc326b6970ff976b78a213c4
+// flow-typed signature: 5fab90f32ae056b44774e4aa1d98001f
 // flow-typed version: <<STUB>>/json-loader_v^0.5.4/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-import { compose, lifecycle } from 'recompose';
-import createHelper from 'recompose/createHelper';
 import waitForUser from '../user/waitForUser.js';
 import { getAction } from '../services/action_service.js';
 import { subscribe } from './dbActions';
+import {compose, lifecycle} from 'recompose';
 
 const subscribeTo = getRefs =>
   compose(
@@ -25,7 +24,7 @@ const subscribeTo = getRefs =>
     })
   );
 
-export default createHelper(subscribeTo, 'subscribeTo');
+export default subscribeTo
 
 export const withSubscription = (name, url) => {
   console.log({name,url})

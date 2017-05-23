@@ -1,4 +1,4 @@
-// flow-typed signature: ac9584891312f68e1cc3f68dc8cda86d
+// flow-typed signature: e836b3f91d70b40fec97557019c8dac4
 // flow-typed version: <<STUB>>/base64-url_v^1.3.3/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

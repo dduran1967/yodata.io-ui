@@ -1,4 +1,4 @@
-// flow-typed signature: bf8380a9aabd5ec66e3804fbed53a1ab
+// flow-typed signature: 1d8cbd3b9129692df1b11785d23c6776
 // flow-typed version: <<STUB>>/recursive-readdir_v2.1.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

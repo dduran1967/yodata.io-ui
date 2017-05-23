@@ -1,4 +1,4 @@
-// flow-typed signature: f86bd04954491fb530f873bf70e00b97
+// flow-typed signature: efcd6d053de7506b9ef3715a2f36be75
 // flow-typed version: <<STUB>>/connect-history-api-fallback_v1.3.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

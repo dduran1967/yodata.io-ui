@@ -1,4 +1,4 @@
-// flow-typed signature: 82f5e5b27c4d590256ef32cf2f05406e
+// flow-typed signature: f5626430234bad7a92815356f3b1c9c4
 // flow-typed version: <<STUB>>/react-notifications_v^1.3.0/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

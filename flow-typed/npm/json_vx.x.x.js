@@ -1,4 +1,4 @@
-// flow-typed signature: 46acd17a4d3023f4d545c2661545963b
+// flow-typed signature: 0467f9577cff1a1204e9f41792a8ae96
 // flow-typed version: <<STUB>>/json_v^9.0.6/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

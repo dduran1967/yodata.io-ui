@@ -1,4 +1,4 @@
-// flow-typed signature: 2076a330f1576233d2f23747116eb4b3
+// flow-typed signature: 65dffab9a8e4766b3b477563001e622f
 // flow-typed version: <<STUB>>/liform-react_v^0.5.15/flow_v0.38.0
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 
