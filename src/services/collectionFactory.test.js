@@ -1,13 +1,35 @@
-import collection from './collectionFactory';
+import collection from './collectionFactory'
 
 const SVC = collection.methods({
   getName() {
     return this.name;
-  }
+  },
 })({
   name: 'test_service',
-  targetCollection: 'collection'
+  targetCollection: 'collection',
 });
+
+SVC.use(function (action) {
+  if (action && action.object && action.object.exampleOfWork) {
+    return { ...action, targetCollection: `/example/${action.object.exampleOfWork}` }
+  }
+  return action;
+})
+
+test('use enhancer', () => {
+  let object = {
+    type: 'SoftwareSourceCode',
+    exampleOfWork: 'Action',
+  }
+  expect(SVC.add(object)).toEqual({
+    type: 'AddAction',
+    object: {
+      type: 'SoftwareSourceCode',
+      exampleOfWork: 'Action',
+    },
+    targetCollection: '/example/Action',
+  })
+})
 
 test('composeAction', () => {
   let type = 'TestAction';
@@ -17,7 +39,7 @@ test('composeAction', () => {
     type: 'TestAction',
     object: { type: 'Person' },
     a: 'a',
-    b: 'b'
+    b: 'b',
   });
 });
 
@@ -26,7 +48,7 @@ test('collection.add', () => {
     type: 'AddAction',
     object: { type: 'Person' },
     meta: 'meta',
-    targetCollection: 'collection'
+    targetCollection: 'collection',
   });
 });
 
@@ -35,7 +57,7 @@ test('collection.update', () => {
     type: 'UpdateAction',
     object: { type: 'Person' },
     meta: 'meta',
-    targetCollection: 'collection'
+    targetCollection: 'collection',
   });
 });
 
@@ -44,12 +66,12 @@ test('collection.delete', () => {
     type: 'DeleteAction',
     object: { type: 'Person' },
     meta: 'meta',
-    targetCollection: 'collection'
+    targetCollection: 'collection',
   });
 });
 
 test('custom methods', () => {
-  SVC.foo2 = function() {
+  SVC.foo2 = function () {
     return this.name;
   };
   expect(SVC.getName()).toEqual('test_service');

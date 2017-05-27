@@ -2,159 +2,47 @@
 <project version="4">
   <component name="AutoTestManager">
     <enabled-run-configurations>
-      <run-configuration type="JavaScriptTestRunnerJest" name="testall" />
       <run-configuration type="JavaScriptTestRunnerJest" name="event hook transforms dispatched action" />
+      <run-configuration type="JavaScriptTestRunnerJest" name="testall" />
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="use tabGroup control on TypesRoot">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vagrant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/csstips_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/csx_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/json5_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/prop-types_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/react-hotkeys_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/react-icons_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/react-svg-buttons_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/react-svg-morph_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/semantic-ui-react_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/tcomb-react_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/tcomb_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/typestyle_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow-typed/npm/winston_vx.x.x.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/collectionFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/collectionFactory.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/exampleService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/serviceFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/serviceFactory.test.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flow-typed/npm/recompose_vx.x.x.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/db/dbLogic.test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/rdf-utilities.test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stores/auth_store.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stores/crud_store.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stores/register_store.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stores/user_store.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+    <list default="true" id="144efc11-9a9c-4e39-ba31-3b85012569b5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/db/firebaseLogic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Type.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/__mocks__/Type.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/__tests__/Action.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/__tests__/Model.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/__tests__/Thing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/__tests__/Type.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/createModel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/actionModel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/action_service.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/reduxService.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/flow-typed/npm/tcomb-react_vx.x.x.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/flow-typed/npm/tcomb_vx.x.x.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/yodata.io-ui.iml" afterPath="$PROJECT_DIR$/.idea/yodata.io-ui.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.rules.json" afterPath="$PROJECT_DIR$/database.rules.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/@kadira/storybook_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/@kadira/storybook_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/ajv_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/ajv_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/amazon-cognito-identity-js_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/amazon-cognito-identity-js_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/archiver_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/archiver_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/autoprefixer_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/autoprefixer_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/aws-sdk_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/aws-sdk_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/axios_v0.15.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/axios_v0.15.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/babel-core_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/babel-core_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/babel-eslint_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/babel-eslint_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/babel-jest_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/babel-jest_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/babel-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/babel-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/babel-plugin-transform-decorators-legacy_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/babel-plugin-transform-decorators-legacy_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/babel-preset-react-app_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/babel-preset-react-app_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/babel-preset-stage-0_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/babel-preset-stage-0_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/base64-url_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/base64-url_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/case-sensitive-paths-webpack-plugin_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/case-sensitive-paths-webpack-plugin_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/check-types_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/check-types_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/classnames_v2.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/classnames_v2.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/clipboard_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/clipboard_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/codemirror_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/codemirror_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/connect-history-api-fallback_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/connect-history-api-fallback_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/cross-spawn_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/cross-spawn_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/css-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/css-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/detect-port_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/detect-port_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/dotenv_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/dotenv_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/eslint-config-react-app_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/eslint-config-react-app_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/eslint-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/eslint-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/eslint-plugin-flowtype_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/eslint-plugin-flowtype_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/eslint-plugin-import_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/eslint-plugin-import_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/eslint-plugin-jsx-a11y_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/eslint-plugin-jsx-a11y_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/eslint-plugin-react_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/eslint-plugin-react_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/eslint_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/eslint_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/extract-text-webpack-plugin_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/extract-text-webpack-plugin_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/file-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/file-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/filesize_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/filesize_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/firebase_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/firebase_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/firebaseui_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/firebaseui_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/fs-extra_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/fs-extra_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/gh-pages_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/gh-pages_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/gzip-size_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/gzip-size_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/highlight.js_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/highlight.js_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/html-webpack-plugin_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/html-webpack-plugin_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/http-proxy-middleware_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/http-proxy-middleware_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/json-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/json-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/json-stable-stringify_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/json-stable-stringify_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/json_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/json_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/less-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/less-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/less_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/less_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/liform-react_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/liform-react_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/mobx-react-devtools_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/mobx-react-devtools_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/mobx-react_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/mobx-react_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/mobx-utils_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/mobx-utils_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/node-sass_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/node-sass_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/object-hash_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/object-hash_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/path-exists_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/path-exists_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/postcss-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/postcss-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/pouchdb_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/pouchdb_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/promise_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/promise_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/rdf-store-inmemory_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/rdf-store-inmemory_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/rdflib_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/rdflib_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/re-base_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/re-base_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-avatar_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-avatar_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-codemirror_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-codemirror_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-data-grid_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-data-grid_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-dev-utils_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-dev-utils_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-fab_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-fab_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-jsonschema-form_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-jsonschema-form_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-mfb_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-mfb_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-motion-ui-pack_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-motion-ui-pack_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-notification-system_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-notification-system_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-notifications_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-notifications_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-redux-form_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-redux-form_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-redux_v5.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-redux_v5.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-router5_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-router5_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-tap-event-plugin_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-tap-event-plugin_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/react-transition-group_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/react-transition-group_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/rebass_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/rebass_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/recursive-readdir_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/recursive-readdir_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux-actions_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux-actions_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux-devtools-extension_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux-devtools-extension_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux-form_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux-form_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux-logger_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux-logger_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux-logic_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux-logic_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux-observable_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux-observable_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux-router5_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux-router5_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux-thunk_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux-thunk_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/redux_v3.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/redux_v3.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/reflexbox_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/reflexbox_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/rimraf_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/rimraf_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/router5_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/router5_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/rxjs_v5.0.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/rxjs_v5.0.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/sass-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/sass-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/semantic-ui_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/semantic-ui_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/solid-client_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/solid-client_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/stampit_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/stampit_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/style-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/style-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/styled-components_v1.4.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/styled-components_v1.4.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/stylus-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/stylus-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/stylus_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/stylus_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/svgo_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/svgo_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/url-loader_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/url-loader_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/vinyl_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/vinyl_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/webpack-dev-server_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/webpack-dev-server_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/webpack-manifest-plugin_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/webpack-manifest-plugin_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/webpack_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/webpack_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/whatwg-fetch_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/whatwg-fetch_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flow-typed/npm/window-or-global_vx.x.x.js" afterPath="$PROJECT_DIR$/flow-typed/npm/window-or-global_vx.x.x.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flowtypes.flow.js" afterPath="$PROJECT_DIR$/flowtypes.flow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/index.js" afterPath="$PROJECT_DIR$/functions/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/channel/channelLogic.js" afterPath="$PROJECT_DIR$/src/channel/channelLogic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/ExampleValue.js" afterPath="$PROJECT_DIR$/src/component/ExampleValue.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/dbLogic.js" afterPath="$PROJECT_DIR$/src/db/dbLogic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/subscribeTo.js" afterPath="$PROJECT_DIR$/src/db/subscribeTo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Action.js" afterPath="$PROJECT_DIR$/src/models/Action.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Model.js" afterPath="$PROJECT_DIR$/src/models/Model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Thing.js" afterPath="$PROJECT_DIR$/src/models/Thing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/index.js" afterPath="$PROJECT_DIR$/src/models/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/schema/ContextView.js" afterPath="$PROJECT_DIR$/src/schema/ContextView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/action_service.js" afterPath="$PROJECT_DIR$/src/services/action_service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/auth_service.js" afterPath="$PROJECT_DIR$/src/services/auth_service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/collectionFactory.js" afterPath="$PROJECT_DIR$/src/services/collectionFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/collectionFactory.test.js" afterPath="$PROJECT_DIR$/src/services/collectionFactory.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/exampleService.js" afterPath="$PROJECT_DIR$/src/services/exampleService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/index.js" afterPath="$PROJECT_DIR$/src/services/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/search_service.js" afterPath="$PROJECT_DIR$/src/services/search_service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/serviceFactory.js" afterPath="$PROJECT_DIR$/src/services/serviceFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/serviceFactory.test.js" afterPath="$PROJECT_DIR$/src/services/serviceFactory.test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/index.js" afterPath="$PROJECT_DIR$/src/store/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thrume/thrume-logic.js" afterPath="$PROJECT_DIR$/src/thrume/thrume-logic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userLogic.js" afterPath="$PROJECT_DIR$/src/user/userLogic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/yo.js" afterPath="$PROJECT_DIR$/src/yo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
@@ -175,52 +63,7 @@
     <favorites_list name="yodata.io-ui" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="serviceFactory.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/services/serviceFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-              <folding>
-                <element signature="e#10#39#0" expanded="true" />
-                <element signature="e#673#793#0" expanded="true" />
-                <element signature="e#732#777#0" expanded="true" />
-                <element signature="e#1980#2204#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collectionFactory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/collectionFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-              <folding>
-                <element signature="e#170#268#0" expanded="true" />
-                <element signature="e#855#905#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collectionFactory.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/collectionFactory.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
-              <folding>
-                <element signature="e#215#456#0" expanded="true" />
-                <element signature="e#489#672#0" expanded="true" />
-                <element signature="e#933#1122#0" expanded="true" />
-                <element signature="e#1155#1306#0" expanded="true" />
-                <element signature="e#1181#1208#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -232,36 +75,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setWebh</find>
-      <find>setWebhok</find>
-      <find>dispatch</find>
-      <find>deb</find>
-      <find>setWebho</find>
+      <find>thrume/send_c</find>
+      <find>A</find>
+      <find>Add/</find>
+      <find>Add</find>
+      <find>AddAction</find>
       <find>U</find>
-      <find>UpdateAc</find>
-      <find>flat</find>
-      <find>viewexe</find>
-      <find>current</find>
-      <find>isActive</find>
-      <find>createAction</find>
-      <find>register</find>
-      <find>UpdateAct</find>
-      <find>exap</find>
-      <find>def</find>
+      <find>UpdateA</find>
+      <find>console.log</find>
+      <find>combineForm</find>
+      <find>subscribeAction</find>
+      <find>createlog</find>
+      <find>Rx</find>
+      <find>db/sub</find>
+      <find>search</find>
       <find>UpdateAction</find>
-      <find>createStore</find>
-      <find>type</find>
-      <find>store</find>
-      <find>firebase</find>
-      <find>getstate</find>
-      <find>stamp</find>
-      <find>serv</find>
-      <find>test</find>
-      <find>jest</find>
-      <find>foo</find>
-      <find>rxjs</find>
-      <find>eventHook</find>
-      <find>event</find>
+      <find>Search</find>
+      <find>prop_in</find>
+      <find>Se</find>
+      <find>ob</find>
+      <find>objectmode</find>
+      <find>objectmodelpro</find>
+      <find>objectmodelproto</find>
+      <find>hasNoHolde</find>
+      <find>object.pro</find>
+      <find>transform</find>
+      <find>createMode</find>
+      <find>startDate</find>
+      <find>startDatestart</find>
+      <find>enhancer</find>
+      <find>Model.Arra</find>
     </findStrings>
     <replaceStrings>
       <replace>var</replace>
@@ -283,41 +126,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/schema/getSubClassesOf.js" />
-        <option value="$PROJECT_DIR$/src/schema/SubClassesOf.js" />
-        <option value="$PROJECT_DIR$/src/schema/propertiesOfDeep.js" />
-        <option value="$PROJECT_DIR$/src/thrume/thrume-root.jsx" />
-        <option value="$PROJECT_DIR$/src/component/ActionCard.js" />
-        <option value="$PROJECT_DIR$/src/schema/getSchemaObject.js" />
-        <option value="$PROJECT_DIR$/src/component/TabGroup.js" />
-        <option value="$PROJECT_DIR$/src/component/httpCodeExample.js" />
-        <option value="$PROJECT_DIR$/src/action/ActionRoot.js" />
-        <option value="$PROJECT_DIR$/src/router/routes.js" />
-        <option value="$PROJECT_DIR$/src/schema/namespace.js" />
-        <option value="$PROJECT_DIR$/src/user/currentUser.js" />
-        <option value="$PROJECT_DIR$/src/component/SchemaForm.js" />
-        <option value="$PROJECT_DIR$/src/thrume/thrume-logic.js" />
-        <option value="$PROJECT_DIR$/src/schema/getExampleValue.js" />
-        <option value="$PROJECT_DIR$/src/apidocs/restApiRoot.js" />
-        <option value="$PROJECT_DIR$/src/types/TypesRoot.jsx" />
-        <option value="$PROJECT_DIR$/src/apps/AppsRoot.js" />
         <option value="$PROJECT_DIR$/src/apps/AppView.js" />
         <option value="$PROJECT_DIR$/src/user/InboxSettings.js" />
-        <option value="$PROJECT_DIR$/src/component/ExampleValue.js" />
-        <option value="$PROJECT_DIR$/src/schema/ContextView.js" />
         <option value="$PROJECT_DIR$/src/component/TypeCard.jsx" />
         <option value="$PROJECT_DIR$/src/user/UserRoot.js" />
         <option value="$PROJECT_DIR$/src/types/TypeView.jsx" />
         <option value="$PROJECT_DIR$/database.rules.json" />
         <option value="$PROJECT_DIR$/src/example/example.js" />
-        <option value="$PROJECT_DIR$/src/services/search_service.js" />
-        <option value="$PROJECT_DIR$/src/services/action_service.js" />
         <option value="$PROJECT_DIR$/functions/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/yarn.lock" />
         <option value="$PROJECT_DIR$/src/db/subscribeTo.js" />
-        <option value="$PROJECT_DIR$/src/store/index.js" />
-        <option value="$PROJECT_DIR$/src/db/dbLogic.js" />
         <option value="$PROJECT_DIR$/src/services/service.test.js" />
         <option value="$PROJECT_DIR$/flow-typed/npm/stampit_vx.x.x.js" />
         <option value="$PROJECT_DIR$/src/services/service.js" />
@@ -327,13 +146,37 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/services/observableFactory.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/services/index.js" />
-        <option value="$PROJECT_DIR$/src/yo.js" />
         <option value="$PROJECT_DIR$/src/services/collectionFactory.js" />
-        <option value="$PROJECT_DIR$/src/services/serviceFactory.js" />
-        <option value="$PROJECT_DIR$/src/services/serviceFactory.test.js" />
-        <option value="$PROJECT_DIR$/src/services/exampleService.js" />
+        <option value="$PROJECT_DIR$/src/services/reduxService.js" />
         <option value="$PROJECT_DIR$/src/services/collectionFactory.test.js" />
+        <option value="$PROJECT_DIR$/src/services/exampleService.js" />
+        <option value="$PROJECT_DIR$/src/user/userLogic.js" />
+        <option value="$PROJECT_DIR$/src/channel/channelLogic.js" />
+        <option value="$PROJECT_DIR$/src/services/search_service.js" />
+        <option value="$PROJECT_DIR$/src/thrume/thrume-logic.js" />
+        <option value="$PROJECT_DIR$/src/services/auth_service.js" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/schema/ContextView.js" />
+        <option value="$PROJECT_DIR$/src/component/ExampleValue.js" />
+        <option value="$PROJECT_DIR$/src/services/index.js" />
+        <option value="$PROJECT_DIR$/src/services/serviceFactory.test.js" />
+        <option value="$PROJECT_DIR$/src/services/serviceFactory.js" />
+        <option value="$PROJECT_DIR$/src/db/dbLogic.js" />
+        <option value="$PROJECT_DIR$/src/db/firebaseLogic.js" />
+        <option value="$PROJECT_DIR$/src/services/action_service.test.js" />
+        <option value="$PROJECT_DIR$/src/services/action_service.js" />
+        <option value="$PROJECT_DIR$/src/services/actionModel.js" />
+        <option value="$PROJECT_DIR$/src/yo.js" />
+        <option value="$PROJECT_DIR$/src/models/Type.js" />
+        <option value="$PROJECT_DIR$/src/models/__tests__/Type.js" />
+        <option value="$PROJECT_DIR$/src/models/Thing.js" />
+        <option value="$PROJECT_DIR$/src/models/__tests__/Thing.js" />
+        <option value="$PROJECT_DIR$/src/models/index.js" />
+        <option value="$PROJECT_DIR$/src/models/createModel.js" />
+        <option value="$PROJECT_DIR$/src/models/Action.js" />
+        <option value="$PROJECT_DIR$/src/models/__tests__/Action.js" />
+        <option value="$PROJECT_DIR$/src/models/Model.js" />
+        <option value="$PROJECT_DIR$/src/models/__tests__/Model.js" />
       </list>
     </option>
   </component>
@@ -359,7 +202,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="436" />
+    <option name="x" value="432" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="1413" />
@@ -422,6 +265,124 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__tests__" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yodata.io-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Sources">
@@ -546,6 +507,24 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="services">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="yodata.io-ui">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="component">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -571,70 +550,6 @@
             <PATH_ELEMENT USER_OBJECT="card-group">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yodata.io-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -704,9 +619,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="searchInterface.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="searchInterface.js" working-dir="$PROJECT_DIR$/src/component">
-      <method />
-    </configuration>
     <configuration default="false" name="service.test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/src/services/serviceFactory.test.js" working-dir="$PROJECT_DIR$/src/services">
       <method />
     </configuration>
@@ -718,6 +630,18 @@
       <test-file value="$PROJECT_DIR$/src/services/serviceFactory.test.js" />
       <test-names>
         <test-name value="event hook transforms dispatched action" />
+      </test-names>
+      <method />
+    </configuration>
+    <configuration default="false" name="tranformation.passes model.test validation" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/models/__tests__/Model.js" />
+      <test-names>
+        <test-name value="tranformation" />
+        <test-name value="passes model.test validation" />
       </test-names>
       <method />
     </configuration>
@@ -786,17 +710,17 @@
       <item index="0" class="java.lang.String" itemvalue="Jest.testall" />
       <item index="1" class="java.lang.String" itemvalue="npm.start" />
       <item index="2" class="java.lang.String" itemvalue="npm.test" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.searchInterface.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.service.test.js" />
-      <item index="5" class="java.lang.String" itemvalue="Jest.event hook transforms dispatched action" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.service.test.js" />
+      <item index="4" class="java.lang.String" itemvalue="Jest.event hook transforms dispatched action" />
+      <item index="5" class="java.lang.String" itemvalue="Jest.tranformation.passes model.test validation" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.service.test.js" />
-        <item index="1" class="java.lang.String" itemvalue="Jest.event hook transforms dispatched action" />
-        <item index="2" class="java.lang.String" itemvalue="npm.test" />
-        <item index="3" class="java.lang.String" itemvalue="npm.start" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.searchInterface.js" />
+        <item index="0" class="java.lang.String" itemvalue="Jest.tranformation.passes model.test validation" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.service.test.js" />
+        <item index="2" class="java.lang.String" itemvalue="Jest.event hook transforms dispatched action" />
+        <item index="3" class="java.lang.String" itemvalue="npm.test" />
+        <item index="4" class="java.lang.String" itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -953,7 +877,8 @@
       <workItem from="1495284734026" duration="2832000" />
       <workItem from="1495288249793" duration="37701000" />
       <workItem from="1495389582328" duration="33204000" />
-      <workItem from="1495484852934" duration="15669000" />
+      <workItem from="1495484852934" duration="104418000" />
+      <workItem from="1495751049048" duration="55499000" />
     </task>
     <task id="LOCAL-00001" summary="add gh-pages">
       <created>1487102793367</created>
@@ -1242,16 +1167,17 @@
       <option name="project" value="LOCAL" />
       <updated>1495110066943</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="add reactive services">
+      <created>1495560711082</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1495560711082</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="event_hook_transforms_dispatched_action - 2017.05.21 at 17h 11m 38s.xml">
-      <configuration name="event hook transforms dispatched action" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="event_hook_transforms_dispatched_action - 2017.05.21 at 17h 11m 58s.xml">
-      <configuration name="event hook transforms dispatched action" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
     <history-entry file="event_hook_transforms_dispatched_action - 2017.05.21 at 17h 12m 28s.xml">
       <configuration name="event hook transforms dispatched action" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
@@ -1276,9 +1202,15 @@
     <history-entry file="testall - 2017.05.21 at 17h 16m 57s.xml">
       <configuration name="testall" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="testall - 2017.05.26 at 19h 06m 59s.xml">
+      <configuration name="testall" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="tranformation_passes_model_test_validation - 2017.05.26 at 15h 16m 17s.xml">
+      <configuration name="tranformation.passes model.test validation" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="633248000" />
+    <option name="totallyTimeSpent" value="777496000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1290,16 +1222,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="436" y="23" width="1280" height="1413" extended-state="0" />
-    <editor active="true" />
+    <frame x="432" y="23" width="1280" height="1413" extended-state="0" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16997617" sideWeight="0.5124905" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16997617" sideWeight="0.5124905" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11884936" sideWeight="0.5197095" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="615" y="385" width="1466" height="816" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20969023" sideWeight="0.48750946" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11960636" sideWeight="0.48029044" order="8" side_tool="false" content_ui="tabs" x="76" y="195" width="1276" height="730" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4390613" sideWeight="0.48029044" order="8" side_tool="false" content_ui="tabs" x="76" y="195" width="1276" height="730" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.47161242" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="640" y="23" width="1280" height="1413" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -1364,7 +1295,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="firebase user data" />
     <MESSAGE value="fix db subscription logic issue" />
     <MESSAGE value="auth logic popup" />
     <MESSAGE value="data subscriptions" />
@@ -1389,7 +1319,8 @@
     <MESSAGE value="apiroot style cleanup" />
     <MESSAGE value="inbox settings ui" />
     <MESSAGE value="use tabGroup control on TypesRoot" />
-    <option name="LAST_COMMIT_MESSAGE" value="use tabGroup control on TypesRoot" />
+    <MESSAGE value="add reactive services" />
+    <option name="LAST_COMMIT_MESSAGE" value="add reactive services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1398,234 +1329,66 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/semantic-ui-react_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-757">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/redux-form_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/react-router5_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/firebaseui_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/subscribeTo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/rdf-store-inmemory_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/redux_v3.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/redux/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/rxjs/src/scheduler/Action.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getExampleValue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/getSchemaObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/ExampleValue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-847">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="462">
+          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
-            <element signature="e#584#1062#0" expanded="false" />
-            <element signature="e#1191#1939#0" expanded="false" />
+            <element signature="e#10#36#0" expanded="false" />
+            <element signature="e#747#1225#0" expanded="false" />
+            <element signature="e#1354#1892#0" expanded="false" />
+            <element signature="e#2095#3082#0" expanded="false" />
+            <element signature="e#2286#2326#0" expanded="false" />
+            <element signature="e#2378#3064#0" expanded="false" />
+            <element signature="e#2393#2875#0" expanded="false" />
+            <element signature="e#2505#2688#0" expanded="false" />
+            <element signature="e#2884#3050#0" expanded="false" />
+            <element signature="e#3131#3553#0" expanded="false" />
+            <element signature="e#3227#3386#0" expanded="false" />
+            <element signature="e#3558#3704#0" expanded="false" />
+            <element signature="e#3951#4182#0" expanded="false" />
+            <element signature="e#3977#4042#0" expanded="false" />
+            <element signature="e#4066#4172#0" expanded="false" />
+            <element signature="e#4188#4416#0" expanded="false" />
+            <element signature="e#4213#4406#0" expanded="false" />
+            <element signature="e#4534#4602#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.rules.json">
+    <entry file="file://$PROJECT_DIR$/src/services/collectionFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <element signature="e#10#36#0" expanded="false" />
+            <element signature="e#197#295#0" expanded="false" />
+            <element signature="e#882#932#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.flowconfig">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/context.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1751">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/jest_v19.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/json5_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/babel-jest_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/ajv_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/stampit/dist/stampit.full.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1101">
-          <caret line="487" column="36" lean-forward="true" selection-start-line="466" selection-start-column="0" selection-end-line="487" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/stampit/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/stampit/dist/stampit.mjs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flow-typed/npm/stampit_vx.x.x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/Graph.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/dbLogic.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/db/dbReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/p-map/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/rdf-utilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/rdf-utilities.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/services/auth_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#10#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/dbLogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+        <state relative-caret-position="567">
+          <caret line="254" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
           <folding>
             <element signature="e#333#417#0" expanded="false" />
             <element signature="e#349#415#0" expanded="false" />
@@ -1643,179 +1406,140 @@
             <element signature="e#1526#1644#0" expanded="false" />
             <element signature="e#1838#1940#0" expanded="false" />
             <element signature="e#1871#1932#0" expanded="false" />
-            <element signature="e#2107#2219#0" expanded="false" />
-            <element signature="e#2589#2619#0" expanded="false" />
-            <element signature="e#3985#4686#0" expanded="false" />
-            <element signature="e#4065#4257#0" expanded="false" />
-            <element signature="e#4198#4233#0" expanded="false" />
-            <element signature="e#4318#4684#0" expanded="false" />
-            <element signature="e#4397#4668#0" expanded="false" />
-            <element signature="e#4721#4854#0" expanded="false" />
-            <element signature="e#4781#4852#0" expanded="false" />
-            <element signature="e#4858#4888#0" expanded="false" />
-            <element signature="e#5240#5279#0" expanded="false" />
-            <element signature="e#5931#6765#0" expanded="false" />
-            <element signature="e#5992#6423#0" expanded="false" />
-            <element signature="e#6186#6214#0" expanded="false" />
-            <element signature="e#6269#6337#0" expanded="false" />
-            <element signature="e#6343#6419#0" expanded="false" />
-            <element signature="e#6467#6763#0" expanded="false" />
-            <element signature="e#6807#7549#0" expanded="false" />
-            <element signature="e#6871#7264#0" expanded="false" />
-            <element signature="e#6983#7161#0" expanded="false" />
-            <element signature="e#7083#7134#0" expanded="false" />
-            <element signature="e#7167#7260#0" expanded="false" />
-            <element signature="e#7308#7547#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/schemaLogic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/service.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1077">
-          <caret line="134" column="19" lean-forward="false" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding>
-            <element signature="e#10#35#0" expanded="false" />
-            <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/action_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="e#413#476#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/observableFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ajv/dist/nodent.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="1" column="25445" lean-forward="false" selection-start-line="1" selection-start-column="25445" selection-end-line="1" selection-end-column="25445" />
-          <folding>
-            <element signature="e#25884#65439#0" expanded="false" />
-            <element signature="e#25897#65325#0" expanded="false" />
-            <element signature="e#27603#61663#0" expanded="false" />
-            <element signature="e#31881#32329#0" expanded="false" />
-            <element signature="e#31971#32322#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/serviceFactory.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="37" column="57" lean-forward="false" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-          <folding>
-            <element signature="e#127#248#0" expanded="false" />
-            <element signature="e#267#312#0" expanded="false" />
-            <element signature="e#362#503#0" expanded="false" />
-            <element signature="e#571#823#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/yo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1149">
-          <caret line="197" column="22" lean-forward="false" selection-start-line="197" selection-start-column="22" selection-end-line="197" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#36#0" expanded="false" />
-            <element signature="n#!!block;n#getSubject#0" expanded="false" />
-            <element signature="n#!!block;n#action#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#auth#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#db#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#channel#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#context#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#ho#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#thrume#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#keyToUrl#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#urlToKey#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#bsf#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#currentUser#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#currentUserId#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#currentUserAgent#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#dispatch#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#fetchSQSMessage#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#fetchSQSSampleData#0;n#Yo#0" expanded="false" />
-            <element signature="e#2868#2903#0" expanded="false" />
-            <element signature="n#!!block;n#subscribe#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#getSchemaObject#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#subClassOf#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#propertiesOf#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#getExampleValue#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#createMockValue#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#createMockType#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#addExampleValue#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#propertiesOfDeep#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#superTypesOf#0;n#Yo#0" expanded="false" />
-            <element signature="n#!!block;n#json#0;n#Yo#0" expanded="false" />
+            <element signature="e#1985#2584#0" expanded="false" />
+            <element signature="e#2045#2374#0" expanded="false" />
+            <element signature="e#2106#2218#0" expanded="false" />
+            <element signature="e#2242#2270#0" expanded="false" />
+            <element signature="e#2276#2370#0" expanded="false" />
+            <element signature="e#2408#2582#0" expanded="false" />
+            <element signature="e#2588#2618#0" expanded="false" />
+            <element signature="e#3984#4699#0" expanded="false" />
+            <element signature="e#4064#4256#0" expanded="false" />
+            <element signature="e#4197#4232#0" expanded="false" />
+            <element signature="e#4317#4697#0" expanded="false" />
+            <element signature="e#4396#4681#0" expanded="false" />
+            <element signature="e#4734#4885#0" expanded="false" />
+            <element signature="e#4800#4883#0" expanded="false" />
+            <element signature="e#4924#5786#0" expanded="false" />
+            <element signature="e#4985#5390#0" expanded="false" />
+            <element signature="e#5152#5180#0" expanded="false" />
+            <element signature="e#5235#5304#0" expanded="false" />
+            <element signature="e#5310#5386#0" expanded="false" />
+            <element signature="e#5440#5784#0" expanded="false" />
+            <element signature="e#5828#6622#0" expanded="false" />
+            <element signature="e#5892#6285#0" expanded="false" />
+            <element signature="e#6004#6182#0" expanded="false" />
+            <element signature="e#6104#6155#0" expanded="false" />
+            <element signature="e#6188#6281#0" expanded="false" />
+            <element signature="e#6335#6620#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="36" column="2" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+        <state relative-caret-position="63">
+          <caret line="3" column="63" lean-forward="false" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
           <folding>
-            <element signature="e#2126#2275#0" expanded="false" />
+            <element signature="e#1143#1460#0" expanded="false" />
+            <element signature="e#1538#1645#0" expanded="false" />
+            <element signature="e#1675#1781#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/auth_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="59" column="62" lean-forward="false" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
+          <folding>
+            <element signature="e#10#45#0" expanded="false" />
+            <element signature="n#!!block;n#login#0" expanded="false" />
+            <element signature="n#!!block;n#constructor#0;n#AuthService#0" expanded="false" />
+            <element signature="n#!!block;n#init#0;n#AuthService#0" expanded="false" />
+            <element signature="e#666#915#0" expanded="false" />
+            <element signature="n#!!block;n#startUI#0;n#AuthService#0" expanded="false" />
+            <element signature="n#!!block;n#login#0;n#AuthService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema/ContextView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/firebaseLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#10#51#0" expanded="false" />
+            <element signature="e#1861#2131#0" expanded="false" />
+            <marker date="1495642553000" expanded="false" signature="4438:4577" ph="{...}" />
+            <marker date="1495642553000" expanded="false" signature="5293:5414" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow-typed/npm/tcomb_vx.x.x.js" />
+    <entry file="file://$PROJECT_DIR$/flow-typed/npm/tcomb-react_vx.x.x.js" />
+    <entry file="file://$PROJECT_DIR$/src/db/dbActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+          <folding>
+            <element signature="e#9#51#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/subscribeTo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/SearchResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding>
+            <element signature="e#412#535#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/search_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="23" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/exampleService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#10#61#0" expanded="false" />
+            <element signature="n#!!block;n#exampleReducer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/search_service.js">
+    <entry file="file://$PROJECT_DIR$/src/models/Organization.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Person.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1823,48 +1547,314 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flowtypes.flow.js">
+    <entry file="file://$PROJECT_DIR$/src/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/yo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="970">
+          <caret line="199" column="19" lean-forward="false" selection-start-line="199" selection-start-column="19" selection-end-line="199" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/objectmodel/dist/object-model.min.js.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/objectmodel/dist/object-model.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/objectmodel/dist/object-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/objectmodel/src/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!block;n#Model#0" expanded="false" />
+            <element signature="e#100#182#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/objectmodel/dist/object-model.umd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="163" column="26" lean-forward="false" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
+          <folding>
+            <element signature="e#80#278#0" expanded="false" />
+            <element signature="e#2367#2445#0" expanded="false" />
+            <element signature="e#11388#11789#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/collectionFactory.test.js">
+    <entry file="file://$PROJECT_DIR$/src/models/__tests__/Type.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+        <state relative-caret-position="483">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="e#215#456#0" expanded="true" />
-            <element signature="e#489#672#0" expanded="true" />
-            <element signature="e#933#1122#0" expanded="true" />
-            <element signature="e#1155#1306#0" expanded="true" />
-            <element signature="e#1181#1208#0" expanded="true" />
+            <element signature="e#798#1026#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/collectionFactory.js">
+    <entry file="file://$PROJECT_DIR$/src/models/Thing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="84">
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/action.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/Action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding>
-            <element signature="e#170#268#0" expanded="true" />
-            <element signature="e#855#905#0" expanded="true" />
+            <element signature="e#306#1314#0" expanded="false" />
+            <element signature="e#709#1026#0" expanded="false" />
+            <element signature="e#756#890#0" expanded="false" />
+            <element signature="e#912#971#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/__tests__/Thing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/actionModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/serviceFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        <state relative-caret-position="390">
+          <caret line="40" column="17" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="40" selection-end-column="17" />
           <folding>
-            <element signature="e#10#39#0" expanded="true" />
-            <element signature="e#673#793#0" expanded="true" />
-            <element signature="e#732#777#0" expanded="true" />
-            <element signature="e#1980#2204#0" expanded="true" />
+            <element signature="e#961#1002#0" expanded="false" />
+            <element signature="e#2119#2154#0" expanded="false" />
+            <element signature="e#2197#2340#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/schema.nt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Type.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/__mocks__/Type.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/__mocks__/Thing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/__mocks__/Person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/__mocks__/ActionInstance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/__tests__/Action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#73#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#591#841#0" expanded="false" />
+            <element signature="e#668#838#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/action_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/action_service.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#135#245#0" expanded="false" />
+            <element signature="e#273#373#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Graph.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/serviceFactory.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="e#1101#1443#0" expanded="true" />
+            <element signature="e#1145#1283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/__tests__/Model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding>
+            <element signature="e#293#965#0" expanded="false" />
+            <element signature="e#306#419#0" expanded="false" />
+            <element signature="e#697#842#0" expanded="false" />
+            <element signature="e#855#962#0" expanded="false" />
+            <element signature="e#995#1075#0" expanded="false" />
+            <element signature="e#1906#1980#0" expanded="false" />
+            <element signature="e#2127#2245#0" expanded="false" />
+            <element signature="e#2266#2305#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#transform#0" expanded="true" />
+            <element signature="e#248#450#0" expanded="true" />
+            <element signature="e#297#321#0" expanded="true" />
+            <element signature="e#2456#2607#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/createModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="56" column="23" lean-forward="true" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+          <folding>
+            <element signature="e#664#755#0" expanded="false" />
+            <element signature="e#769#823#0" expanded="false" />
+            <element signature="e#1022#1060#0" expanded="false" />
+            <element signature="e#1293#1538#0" expanded="true" />
           </folding>
         </state>
       </provider>

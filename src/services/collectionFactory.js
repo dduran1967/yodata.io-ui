@@ -1,5 +1,6 @@
 // @flow
 
+import * as Rx from 'rxjs'
 import Service from './serviceFactory'
 
 const CollectionService = Service

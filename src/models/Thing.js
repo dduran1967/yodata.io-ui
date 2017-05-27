@@ -1,9 +1,13 @@
-// @flow
+import Model from './Model'
 
-export type Thing = {
-  id: string,
-  type: string,
-  url: string,
-  label: string,
-  description: string,
-}
+const Thing = Model.Type.extend({
+  additionalType: [ Array(String) ],
+  alternateName: [ Array(String) ],
+  name: [ String ],
+  description: [ String ],
+  context: [ String ],
+  url: [ String ],
+  label: [ Array(String) ],
+})
+
+export default Thing

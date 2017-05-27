@@ -11,7 +11,7 @@ import channelRoot from './channelBasePath'
 
 const onUserSignedIn = createLogic({
   type: 'USER/USER_SIGNED_IN',
-  process({action}, dispatch) {
+  process({action}, dispatch, done) {
     let {uid} = action.payload
     dispatch({
       type: 'DB/SUBSCRIBE',
@@ -21,7 +21,8 @@ const onUserSignedIn = createLogic({
         object: channelRoot(uid),
         actionStatus: 'PotentialActionStatus',
       },
-    })
+    });
+    done();
   },
 })
 
@@ -65,7 +66,7 @@ const createChannel = createLogic({
 
 export const subscribe = createLogic({
   type: 'CHANNEL/SUBSCRIBE',
-  process({getState}, dispatch) {
+  process({getState}, dispatch, done) {
     let state = getState();
     let uid = state.user.currentUser.uid
     dispatch({
@@ -78,6 +79,7 @@ export const subscribe = createLogic({
         actionStatus: 'PotentialActionStatus',
       },
     })
+    done()
   },
 })
 
@@ -95,12 +97,13 @@ export const onCreateAccount = createLogic({
       reject(action);
     }
   },
-  process({action}, dispatch) {
+  process({action}, dispatch, done) {
     let id = action.payload.object;
     console.info('PROCESS: CREATE NEW CONTAINER', id)
     let data = createChannelContainer(id);
     let ref = firebase.database().ref(id)
-    ref.set(data).then(snap => {
+    ref.set(data)
+      .then(snap => {
       dispatch({
         type: 'CHANNEL/CONTAINER_CREATE_COMPLETED',
         payload: {
@@ -111,6 +114,7 @@ export const onCreateAccount = createLogic({
         },
       })
     })
+      .then(() => done())
   },
 })
 

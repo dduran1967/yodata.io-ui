@@ -1,9 +1,7 @@
 // @flow
 
-import { combineForms } from 'react-redux-form';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { createLogger } from 'redux-logger';
 import { createLogicMiddleware } from 'redux-logic';
 import { router5Middleware, router5Reducer } from 'redux-router5';
 import { channelLogic, channelReducer } from '../channel';
@@ -21,6 +19,7 @@ import { notificiationsReducer } from '../component/Notifications.js';
 import reactionReducer from '../reaction/reactionReducer.js';
 import reactionLogic from '../reaction/reactionLogic.js';
 import { getAction } from '../services/action_service.js';
+import { exampleReducer } from '../services/exampleService'
 
 const REDUCERS = {
   user: userReducer,
@@ -33,7 +32,8 @@ const REDUCERS = {
   search: searchReducer,
   thrume: thrumeReducer,
   notifications: notificiationsReducer,
-  reactions: reactionReducer
+  reactions: reactionReducer,
+  example: exampleReducer
 };
 
 const ROOT_REDUCER = combineReducers(REDUCERS);

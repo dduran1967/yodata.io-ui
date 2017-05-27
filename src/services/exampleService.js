@@ -1,49 +1,36 @@
 // @flow
 
-import collection from './collectionFactory'
+import createCollection from './collectionFactory';
+import {addReducerToStore} from '../store';
 
-const exampleService = collection({ name: 'example' })
+const service = createCollection({ name: 'example' });
+service.use(function(action) {
+  if (action && action.object && action.object.exampleOfWork) {
+    return {
+      ...action,
+      targetCollection: `/example/${action.object.exampleOfWork}`
+    };
+  }
+  return action;
+});
 
-export default exampleService
-// import get from 'lodash/get';
-//
-// interface Action {
-//   type: string
-// };
-//
-// const EXAMPLE_SERVICE_NAME = 'example';
-//
-// const exampleService = new Service({
-//   name: EXAMPLE_SERVICE_NAME,
-// eventHook: {
-//   beforeAddAction: function beforeAdd(action) {
-//     let subject = get(action, 'object.exampleOfWork');
-//     if (typeof subject === 'string') {
-//       return {
-//         ...action,
-//         targetCollection: `/example/${subject}`,
-//       };
-//     }
-//     return action;
-//   }
-// }
-// });
-//
-// function exampleReducer<Reducer>(state = {}, action: Action): Object {
-//   if (action.targetCollection === EXAMPLE_SERVICE_NAME) {
-//     switch (action.type) {
-//       case 'AddAction':
-//         if (action.object && action.object.id) {
-//           return { ...state, [action.object.id]: action.object };
-//         }
-//         break;
-//       default:
-//         return state;
-//     }
-//   }
-//   return state;
-// }
-//
-// exampleService.createReducer(exampleReducer);
-//
-// export default exampleService;
+export default service;
+
+export function exampleReducer<Reducer>(state = {}, action: Action): Object {
+  if (
+    action.targetCollection &&
+    typeof action.targetCollection === 'string' &&
+    action.targetCollection.startsWith('/example')
+  ) {
+    switch (action.type) {
+      case 'AddAction':
+        if (action.object && action.object.id) {
+          return { ...state, [action.object.id]: action.object };
+        }
+        break;
+      default:
+        return state;
+    }
+  }
+  return state;
+}

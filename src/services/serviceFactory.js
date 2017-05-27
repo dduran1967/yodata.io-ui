@@ -6,39 +6,39 @@ import { Subject } from 'rxjs'
 import { flow } from 'lodash'
 
 type Enhancer = (Object) => Object;
-
 type Service = {
   name: string,
-  eventMiddle: Array<Enhancer>,
-  applyHooks: (Action) => Action,
+  eventMiddleware: Array<Enhancer>,
+  transform: (Action) => Action,
   use: (Enhancer) => void
 };
-
 type ServiceFactoryOptions = {
   name: string,
   eventHook?: Array<Enhancer>,
 };
-
 type ServiceFactory = (options: ServiceFactoryOptions) => Service;
 
 const serviceFactory: ServiceFactory = stampit({
   properties: {
     name: 'service',
     eventMiddleware: [],
-    observable$: new Subject(),
+    input$: new Subject(),
+    event$: new Subject()
+
   },
   methods: {
-    applyHooks: function (action: Action, context) {
-      return this.eventMiddleware.reduce((action, fn) => {
-        return fn(action, context);
-      }, action);
-    },
     use(fn: Enhancer): Map<string, Enhancer> {
       if (isFunction(fn)) {
         let hook = fn.bind(this);
         this.eventMiddleware.push(hook);
       }
       return this;
+    },
+    transform(action: Action, context) {
+      const ctx = context || this;
+      return this.eventMiddleware.reduce((action, fn) => {
+        return fn(action, ctx);
+      }, action);
     },
     validate(action: Action) {
       if (!action.type) {
@@ -63,20 +63,21 @@ const serviceFactory: ServiceFactory = stampit({
       return action;
     },
     dispatch(action: Action) {
+      this.input$.next(action)
       let nextAction = flow(
-        action => this.applyHooks(action, this),
+        action => this.transform(action, this),
         this.validate,
       )(action);
       if (nextAction.error) {
-        this.observable$.error(nextAction)
+        this.event$.error(nextAction)
       }
       else {
-        this.observable$.next(nextAction);
+        this.event$.next(nextAction);
       }
       return nextAction
     },
     subscribe(next, ...rest) {
-      return this.observable$.subscribe(next, ...rest);
+      return this.event$.subscribe(next, ...rest);
     },
   },
   initializers: [
@@ -86,8 +87,10 @@ const serviceFactory: ServiceFactory = stampit({
         this.name = name;
       }
       if (Array.isArray(eventMiddleware)) {
-        this.eventMiddleware = eventMiddleware;
+        let currentMiddleware = this.eventMiddleware || [];
+        this.eventMiddleware = [...currentMiddleware, ...eventMiddleware]
       }
+      this.out$ = this.input$.map(action => this.transform(action, this)).map(this.validate)
     },
   ],
 });

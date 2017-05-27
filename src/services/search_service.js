@@ -54,8 +54,9 @@ const searchLogic = createLogic({
 });
 const searchInit = createLogic({
   type: 'SEARCH/INIT',
-  process({ getAction }, dispatch) {
+  process({ getAction }, dispatch, done) {
     dispatch(getAction('subscribe')('schema', '/public/schema'));
+    done();
   }
 });
 

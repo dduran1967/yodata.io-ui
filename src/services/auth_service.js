@@ -28,10 +28,8 @@ class AuthService {
   }
 
   init() {
-    console.log('init auth', firebase.auth());
     this.ui = new firebaseui.auth.AuthUI(firebase.auth());
     firebase.auth().onAuthStateChanged(user => {
-      console.log('auth state changed', user);
       if (user) {
         store &&
           store.dispatch({
@@ -60,7 +58,6 @@ const auth = new AuthService({
     signInFlow: 'popup',
     callbacks: {
       signInSuccess: function(user, credential, redirectUrl) {
-        console.log('sign in success callback', user, credential, redirectUrl)
         if (window.opener) {
           // The widget has been opened in a popup, so close the window
           // and return false to not redirect the opener.

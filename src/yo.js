@@ -16,7 +16,7 @@ import store from './store'
 import * as thrume from './thrume'
 import * as channelActions from './channel/channelActions.js'
 import authService from './services/auth_service.js'
-import actionService from './services/action_service.js'
+import actionService, {searchAction, ActionFactory} from './services/action_service.js'
 import currentUser from './user/currentUser.js'
 import currentUserAgent from './user/currentUserAgent.js'
 import * as ho from 'object-hash'
@@ -32,7 +32,7 @@ import ExampleService from './services/exampleService';
 import Service from './services/serviceFactory'
 import * as Rx from 'rxjs'
 import appService from './services';
-
+import Model from 'objectmodel'
 
 function getSubject(subjectId) {
   return store.getState().schema.index[subjectId];
@@ -196,4 +196,6 @@ root.getSuperTypes = getSuperTypes;
 root.stampit = stampit;
 root.rx = Rx;
 root.yap = appService;
+root.search = searchAction;
+root.Model = Model;
 export default yo;

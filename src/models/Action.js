@@ -1,21 +1,38 @@
-// @flow
+import {Model, createModel, transform, validate} from './Model'
 
-import type {Thing} from './Thing'
+const propTypes = {
+  type: String,
+  object: Object,
+  startTime: Date,
+  endTime: Date,
+  targetCollection: String,
+  actionStatus: String,
+  error: Object,
+  instrument: Object,
+  location: Object,
+  participant: Model.Array(Object),
+};
 
-export type StandardAction = {
-  type: string,
-  payload: any,
-  meta: any
-}
+const ActionStatusType = Model([
+  'ActiveActionStatus',
+  'CompletedActionStatus',
+  'FailedActionStatus',
+  undefined,
+]);
 
-export type Action = {
-  id: string,
-  type: string,
-  actionStatus: string,
-  agent: Thing,
-  object: Thing,
-  subject: Thing,
-  instrument: Thing,
-}
+const ActionModel = Model.Object({
+  type: String,
+  object: [ Object ],
+  actionStatus: [ String ],
+  startTime: [ Date ],
+});
 
+const createAction = props => {
+  let model = createModel(props);
+  return (type: string, data: Object) => {
+    let action = transform({ type, ...data });
+    let validation = validate({ action, model });
+    return validation.isValid ? action : { ...validation, action };
+  };
+};
 

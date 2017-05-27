@@ -1,16 +1,15 @@
 // @flow
 
-import check from 'check-types'
-import { createLogic } from 'redux-logic'
-import currentUser from '../user/currentUser.js'
-import getThrumeBaseUrl from './getThrumeBaseUrl'
-import { THRUME_BASE } from './thrume-config'
-import createDefaultContainer from './thrumeDefaultContainer'
-
+import check from 'check-types';
+import { createLogic } from 'redux-logic';
+import currentUser from '../user/currentUser.js';
+import getThrumeBaseUrl from './getThrumeBaseUrl';
+import { THRUME_BASE } from './thrume-config';
+import createDefaultContainer from './thrumeDefaultContainer';
 
 const onUserSignedIn = createLogic({
   type: 'USER/USER_SIGNED_IN',
-  process({ action }, dispatch) {
+  process({ action }, dispatch, done) {
     let { uid } = action.payload;
     check.assert.string(uid);
     dispatch({
@@ -19,10 +18,11 @@ const onUserSignedIn = createLogic({
         type: 'SubscribeAction',
         name: 'thrume@root',
         object: getThrumeBaseUrl(uid),
-        actionStatus: 'PotentialActionStatus',
-      },
+        actionStatus: 'PotentialActionStatus'
+      }
     });
-  },
+    done();
+  }
 });
 
 export const handleNewAccount = createLogic({
@@ -43,7 +43,7 @@ export const handleNewAccount = createLogic({
     let data = createDefaultContainer(uid);
     let ref = firebase.database().ref(id);
     ref.set(data);
-  },
+  }
 });
 
 const initContainer = createLogic({
@@ -51,7 +51,7 @@ const initContainer = createLogic({
   processOptions: {
     dispatchReturn: true,
     successType: 'THRUME/INIT_CONTAINER_COMPLETED',
-    failType: 'THRUME/INIT_CONTAINER_FAIL',
+    failType: 'THRUME/INIT_CONTAINER_FAIL'
   },
   transform({ action }, next, reject) {
     let agent = currentUser();
@@ -62,8 +62,8 @@ const initContainer = createLogic({
       ready: true,
       config: {
         uid: agent,
-        root: object,
-      },
+        root: object
+      }
     };
     let nextAction = { ...action, payload };
     next(nextAction);
@@ -71,14 +71,14 @@ const initContainer = createLogic({
   process({ action, firebase }) {
     let ref = firebase.database().ref(action.payload.config.root);
     return ref.set(action.payload).then(() => action.payload);
-  },
+  }
 });
 
 const send = createLogic({
   type: 'THRUME/SEND',
   processOptions: {
     successType: 'THRUME/SEND_COMPLETED',
-    failType: 'THRUME/SEND_FAIL',
+    failType: 'THRUME/SEND_FAIL'
   },
   validate({ action }, allow, reject) {
     try {
@@ -89,7 +89,7 @@ const send = createLogic({
       reject(action);
     }
   },
-  process({ getState, action, firebase }) {
+  process({ getState, action, firebase }, dispatch, done) {
     let user = currentUser();
     let settings = getState().thrume;
     if (user && user.uid) {
@@ -97,32 +97,36 @@ const send = createLogic({
         ? settings.inboxURL
         : `/in/${user.uid}`;
       let inbox = firebase.database().ref(inboxURL);
-      return inbox.push(action.payload).then(snap => {
-        return action.payload;
-      });
+      return inbox
+        .push(action.payload)
+        .then(snap => {
+          return action.payload;
+        })
+        .then(() => done());
     }
-  },
+  }
 });
 
 const onSendCompleted = createLogic({
   type: 'THRUME/SEND_COMPLETED',
-  process({ action }, dispatch) {
+  process({ action }, dispatch, done) {
     dispatch({
       type: 'NOTIFICATIONS/ADD',
       payload: {
         level: 'success',
         title: `Message sent.`,
-        message: `message sent.`,
-      },
+        message: `message sent.`
+      }
     });
-  },
+    done()
+  }
 });
 
 const sendToURL = createLogic({
   type: 'THRUME/SEND_TO_URL',
   processOptions: {
     successType: 'THRUME/SEND_TO_URL_COMPLETED',
-    failType: 'THRUME/SEND_TO_URL_FAIL',
+    failType: 'THRUME/SEND_TO_URL_FAIL'
   },
   validate({ action }, allow, reject) {
     try {
@@ -143,14 +147,14 @@ const sendToURL = createLogic({
       let inbox = firebase.database().ref(inboxURL);
       return inbox.push(action.payload.message);
     }
-  },
+  }
 });
 
 const setWebhook = createLogic({
   type: 'THRUME/SET_WEBHOOK',
   processOptions: {
     successType: 'THRUME/SET_WEBHOOK_COMPLETED',
-    failType: 'THRUME/SET_WEBHOOK_FAIL',
+    failType: 'THRUME/SET_WEBHOOK_FAIL'
   },
   process({ action, firebase }) {
     let user = currentUser();
@@ -164,7 +168,7 @@ const setWebhook = createLogic({
           return { webhook: action.payload };
         });
     }
-  },
+  }
 });
 
 export default [
@@ -174,5 +178,5 @@ export default [
   initContainer,
   sendToURL,
   setWebhook,
-  onSendCompleted,
+  onSendCompleted
 ];

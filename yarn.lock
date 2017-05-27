@@ -6520,6 +6520,10 @@ object.values@^1.0.3:
     function-bind "^1.1.0"
     has "^1.0.1"
 
+objectmodel@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/objectmodel/-/objectmodel-2.6.2.tgz#95e8f881fd13a0ec194f266aaed57a4923625240"
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -8940,7 +8944,7 @@ tcomb-react@^0.9.3:
     tcomb-doc "^0.5.0"
     tcomb-validation "^3.0.0"
 
-tcomb-validation@^3.0.0:
+tcomb-validation@^3.0.0, tcomb-validation@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/tcomb-validation/-/tcomb-validation-3.3.0.tgz#29ada8534203500e90b245eedd0e1a80f1909ba2"
   dependencies:

@@ -16,9 +16,16 @@ import { createMockType } from '../schema/getExampleValue';
 import values from 'lodash/values';
 import url from 'url';
 import propertiesOfDeep from '../schema/propertiesOfDeep';
+import exampleService from '../services/exampleService';
 
 const ExampleValues = compose(
-  connect(),
+  connect(
+    null,
+    {
+      addExample: exampleService.add,
+      updateExample: exampleService.update
+    }
+  ),
   withState('index', 'setIndex', 0),
   withProps(props => {
     let currentValue = {};
@@ -47,7 +54,6 @@ const ExampleValues = compose(
         object.json = JSON.parse(object.text);
       } catch (e) {
         console.error('Unable to parse JSON', object);
-        return;
       } finally {
         if (object.url) {
           props.dispatch({
@@ -58,12 +64,8 @@ const ExampleValues = compose(
             actionStatus: 'PotentialActionStatus'
           });
         } else {
-          props.dispatch({
-            type: 'AddAction',
-            object: object,
-            targetCollection: `/public/schema/${props.subject.id}/exampleValue`,
-            actionStatus: 'PotentialActionStatus'
-          });
+          props.addExample(object);
+
         }
       }
     }

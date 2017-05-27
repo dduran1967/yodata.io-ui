@@ -1,65 +1,91 @@
-// @flow
+import t from 'tcomb-validation';
+import createStamp from 'stampit';
+import keys from 'lodash/keys';
 
-import t from 'tcomb';
+const THING = t.struct(
+  {
+    type: t.String
+  },
+  'Thing'
+);
 
-const actionSchema = {
-  type: 'object',
-  properties: {
-    actionStatus: {
-      type: 'string',
-      enum: [
-        'ActiveActionStatus',
-        'PotentialActionStatus',
-        'CompletedActionStatus',
-        'FailedActionStatus'
-      ]
-    },
-    agent: {
-      type: 'object',
-      properties: {
-        type: 'string'
-      }
-    },
-    endTime: {
-      type: 'string',
-      format: 'date-time'
-    },
-    startTime: {
-      type: 'string',
-      format: 'date-time'
-    },
-    error: {
-      type: 'object',
-      properties: {
-        type: 'string'
-      }
-    },
-    instrument: {
-      type: 'object',
-      properties: {
-        type: 'string'
-      }
-    },
-    location: {
-      type: 'object',
-      properties: {
-        type: 'string'
-      }
-    },
-    result: {
-      type: 'object',
-      properties: {
-        type: 'string'
-      }
-    },
-    participant: {
-      type: 'object',
-      properties: {
-        type: 'string'
-      }
-    }
-  }
+// validation properties
+const PROP_TYPES = {
+  '@context': t.Any,
+  '@id': t.maybe(t.String),
+  type: t.String,
+  actionStatus: t.maybe(
+    t.enums.of([
+      'ActiveActionStatus',
+      'CompletedActionStatus',
+      'FailedActionStatus'
+    ])
+  ),
+  agent: t.maybe(THING),
+  object: THING,
+  instrument: t.maybe(THING),
+  participant: t.maybe(t.list(THING)),
+  result: t.maybe(THING),
+  error: t.maybe(THING),
+  startTime: t.maybe(t.Date),
+  endTime: t.maybe(t.Date),
+  target: t.maybe(THING),
+  targetCollection: t.maybe(THING)
 };
+
+const ACTION = t.struct(PROP_TYPES);
+
+const validateAction = action => {
+  return t.validate(action, ACTION);
+};
+
+const cleanAction = (action: Action): Action => {
+  return action;
+};
+
+const createAction = (type: string): Action => {
+  return {};
+};
+
+function createValidator({ properties, required }) {
+  t.assert(t.Object(properties));
+  t.assert(t.Array(required));
+  const validator = {};
+  keys(properties).forEach(key => {
+    if (properties.hasOwnProperty(key)) {
+      let value = properties[key];
+      validator[key] = required.includes(key) ? value : t.maybe(value);
+    } else {
+      throw new Error(`unknown property ${key}`);
+    }
+  });
+}
+
+export const ActionFactory = createStamp({
+  properties: {
+    type: 'Action',
+    context: {},
+    struct: ACTION,
+    required: [],
+    propTypes: { ...PROP_TYPES }
+  },
+  methods: {
+    clean: cleanAction,
+    transform: cleanAction,
+    validate: validateAction,
+    create(action) {
+      return { ...action, type: this.type };
+    }
+  },
+  init(props, { instance }) {
+    Object.assign(this, props);
+  }
+});
+
+export const searchAction = ActionFactory.props({
+  type: 'SearchAction',
+  required: ['object']
+});
 
 const Action = t.struct(
   {
@@ -122,15 +148,15 @@ const defaultActions = {
 };
 
 class ActionService {
-  middleware = {}
-  actions = {}
+  middleware = {};
+  actions = {};
 
   register(id, handler) {
     this.actions[id] = handler;
   }
 
   registerActions(actionMap) {
-    Object.assign(this.actions, actionMap)
+    Object.assign(this.actions, actionMap);
   }
 
   getAction(id) {
