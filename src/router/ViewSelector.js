@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import SearchResult from '../component/SearchResult'
 
 
+// load state from redux
 const controller = connect(state => ({
   search: state.search,
   route: state.router.route,
@@ -15,15 +16,16 @@ const ViewSelector = (props, context) => {
   let { search, route, user } = props;
 
   if (!route) {
-    return <div/>
+    return <div />
   }
 
   if (user.signedIn === false) {
+    debugger;
     location.assign('/widget.html')
-    return <div/>
+    return <div />
   }
 
-  let view = routeMap[ route.name ];
+  let view = routeMap[route.name];
 
   if (search && search.results.length > 0) {
     return React.createElement(SearchResult, props);

@@ -1,10 +1,10 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const axios = require('axios');
-const OnUserCreated = require('./onUserCreated');
-
 const config = functions.config();
 admin.initializeApp(config.firebase);
+
+const OnUserCreated = require('./onUserCreated');
 
 const handlerUserCreated = OnUserCreated('/user/{uid}', admin.database());
 
@@ -13,7 +13,7 @@ exports.webhooks = functions.database
   .onWrite(event => {
     let uid = event.params.uid;
     let messageId = event.params.messageId;
-    let webhook = admin.ref(`/user/${uid}/thrume/webhook`);
+    let webhook = admin.database().ref(`/user/${uid}/thrume/webhook`);
     return webhook.once('value').then(snap => {
       if (snap.val() === null) {
         return Promise.resolve(); // no active webhook

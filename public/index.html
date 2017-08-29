@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <!-- Loading FirebaseAuthUI CSS from CDN -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
 
-    <!--
+  <!--
         Notice the use of %PUBLIC_URL% in the tag above.
         It will be replaced with the URL of the `public` folder during the build.
         Only files inside the `public` folder can be referenced from the HTML.
@@ -16,26 +17,28 @@
         work correctly both with client-side routing and a non-root public URL.
         Learn how to configure a non-root public URL by running `npm run build`.
       -->
-    <title>Yodata</title>
+  <title>Yodata</title>
 </head>
 
 <body>
-<div id="authui"></div>
-<div id="app"></div>
-<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
-<script src="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAuLfAq8F2ibOTuMe3Ql7UmwGWHEXHqkiU",
-    authDomain: "yodata-1115.firebaseapp.com",
-    databaseURL: "https://yodata-1115.firebaseio.com",
-    projectId: "yodata-1115",
-    storageBucket: "yodata-1115.appspot.com",
-    messagingSenderId: "776960890496"
-  };
-  firebase.initializeApp(config);
-  var ui = new firebaseui.auth.AuthUI(firebase.auth());
-</script>
+  <div id="authui"></div>
+  <div id="app"></div>
+  <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  <!-- Loading FirebaseAuthUI JS from CDN -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAuLfAq8F2ibOTuMe3Ql7UmwGWHEXHqkiU",
+      authDomain: "yodata-1115.firebaseapp.com",
+      databaseURL: "https://yodata-1115.firebaseio.com",
+      projectId: "yodata-1115",
+      storageBucket: "yodata-1115.appspot.com",
+      messagingSenderId: "776960890496"
+    };
+    firebase.initializeApp(config);
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  </script>
 </body>
+
 </html>

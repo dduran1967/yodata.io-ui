@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/user/user-actions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/user</a> user-actions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {createAction} from 'redux-actio<span class="cstat-no" title="statement not covered" >ns'<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+export const userAccountInit = createAction('USER/<span class="cstat-no" title="statement not covered" >ACCOUNT_INIT')</span>
+&nbsp;
+&nbsp;
+export const fetchProfile = createAction(<span class="cstat-no" title="statement not covered" ></span>
+  'USER/FETCH_PROFILE',
+<span class="fstat-no" title="function not covered" ></span>  url =&gt;<span class="cstat-no" title="statement not covered" > ({url})</span>
+)
+&nbsp;
+export const setUser = createAction(<span class="cstat-no" title="statement not covered" ></span>
+  'USER/SET_USER',
+<span class="fstat-no" title="function not covered" ></span>  user =&gt;<span class="cstat-no" title="statement not covered" > ({user})</span>
+)
+&nbsp;
+export const signInWithEmailAndPassword = createAction(<span class="cstat-no" title="statement not covered" ></span>
+  'USER/SIGN_IN_WITH_EMAIL_AND_PASSWORD',
+<span class="fstat-no" title="function not covered" ></span>  (email, password) =&gt;<span class="cstat-no" title="statement not covered" > ({email, password})</span>
+)
+&nbsp;
+export const signOut = createAction('USER/<span class="cstat-no" title="statement not covered" >SIGN_OUT')</span>
+&nbsp;
+export const createUserWithEmailAndPassword = createAction(<span class="cstat-no" title="statement not covered" ></span>
+  'USER/CREATE_USER_WITH_EMAIL_AND_PASSWORD',
+<span class="fstat-no" title="function not covered" ></span>  (email, password) =&gt;<span class="cstat-no" title="statement not covered" > ({email, password})</span>
+)
+&nbsp;
+export const authStateChanged = createAction('USER/<span class="cstat-no" title="statement not covered" >AUTH_STATE_CHANGED')</span>
+&nbsp;
+export const userSignedIn = createAction('USER/<span class="cstat-no" title="statement not covered" >USER_SIGNED_IN')</span>
+&nbsp;
+export const userSignedOut = createAction('USER/<span class="cstat-no" title="statement not covered" >USER_SIGNED_OUT')</span>
+&nbsp;
+&nbsp;
+&nbsp;
+export default {
+  fetchProfile,
+  setUser,
+  signInWithEmailAndPassword,
+  signOut,
+  createUserWithEmailAndPassword,
+  authStateChanged,
+  userSignedIn,
+  userSignedOut,
+  userAccountInit
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 27 2017 11:22:52 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

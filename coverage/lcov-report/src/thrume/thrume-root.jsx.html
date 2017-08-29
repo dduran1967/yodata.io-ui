@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/thrume/thrume-root.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/thrume</a> thrume-root.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/16</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+import values from 'lodash/values'
+import React from 'react'
+import {connect} from 'react-redux'
+import {compose, withHandlers, withProps, withState} from 'recompose'
+import {Label, Popup, Segment} from 'semantic-ui-react'
+import Header from '../component/Header'
+import Page from '../component/Page'
+import CodeEditor from '../component/CodeEditor'
+import Link from '../component/Link.js'
+import TextPopup from '../component/TextPopup.jsx'
+import {Button} from '../component/index'
+import stringify from '../component/stringify'
+import check from 'check-types'
+import json from 'json5';<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getUrl(</span>ref: string) {
+<span class="cstat-no" title="statement not covered" >  return window.firebase.database().ref(ref).toString();</span>
+}
+&nbsp;
+const ThrumeRootView = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >pr</span>ops =&gt; {</span>
+  const example = stringify({<span class="cstat-no" title="statement not covered" ></span>
+    '@context': 'http://schema.org/',
+    type: 'CommunicateAction',
+    agent: {
+      type: 'Person',
+      id: props.agent,
+      name: props.currentUser &amp;&amp; props.currentUser.displayName,
+    },
+    object: {
+      type: 'Text',
+      value: 'Hello World!',
+    },
+    participant: {
+      recipient: props.agent,
+    },
+    target: {
+      type: 'EntryPoint',
+      httpMethod: 'POST',
+      contentType: 'application/ld+json',
+      urlTemplate: `/in/${props.currentUser &amp;&amp; props.currentUser.uid}`,
+    },
+  })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;Page&gt;
+&nbsp;
+      &lt;Segment style={{marginTop: '1em'}}&gt;
+        &lt;Header
+          icon="feed"
+          content="Quickstart"
+          subheader="Open source, decentralized data integration toolkit."
+        /&gt;
+      &lt;/Segment&gt;
+&nbsp;
+      &lt;Segment id="sending_actions"&gt;
+        &lt;Header content="Sending Actions"/&gt;
+        &lt;p&gt;
+          To send a message, simply http POST to your inbound URL.
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;Label basic color={'blue'} content="Your inbound URL" detail={getUrl(props.thrumeUrl)}/&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          Key properties of Actions are &lt;Popup trigger={&lt;span&gt;type&lt;/span&gt;} header="type" content="Action identifier"/&gt;
+          (required),
+          &lt;TextPopup trigger="agent" content="The direct performer of the action"/&gt; and &lt;TextPopup trigger="object"
+                                                                                                   content="The thing (subject) being acted upon, whos state may be changed by the action."/&gt;.
+        &lt;/p&gt;
+        &lt;p&gt;
+          See &lt;Link name="types/view" params={{id: 'Action'}}&gt;Actions&lt;/Link&gt; for the complete spec.
+        &lt;/p&gt;
+&nbsp;
+        &lt;CodeEditor
+          value={props.nextSendAction || example }
+          onChange={<span class="fstat-no" title="function not covered" >(n</span>extValue) =<span class="cstat-no" title="statement not covered" >&gt; props.setNextSendAction(nextValue</span>)}
+        /&gt;
+        &lt;hr/&gt;
+        &lt;Segment attached="bottom"&gt;
+          &lt;Button primary content="SEND" onClick={() =&gt; props.notify(props.nextSendAction || example)}/&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+&nbsp;
+&nbsp;
+        &lt;/Segment&gt;
+&nbsp;
+      &lt;/Segment&gt;
+&nbsp;
+    &lt;/Page&gt;
+  );
+};
+&nbsp;
+const thrumeRootContainer = compose(<span class="cstat-no" title="statement not covered" ></span>
+  connect(state =&gt; ({<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+    agent: state.user.root,
+    thrume: state.thrume,
+    root: state.db['thrume@root'],
+    currentUser: state.user &amp;&amp; state.user.currentUser,
+  })),
+  withState('nextSendAction', 'setNextSendAction', null),
+  withProps(props =&gt; {<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      thrumeUrl: `/in/${props.currentUser &amp;&amp; props.currentUser.uid}`,
+      items: values(props.root &amp;&amp; props.root.now),
+    };
+  }),
+  withHandlers({
+    notify<span class="fstat-no" title="function not covered" >: </span>({dispatch}) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >ne</span>xt =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+        let data = json.parse(next);<span class="cstat-no" title="statement not covered" ></span>
+        check.assert(data.object.value)
+<span class="cstat-no" title="statement not covered" >        dispatch({</span>
+          type: 'NOTIFICATIONS/ADD',
+          payload: {
+            level: 'success',
+            title: `Message from: ${data.agent &amp;&amp; (data.agent.name || data.agent.id)}`,
+            message: data.object.value,
+          },
+        })
+      } catch (e) {
+<span class="cstat-no" title="statement not covered" >        dispatch({</span>
+          type: 'NOTIFICATIONS/ADD',
+          payload: {
+            level: 'error',
+            title: 'Uh oh.',
+            message: 'invalid message format',
+          },
+        })
+      }
+    },
+  }),
+);
+&nbsp;
+export default thrumeRootContainer(ThrumeRootView);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 27 2017 11:22:52 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/schema/ContextView.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/schema</a> ContextView.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/5</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+import { compose } from 'recompose'
+import Debug from '../component/Debug'<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+&nbsp;
+// const SAMPLE_MESSAGE = {
+//   acceptedByMember: false,
+//   assignments: [
+//     {
+//       assignmentType: 'Lead',
+//       ownerKey: 'C90059FD64E6403E9C9A7BE7AAA60C82',
+//       ownerType: 'Office',
+//       timestampEntered: '2017-04-22T14:40:46.0775524-05:00'
+//     }
+//   ],
+//   contactEvent: {
+//     primaryEvent: 'Updated',
+//     secondaryEvents: [
+//       'ExternalUpdate',
+//       'Updated'
+//     ]
+//   },
+//   contactKey: '80803473-7ddb-4fdc-be55-b29d642c7a5e',
+//   emailAddresses: [
+//     {
+//       emailAddress: 'jennifer.kowitt@gmail.com',
+//       emailAddressKey: '73881931-3e28-495f-ac05-f800adb559ec',
+//       emailType: 'primary',
+//       timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
+//       timestampModified: '2017-04-22T14:40:46.1556819-05:00',
+//       usedForApm: true
+//     }
+//   ],
+//   firstName: 'Jennifer',
+//   fullName: 'Jennifer Kowitt',
+//   lastName: 'Kowitt',
+//   leadSources: [
+//     {
+//       isLead: true,
+//       leadSource: 'Office Website',
+//       originalReferrerUrl: '',
+//       subLeadSource: 'Saved Property',
+//       timestampEntered: '2017-04-22T14:40:46.0775524-05:00'
+//     }
+//   ],
+//   middleName: '',
+//   originatingSystemContactKey: '',
+//   originatingSystemName: 'BrokerOffice',
+//   phoneNumbers: [
+//     {
+//       phoneNumber: '9084192418',
+//       phoneNumberKey: '7f375a61-778c-4c1b-9f6b-e1d63a19334f',
+//       phoneNumberType: 'Work',
+//       timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
+//       timestampModified: '2017-04-22T14:40:46.1556819-05:00'
+//     }
+//   ],
+//   preferredContactMethod: 'No Preference',
+//   preferredTime: '',
+//   properties: [
+//     {
+//       bathroomsTotal: '3',
+//       bedroomsTotal: '4',
+//       city: 'W Hartford',
+//       contactNote: 'Convenient location to West Hartford Center, schools, Stop &amp; Shop and the Mall.  Meticulous Tudor Colonial with 2460 square feet.  Outstanding family home featuring renovated baths and ESK kitchen with SS appliances plus a den/office, lovely formal LR/FP and elegant DR, plus a 24 x 9 sunroom. Enjoy the LL Rec Rm (406 Sq. Ft/FP) and the 3rd Floor bonus room (420 Sq. Ft) in addition to 4 Bedrooms and 2.1 Baths. A/C in kitchen only and throughout the second floor. You will appreciate your deck (404 Sq. Ft) as you view and enjoy the tranquility of your professionally landscaped yard with perennials popping up all around.    This home is a pleasure to present to you.',
+//       cooling: 'Central Air',
+//       country: 'USA',
+//       countyOrParish: 'Hartford',
+//       daysOnMarket: 5,
+//       directions: 'Farmington Ave to Ridgewood Road',
+//       exteriorFeatures: 'Fruit Trees, Garden, Gutters, Exterior Lighting, Sidewalks, Landscaped',
+//       heating: 'Gas Heat',
+//       interiorFeatures: 'Attic Storage, Attic Walk-up, Smoke Alarm',
+//       listAgentEmail: 'hsteel@bhhsne.com',
+//       listAgentFirstName: 'Hannah',
+//       listAgentFullName: 'Hannah Steel',
+//       listAgentLastName: 'Steel',
+//       listAgentMlsId: 'STEELH',
+//       listAor: 'ctconnmls',
+//       listBrokerName: 'BHHS New England Properties',
+//       listBrokerPhone: '(860) 521-8100',
+//       listOfficeMlsId: 'BHHS04',
+//       listPrice: 545000,
+//       listingContractDate: '2017-04-17T16:03:00',
+//       listingId: 'G10212776',
+//       listingKey: '5e4afc46-cd62-4422-a058-b27a1a57451b',
+//       listingTypeName: 'Residential',
+//       lotSizeArea: 0.27,
+//       mlsStatus: 'Active',
+//       poolFeatures: 'Pool',
+//       postalCode: '06107',
+//       propertySubType: 'Colonial',
+//       propertyType: 'Single Family',
+//       propertyUrl: 'http://www.berkshirehathawayhs.com/new-england-properties-ct301/G10212776',
+//       stateOrProvince: 'CT',
+//       streetName: 'Ridgewood Rd',
+//       streetNumber: '50',
+//       streetNumberNumeric: 50,
+//       subdivisionName: 'W Hartford (2)',
+//       timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
+//       timestampModified: '2017-04-22T14:40:46.0775524-05:00',
+//       yearBuilt: 1939
+//     }
+//   ],
+//   timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
+//   timestampModified: '2017-04-22T14:40:46.0775524-05:00'
+// }
+&nbsp;
+const CONTEXT = <span class="cstat-no" title="statement not covered" >{</span>
+  acceptedByMember: false,
+  assignments: [
+    {
+      assignmentType: 'Lead',
+      ownerKey: 'C90059FD64E6403E9C9A7BE7AAA60C82',
+      ownerType: 'Office',
+      timestampEntered: '2017-04-22T14:40:46.0775524-05:00'
+    }
+  ],
+  contactEvent: {
+    primaryEvent: 'Updated',
+    secondaryEvents: [
+      'ExternalUpdate',
+      'Updated'
+    ]
+  },
+  contactKey: '80803473-7ddb-4fdc-be55-b29d642c7a5e',
+  emailAddresses: [
+    {
+      emailAddress: 'jennifer.kowitt@gmail.com',
+      emailAddressKey: '73881931-3e28-495f-ac05-f800adb559ec',
+      emailType: 'primary',
+      timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
+      timestampModified: '2017-04-22T14:40:46.1556819-05:00',
+      usedForApm: true
+    }
+  ],
+  firstName: 'Jennifer',
+  fullName: 'Jennifer Kowitt',
+  lastName: 'Kowitt',
+  leadSources: [
+    {
+      isLead: true,
+      leadSource: 'Office Website',
+      originalReferrerUrl: '',
+      subLeadSource: 'Saved Property',
+      timestampEntered: '2017-04-22T14:40:46.0775524-05:00'
+    }
+  ],
+  middleName: '',
+  originatingSystemContactKey: '',
+  originatingSystemName: 'BrokerOffice',
+  phoneNumbers: [
+    {
+      phoneNumber: '9084192418',
+      phoneNumberKey: '7f375a61-778c-4c1b-9f6b-e1d63a19334f',
+      phoneNumberType: 'Work',
+      timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
+      timestampModified: '2017-04-22T14:40:46.1556819-05:00'
+    }
+  ],
+  preferredContactMethod: 'No Preference',
+  preferredTime: '',
+  properties: [
+    {
+      bathroomsTotal: '3',
+      bedroomsTotal: '4',
+      city: 'W Hartford',
+      contactNote: 'Convenient location to West Hartford Center, schools, Stop &amp; Shop and the Mall.  Meticulous Tudor Colonial with 2460 square feet.  Outstanding family home featuring renovated baths and ESK kitchen with SS appliances plus a den/office, lovely formal LR/FP and elegant DR, plus a 24 x 9 sunroom. Enjoy the LL Rec Rm (406 Sq. Ft/FP) and the 3rd Floor bonus room (420 Sq. Ft) in addition to 4 Bedrooms and 2.1 Baths. A/C in kitchen only and throughout the second floor. You will appreciate your deck (404 Sq. Ft) as you view and enjoy the tranquility of your professionally landscaped yard with perennials popping up all around.    This home is a pleasure to present to you.',
+      cooling: 'Central Air',
+      country: 'USA',
+      countyOrParish: 'Hartford',
+      daysOnMarket: 5,
+      directions: 'Farmington Ave to Ridgewood Road',
+      exteriorFeatures: 'Fruit Trees, Garden, Gutters, Exterior Lighting, Sidewalks, Landscaped',
+      heating: 'Gas Heat',
+      interiorFeatures: 'Attic Storage, Attic Walk-up, Smoke Alarm',
+      listAgentEmail: 'hsteel@bhhsne.com',
+      listAgentFirstName: 'Hannah',
+      listAgentFullName: 'Hannah Steel',
+      listAgentLastName: 'Steel',
+      listAgentMlsId: 'STEELH',
+      listAor: 'ctconnmls',
+      listBrokerName: 'BHHS New England Properties',
+      listBrokerPhone: '(860) 521-8100',
+      listOfficeMlsId: 'BHHS04',
+      listPrice: 545000,
+      listingContractDate: '2017-04-17T16:03:00',
+      listingId: 'G10212776',
+      listingKey: '5e4afc46-cd62-4422-a058-b27a1a57451b',
+      listingTypeName: 'Residential',
+      lotSizeArea: 0.27,
+      mlsStatus: 'Active',
+      poolFeatures: 'Pool',
+      postalCode: '06107',
+      propertySubType: 'Colonial',
+      propertyType: 'Single Family',
+      propertyUrl: 'http://www.berkshirehathawayhs.com/new-england-properties-ct301/G10212776',
+      stateOrProvince: 'CT',
+      streetName: 'Ridgewood Rd',
+      streetNumber: '50',
+      streetNumberNumeric: 50,
+      subdivisionName: 'W Hartford (2)',
+      timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
+      timestampModified: '2017-04-22T14:40:46.0775524-05:00',
+      yearBuilt: 1939
+    }
+  ],
+  timestampEntered: '2017-04-22T14:40:46.0775524-05:00',
+  timestampModified: '2017-04-22T14:40:46.0775524-05:00'
+}
+&nbsp;
+const ContextView = compose(<span class="cstat-no" title="statement not covered" ></span>
+<span class="fstat-no" title="function not covered" >)(</span>props =&gt; {
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;Debug context={CONTEXT}/&gt;
+  )
+})
+&nbsp;
+export default ContextView
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 27 2017 11:22:52 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

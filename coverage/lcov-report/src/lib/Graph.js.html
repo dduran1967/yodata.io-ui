@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/lib/Graph.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/lib</a> Graph.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.43% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/46</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
+import uniq from 'lodash/uniq';
+import flow from 'lodash/fp/flow';
+import map from 'lodash/fp/map';
+import getProperty from 'lodash/fp/property';
+import reduce from 'lodash/fp/reduce';
+import $rdf, {IndexedFormula, Statement} from 'rdflib';
+import {
+  context,
+  CONTEXT_IN,
+  NAMESPACE,
+  sameAs,
+  NS_PREFIX,
+} from '../schema/context.js';
+import {
+  find,
+  findSubject,
+  jsonReducer,
+  lit,
+  mapStatementToContext,
+  statementToContext,
+  propertiesOf,
+  propertiesOfDeep,
+  subTypesOf,
+  superTypesOf,
+  sym,
+  toJson,
+  getUrlNamespace,
+  termToContext,
+  createContextTransformer,
+} from './rdf-utilities';
+import mapValues from 'lodash/mapValues';
+&nbsp;
+const TYPE = NAMESPACE.rdf('type');
+const CLASS = NAMESPACE.rdfs('Class');
+const PROPERTY = NAMESPACE.rdf('Property');
+&nbsp;
+export class Graph extends IndexedFormula {
+  constructor() {
+    super();
+    this.init();
+  }
+&nbsp;
+  init() {
+    this.context = context;
+    this.inContext = CONTEXT_IN;
+    this.namespace = {...NAMESPACE};
+    this.vocab = 'http://schema.org/';
+    this.equateAll(sameAs);
+    $rdf.fetcher(this);
+  }
+&nbsp;
+  /**
+   * fetch and load the target URL into the current store.
+   * @param {string} url - the targer URL
+   * @returns {promise} */
+<span class="fstat-no" title="function not covered" >  fe</span>tch(url: string) {
+<span class="cstat-no" title="statement not covered" >    return this.fetcher.load(url);</span>
+  }
+&nbsp;
+  find = find(this);
+&nbsp;
+  findSubject = findSubject(this);
+&nbsp;
+  subTypesOf = subTypesOf(this);
+&nbsp;
+  superTypesOf = superTypesOf(this);
+&nbsp;
+  findTypes = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    return this.each(null, TYPE, CLASS).sort().map(this.findOne);</span>
+  };
+&nbsp;
+  findActions = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    let action = <span class="cstat-no" title="statement not covered" >this.context.Action;</span>
+<span class="cstat-no" title="statement not covered" >    return this.subTypesOf(action).sort().map(this.findOne);</span>
+  };
+&nbsp;
+  findProperties = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    return this.each(null, TYPE, PROPERTY).sort().map(this.findOne);</span>
+  };
+&nbsp;
+  equateAll(pairs: [string, any]) {
+    pairs.forEach(([a, b]) =&gt; this.equate(a, b));
+  }
+&nbsp;
+  hasGraph = <span class="fstat-no" title="function not covered" >(i</span>ri: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >    return !!this.whyIndex[iri];</span>
+  };
+&nbsp;
+  propertiesOf = propertiesOf(this);
+&nbsp;
+  propertiesOfDeep = propertiesOfDeep(this);
+&nbsp;
+  mapToContext = <span class="fstat-no" title="function not covered" >(s</span>tatement: Statement) =&gt; {
+    let ctx = <span class="cstat-no" title="statement not covered" >this.inContext;</span>
+<span class="cstat-no" title="statement not covered" >    return mapStatementToContext(statement, ctx, this.vocab, true);</span>
+  };
+&nbsp;
+  parse = (data: string, contentType: string) =&gt; {
+    return $rdf.parse(data, this, 'http://schema.org/', 'text/n3');
+  };
+&nbsp;
+  toJSON = <span class="fstat-no" title="function not covered" >(</span>
+    statements: Statement[],
+    context: Object = <span class="branch-0 cbranch-no" title="branch not covered" >this.inContext,</span>
+    vocab: string = <span class="branch-0 cbranch-no" title="branch not covered" >this.vocab,</span>
+    shrinkLiterals: boolean = <span class="branch-0 cbranch-no" title="branch not covered" >true,</span>
+  ) =&gt; {
+    let sts = <span class="cstat-no" title="statement not covered" >statements || this.statements;</span>
+    let transform = <span class="cstat-no" title="statement not covered" >createContextTransformer(context, vocab, shrinkLiterals);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    sts = sts.map(<span class="fstat-no" title="function not covered" >st</span> =&gt; <span class="cstat-no" title="statement not covered" >mapValues(st, transform))</span>;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return toJson(sts);</span>
+  };
+&nbsp;
+  /**
+   * returns JSON representation with the subject URL as the ROOT
+   * @param {string} url - target URL
+   * @returns {object}
+   */
+  findOne = <span class="fstat-no" title="function not covered" >(u</span>rl: string) =&gt; {
+    let subjectNode = <span class="cstat-no" title="statement not covered" >sym(url);</span>
+    let {inContext, vocab} = <span class="cstat-no" title="statement not covered" >this;</span>
+    let subjectKey = <span class="cstat-no" title="statement not covered" >termToContext(subjectNode, inContext, vocab, true);</span>
+<span class="cstat-no" title="statement not covered" >    return flow(</span>
+      sym,
+      findSubject(this),
+      map(statementToContext(inContext, vocab, true)),
+      reduce(jsonReducer, {}),
+      getProperty(subjectKey),
+<span class="fstat-no" title="function not covered" >      en</span>tity =&gt;
+<span class="cstat-no" title="statement not covered" >        mapValues(entity, <span class="fstat-no" title="function not covered" >v </span>=&gt; <span class="cstat-no" title="statement not covered" >Array.isArray(v) &amp;&amp; v.length === 1 ? v[0] : v)</span>,</span>
+    )(url);
+  };
+&nbsp;
+  getSubject = <span class="fstat-no" title="function not covered" >(u</span>ri: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (uri) {</span>
+      let subjectNode = <span class="cstat-no" title="statement not covered" >sym(uri);</span>
+      let props = <span class="cstat-no" title="statement not covered" >this.findOne(subjectNode);</span>
+<span class="cstat-no" title="statement not covered" >      return {</span>
+        id: uri,
+        type: props.type,
+        label: lit(props.label),
+        description: lit(props.description),
+        superTypes: this.superTypesOf(subjectNode).map(this.findOne),
+        properties: this.propertiesOfDeep(subjectNode).map(this.findOne),
+      };
+    }
+<span class="cstat-no" title="statement not covered" >    throw new Error(`subject with uri ${uri} not found.`);</span>
+  };
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ch</span>eckNamespaces() {
+    let subjectNamespaces = <span class="cstat-no" title="statement not covered" >Object.keys(this.subjectIndex).map(getUrlNamespace);</span>
+    let predicateNamespaces = <span class="cstat-no" title="statement not covered" >Object.keys(this.predicateIndex).map(</span>
+      getUrlNamespace,
+    );
+    let objectNamespaces = <span class="cstat-no" title="statement not covered" >Object.keys(this.objectIndex).map(getUrlNamespace);</span>
+    let allNamespaces = <span class="cstat-no" title="statement not covered" >[</span>
+      ...subjectNamespaces,
+      ...predicateNamespaces,
+      ...objectNamespaces,
+    ];
+    let uniqueNamespaces = <span class="cstat-no" title="statement not covered" >uniq(allNamespaces);</span>
+<span class="cstat-no" title="statement not covered" >    return uniqueNamespaces.reduce(<span class="fstat-no" title="function not covered" >(a</span>, v) =&gt; (<span class="cstat-no" title="statement not covered" >{...a, [v]: NS_PREFIX[v]})</span>, {});</span>
+  }
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >graph(</span>) {
+<span class="cstat-no" title="statement not covered" >  return new Graph();</span>
+}
+&nbsp;
+export default Graph;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 27 2017 11:22:52 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

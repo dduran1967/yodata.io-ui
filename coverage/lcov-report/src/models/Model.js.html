@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/models/Model.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/models</a> Model.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">67.44% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>29/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">67.44% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>29/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+import Model from 'objectmodel'
+import createModel from './createModel'
+import {mapPropertiesToDataType} from './createModel';
+&nbsp;
+&nbsp;
+Model.Primitive = Model([ Boolean, Number, String, Symbol ]);
+Model.Any = Model([ Object, Boolean, Number, String, Symbol, null, undefined ]);
+&nbsp;
+// Booleans-like
+Model.Falsy = Model([ Model.Primitive, null, undefined ]).assert(function <span class="fstat-no" title="function not covered" >isFalsy(</span>val) {
+<span class="cstat-no" title="statement not covered" >  return !val</span>
+});
+Model.Truthy = Model([ Model.Primitive, Object ]).assert(function <span class="fstat-no" title="function not covered" >isTruthy(</span>val) {
+<span class="cstat-no" title="statement not covered" >  return !!val</span>
+});
+&nbsp;
+// Numbers
+Model.Integer = Model(Number).assert(Number.isInteger);
+Model.SafeInteger = Model(Number).assert(Number.isSafeInteger);
+Model.FiniteNumber = Model(Number).assert(Number.isFinite);
+Model.PositiveNumber = Model(Number).assert(function <span class="fstat-no" title="function not covered" >isPositive(</span>val) {
+<span class="cstat-no" title="statement not covered" >  return val &gt;= 0</span>
+});
+Model.NegativeNumber = Model(Number).assert(function <span class="fstat-no" title="function not covered" >isNegative(</span>val) {
+<span class="cstat-no" title="statement not covered" >  return val &lt;= 0</span>
+});
+Model.PositiveInteger = Model.PositiveNumber.extend().assert(Number.isInteger);
+Model.NegativeInteger = Model.NegativeNumber.extend().assert(Number.isInteger);
+&nbsp;
+// Strings
+Model.StringNotBlank = Model(String).assert(function <span class="fstat-no" title="function not covered" >isNotBlank(</span>str) {
+<span class="cstat-no" title="statement not covered" >  return str.trim().length &gt; 0</span>
+});
+Model.NormalizedString = Model(String).assert(function <span class="fstat-no" title="function not covered" >isNormalized(</span>str) {
+<span class="cstat-no" title="statement not covered" >  return str.normalize() === str</span>
+});
+Model.TrimmedString = Model(String).assert(function <span class="fstat-no" title="function not covered" >isTrimmed(</span>str) {
+<span class="cstat-no" title="statement not covered" >  return str.trim() === str</span>
+});
+&nbsp;
+// Dates
+Model.PastDate = Model(Date).assert(function <span class="fstat-no" title="function not covered" >isInThePast(</span>date) {
+<span class="cstat-no" title="statement not covered" >  return date.getTime() &lt; Date.now()</span>
+});
+Model.FutureDate = Model(Date).assert(function <span class="fstat-no" title="function not covered" >isInTheFuture(</span>date) {
+<span class="cstat-no" title="statement not covered" >  return date.getTime() &gt; Date.now()</span>
+});
+&nbsp;
+// Arrays
+Model.ArrayNotEmpty = Model(Array).assert(function <span class="fstat-no" title="function not covered" >isNotEmpty(</span>arr) {
+<span class="cstat-no" title="statement not covered" >  return arr.length &gt; 0</span>
+});
+Model.ArrayUnique = Model(Array).assert(function <span class="fstat-no" title="function not covered" >hasNoDuplicates(</span>arr) {
+<span class="cstat-no" title="statement not covered" >  return arr.every(<span class="fstat-no" title="function not covered" >fu</span>nction (val, idx) {</span>
+<span class="cstat-no" title="statement not covered" >    return arr.indexOf(val) === idx</span>
+  })
+});
+Model.ArrayDense = Model(Array).assert(function <span class="fstat-no" title="function not covered" >hasNoHoles(</span>arr) {
+<span class="cstat-no" title="statement not covered" >  return arr.filter(<span class="fstat-no" title="function not covered" >fu</span>nction (x) {</span>
+<span class="cstat-no" title="statement not covered" >      return true</span>
+    }).length === arr.length
+});
+&nbsp;
+Model.Type = Model({ type: String }).defaults({
+  type: 'Thing',
+  toJSON: function () {
+    return { ...this }
+  },
+  toString: function () {
+    return JSON.stringify({ ...this }, null, 2)
+  },
+})
+&nbsp;
+function transform(object, actions, context) {
+  return actions.reduce((object, fn) =&gt; {
+    return fn(object, context);
+  }, object);
+}
+&nbsp;
+const validate = (object, model) =&gt; {
+  let errs = [];
+&nbsp;
+  function collector(errors) {
+    errs = errors;
+  }
+&nbsp;
+  let validationResult = model.validate(object, collector);
+  return {
+    errors: errs,
+    errorCount: errs.length,
+    isValid: errs.length === 0,
+  };
+};
+&nbsp;
+export { Model, createModel, transform, validate, mapPropertiesToDataType }
+&nbsp;
+export default Model
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 27 2017 11:22:52 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
