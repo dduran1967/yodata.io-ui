@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/schema/context.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/schema</a> context.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>26/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>26/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import invert from 'lodash/invert';
+import {Namespace} from 'rdflib';
+&nbsp;
+// Namespaces
+const acl = Namespace('http://www.w3.org/ns/auth/acl#');
+const dc = Namespace('http://purl.org/dc/terms/');
+const dce = Namespace('http://purl.org/dc/elements/1.1/');
+const foaf = Namespace('http://xmlns.com/foaf/0.1/');
+const ldp = Namespace('http://www.w3.org/ns/ldp#');
+const rdf = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#');
+const rdfs = Namespace('http://www.w3.org/2000/01/rdf-schema#');
+const schema = Namespace('http://schema.org/');
+const owl = Namespace('http://www.w3.org/2002/07/owl#');
+const posix = Namespace('http://www.w3.org/ns/posix/stat#');
+const skos = Namespace('http://www.w3.org/2004/02/skos/core#');
+const solid = Namespace('http://www.w3.org/ns/solid/terms#');
+const vann = Namespace('http://purl.org/vocab/vann/');
+const vs = Namespace('http://www.w3.org/2003/06/sw-vocab-status/ns#');
+const xsd = Namespace('http://www.w3.org/2001/XMLSchema#');
+const link = Namespace('http://www.w3.org/2007/ont/link#');
+const pim = Namespace('http://www.w3.org/ns/pim/space#');
+&nbsp;
+export const NS_PREFIX = {
+  'http://www.w3.org/ns/auth/acl#': 'acl',
+  'http://purl.org/dc/terms/': 'dc',
+  'http://purl.org/dc/elements/1.1/': 'dce',
+  'http://xmlns.com/foaf/0.1/': 'foaf',
+  'http://www.w3.org/ns/ldp#': 'ldp',
+  'http://www.w3.org/1999/02/22-rdf-syntax-ns#': 'rdf',
+  'http://www.w3.org/2000/01/rdf-schema#': 'rdfs',
+  'http://schema.org/': 'schema',
+  'http://www.w3.org/2002/07/owl#': 'owl',
+  'http://www.w3.org/ns/posix/stat#': 'posix',
+  'http://www.w3.org/2004/02/skos/core#': 'skos',
+  'http://www.w3.org/ns/solid/terms#': 'solid',
+  'http://purl.org/vocab/vann/': 'vann',
+  'http://www.w3.org/2003/06/sw-vocab-status/ns#': 'vs',
+  'http://www.w3.org/2001/XMLSchema#': 'xsd',
+  'http://www.w3.org/2007/ont/link#': 'link',
+  'http://www.w3.org/ns/pim/space#': 'pim',
+  'http://purl.org/ontology/bibo/': 'bibo',
+  'http://purl.org/ontology/mo/': 'mo',
+  'http://rdfs.org/ns/void#': 'void',
+  'http://www.iana.org/assignments/link-relations/': 'rel',
+  'http://www.w3.org/2007/ont/http#': 'http',
+  'http://www.w3.org/2007/ont/httph#': 'headers',
+  'http://www.w3.org/ns/dcat#': 'dcat',
+  'http://www.w3.org/ns/iana/media-types/text/turtle#': 'turtle',
+  'http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#': 'schema',
+  'https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#': 'schema',
+  'http://www.wikidata.org/entity/': 'entity',
+  'http://purl.org/dc/dcmitype/': 'dctype',
+};
+&nbsp;
+export const NAMESPACE = {
+  acl,
+  dc,
+  dce,
+  foaf,
+  ldp,
+  rdf,
+  rdfs,
+  schema,
+  owl,
+  skos,
+  solid,
+  vann,
+  vs,
+  xsd,
+  link,
+  posix,
+  pim,
+};
+&nbsp;
+const baseTypes = {
+  Person: schema('Person'),
+  Thing: schema('Thing'),
+  Place: schema('Place'),
+  Organization: schema('Organization'),
+  Action: schema('Action'),
+  Event: schema('Event'),
+  Text: schema('Text'),
+  DateTime: schema('DateTime'),
+  EntryPoint: schema('EntryPoint'),
+  ImageObject: schema('ImageObject'),
+  ActionStatusType: schema('ActionStatusType'),
+  PostalAddress: schema('PostalAddress'),
+  CreativeWork: schema('CreativeWork'),
+  URL: schema('URL'),
+  Property: rdf('Property'),
+  Type: rdfs('Class'),
+  Vocab: owl('Ontology'),
+  Document: link('Document'),
+  RDFDocument: link('RDFDocument'),
+  Container: ldp('Container'),
+  BasicContainer: ldp('BasicContainer'),
+};
+&nbsp;
+const actionTypes = {
+  Action: schema('Action'),
+  RegisterAction: schema('RegisterAction'),
+  UnRegisterAction: schema('UnRegisterAction'),
+  AchieveAction: schema('AchieveAction'),
+};
+&nbsp;
+export const context = {
+  allValuesFrom: owl('allValuesFrom'),
+  bytes: posix('size'),
+  contributor: dc('contributor'),
+  creator: dc('creator'),
+  contains: ldp('contains'),
+  deprecated: owl('deprecated'),
+  description: rdfs('comment'),
+  disjointWith: owl('disjointWith'),
+  dateModified: schema('dateModified'),
+  domain: schema('domainIncludes'),
+  equivalentClass: owl('equivalentClass'),
+  equivalentProperty: owl('equivalentProperty'),
+  hasVersion: dc('hasVersion'),
+  inbox: ldp('inbox'),
+  intersectionOf: owl('intersectionOf'),
+  inverseOf: schema('inverseOf'),
+  isDefinedBy: rdfs('isDefinedBy'),
+  label: rdfs('label'),
+  maxCardinality: owl('maxCardinality'),
+  maxQualifiedCardinality: owl('maxQualifiedCardinality'),
+  mainEntityOfPage: schema('mainEntityOfPage'),
+  minCardinality: owl('minCardinality'),
+  minQualifiedCardinality: owl('minQualifiedCardinality'),
+  modificationTimestamp: posix('mtime'),
+  name: foaf('name'),
+  note: skos('note'),
+  onClass: owl('onClass'),
+  onDataRange: owl('onDataRange'),
+  onProperty: owl('onProperty'),
+  preferredNamespacePrefix: vann('preferredNamespacePrefix'),
+  preferredNamespaceUri: vann('preferredNamespaceUri'),
+  publisher: dc('publisher'),
+  range: schema('rangeIncludes'),
+  sameAs: owl('sameAs'),
+  seeAlso: rdfs('seeAlso'),
+  someValuesFrom: owl('someValuesFrom'),
+  source: dc('source'),
+  subClassOf: rdfs('subClassOf'),
+  subPropertyOf: rdfs('subPropertyOf'),
+  supersededBy: schema('supersededBy'),
+  title: dc('title'),
+  tags: schema('keywords'),
+  termStatus: vs('term_status'),
+  type: rdf('type'),
+  publicTypeIndex: solid('publicTypeIndex'),
+  privateTypeIndex: solid('privateTypeIndex'),
+  unionOf: owl('unionOf'),
+  versionInfo: owl('versionInfo'),
+  storageUrl: pim('storage'),
+  preferencesUrl: pim('preferencesFile'),
+  linkURI: link('uri'),
+  ...baseTypes,
+  ...actionTypes,
+};
+&nbsp;
+export const sameAs = [
+  [rdfs('domain'), schema('domainIncludes')],
+  [rdfs('range'), schema('rangeIncludes')],
+  [dc('modified'), schema('dateModified')],
+];
+&nbsp;
+export const PROPERTY_TYPES = [
+  'http://www.w3.org/1999/02/22-rdf-syntax-ns#Property',
+  'http://www.w3.org/2000/01/rdf-schema#Property',
+  'http://www.w3.org/2002/07/owl#AnnotationProperty',
+  'http://www.w3.org/2002/07/owl#DeprecatedProperty',
+  'http://www.w3.org/2002/07/owl#FunctionalProperty',
+  'http://www.w3.org/2002/07/owl#ObjectProperty',
+  'http://www.w3.org/2002/07/owl#OntologyProperty',
+];
+&nbsp;
+export const CLASS_TYPES = [
+  'http://www.w3.org/2000/01/rdf-schema#Class',
+  'http://www.w3.org/2002/07/owl#Class',
+  'http://www.w3.org/2000/01/rdf-schema#Datatype',
+  'http://www.w3.org/2002/07/owl#DeprecatedClass',
+  'http://purl.org/dc/terms/AgentClass',
+];
+&nbsp;
+export const CONTEXT_IN = invert(context);
+&nbsp;
+export default context;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 27 2017 11:22:52 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

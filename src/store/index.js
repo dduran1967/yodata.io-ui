@@ -20,6 +20,7 @@ import reactionReducer from '../reaction/reactionReducer.js';
 import reactionLogic from '../reaction/reactionLogic.js';
 import { getAction } from '../services/action_service.js';
 import { exampleReducer } from '../services/exampleService'
+import root from 'window-or-global';
 
 const REDUCERS = {
   user: userReducer,
@@ -48,9 +49,9 @@ const LOGIC_MIDDLEWARES = [
 ];
 
 const LOGIC_DEPENDENCIES = {
-  firebase: window.firebase,
-  db: window.firebase.database,
-  auth: window.firebase.auth,
+  firebase: root.firebase,
+  db: root.firebase && root.firebase.database,
+  auth: root.firebase && root.firebase.auth,
   getAction
 };
 

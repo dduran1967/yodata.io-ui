@@ -33,6 +33,8 @@ import Service from './services/serviceFactory'
 import * as Rx from 'rxjs'
 import appService from './services';
 import Model from 'objectmodel'
+import EventEmitter from 'events';
+
 
 function getSubject(subjectId) {
   return store.getState().schema.index[subjectId];
@@ -198,4 +200,5 @@ root.rx = Rx;
 root.yap = appService;
 root.search = searchAction;
 root.Model = Model;
+root.EventEmitter = EventEmitter
 export default yo;

@@ -7,7 +7,7 @@ const Home = props => (
   <div>
     <Segment basic style={{ marginTop: '1em' }}>
       <h1>
-        Yodata is an open community for developers and data wrangers creating User-Centric - aka "Deceralized" - data
+        Yodata is an open community for developers and data wrangers creating User-Centric - aka "Decentralized" - data
         integration.
       </h1>
     </Segment>

@@ -1,5 +1,4 @@
-import Model from 'objectmodel';
-
+// @flow
 /**
  * returns a typed object creator/validator
  *
@@ -21,6 +20,51 @@ import Model from 'objectmodel';
  * createModel({properties, required, context}) => Model<Object>
  *
  */
+import Model from 'objectmodel';
+import { castArray } from 'lodash';
+
+const ContextMapper = Model.Function(
+  Model.Array(String),
+  Object,
+  Model.Array(String)
+).return(Object);
+
+export const mapPropertiesToDataType = new ContextMapper(function(
+  properties,
+  context,
+  required
+) {
+  const reducer = (result, propertyID) => {
+    let property = context[propertyID];
+    if (!property) {
+      throw new Error(`property ${propertyID} not in context`);
+    }
+    let range = property.range || property.rangeIncludes || 'Text';
+    let type = castArray(range).map(rangeInstance => {
+      switch (rangeInstance) {
+        case 'Boolean':
+          return Boolean;
+        case 'Date':
+        case 'DateTime':
+          return Date;
+        case 'Number':
+          return Number;
+        case 'Text':
+        case 'Time':
+        case 'URL':
+        case 'Literal':
+          return String;
+        default:
+          return Object;
+      }
+    });
+    let key = propertyID;
+    let value = required.includes(key) ? type : type;
+    return { ...result, [key]: value };
+  };
+  return properties.reduce(reducer, {});
+});
+
 const ModelFactory = Model.Function({
   properties: Model.Array(String),
   required: [Model.Array(String)],
@@ -46,15 +90,8 @@ const createModel = new ModelFactory(function({
   context,
   required
 }) {
-  let schema = properties.reduce((model, key) => {
-    let dataType = context[key];
-    if (typeof dataType === 'undefined') {
-      console.error(`property ${key} not in context`);
-    }
-    let value = required.includes(key) ? dataType : [dataType];
-    return { ...model, [key]: value };
-  }, {});
+  let schema = mapPropertiesToDataType(properties, context, required);
   return Model(schema);
 });
 
-export default createModel
+export default createModel;

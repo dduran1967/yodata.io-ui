@@ -1,30 +1,8 @@
 
 import Model from 'objectmodel'
 import createModel from './createModel'
+import {mapPropertiesToDataType} from './createModel';
 
-function transform(object, actions, context) {
-  return actions.reduce((object, fn) => {
-    return fn(object, context);
-  }, object);
-}
-
-const validate = (object, model) => {
-  let errs = [];
-
-  function collector(errors) {
-    errs = errors;
-  }
-
-  let validationResult = model.validate(object, collector);
-  return {
-    isValid: errs.length === 0,
-    errors: errs,
-  };
-};
-
-export { Model, createModel, transform, validate }
-
-export default Model
 
 Model.Primitive = Model([ Boolean, Number, String, Symbol ]);
 Model.Any = Model([ Object, Boolean, Number, String, Symbol, null, undefined ]);
@@ -93,6 +71,31 @@ Model.Type = Model({ type: String }).defaults({
     return JSON.stringify({ ...this }, null, 2)
   },
 })
+
+function transform(object, actions, context) {
+  return actions.reduce((object, fn) => {
+    return fn(object, context);
+  }, object);
+}
+
+const validate = (object, model) => {
+  let errs = [];
+
+  function collector(errors) {
+    errs = errors;
+  }
+
+  let validationResult = model.validate(object, collector);
+  return {
+    errors: errs,
+    errorCount: errs.length,
+    isValid: errs.length === 0,
+  };
+};
+
+export { Model, createModel, transform, validate, mapPropertiesToDataType }
+
+export default Model
 
 
 

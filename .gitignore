@@ -1,7 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-## webstorm
-/.idea/workspace.xml
+## vscode local history
+/.history/
+
 
 # dependencies
 node_modules
@@ -11,7 +12,8 @@ node_modules
 # production
 
 # misc
-.idea/dictionaries/
+.DS_Store
+.idea
 semantic/
 src/style/components/
 src/style/semantic.js
